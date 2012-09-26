@@ -225,22 +225,6 @@
               <div id="content">
                 <?php print $content; ?>
               </div>
-              <div id="modestmaps-setup">
-                <script>
-                  var url = 'http://api.tiles.mapbox.com/v3/mapbox.world-light.jsonp';
-                  wax.tilejson(url, function(tilejson) {
-                  	// Set up a map in a div with the id 'modestmaps-setup'
-                    var m = new MM.Map('modestmaps-setup',
-                    // Use Wax's connector to add a new custom layer
-                    new wax.mm.connector(tilejson),
-                    // And it'll be 240px by 120px
-                    new MM.Point(240,120));
-          
-                    // Center it on the United States, at zoom level 2.
-                    m.setCenterZoom({ lat: 39, lon: -98 }, 2);
-                  });
-                  </script>
-                </div>
             <?php endif; ?>
 
             <?php print $feed_icons; ?>
