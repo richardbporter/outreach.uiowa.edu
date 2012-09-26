@@ -61,6 +61,7 @@
   
   scripts[] = scripts/wax/ext/modestmaps.min.js
   scripts[] = scripts/wax/dist/wax.mm.js
+  scripts[] = scripts/outreach.events.js
   
   ; Internet Explorer Scripts
   ;
