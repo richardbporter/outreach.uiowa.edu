@@ -2,93 +2,107 @@
 
 /**
  * @file
- * Process theme data.
- *
- * Use this file to run your theme specific implimentations of theme functions,
- * such preprocess, process, alters, and theme function overrides.
- *
- * Preprocess and process functions are used to modify or create variables for
- * templates and theme functions. They are a common theming tool in Drupal, often
- * used as an alternative to directly editing or adding code to templates. Its
- * worth spending some time to learn more about these functions - they are a
- * powerful way to easily modify the output of any template variable.
- * 
- * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
- * 1. Rename each function and instance of "outreach" to match
- *    your subthemes name, e.g. if your theme name is "footheme" then the function
- *    name will be "footheme_preprocess_hook". Tip - you can search/replace
- *    on "outreach".
- * 2. Uncomment the required function to use.
+ * Contains theme override functions and preprocess functions for the outreach theme.
  */
-
 
 /**
- * Preprocess variables for the html template.
+ * Changes the default meta content-type tag to the shorter HTML5 version
  */
-/* -- Delete this line to enable.
+function outreach_html_head_alter(&$head_elements) {
+  $head_elements['system_meta_content_type']['#attributes'] = array(
+    'charset' => 'utf-8'
+  );
+}
+
+/**
+ * Changes the search form to use the HTML5 "search" input attribute
+ */
+function outreach_preprocess_search_block_form(&$vars) {
+  $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
+}
+
+/**
+ * Uses RDFa attributes if the RDF module is enabled
+ * Lifted from Adaptivetheme for D7, full credit to Jeff Burnz
+ * ref: http://drupal.org/node/887600
+ */
 function outreach_preprocess_html(&$vars) {
-  global $theme_key;
+  // Ensure that the $vars['rdf'] variable is an object.
+  if (!isset($vars['rdf']) || !is_object($vars['rdf'])) {
+    $vars['rdf'] = new StdClass();
+  }
 
-  // Two examples of adding custom classes to the body.
+  if (module_exists('rdf')) {
+    $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
+    $vars['rdf']->version = 'version="HTML+RDFa 1.1"';
+    $vars['rdf']->namespaces = $vars['rdf_namespaces'];
+    $vars['rdf']->profile = ' profile="' . $vars['grddl_profile'] . '"';
+  } else {
+    $vars['doctype'] = '<!DOCTYPE html>' . "\n";
+    $vars['rdf']->version = '';
+    $vars['rdf']->namespaces = '';
+    $vars['rdf']->profile = '';
+  }
   
-  // Add a body class for the active theme name.
-  // $vars['classes_array'][] = drupal_html_class($theme_key);
 
-  // Browser/platform sniff - adds body classes such as ipad, webkit, chrome etc.
-  // $vars['classes_array'][] = css_browser_selector();
+ // use the $html5shiv variable in their html.tpl.php
+  $element = array(  
+    'element' => array(
+    '#tag' => 'script',
+    '#value' => '',
+    '#attributes' => array(
+      'src' => '//html5shiv.googlecode.com/svn/trunk/html5.js',
+     ),
+   ),
+ );
+
+ $shimset = theme_get_setting('outreach_shim');
+ $script = theme('html_tag', $element);
+ //If the theme setting for adding the html5shim is checked, set the variable.
+ if ($shimset == 1) { $vars['html5shim'] = "\n<!--[if lt IE 9]>\n" . $script . "<![endif]-->\n"; }
 
 }
-// */
-
 
 /**
- * Process variables for the html template.
+ * Return a themed breadcrumb trail.
+ *
+ * @param $breadcrumb
+ *   An array containing the breadcrumb links.
+ * @return
+ *   A string containing the breadcrumb output.
  */
-/* -- Delete this line if you want to use this function
-function outreach_process_html(&$vars) {
-}
-// */
+function outreach_breadcrumb($vars) {
+  $breadcrumb = $vars['breadcrumb'];
+  // Determine if we are to display the breadcrumb.
+  $show_breadcrumb = theme_get_setting('breadcrumb_display');
+  if ($show_breadcrumb == 'yes') {
 
+    // Optionally get rid of the homepage link.
+    $show_breadcrumb_home = theme_get_setting('breadcrumb_home');
+    if (!$show_breadcrumb_home) {
+      array_shift($breadcrumb);
+    }
 
-/**
- * Override or insert variables for the page templates.
- */
-/* -- Delete this line if you want to use these functions
-function outreach_preprocess_page(&$vars) {
-}
-function outreach_process_page(&$vars) {
-}
-// */
+    // Return the breadcrumb with separators.
+    if (!empty($breadcrumb)) {
+      $separator = filter_xss(theme_get_setting('breadcrumb_separator'));
+      $trailing_separator = $title = '';
 
+      // Add the title and trailing separator
+      if (theme_get_setting('breadcrumb_title')) {
+        if ($title = drupal_get_title()) {
+          $trailing_separator = $separator;
+        }
+      }
+      // Just add the trailing separator
+      elseif (theme_get_setting('breadcrumb_trailing')) {
+        $trailing_separator = $separator;
+      }
 
-/**
- * Override or insert variables into the node templates.
- */
-/* -- Delete this line if you want to use these functions
-function outreach_preprocess_node(&$vars) {
+      // Assemble the breadcrumb
+      return implode($separator, $breadcrumb) . $trailing_separator . $title;
+    }
+  }
+  // Otherwise, return an empty string.
+  return '';
 }
-function outreach_process_node(&$vars) {
-}
-// */
-
-
-/**
- * Override or insert variables into the comment templates.
- */
-/* -- Delete this line if you want to use these functions
-function outreach_preprocess_comment(&$vars) {
-}
-function outreach_process_comment(&$vars) {
-}
-// */
-
-
-/**
- * Override or insert variables into the block templates.
- */
-/* -- Delete this line if you want to use these functions
-function outreach_preprocess_block(&$vars) {
-}
-function outreach_process_block(&$vars) {
-}
-// */

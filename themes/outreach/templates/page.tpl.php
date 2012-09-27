@@ -1,41 +1,16 @@
 <?php
+
 /**
  * @file
- * Adaptivetheme implementation to display a single Drupal page.
- *
- * ###  Full Width Wrappers  ###
- *
- * This page template that has 100% width wrappers, which effectively
- * divide the page up into sections to you can style with full width
- * backgrounds. AT Commerce uses markup similar to this to achieve
- * its style - its worth checking out to see how I did this.
- *
- * To use copy this to your subtheme and rename it page.tpl.php,
- * or enable this in theme settings under "Site Tweaks".
+ * Default theme implementation to display a single Drupal page.
  *
  * Available variables:
- *
- * Adaptivetheme supplied variables:
- * - $site_logo: Themed logo - linked to front with alt attribute.
- * - $site_name: Site name linked to the homepage.
- * - $site_name_unlinked: Site name without any link.
- * - $hide_site_name: Toggles the visibility of the site name.
- * - $visibility: Holds the class .element-invisible or is empty.
- * - $primary_navigation: Themed Main menu.
- * - $secondary_navigation: Themed Secondary/user menu.
- * - $primary_local_tasks: Split local tasks - primary.
- * - $secondary_local_tasks: Split local tasks - secondary.
- * - $tag: Prints the wrapper element for the main content.
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
- * - *_attributes: attributes for various site elements, usually holds id, class
- *   or role attributes.
  *
  * General utility variables:
  * - $base_path: The base URL path of the Drupal installation. At the very
  *   least, this will always default to /.
  * - $directory: The directory the template is located in, e.g. modules/system
- *   or themes/bartik.
+ *   or themes/garland.
  * - $is_front: TRUE if the current page is the front page.
  * - $logged_in: TRUE if the user is registered and signed in.
  * - $is_admin: TRUE if the user has permission to access administration pages.
@@ -45,6 +20,8 @@
  *   when linking to the front page. This includes the language domain or
  *   prefix.
  * - $logo: The path to the logo image, as defined in theme configuration.
+ * - $site_name: The name of the site, empty when display has been disabled
+ *   in theme settings.
  * - $site_slogan: The slogan of the site, empty when display has been disabled
  *   in theme settings.
  *
@@ -75,7 +52,7 @@
  *   in the page's path (e.g. node/12345 and node/12345/revisions, but not
  *   comment/reply/12345).
  *
- * Core Regions:
+ * Regions:
  * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['highlighted']: Items for the highlighted content region.
  * - $page['content']: The main content of the current page.
@@ -84,182 +61,99 @@
  * - $page['header']: Items for the header region.
  * - $page['footer']: Items for the footer region.
  *
- * Adaptivetheme Regions:
- * - $page['leaderboard']: full width at the very top of the page
- * - $page['menu_bar']: menu blocks placed here will be styled horizontal
- * - $page['secondary_content']: full width just above the main columns
- * - $page['content_aside']: like a main content bottom region
- * - $page['tertiary_content']: full width just above the footer
- *
  * @see template_preprocess()
  * @see template_preprocess_page()
  * @see template_process()
- * @see adaptivetheme_preprocess_page()
- * @see adaptivetheme_process_page()
  */
 ?>
-<div id="page-wrapper">
-  <div id="page" class="<?php print $classes; ?>">
 
-    <?php if($page['leaderboard']): ?>
-      <div id="leaderboard-wrapper">
-        <div class="container clearfix">
-          <?php print render($page['leaderboard']); ?>
-        </div>
-      </div>
+<div id="page-wrapper"><div id="page">
+
+  <header id="header" role="banner"><div class="section clearfix">
+
+    <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+      </a>
     <?php endif; ?>
 
-    <div id="header-wrapper">
-      <div class="container clearfix">
-        <header<?php print $header_attributes; ?>>
-
-          <?php if ($site_logo || $site_name || $site_slogan): ?>
-            <!-- start: Branding -->
-            <div<?php print $branding_attributes; ?>>
-
-              <?php if ($site_logo): ?>
-                <div id="logo">
-                  <?php print $site_logo; ?>
-                </div>
-              <?php endif; ?>
-
-              <?php if ($site_name || $site_slogan): ?>
-                <!-- start: Site name and Slogan hgroup -->
-                <hgroup<?php print $hgroup_attributes; ?>>
-
-                  <?php if ($site_name): ?>
-                    <h1<?php print $site_name_attributes; ?>><?php print $site_name; ?></h1>
-                  <?php endif; ?>
-
-                  <?php if ($site_slogan): ?>
-                    <h2<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
-                  <?php endif; ?>
-
-                </hgroup><!-- /end #name-and-slogan -->
-              <?php endif; ?>
-
-
-            </div><!-- /end #branding -->
+    <?php if ($site_name || $site_slogan): ?>
+      <div id="name-and-slogan">
+        <?php if ($site_name): ?>
+          <?php if ($title): ?>
+            <div id="site-name"><strong>
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            </strong></div>
+          <?php else: /* Use h1 when the content title is empty */ ?>
+            <h1 id="site-name">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            </h1>
           <?php endif; ?>
+        <?php endif; ?>
 
-        <?php print render($page['header']); ?>
-
-        </header>
-      </div>
-    </div>
-
-    <?php if ($page['menu_bar'] || $primary_navigation || $secondary_navigation): ?>
-      <div id="nav-wrapper">
-        <div class="container clearfix">
-          <?php print render($page['menu_bar']); ?>
-          <?php if ($primary_navigation): print $primary_navigation; endif; ?>
-          <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
-        </div>
-      </div>
+        <?php if ($site_slogan): ?>
+          <div id="site-slogan"><?php print $site_slogan; ?></div>
+        <?php endif; ?>
+      </div> <!-- /#name-and-slogan -->
     <?php endif; ?>
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb-wrapper">
-        <div class="container clearfix">
-          <?php print $breadcrumb; ?>
-        </div>
-      </div>
+    <?php print render($page['header']); ?>
+
+    <?php if ($main_menu): ?>
+      <p id="skip-link"><em><a href="#navigation">Skip to Navigation</a></em> &darr;</p>
     <?php endif; ?>
 
-    <?php if ($messages || $page['help']): ?>
-      <div id="messages-help-wrapper">
-        <div class="container clearfix">
-          <?php print $messages; ?>
-          <?php print render($page['help']); ?>
-        </div>
-      </div>
+  </div></header> <!-- /.section, /#header -->
+
+
+  <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu) { print ' with-navigation'; } ?>">
+
+    <div id="content" class="column" role="main"><div class="section">
+      <?php if ($page['highlighted']): ?>
+        <div id="highlighted"><?php print render($page['highlighted']); ?></div>
+      <?php endif; ?>
+      <?php if ($breadcrumb): ?>
+        <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+      <?php endif; ?>
+      <?php print $messages; ?>
+      <?php print render($title_prefix); ?>
+      <?php if ($title): ?>
+        <h1 class="title" id="page-title"><?php print $title; ?></h1>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
+      <?php if ($tabs): ?>
+        <div class="tabs"><?php print render($tabs); ?></div>
+      <?php endif; ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+      <?php print $feed_icons; ?>
+    </div></div> <!-- /.section, /#content -->
+
+    <?php if ($main_menu): ?>
+      <nav id="navigation" role="navigation"><div class="section">
+        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
+        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Secondary menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
+      </div></nav> <!-- /.section, /#navigation -->
     <?php endif; ?>
 
-    <?php if ($page['secondary_content']): ?>
-      <div id="secondary-content-wrapper">
-        <div class="container clearfix">
-          <?php print render($page['secondary_content']); ?>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <div id="content-wrapper"><div class="container">
-      <div id="columns"><div class="columns-inner clearfix">
-        <div id="content-column"><div class="content-inner">
-
-          <?php print render($page['highlighted']); ?>
-
-          <<?php print $tag; ?> id="main-content">
-
-            <?php print render($title_prefix); ?>
-
-            <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
-              <header<?php print $content_header_attributes; ?>>
-
-                <?php if ($title): ?>
-                  <h1 id="page-title"><?php print $title; ?></h1>
-                <?php endif; ?>
-
-                <?php if ($primary_local_tasks || $secondary_local_tasks || $action_links): ?>
-                  <div id="tasks">
-
-                    <?php if ($primary_local_tasks): ?>
-                      <ul class="tabs primary clearfix"><?php print render($primary_local_tasks); ?></ul>
-                    <?php endif; ?>
-
-                    <?php if ($secondary_local_tasks): ?>
-                      <ul class="tabs secondary clearfix"><?php print render($secondary_local_tasks); ?></ul>
-                    <?php endif; ?>
-
-                    <?php if ($action_links = render($action_links)): ?>
-                      <ul class="action-links clearfix"><?php print $action_links; ?></ul>
-                    <?php endif; ?>
-
-                  </div>
-                <?php endif; ?>
-
-              </header>
-            <?php endif; ?>
-
-            <?php if ($content = render($page['content'])): ?>
-              <div id="content">
-                <?php print $content; ?>
-              </div>
-            <?php endif; ?>
-
-            <?php print $feed_icons; ?>
-
-            <?php print render($title_suffix); // Prints page level contextual links ?>
-
-          </<?php print $tag; ?>>
-
-          <?php print render($page['content_aside']); ?>
-
-        </div></div>
-
+    <?php if ($page['sidebar_first']): ?>
+      <aside id="sidebar-first" class="column sidebar" role="complementary"><div class="section">
         <?php print render($page['sidebar_first']); ?>
+      </div></aside> <!-- /.section, /#sidebar-first -->
+    <?php endif; ?>
+
+    <?php if ($page['sidebar_second']): ?>
+      <aside id="sidebar-second" class="column sidebar" role="complementary"><div class="section">
         <?php print render($page['sidebar_second']); ?>
-
-      </div></div>
-    </div></div>
-
-    <?php if ($page['tertiary_content']): ?>
-      <div id="tertiary-content-wrapper">
-        <div class="container clearfix">
-          <?php print render($page['tertiary_content']); ?>
-        </div>
-      </div>
+      </div></aside> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
 
-    <?php if ($page['footer']): ?>
-      <div id="footer-wrapper">
-        <div class="container clearfix">
-          <footer<?php print $footer_attributes; ?>>
-            <?php print render($page['footer']); ?>
-          </footer>
-        </div>
-      </div>
-    <?php endif; ?>
+  </div></div> <!-- /#main, /#main-wrapper -->
+  <footer id="footer" role="contentinfo"><div class="section">
+    <?php print render($page['footer']); ?>
+  </div></footer> <!-- /.section, /#footer -->
 
-  </div>
-</div>
+</div></div> <!-- /#page, /#page-wrapper -->
