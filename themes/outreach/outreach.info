@@ -1,5 +1,5 @@
-name = outreach
-description = Outreach default theme.
+name = Outreach
+description = Default theme for the Outreach site. Based on minimalist HTML5 theme Boron.
 core = 7.x
 engine = phptemplate
 base theme = boron
