@@ -1,1 +1,6 @@
+# Ignore settings.php file.
 settings.php
+
+# Ignore .sass-cache files.
+.sass-cache
+.sass-cache/*
