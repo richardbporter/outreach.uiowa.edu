@@ -128,8 +128,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <div id="map"></div>
-      <?php print $feed_icons; ?>
+      <iframe width='960' height='500' frameBorder='0' src='http://a.tiles.mapbox.com/v3/richardbporter.County-Alumni.html#7/42.016700000000014/-93.24099999999999'></iframe>
     </div></div> <!-- /.section, /#content -->
 
     <?php if ($main_menu): ?>

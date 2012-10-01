@@ -28,4 +28,3 @@ stylesheets[print][] = css/print.css
 scripts[] = js/modestmaps.min.js
 scripts[] = js/wax/wax.mm.js
 scripts[] = js/wax/wax.ext.js
-scripts[] = js/outreach.events.js
