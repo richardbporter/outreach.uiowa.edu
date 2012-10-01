@@ -1,0 +1,31 @@
+/**
+ * @file
+ * This file holds all HTML table styling for the outreach theme SASS.
+ */
+ 
+/* =============================================================================
+ *   Tables
+ * ============================================================================= 
+ */
+table {
+	width: 100%;
+	thead {
+	  tr {
+	    th {
+	      text-align: center;
+	      padding: 2px;
+	      a {
+	        font-size: 0.95em;
+	        color: $dark_grey;
+	      }
+	    }
+	  }
+	}
+	tr {
+	  td {
+	    text-align: center;
+	    padding: 5px;
+	    border-left: 1px solid $white;
+	  }
+	}
+}

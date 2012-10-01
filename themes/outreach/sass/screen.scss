@@ -6,7 +6,8 @@
 @import "compass/reset";
 @import "_type.scss";
 @import "_colors.scss";
-@import "_forms.scss"; 
+@import "_forms.scss";
+@import "_tables";
  
 /* =============================================================================
  *   General
@@ -30,7 +31,7 @@
   #site-name {
 	 font-size: 3em;
 	 a {
-     color: $grey_dark;
+     color: $dark_grey;
      text-decoration: none;
 	 }
   }
