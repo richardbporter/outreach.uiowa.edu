@@ -3,7 +3,7 @@
 /**
  * @file
  * 
- * This module This module holds the custom functions that compute some fields for the County node.
+ * This module holds the callback functions for computed fields.
  */
 
 /**
