@@ -7,7 +7,7 @@
  */
 
 /**
- * Callback function for enrollment_total field on County node.
+ * Callback function for enrollment_total field on County Instance node.
  * 
  * @param $entity_field
  * @param $entity_type
