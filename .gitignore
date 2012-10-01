@@ -2,5 +2,4 @@
 settings.php
 
 # Ignore .sass-cache files.
-.sass-cache
-.sass-cache/*
+/themes/outreach/.sass-cache
