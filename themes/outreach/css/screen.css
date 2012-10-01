@@ -1,7 +1,7 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+ * @file
+ * Main SASS file for outreach theme. Imports all other mixins.
+ */
 /* line 17, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -57,3 +57,42 @@ a img {
 /* line 116, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
+
+/**
+ * @file
+ * This file holds all variables and mixins for the outreach theme SASS.
+ */
+/* =============================================================================
+ *   General
+ * ============================================================================= 
+ */
+/* =============================================================================
+ *   Header
+ * ============================================================================= 
+ */
+/* line 19, ../sass/screen.scss */
+#header {
+  padding: 1em 0 0 0; }
+  /* line 21, ../sass/screen.scss */
+  #header #site-name {
+    font-size: 3em; }
+    /* line 23, ../sass/screen.scss */
+    #header #site-name a {
+      color: #333333;
+      text-decoration: none; }
+  /* line 28, ../sass/screen.scss */
+  #header #site-slogan {
+    font-style: italic; }
+
+/* =============================================================================
+ *   Nav
+ * ============================================================================= 
+ */
+/* =============================================================================
+ *   Map
+ * =============================================================================
+ */
+/* line 45, ../sass/screen.scss */
+#map {
+  width: 960px;
+  height: 500px; }

@@ -1,6 +1,48 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+ * @file
+ * Main SASS file for outreach theme. Imports all other mixins.
+ */
 
 @import "compass/reset";
+@import "_mixins.scss";
+ 
+/* =============================================================================
+ *   General
+ * ============================================================================= 
+ */
+ 
+ 
+/* =============================================================================
+ *   Header
+ * ============================================================================= 
+ */
+#header {
+  padding: 1em 0 0 0;	
+  #site-name {
+	 font-size: 3em;
+	 a {
+     color: $grey_dark;
+     text-decoration: none;
+	 }
+  }
+  #site-slogan {
+    font-style: italic;
+  }
+}
+
+/* =============================================================================
+ *   Nav
+ * ============================================================================= 
+ */
+ #nav {
+   
+ }
+ 
+/* =============================================================================
+ *   Map
+ * =============================================================================
+ */
+#map {
+	width: 960px;
+	height: 500px;
+}
