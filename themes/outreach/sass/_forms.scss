@@ -1,0 +1,23 @@
+/**
+ * @file
+ * This file holds all HTML forms styling for the outreach theme SASS.
+ */
+ 
+/* =============================================================================
+ *   Field Group Module
+ * ============================================================================= 
+ */
+.field-group-fieldset {
+	margin: 1em 0 1em 0;
+	padding: 1em;
+	border: 2px groove threedface;
+	.fieldset-legend {
+	  .fieldset-title {
+	    color: $grey_dark;
+	    font-size: 1.2em;
+	  }
+	}
+	.field-label {
+	  margin-bottom: $line_height;
+	}
+}
