@@ -22,7 +22,10 @@ features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
 
-stylesheets[screen][] = screen.css
-stylesheets[print][] = print.css
+stylesheets[screen][] = css/screen.css
+stylesheets[print][] = css/print.css
 
-scripts[] = myscript.js
+scripts[] = js/modestmaps.min.js
+scripts[] = js/wax/wax.mm.js
+scripts[] = js/wax/wax.ext.js
+scripts[] = js/outreach.events.js
