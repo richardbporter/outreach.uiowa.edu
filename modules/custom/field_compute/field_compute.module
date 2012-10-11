@@ -20,17 +20,18 @@
 function computed_field_field_enrollment_total_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
   // Add all enrollment fields to an array.
   $enrollment_fields = array(
-    'field_enrollment_business',
-    'field_enrollment_dentistry',
-    'field_enrollment_education',
-    'field_enrollment_engineering',
-    'field_enrollment_graduate',
-    'field_enrollment_law',
-    'field_enrollment_clas',
-    'field_enrollment_medicine',
-    'field_enrollment_nursing',
-    'field_enrollment_pharmacy',
-    'field_enrollment_public_health',
+    'field_business',
+    'field_dentistry',
+    'field_education',
+    'field_engineering',
+    'field_graduate',
+    'field_law',
+    'field_clas',
+    'field_medicine',
+    'field_nursing',
+    'field_pharmacy',
+    'field_public_health',
+    'field_university_college',
   );
   
   // Calculate the total enrollment.
@@ -38,6 +39,121 @@ function computed_field_field_enrollment_total_compute(&$entity_field, $entity_t
   
   // Assign the total to the field.
   $entity_field[0]['value'] = $enrollment_total; 
+}
+
+/**
+ * Callback function for field_percentage_physicians field on County Instance node.
+ * 
+ * @param $entity_field
+ * @param $entity_type
+ * @param $entity
+ * @param $field
+ * @param $instance
+ * @param $langcode
+ * @param $items
+ */
+function computed_field_field_percentage_physicians_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+  // Assign fields to variables.
+  $sum = array_pop(field_get_items($entity_type, $entity, 'field_ui_educated_physicians'));
+  $total = array_pop(field_get_items($entity_type, $entity, 'field_total_physicians'));
+  
+  // Calculate percentage.
+  $percentage = _field_compute_calculate_percentage($sum, $total);
+  
+  // Assign percentage to field.
+  $entity_field[0]['value'] = $percentage;
+}
+
+/**
+ * Callback function for field_percentage_assistants field on County Instance node.
+ *
+ * @param $entity_field
+ * @param $entity_type
+ * @param $entity
+ * @param $field
+ * @param $instance
+ * @param $langcode
+ * @param $items
+ */
+function computed_field_field_percentage_assistants_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+  // Assign fields to variables.
+  $sum = array_pop(field_get_items($entity_type, $entity, 'field_ui_educated_assistants'));
+  $total = array_pop(field_get_items($entity_type, $entity, 'field_total_assistants'));
+  
+  // Calculate percentage.
+  $percentage = _field_compute_calculate_percentage($sum, $total);
+  
+  // Assign percentage to field.
+  $entity_field[0]['value'] = $percentage;
+}
+
+/**
+ * Callback function for field_percentage_dentists field on County Instance node.
+ *
+ * @param $entity_field
+ * @param $entity_type
+ * @param $entity
+ * @param $field
+ * @param $instance
+ * @param $langcode
+ * @param $items
+ */
+function computed_field_field_percentage_dentists_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+  // Assign fields to variables.
+  $sum = array_pop(field_get_items($entity_type, $entity, 'field_ui_educated_dentists'));
+  $total = array_pop(field_get_items($entity_type, $entity, 'field_total_dentists'));
+  
+  // Calculate percentage.
+  $percentage = _field_compute_calculate_percentage($sum, $total);
+  
+  // Assign percentage to field.
+  $entity_field[0]['value'] = $percentage;
+}
+
+/**
+ * Callback function for field_percentage_nurses field on County Instance node.
+ *
+ * @param $entity_field
+ * @param $entity_type
+ * @param $entity
+ * @param $field
+ * @param $instance
+ * @param $langcode
+ * @param $items
+ */
+function computed_field_field_percentage_nurses_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+  // Assign fields to variables.
+  $sum = array_pop(field_get_items($entity_type, $entity, 'field_ui_educated_nurses'));
+  $total = array_pop(field_get_items($entity_type, $entity, 'field_total_nurses'));
+  
+  // Calculate percentage.
+  $percentage = _field_compute_calculate_percentage($sum, $total);
+  
+  // Assign percentage to field.
+  $entity_field[0]['value'] = $percentage;
+}
+
+/**
+ * Callback function for field_percentage_pharmacists field on County Instance node.
+ *
+ * @param $entity_field
+ * @param $entity_type
+ * @param $entity
+ * @param $field
+ * @param $instance
+ * @param $langcode
+ * @param $items
+ */
+function computed_field_field_percentage_pharmacists_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+  // Assign fields to variables.
+  $sum = array_pop(field_get_items($entity_type, $entity, 'field_ui_educated_pharmacists'));
+  $total = array_pop(field_get_items($entity_type, $entity, 'field_total_pharmacists'));
+  
+  // Calculate percentage.
+  $percentage = _field_compute_calculate_percentage($sum, $total);
+  
+  // Assign percentage to field.
+  $entity_field[0]['value'] = $percentage;
 }
 
 /**
@@ -50,8 +166,35 @@ function computed_field_field_enrollment_total_compute(&$entity_field, $entity_t
 function _field_compute_sum($entity_type, $entity, $fields) {
   $total = 0;
   foreach ($fields as $field) {
-    $total += array_pop(array_pop(field_get_items($entity_type, $entity, $field)));
+    if (!isset($entity->{$field}['und'][0]['value'])) {
+      $value = 0;
+    } else {
+      $value = array_pop(array_pop(field_get_items($entity_type, $entity, $field)));
+    }
+    
+    $total += $value;
   }
   
   return $total;
+}
+
+/**
+ * Helper function to compute a percentage of two fields.
+ * 
+ * @param $entity_type
+ * @param $entity
+ * @param $sum
+ * @param $total
+ */
+function _field_compute_calculate_percentage($sum, $total) {
+  // Divide the sum by total.
+  if ($total['value'] == 0) {
+    return 0;
+  }
+  else {
+    $percentage = $sum['value'] / $total['value'];
+  }
+  
+  // Return the percentage.
+  return $percentage;
 }
