@@ -21,12 +21,13 @@ function computed_field_field_enrollment_total_compute(&$entity_field, $entity_t
   // Add all enrollment fields to an array.
   $enrollment_fields = array(
     'field_business',
+    'field_management',
     'field_dentistry',
     'field_education',
     'field_engineering',
     'field_graduate',
     'field_law',
-    'field_clas',
+    'field_liberal_arts',
     'field_medicine',
     'field_nursing',
     'field_pharmacy',
