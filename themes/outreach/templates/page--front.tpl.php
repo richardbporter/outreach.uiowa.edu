@@ -99,14 +99,7 @@
   <?php if ($main_menu): ?>
     <p id="skip-link"><em><a href="#navigation">Skip to Navigation</a></em> &darr;</p>
   <?php endif; ?>
-  
-  <?php if ($main_menu): ?>
-    <nav id="navigation" role="navigation"><div class="section">
-      <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
-      <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Secondary menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
-    </div></nav> <!-- /.section, /#navigation -->
-  <?php endif; ?>
-  
+
 </div></header> <!-- /.section, /#header -->
 
 
@@ -134,6 +127,13 @@
     <?php endif; ?>
     <?php print render($page['content']); ?>
   </div></div> <!-- /.section, /#content -->
+
+  <?php if ($main_menu): ?>
+    <nav id="navigation" role="navigation"><div class="section">
+      <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
+      <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Secondary menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
+    </div></nav> <!-- /.section, /#navigation -->
+  <?php endif; ?>
 
   <?php if ($page['sidebar_first']): ?>
     <aside id="sidebar-first" class="column sidebar" role="complementary"><div class="section">
