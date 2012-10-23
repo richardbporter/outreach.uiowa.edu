@@ -1,14 +1,24 @@
 <?php
-function boron_form_system_theme_settings_alter(&$form, &$form_state) {
+/**
+ * @file
+ * Contains custom theme settings for the starter theme.
+ * 
+ */
 
-  /**
-   * Breadcrumb settings
-   * Copied from Zen
-   */
+/**
+ * Implements hook_form_system_theme_setings_alter().
+ * 
+ * @param $form
+ * @param $form_state
+ */
+function starter_form_system_theme_settings_alter(&$form, &$form_state) {
+
+  // Breadcrumb settings, copied from Zen
   $form['breadcrumb'] = array(
    '#type' => 'fieldset',
    '#title' => t('Breadcrumb'),
   );
+  
   $form['breadcrumb']['breadcrumb_display'] = array(
    '#type' => 'select',
    '#title' => t('Display breadcrumb'),
@@ -18,6 +28,7 @@ function boron_form_system_theme_settings_alter(&$form, &$form_state) {
      'no' => t('No'),
    ),
   );
+  
   $form['breadcrumb']['breadcrumb_separator'] = array(
    '#type'  => 'textfield',
    '#title' => t('Breadcrumb separator'),
@@ -26,17 +37,20 @@ function boron_form_system_theme_settings_alter(&$form, &$form_state) {
    '#size' => 8,
    '#maxlength' => 10,
   );
+  
   $form['breadcrumb']['breadcrumb_home'] = array(
    '#type' => 'checkbox',
    '#title' => t('Show the homepage link in breadcrumbs'),
    '#default_value' => theme_get_setting('breadcrumb_home'),
   );
+  
   $form['breadcrumb']['breadcrumb_trailing'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Append a separator to the end of the breadcrumb'),
     '#default_value' => theme_get_setting('breadcrumb_trailing'),
     '#description'   => t('Useful when the breadcrumb is placed just before the title.'),
   );
+  
   $form['breadcrumb']['breadcrumb_title'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Append the content title to the end of the breadcrumb'),

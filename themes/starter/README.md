@@ -1,9 +1,9 @@
-# Base Theme
-This is an HTML5, mobile-friendly, minimal base theme that takes components 
+# starter Theme
+This is an HTML5, mobile-first, minimal starter theme that takes components 
 from HTML5 Boilerplate and the Drupal Boron theme.
 
 ## Modifications
-* Add meta IE render engine and meta viewport tags to <head> via template.php.
+* Add a bunch of meta tags via template.php
 * Add conditional <html> classes to html.tpl.php.
 ** Remove xml:lang attribute from <html> element.
 ** Add $rdf->version attribute to <html> element.

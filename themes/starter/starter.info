@@ -2,8 +2,8 @@
 ; Theme Info -----------------------------------------------------------------
 ; required information about the theme
 
-name = Base
-description = This is an HTML5, mobile friendly, minimal base theme. 
+name = Starter
+description = This is an HTML5, mobile-first, minimal starter theme. 
 core = 7.x
 engine = phptemplate
 
