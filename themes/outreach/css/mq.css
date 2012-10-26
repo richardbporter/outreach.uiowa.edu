@@ -1,0 +1,541 @@
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 19, ../sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 26, ../sass/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/* line 36, ../sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 42, ../sass/_normalize.scss */
+[hidden] {
+  display: none; }
+
+/* line 55, ../sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  /* Establishes a vertical rhythm unit using $base-line-height. */
+  line-height: 1.5em; }
+
+/* line 70, ../sass/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+/* line 76, ../sass/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 85, ../sass/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/* line 91, ../sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* line 101, ../sass/_normalize.scss */
+p,
+pre {
+  margin: 1.5em 0; }
+
+/* line 105, ../sass/_normalize.scss */
+blockquote {
+  margin: 1.5em 40px; }
+
+/* line 112, ../sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em; }
+
+/* line 121, ../sass/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+/* line 127, ../sass/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  margin-top: 1.28205em;
+  margin-bottom: 1.28205em; }
+
+/* line 133, ../sass/_normalize.scss */
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+/* line 139, ../sass/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  line-height: 1.80723em;
+  margin-top: 1.80723em;
+  margin-bottom: 1.80723em; }
+
+/* line 145, ../sass/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  line-height: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+/* line 152, ../sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 158, ../sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/* line 163, ../sass/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/* line 168, ../sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 177, ../sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+  line-height: 1.5em; }
+
+/* line 186, ../sass/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/* line 193, ../sass/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/* line 198, ../sass/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 204, ../sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 211, ../sass/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 215, ../sass/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 227, ../sass/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1.5em 0;
+  padding: 0 0 0 40px; }
+
+/* line 232, ../sass/_normalize.scss */
+dl {
+  padding: 0; }
+
+/* line 236, ../sass/_normalize.scss */
+dd {
+  margin: 0 0 0 40px; }
+
+/* line 243, ../sass/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* line 254, ../sass/_normalize.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+/* line 263, ../sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 272, ../sass/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* line 282, ../sass/_normalize.scss */
+form {
+  margin: 0; }
+
+/* line 288, ../sass/_normalize.scss */
+fieldset {
+  border-color: #c0c0c0;
+  margin: 0 2px;
+  border-top-style: solid;
+  border-top-width: 0.0625em;
+  padding-top: 0.4625em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.0625em;
+  padding-bottom: 0.9125em;
+  border-left-style: solid;
+  border-left-width: 0.0625em;
+  padding-left: 0.875em;
+  border-right-style: solid;
+  border-right-width: 0.0625em;
+  padding-right: 0.875em; }
+
+/* line 301, ../sass/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/* line 316, ../sass/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  vertical-align: baseline;
+  /* 4 */
+  *vertical-align: middle;
+  /* 4 */ }
+
+/* line 329, ../sass/_normalize.scss */
+button,
+input {
+  line-height: normal; }
+
+/* line 343, ../sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/* line 353, ../sass/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/* line 362, ../sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/* line 374, ../sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */ }
+
+/* line 382, ../sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 388, ../sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 395, ../sass/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* line 405, ../sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 17, ../sass/_h5bp.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222222; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 27, ../sass/_h5bp.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 32, ../sass/_h5bp.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 41, ../sass/_h5bp.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+/* line 54, ../sass/_h5bp.scss */
+img {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 62, ../sass/_h5bp.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 72, ../sass/_h5bp.scss */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+/* line 80, ../sass/_h5bp.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #cccccc;
+  color: black;
+  padding: 0.2em 0; }
+
+/* line 5, ../sass/_mobile-first.scss */
+#skip-link {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  /* line 40, ../sass/_mixins.scss */
+  #skip-link.focusable:active, #skip-link.focusable:focus {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%; }
+
+/* line 9, ../sass/_mobile-first.scss */
+body {
+  overflow: hidden;
+  padding-top: 0; }
+  /* line 12, ../sass/_mobile-first.scss */
+  body.toolbar {
+    padding-top: 0; }
+
+/* line 18, ../sass/_mobile-first.scss */
+#header {
+  padding: 0 1em 0 1em;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 4px solid #ebc733; }
+  /* line 22, ../sass/_mobile-first.scss */
+  #header #name-and-slogan {
+    width: 50%;
+    float: left; }
+    /* line 25, ../sass/_mobile-first.scss */
+    #header #name-and-slogan #site-name {
+      margin-top: 0;
+      margin-bottom: 1em; }
+      /* line 28, ../sass/_mobile-first.scss */
+      #header #name-and-slogan #site-name a {
+        color: #d6b015;
+        text-decoration: none; }
+
+/* line 40, ../sass/_mobile-first.scss */
+#navigation {
+  width: 50%;
+  float: left; }
+
+/* line 46, ../sass/_mobile-first.scss */
+#main-menu {
+  margin: 0 0; }
+
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 26, ../sass/mq.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 34, ../sass/mq.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  /* line 38, ../sass/mq.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 42, ../sass/mq.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 52, ../sass/mq.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  /* line 57, ../sass/mq.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /* line 62, ../sass/mq.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  /* line 67, ../sass/mq.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /* line 71, ../sass/mq.scss */
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  /* line 81, ../sass/mq.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 87, ../sass/mq.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }

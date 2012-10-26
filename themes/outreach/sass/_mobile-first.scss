@@ -1,0 +1,48 @@
+// Import base.
+@import "base";
+
+// Define all of your mobile-first SASS here.
+#skip-link {
+  @include visuallyhidden;
+}
+
+body {
+  overflow: hidden;
+  padding-top: 0;
+  &.toolbar {
+    padding-top: 0;
+  }
+}
+
+// Header
+#header {
+  padding: 0 1em 0 1em;
+  background-color: rgba($black, 0.6);
+  border-bottom: 4px solid $gold;
+  #name-and-slogan {
+    width: 50%;
+    float: left;
+    #site-name {
+      margin-top: 0;
+      margin-bottom: 1em;
+      a {
+        color: darken($gold, 10%);
+        text-decoration: none;
+      }
+    }
+    #site-slogan {
+
+    }
+  }
+}
+
+// Navigation
+#navigation {
+  width: 50%;
+  float: left;
+}
+
+// Main menu
+#main-menu {
+  margin: 0 0;
+}

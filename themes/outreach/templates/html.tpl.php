@@ -38,7 +38,7 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf->version . $rdf_namespaces; ?>> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf->version . $rdf_namespaces; ?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf->version . $rdf_namespaces; ?>> <!--<![endif]-->
- 
+
 <head<?php print $rdf->profile; ?>>
 
   <?php print $head; ?>

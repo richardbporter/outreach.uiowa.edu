@@ -2,21 +2,18 @@
 ; Theme Info -----------------------------------------------------------------
 ; required information about the theme
 
-name = Starter
-description = This is an HTML5, mobile-first, minimal starter theme. 
+name = Outreach
+description = This is an HTML5, mobile-first, minimal starter theme.
 core = 7.x
 engine = phptemplate
 
 ; Stylesheets  ---------------------------------------------------------------
 ; We use [screen] instead of [all] to avoid browser styles affecting
-; other media types. 
-
-stylesheets[screen][] = css/normalize.css
-stylesheets[screen][] = css/defaults.css
+; other media types.
 stylesheets[screen][] = css/mq.css
 
 ; Scripts  -------------------------------------------------------------------
-scripts[] = js/modernizr-2.6.2.min.js 
+scripts[] = js/modernizr-2.6.2.min.js
 
 ; Regions --------------------------------------------------------------------
 ; these content regions are available for block placement

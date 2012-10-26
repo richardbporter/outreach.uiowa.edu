@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains theme override functions and preprocess functions for the starter theme.
+ * Contains theme override functions and preprocess functions for the outreach theme.
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param $head_elements
  */
-function starter_html_head_alter(&$head_elements) {
+function outreach_html_head_alter(&$head_elements) {
   // Changes the default meta content-type tag to the shorter HTML5 version.
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
@@ -80,7 +80,7 @@ function starter_html_head_alter(&$head_elements) {
  *
  * @param $variables
  */
-function starter_preprocess_search_block_form(&$vars) {
+function outreach_preprocess_search_block_form(&$vars) {
   // Changes the search form to use the HTML5 "search" input attribute.
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }
@@ -90,7 +90,7 @@ function starter_preprocess_search_block_form(&$vars) {
  *
  * @param $vars
  */
-function starter_preprocess_html(&$vars) {
+function outreach_preprocess_html(&$vars) {
   // Create IE meta tag. Forces latest IE rendering mode and Google Chrome Frame.
   $meta_ie_render_engine = array(
     '#type' => 'html_tag',
@@ -200,7 +200,7 @@ function starter_preprocess_html(&$vars) {
  * @return
  *   A string containing the breadcrumb output.
  */
-function starter_breadcrumb($vars) {
+function outreach_breadcrumb($vars) {
   $breadcrumb = $vars['breadcrumb'];
   // Determine if we are to display the breadcrumb.
   $show_breadcrumb = theme_get_setting('breadcrumb_display');
