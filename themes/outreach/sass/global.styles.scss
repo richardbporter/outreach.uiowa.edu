@@ -227,7 +227,16 @@ var {
  * Wraps the header
  */
 #header-wrapper {
-  .container {}
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  background-color: rgba($white, 0.8);
+  border-bottom: 4px solid darken($light, 10%);
+  padding: 1em 0 0 0;
+  .container {
+    margin: 0 auto;
+  }
 }
 
 
@@ -235,6 +244,7 @@ var {
  * Wraps the nav elements
  */
 #nav-wrapper {
+  float: right;
   .container {}
 }
 
@@ -329,6 +339,7 @@ var {
     &:link,
     &:visited {
       text-decoration: none;
+      color: $black;
     }
 
     &:hover,
@@ -344,6 +355,7 @@ var {
  */
 #site-slogan {
   margin: 0;
+  float: left;
 }
 
 

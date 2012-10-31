@@ -10,11 +10,9 @@
 // Mixins
 // -----------------------------------------------------------------------------
 // To use a mixin in this file, add this line to the top of your .scss file:
-//   @import "base"; (_base.scss imports _custom.scss).
 //
 // Then to use a mixin for a particular rule, add this inside the ruleset's
 // curly brackets:
-//   @include mix-in-name;
 //
 
 //
@@ -31,6 +29,8 @@ $light:        #eee;    // table row odd active, primary link inactive hover
 $medium_light: #ebebeb; // table row even active
 $medium_dark:  #e5e5e5; // table thead
 $debug:        rgba(255, 192, 203, 0.5); // Full width wrapper test
+$white:         #ffffff;
+$black:         #000000;
 
 $thead:          $medium_dark;
 $tr_odd:         $page;
