@@ -229,14 +229,7 @@ var {
  * Wraps the header
  */
 #header-wrapper {
-  position: absolute;
-  left: 5%;
-  z-index: 1;
-  width: 90%;
-  display: block;
   background-color: rgba($white, 0.9);
-  border-left: 4px solid darken($light, 10%);
-  border-right: 4px solid darken($light, 10%);
   border-bottom: 4px solid darken($light, 10%);
   padding: 1em 0 0 0;
   .container {
@@ -323,8 +316,6 @@ var {
  * Logo
  */
 #logo {
-  display: inline;
-  float: left;
   img {
     vertical-align: bottom;
   }
@@ -334,20 +325,13 @@ var {
 /*
  * Wrapper for the site name and slogan (hgroup)
  */
-#name-and-slogan {
-  position: relative;
-}
+#name-and-slogan {}
 
 
 /*
  * Site name (h1)
  */
 #site-name {
-  display: inline;
-  margin: 0;
-  position: absolute;
-  top: 40px;
-  left: 120px;
   font-weight: normal;
   a {
 
@@ -369,10 +353,6 @@ var {
  * Site slogan (h2)
  */
 #site-slogan {
-  margin: 0;
-  position: absolute;
-  top: 80px;
-  left: 120px;
   font-style: italic;
 }
 
