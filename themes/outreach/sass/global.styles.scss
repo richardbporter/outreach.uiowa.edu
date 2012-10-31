@@ -231,9 +231,11 @@ var {
 #header-wrapper {
   background-color: rgba($white, 0.9);
   border-bottom: 4px solid darken($light, 10%);
-  padding: 1em 0 0 0;
   .container {
     margin: 0 auto;
+    #nav-wrapper {
+      margin: -30px 0 0 0;
+    }
   }
 }
 
@@ -279,11 +281,6 @@ var {
     max-width: 100%;
     margin: 0 auto;
   }
-}
-
-.not-front #content-wrapper {
-  padding-top: 200px;
-  padding-left: 60px;
 }
 
 /*
@@ -332,6 +329,7 @@ var {
  * Site name (h1)
  */
 #site-name {
+  margin: 0;
   font-weight: normal;
   a {
 
