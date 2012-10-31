@@ -142,21 +142,21 @@
             </div><!-- /end #branding -->
           <?php endif; ?>
 
+          <?php if ($page['menu_bar'] || $primary_navigation || $secondary_navigation): ?>
+            <div id="nav-wrapper">
+              <div class="container clearfix">
+                <?php print render($page['menu_bar']); ?>
+                <?php if ($primary_navigation): print $primary_navigation; endif; ?>
+                <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
+              </div>
+            </div>
+          <?php endif; ?>
+
         <?php print render($page['header']); ?>
 
         </header>
       </div>
     </div>
-
-    <?php if ($page['menu_bar'] || $primary_navigation || $secondary_navigation): ?>
-      <div id="nav-wrapper">
-        <div class="container clearfix">
-          <?php print render($page['menu_bar']); ?>
-          <?php if ($primary_navigation): print $primary_navigation; endif; ?>
-          <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
-        </div>
-      </div>
-    <?php endif; ?>
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb-wrapper">
