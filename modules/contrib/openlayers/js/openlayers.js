@@ -29,18 +29,12 @@ Drupal.settings.openlayers.maps = {};
  */
 Drupal.behaviors.openlayers = {
   'attach': function(context, settings) {
-    if (typeof(Drupal.settings.openlayers) === 'object' &&
-        Drupal.settings.openlayers.maps &&
-        !$(context).data('openlayers')) {
-      $('.openlayers-map:not(.openlayers-processed)').each(function() {
-        // By setting the stop_render variable to TRUE, this will
-        // halt the render process.  If set, one could remove this setting
-        // then call Drupal.attachBehaviors again to get it started
+      $(context).find('.openlayers-map').once('openlayers', function() {
         var map_id = $(this).attr('id');
-        if (Drupal.settings.openlayers.maps[map_id] && Drupal.settings.openlayers.maps[map_id].stop_render != true) {
-          var map = Drupal.settings.openlayers.maps[map_id];
-          $(this).addClass('openlayers-processed');
-
+        var map = Drupal.settings.openlayers.maps[map_id];
+        var $that = $(this);
+        var options = {};
+        if (map) {
           // Use try..catch for error handling.
           try {
             // Set OpenLayers language based on document language,
@@ -84,19 +78,27 @@ Drupal.behaviors.openlayers = {
             }
 
             // Initialize openlayers map
-            var openlayers = new OpenLayers.Map(map.id, options);
+            map[0] = new OpenLayers.Map(options);
 
             // Run the layer addition first
-            Drupal.openlayers.addLayers(map, openlayers);
+            Drupal.openlayers.addLayers(map, map[0]);
 
-            // Attach data to map DOM object
-            $(this).data('openlayers', {'map': map, 'openlayers': openlayers});
-
-            // Finally, attach behaviors
-            Drupal.attachBehaviors(this);
+            // attach OL behaviors to the map
+            $.each(Drupal.openlayers.behaviors, function (name, behavior) {
+              if (map.behaviors[name] && $.isFunction(behavior.attach)) {
+                $that.once(name, function () {
+                  behavior.attach($that, map, map.behaviors[name], map[0]);
+                });
+              }
+            });
 
             if ($.browser.msie) {
-              Drupal.openlayers.redrawVectors();
+              $(window).load(function () {
+                map[0].render(map.id);
+              });
+            }
+            else {
+              map[0].render(map.id);
             }
           }
           catch (e) {
@@ -109,6 +111,28 @@ Drupal.behaviors.openlayers = {
           }
         }
       });
+  },
+  // Need to remove all event handlers to avoid leaking.
+  'detach': function (context, settings, trigger) {
+    // only on unload, not serialize
+    if (trigger === 'unload') {
+      // we destroy only processed maps in the relevant context
+      $(context).find('.openlayers-map').removeOnce('openlayers', function () {
+        var map_id = $(this).attr('id');
+        var map = Drupal.settings.openlayers.maps[map_id];
+        var $that = $(this);
+
+        // detach OL behaviors from the map
+        $.each(Drupal.openlayers.behaviors, function (name, behavior) {
+          if (map.behaviors[name] && $.isFunction(behavior.detach)) {
+            $that.removeOnce(name, function () {
+              behavior.detach($that, map, map.behaviors[name], map[0], trigger);
+            });
+          }
+        });
+        // clean up to avoid leaks
+        map[0].destroy();
+      });
     }
   }
 };
@@ -117,6 +141,7 @@ Drupal.behaviors.openlayers = {
  * Collection of helper methods.
  */
 Drupal.openlayers = {
+  'behaviors': {},
   // Determine path based on format.
   'relatePath': function(path, basePath) {
     // Check for a full URL or an absolute path.
@@ -126,26 +151,6 @@ Drupal.openlayers = {
     else {
       return basePath + path;
     }
-  },
-  /*
-   * Redraw Vectors.
-   * This is necessary because various version of IE cannot draw vectors on
-   * $(document).ready()
-   */
-  'redrawVectors': function() {
-    $(window).load(
-      function() {
-        var map;
-        for (map in Drupal.settings.openlayers.maps) {
-          $.each($('#' + map).data('openlayers')
-            .openlayers.getLayersByClass('OpenLayers.Layer.Vector'),
-            function(i, layer) {
-              layer.redraw();
-            }
-          );
-        }
-      }
-    );
   },
   /**
    * Add layers to the map
@@ -281,16 +286,16 @@ Drupal.openlayers = {
       layer.addFeatures(newFeatures);
     }
   },
-  
+
   'getStyleMap': function(map, layername) {
     if (map.styles) {
       var stylesAdded = {};
-      
+
       // Grab and map base styles.
       for (var style in map.styles) {
         stylesAdded[style] = new OpenLayers.Style(map.styles[style]);
       }
-      
+
       // Implement layer-specific styles.  First default, then select.
       if (map.layer_styles !== undefined && map.layer_styles[layername]) {
         var style = map.layer_styles[layername];
@@ -300,7 +305,7 @@ Drupal.openlayers = {
         var style = map.layer_styles_select[layername];
         stylesAdded['select'] = new OpenLayers.Style(map.styles[style]);
       }
-      
+
       return new OpenLayers.StyleMap(stylesAdded);
     }
     else {
@@ -319,7 +324,7 @@ Drupal.openlayers = {
       });
     }
   },
-  
+
   'objectFromFeature': function(feature) {
     var wktFormat = new OpenLayers.Format.WKT();
     // Extract geometry either from wkt property or lon/lat properties
@@ -330,7 +335,7 @@ Drupal.openlayers = {
       return wktFormat.read('POINT(' + feature.lon + ' ' + feature.lat + ')');
     }
   },
-  
+
   /**
    * Add Behavior.
    *
@@ -349,29 +354,18 @@ Drupal.openlayers = {
    *   Drupal behavior.
    */
   'addBehavior': function(id, attach, detach) {
-    // Add as a Drupal behavior.  Add a prefix, just to be safe.
-    Drupal.behaviors['openlayers_auto_' + id] = {
-      attach: function (context, settings) {
-        var data = $(context).data('openlayers');
-        
-        // Ensure that there is a map and that the appropriate
-        // behavior exists.  Need "data &&" to avoid js crash 
-        // when data is empty
-        var localBehavior = data && data.map.behaviors[id];
-        
+    // Add as a map level behavior.
+    Drupal.openlayers.behaviors[id] = {
+      attach: function (context, map, behavior, openlayers) {
         // Ensure scope in the attach callback
         var that = this;
-        if (localBehavior) {
-          $(context).once('openlayers-' + id, function () {
-            attach.apply(that, [data, data.map.behaviors[id], context, settings]);
-          });
-        }
+        attach.apply(that, [{map: map, openlayers: openlayers}, behavior]);
       },
       // Maybe we need a little more handling here.
       detach: detach
     };
   },
-  
+
   /**
    * Add Control.
    *
