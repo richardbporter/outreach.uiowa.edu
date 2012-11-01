@@ -242,6 +242,9 @@ var {
     margin: 0 auto;
     #nav-wrapper {
       margin: -42px 0 0 0;
+      nav {
+        margin-right: 0;
+      }
       ul {
         li {
           a {
@@ -347,7 +350,7 @@ var {
  * Site name (h1)
  */
 #site-name {
-  margin: -10px 20px 0 0;
+  margin: -10px 20px 0 -10px;
   float: left;
   a {
 
