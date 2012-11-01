@@ -226,15 +226,29 @@ var {
 
 
 /*
+ * Wraps the UI bar
+ */
+#ui-wrapper {
+  box-shadow: none;
+}
+
+/*
  * Wraps the header
  */
 #header-wrapper {
-  background-color: rgba($white, 0.9);
-  border-bottom: 4px solid darken($light, 10%);
+  @include background-image(linear-gradient($grey, darken($grey, 5%)));
+  border-bottom: 4px solid darken($gold, 10%);
   .container {
     margin: 0 auto;
     #nav-wrapper {
-      margin: -30px 0 0 0;
+      margin: -42px 0 0 0;
+      ul {
+        li {
+          a {
+            color: $light;
+          }
+        }
+      }
     }
   }
 }
@@ -309,6 +323,10 @@ var {
 #branding {}
 
 
+#ui-wrapper #ui-logo {
+  border-top: none;
+}
+
 /*
  * Logo
  */
@@ -329,14 +347,17 @@ var {
  * Site name (h1)
  */
 #site-name {
-  margin: 0;
-  font-weight: normal;
+  margin: -10px 20px 0 0;
+  float: left;
   a {
 
     &:link,
     &:visited {
+      font-size: 160%;
       text-decoration: none;
-      color: $black;
+      color: lighten($grey, 60%);
+      font-weight: normal;
+      @include text-shadow(0 3px 8px $black);
     }
 
     &:hover,
@@ -351,7 +372,12 @@ var {
  * Site slogan (h2)
  */
 #site-slogan {
+  float: left;
+  margin: 18px 0 0 0;
+  color: $black;
+  font-weight: normal;
   font-style: italic;
+  @include text-shadow(0 2px 3px $grey);
 }
 
 
