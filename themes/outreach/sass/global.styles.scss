@@ -249,6 +249,9 @@ var {
         li {
           a {
             color: $light;
+            &.active {
+              text-decoration: underline;
+            }
           }
         }
       }
