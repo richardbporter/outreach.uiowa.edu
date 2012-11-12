@@ -358,6 +358,7 @@ var {
   @include ir();
   width: 300px;
   height: 45px;
+  background-image: url("images/logo.png") center no-repeat;
   a {
 
     &:link,
