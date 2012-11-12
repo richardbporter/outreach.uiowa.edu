@@ -355,6 +355,9 @@ var {
 #site-name {
   margin: -10px 20px 0 -10px;
   float: left;
+  @include ir();
+  width: 300px;
+  height: 45px;
   a {
 
     &:link,
@@ -567,13 +570,15 @@ a {
   }
 }
 
-.openlayers-popup a {
-  font-weight: bold;
-  color: $white;
-  border-bottom: 1px solid lighten($light, 20%);
-  &:hover {
-    border-bottom: 1px solid darken($medium_dark, 20%);
-    text-decoration: none;
+.openlayers-popup {
+  a {
+    font-weight: bold;
+    color: $white;
+    border-bottom: 1px solid lighten($light, 20%);
+    &:hover {
+      border-bottom: 1px solid darken($medium_dark, 20%);
+      text-decoration: none;
+    }
   }
 }
 
