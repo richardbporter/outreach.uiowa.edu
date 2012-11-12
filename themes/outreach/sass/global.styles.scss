@@ -241,7 +241,7 @@ var {
   .container {
     margin: 0 auto;
     #nav-wrapper {
-      margin: -42px 0 0 0;
+      margin: -38px 0 0 0;
       nav {
         margin-right: 0;
       }
@@ -353,23 +353,16 @@ var {
  * Site name (h1)
  */
 #site-name {
-  margin: -10px 20px 0 -10px;
+  margin: 5px 20px 0 -10px;
   float: left;
-  @include ir();
-  width: 300px;
-  height: 45px;
-  background-image: url("images/logo.png") center no-repeat;
   a {
-
     &:link,
     &:visited {
-      font-size: 160%;
-      text-decoration: none;
-      color: lighten($grey, 60%);
-      font-weight: normal;
-      @include text-shadow(0 3px 8px $black);
+      @include ir();
+      width: 300px;
+      height: 45px;
+      background: url("images/logo.png") center no-repeat;
     }
-
     &:hover,
     &:focus {
       text-decoration: none;
@@ -383,7 +376,7 @@ var {
  */
 #site-slogan {
   float: left;
-  margin: 18px 0 0 0;
+  margin: 16px 0 0 0;
   color: $black;
   font-weight: normal;
   font-style: italic;
