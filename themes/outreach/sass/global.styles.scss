@@ -296,10 +296,16 @@ var {
 /*
  * Wraps the main content column
  */
-#content-wrapper {
+.front #content-wrapper {
   .container {
     max-width: 100%;
     margin: 0 auto;
+  }
+}
+
+.not-front #content-wrapper {
+  .container {
+    max-width: 1140px;
   }
 }
 
