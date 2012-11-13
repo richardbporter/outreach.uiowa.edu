@@ -24,14 +24,14 @@
  * Smartphone sizes and down
  */
 @media only screen and (max-width: 480px) {
-  /* 
+  /*
    * Float Region blocks example:
    * In smaller screen sizes we can remove the float and widths so all blocks
    * stack instead of displaying horizonally. The selector used here is an
    * "attribute selector" which will match on any float block class. Use your
    * inspector or Firebug to get the classes from the page output if you need
    * more granular control over block alignment and stacking.
-   * 
+   *
    * "Float Region blocks" is an extension for floating blocks in regions, see
    * your themes appearance settings, under the Extensions tab.
    */
@@ -42,9 +42,19 @@
   }
 }
 /*
- * Tablet sizes and up
+ * Tablet sizes and down
  */
-/* @media only screen and (min-width: 768px) {} */
+@media only screen and (max-width: 1076px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.custom\.scss}line{font-family:\0000360}}
+  #site-slogan {
+    margin: 16px 0 0 -20px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.custom\.scss}line{font-family:\0000364}}
+  #header-wrapper .container #nav-wrapper nav ul li a {
+    font-size: 80%;
+  }
+}
 /*
  * Desktops/laptops and up
  */
