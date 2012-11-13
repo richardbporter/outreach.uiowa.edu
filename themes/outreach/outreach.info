@@ -35,7 +35,7 @@
   ; "less than IE9" but "not IEMobile 7".
   ; Uncomment the following to use the included IE styleseet:
 
-  ; ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)][] = css/lt-ie9.css
+  ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)][] = css/lt-ie9.css
 
 
   ; Unset Module CSS or other Stylesheets
@@ -104,12 +104,12 @@
   ; and main content column layout - these are controlled via theme settings for
   ; Page layouts. The Panels layouts are for Panels module and are controlled via
   ; the theme settings for Panels layouts.
-  
+
   ; There are seperate directories for each type of layout and an example
   ; plugin for each. These don't do very much, they are just examples, you can
   ; use the core themes layout plugins as a guide. Please see the _README in the
   ; layouts directory of this subtheme.
-  
+
   ; Remove the semicolon to umcomment and clear the sites cache.
 
   ; Page layout plugins
