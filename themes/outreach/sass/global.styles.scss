@@ -297,7 +297,7 @@ var {
 /*
  * Wraps the main content column
  */
-.front #content-wrapper {
+.front #content-wrapper, .page-house #content-wrapper {
   .container {
     max-width: 100%;
     margin: 0 auto;
