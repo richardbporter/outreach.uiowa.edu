@@ -173,7 +173,7 @@ var {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003308}}
-.not-front #content-wrapper .container {
+.node-type-county #content-wrapper .container {
   max-width: 1140px;
 }
 
