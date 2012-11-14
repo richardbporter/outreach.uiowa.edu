@@ -1984,3 +1984,7 @@ tr.error {
     width: auto;
   }
 }
+
+.field-type-computed .field-item:after {
+  content: "%";
+}

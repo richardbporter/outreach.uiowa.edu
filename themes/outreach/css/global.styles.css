@@ -1312,3 +1312,8 @@ div.messages ul {
   min-height: 260px;
   width: auto;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031988}}
+.field-type-computed .field-item:after {
+  content: "%";
+}
