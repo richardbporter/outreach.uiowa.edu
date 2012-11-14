@@ -308,12 +308,16 @@ var {
   }
 }
 
-.node-type-county #content-wrapper {
-  background: url("images/grid12.png") $light;
-  .container {
-    max-width: 1140px;
-    background-color: $white;
-    @include box-shadow(rgba($grey, 0.4) 0 0 10px 4px);
+.node-type-county, .node-type-senate-district, .node-type-house-district, .node-type-congressional-district {
+  #content-wrapper {
+    background: url("images/grid12.png") $light;
+    .container {
+      max-width: 1140px;
+      background-color: $white;
+      color: $grey;
+      @include box-shadow(rgba($grey, 0.3) 0 0 10px 4px);
+      @include noise();
+    }
   }
 }
 
