@@ -1988,3 +1988,8 @@ tr.error {
 .field-type-computed .field-item:after {
   content: "%";
 }
+
+.field-type-image figure {
+  float: right;
+  margin-top: 75px;
+}

@@ -1317,3 +1317,9 @@ div.messages ul {
 .field-type-computed .field-item:after {
   content: "%";
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031992}}
+.field-type-image figure {
+  float: right;
+  margin-top: 75px;
+}
