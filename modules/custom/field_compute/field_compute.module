@@ -158,6 +158,66 @@ function computed_field_field_percentage_pharmacists_compute(&$entity_field, $en
 }
 
 /**
+ * Callback function for field_percentage_physicians display.
+ *
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_percentage_physicians_display($field, $entity_field_item, $entity_lang, $langcode) {
+  $display_output = $entity_field_item['value'] . '%';
+}
+
+/**
+ * Callback function for field_percentage_assistants display.
+ *
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_percentage_assistants_display($field, $entity_field_item, $entity_lang, $langcode) {
+  $display_output = $entity_field_item['value'] . '%';
+}
+
+/**
+ * Callback function for field_percentage_dentists display.
+ *
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_percentage_dentists_display($field, $entity_field_item, $entity_lang, $langcode) {
+  $display_output = $entity_field_item['value'] . '%';
+}
+
+/**
+ * Callback function for field_percentage_nurses display.
+ *
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_percentage_nurses_display($field, $entity_field_item, $entity_lang, $langcode) {
+  $display_output = $entity_field_item['value'] . '%';
+}
+
+/**
+ * Callback function for field_percentage_nurses display.
+ *
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_percentage_nurses_display($field, $entity_field_item, $entity_lang, $langcode) {
+  $display_output = $entity_field_item['value'] . '%';
+}
+
+/**
  * Helper function to sum an array of fields of integer type.
  *
  * @param $entity_type
