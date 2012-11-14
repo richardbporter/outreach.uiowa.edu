@@ -193,7 +193,7 @@ function _field_compute_calculate_percentage($sum, $total) {
     return 0;
   }
   else {
-    $percentage = $sum['value'] / $total['value'];
+    $percentage = round(($sum['value'] / $total['value']) * 100);
   }
 
   // Return the percentage.
