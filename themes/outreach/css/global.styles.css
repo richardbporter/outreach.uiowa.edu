@@ -180,15 +180,15 @@ var {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003311}}
 .node-type-county #content-wrapper {
-  background: url("images/grid11.png") #eeeeee;
+  background: url("images/grid12.png") #eeeeee;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003313}}
 .node-type-county #content-wrapper .container {
   max-width: 1140px;
   background-color: white;
-  -webkit-box-shadow: rgba(59, 59, 60, 0.1) 0 0 4px 6px;
-  -moz-box-shadow: rgba(59, 59, 60, 0.1) 0 0 4px 6px;
-  box-shadow: rgba(59, 59, 60, 0.1) 0 0 4px 6px;
+  -webkit-box-shadow: rgba(59, 59, 60, 0.4) 0 0 10px 4px;
+  -moz-box-shadow: rgba(59, 59, 60, 0.4) 0 0 10px 4px;
+  box-shadow: rgba(59, 59, 60, 0.4) 0 0 10px 4px;
 }
 
 /*
@@ -253,8 +253,8 @@ var {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003391}}
 #site-slogan {
   float: left;
-  margin: 16px 0 0 0;
-  color: black;
+  margin: 16px 0 0 -10px;
+  color: #999999;
   font-weight: normal;
   font-style: italic;
   text-shadow: 0 2px 3px #3b3b3c;

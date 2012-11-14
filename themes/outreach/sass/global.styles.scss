@@ -309,11 +309,11 @@ var {
 }
 
 .node-type-county #content-wrapper {
-  background: url("images/grid11.png") $light;
+  background: url("images/grid12.png") $light;
   .container {
     max-width: 1140px;
     background-color: $white;
-    @include box-shadow(rgba($grey, 0.1) 0 0 4px 6px);
+    @include box-shadow(rgba($grey, 0.4) 0 0 10px 4px);
   }
 }
 
@@ -390,8 +390,8 @@ var {
  */
 #site-slogan {
   float: left;
-  margin: 16px 0 0 0;
-  color: $black;
+  margin: 16px 0 0 -10px;
+  color: darken($white, 40%);
   font-weight: normal;
   font-style: italic;
   @include text-shadow(0 2px 3px $grey);
