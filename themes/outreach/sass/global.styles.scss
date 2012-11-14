@@ -133,6 +133,10 @@ abbr {}
 
 acronym {}
 
+hr {
+  border: solid rgba($grey, 0.3);
+  border-width: 1px 0 0;
+}
 
 pre,
 code,
