@@ -1989,6 +1989,10 @@ tr.error {
   content: "%";
 }
 
+.field-name-field-enrollment-total .field-item:after {
+  content: "";
+}
+
 .field-type-image figure {
   float: right;
   margin-top: 75px;
