@@ -206,14 +206,14 @@ function computed_field_field_percentage_nurses_display($field, $entity_field_it
 }
 
 /**
- * Callback function for field_percentage_nurses display.
+ * Callback function for field_percentage_pharmacists display.
  *
  * @param  $field
  * @param  $entity_field_item
  * @param  $entity_lang
  * @param  $langcode
  */
-function computed_field_field_percentage_nurses_display($field, $entity_field_item, $entity_lang, $langcode) {
+function computed_field_field_percentage_pharmacists_display($field, $entity_field_item, $entity_lang, $langcode) {
   $display_output = $entity_field_item['value'] . '%';
 }
 
