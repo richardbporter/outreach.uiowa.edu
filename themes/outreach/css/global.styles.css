@@ -253,7 +253,7 @@ var {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003391}}
 #site-slogan {
   float: left;
-  margin: 16px 0 0 -10px;
+  margin: 16px 0 0 -20px;
   color: #999999;
   font-weight: normal;
   font-style: italic;
