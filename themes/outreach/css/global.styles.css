@@ -755,7 +755,7 @@ ul.action-links {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031083}}
 .field-label {
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 300 !important;
   font-family: inherit;
   line-height: inherit;
   margin-bottom: 0;
