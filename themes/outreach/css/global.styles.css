@@ -173,7 +173,7 @@ var {
  * Wraps the main content column
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003305}}
-.front #content-wrapper .container, .page-house .container, .page-senate .container, .page-congressional #content-wrapper .container {
+.front #content-wrapper .container, .page-house #content-wrapper .container, .page-senate #content-wrapper .container, .page-congressional #content-wrapper .container {
   max-width: 100%;
   margin: 0 auto;
 }
