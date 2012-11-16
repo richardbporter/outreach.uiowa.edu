@@ -1350,3 +1350,23 @@ div.messages ul {
   float: right;
   margin-top: 75px;
 }
+
+/* =============================================================================
+ *   Maps
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032015}}
+#map {
+  width: 100%;
+  height: 800px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032020}}
+.marker {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  margin-left: -51px;
+  margin-top: -51px;
+  pointer-events: all;
+  position: absolute;
+}
