@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * This module handles the applicaiton logic for the Outreach maps.
+ */
+
+/**
+ * Implements template_preprocess_page().
+ *
+ * @param $variables
+ */
+function outreach_maps_preprocess_page(&$variables) {
+  // The county map is the default map for the front page.
+  if ($variables['is_front'] == TRUE) {
+    // Get the path to the module.
+    $path = drupal_get_path('module', 'outreach_maps');
+
+    // Add the necessary scripts.
+    drupal_add_js('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '98'));
+    drupal_add_js($path . '/js/counties.jquery.js', array('weight' => '99'));
+
+    // Add default styles for controls.
+    drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css', array('type' => 'external'));
+  }
+}
