@@ -1362,11 +1362,18 @@ div.messages ul {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032020}}
 .marker {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #000;
-  margin-left: -51px;
-  margin-top: -51px;
-  pointer-events: all;
   position: absolute;
+  pointer-events: all;
+  color: black;
+  margin-top: -10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032027}}
+.harrison {
+  margin-left: -20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032031}}
+.polk {
+  margin-left: -10px;
 }

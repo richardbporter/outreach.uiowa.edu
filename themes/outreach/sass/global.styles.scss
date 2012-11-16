@@ -2018,11 +2018,16 @@ tr.error {
 }
 
 .marker {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #000;
-  margin-left: -51px;
-  margin-top: -51px;
-  pointer-events: all;
-  position: absolute;
+  position: absolute;  // Markers have to be positioned absolutely.
+  pointer-events: all;  // Allows for interactive markers.
+  color: $black;
+  margin-top: -10px;
+}
+
+.harrison {
+  margin-left: -20px;
+}
+
+.polk {
+  margin-left: -10px;
 }
