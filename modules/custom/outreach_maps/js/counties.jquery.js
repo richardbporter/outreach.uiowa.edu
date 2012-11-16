@@ -6,7 +6,7 @@
 // Namespace jQuery to avoid conflicts.
 (function($) {
   // Initialize the county map.
-  Drupal.initializeCountyMap = function() {
+  Drupal.initializeMap = function() {
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-eyt0wixl');
 
@@ -23,49 +23,70 @@
     // Add the UI components.
     map.ui.zoomer.add();
 
-    // Center the map over Iowa (Polk County) and zoom in.
+    // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
+    //map.setPanLimits([{ lat: 41.2053, lon: -77.1827 }, { lat: 43.0040, lon: -108.1540 }]);
     map.setZoomRange(7, 9);
-    map.zoom(8, true);
+
+    // Zoom in one step closer if the viewport permits.
+    if ($(window).width() > 1290) {
+      map.zoom(8, true);
+    }
+    else {
+      map.zoom(7, true);
+    }
 
     // Add the counties layer.
     map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
 
-    // Create the county marker layer.
-    var countyMarkers = mapbox.markers.layer();
+    // Create the county markers layer with custom factory function.
+    var countyMarkers = mapbox.markers.layer().features([{
+      // Polk County
+      "geometry": { "type": "Point", "coordinates": [-93.5697204, 41.6842807]},
+      "properties": { "text": "Polk" }
+    }, {
+      // Harrison County
+      "geometry": { "type": "Point", "coordinates": [-95.8271491, 41.6885843]},
+      "properties": { "text": "Harrison" }
+    }]).factory(function(f) {
+      // Define a new factory function. This takes a GeoJSON object
+      // as its input and returns an element that represents the point.
+      var countyLink = document.createElement('a');
+      $(countyLink).addClass('marker use-ajax');
+      $(countyLink).addClass(f.properties.text.toLowerCase());
+      $(countyLink).text(f.properties.text);
+      $(countyLink).attr('href', 'outreach-maps/county/' + f.properties.text.toLowerCase());
+      return countyLink;
+    });
 
-    // Bind interactions to markers in this layer.
-    mapbox.markers.interaction(countyMarkers);
+     // Create county interaction.
+    var countyInteraction = mapbox.markers.interaction(countyMarkers);
+    countyInteraction.showOnHover(false);
 
-    // Add the marker layer to the map.
+    // Add the couny markers layer to the map.
     map.addLayer(countyMarkers);
 
-    // Add a marker to the countyMarkers layer. Geometry is lon, lat.
-    countyMarkers.add_feature({
-        geometry: {
-            coordinates: [-91.5887572, 41.6687272]
-        },
-        properties: {
-          'marker-color': '#000',
-          'marker-symbol': 'star-stroked',
-          title: 'Example Marker',
-          description: 'This is a single marker.'
-        }
+     // Set a custom formatter for tooltips
+    // Provide a function that returns html to be used in tooltip
+    countyInteraction.formatter(function(f) {
+        var o = '<h2>' + f.properties.text + '</h2>';
+        o += 'This content should be returned via AJAX.';
+
+        return o;
     });
 
     // Add attribution.
     map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
 
     // Log the map object.
-    console.log(johnsonCounty, johnsonCountyCoords, countyMarkers);
+    console.log(map);
   };
 
-  // Attach countyMap behavior.
-  Drupal.behaviors.countyMap = {
+  // Attach initializeMap behavior.
+  Drupal.behaviors.initializeMap = {
     attach: function(context, settings) {
-      $('#map', context).once('countyMap', function() {
-        // Initialize the map.
-        Drupal.initializeCountyMap();
+      $('#map', context).once('initializeMap', function() {
+        Drupal.initializeMap();
       });
     }
   }
