@@ -16,8 +16,9 @@ function outreach_maps_preprocess_page(&$variables) {
     $path = drupal_get_path('module', 'outreach_maps');
 
     // Add the necessary scripts.
-    drupal_add_js('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '98'));
-    drupal_add_js($path . '/js/counties.jquery.js', array('weight' => '99'));
+    drupal_add_js('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '90'));
+    drupal_add_js($path . '/js/counties.jquery.js', array('weight' => '91'));
+    drupal_add_js('misc/ajax.js', array('weight' => '92'));
 
     // Add default styles for controls.
     drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css', array('type' => 'external'));
@@ -30,31 +31,17 @@ function outreach_maps_preprocess_page(&$variables) {
  * @return array items
  */
 function outreach_maps_menu() {
-  $items['/outreach-maps/county/%'] = array(
-    'page_callback' => '_outreach_maps_load_county',
-    'page_arguments' => array(2),
-  );
+   $items = array();
+
+  // A menu callback is required when using ajax outside of the Form API.
+  $items['outreach-maps/county/%'] = array(
+    'page callback' => '_outreach_maps_load_county',
+    'page arguments' => array(2),
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file' => 'outreach_maps.callbacks.inc',
+);
 
   return $items;
-}
-
-/**
- * Helper function to return county data.
- *
- * @param  string $county
- * @return array  $data
- */
-function _outreach_maps_load_county($county, $type = 'ajax') {
-  $data = array();
-
-  // Build an EFQ that returns a county node;
-  $county_query = new EntityFieldQuery();
-  $county_query->entityCondition('entity_type', 'node')
-  ->entityCondition('bundle', 'county')
-  ->propertyCondition('title', $county);
-
-  // Execute the query.
-  $county_result = $county_query->execute();
-
-  return $data;
 }
