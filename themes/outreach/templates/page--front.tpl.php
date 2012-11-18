@@ -221,6 +221,7 @@
               </header>
             <?php endif; ?>
 
+            <!-- Begin map. -->
             <div id="map">
               <a href="#" class="zoomer zoomin">+</a>
               <a href="#" class="zoomer zoomout">-</a>
