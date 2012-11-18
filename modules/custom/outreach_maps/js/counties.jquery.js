@@ -29,7 +29,7 @@
     map.setZoomRange(7, 9);
 
     // Zoom in one step closer if the viewport permits.
-    if ($(window).width() > 1290) {
+    if ($(window).width() > 1290 && $(window).height() > 900) {
       map.zoom(8, true);
     }
     else {
@@ -55,22 +55,23 @@
       $(countyLink).addClass('marker use-ajax');
       $(countyLink).addClass(f.properties.text.toLowerCase());
       $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', 'outreach-maps/county/' + f.properties.text.toLowerCase());
+      $(countyLink).attr('href', 'outreach-maps/county/' + f.properties.text.toLowerCase() + '/nojs');
       return countyLink;
     });
 
      // Create county interaction.
     var countyInteraction = mapbox.markers.interaction(countyMarkers);
+
+    // Turn off hover tooltips.
     countyInteraction.showOnHover(false);
 
     // Add the couny markers layer to the map.
     map.addLayer(countyMarkers);
 
-     // Set a custom formatter for tooltips
-    // Provide a function that returns html to be used in tooltip
+     // Set a custom formatter for tooltips.
+    // Provide a function that returns html to be used in tooltip.
     countyInteraction.formatter(function(f) {
         var o = '<h2>' + f.properties.text + '</h2>';
-        o += 'This content should be returned via AJAX.';
 
         return o;
     });
@@ -78,8 +79,8 @@
     // Add attribution.
     map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
 
-    // Log the map object.
-    console.log(map);
+    // Logging.
+    console.log(Drupal.settings);
   };
 
   // Attach initializeMap behavior.
