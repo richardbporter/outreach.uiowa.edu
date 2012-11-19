@@ -2020,14 +2020,19 @@ tr.error {
 .marker {
   position: absolute;  // Markers have to be positioned absolutely.
   pointer-events: all;  // Allows for interactive markers.
-  color: $black;
+  color: $grey;
   margin-top: -10px;
+  @include text-shadow(4px 4px 3px rgba($grey, 0.6));
 }
 
 .marker-popup {
   span {
     display: block;
   }
+}
+
+.ajax-progress-throbber {
+  display: none !important;
 }
 
 
