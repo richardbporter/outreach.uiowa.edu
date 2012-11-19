@@ -52,10 +52,10 @@
       // Define a new factory function. This takes a GeoJSON object
       // as its input and returns an element that represents the point.
       var countyLink = document.createElement('a');
-      $(countyLink).addClass('marker use-ajax');
+      $(countyLink).addClass('marker');
       $(countyLink).addClass(f.properties.text.toLowerCase());
       $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', 'outreach-maps/county/' + f.properties.text.toLowerCase() + '/nojs');
+      $(countyLink).attr('href', '#');
       return countyLink;
     });
 
@@ -71,16 +71,26 @@
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
     countyInteraction.formatter(function(f) {
-        var o = '<h2>' + f.properties.text + '</h2>';
-
-        return o;
+      var o = '';
+      $.ajax({
+        url: '/outreach-maps/county/' + f.properties.text.toLowerCase(),
+        dataType: 'json',
+        //async: false,
+        success: function(county) {
+          console.log(county, 'county');
+          o += '<h2>' + county.name + '</h2>';
+          o += '<div class="hh">';
+          o += '<strong>Hometown Hawkeyes</strong>';
+          o += '<span>Students: ' + county.students + '</span>';
+          o += '<span>Alumni: ' + county.alumni + '</span>';
+          o += '</div>';
+        }
+      });
+      return o;
     });
 
     // Add attribution.
     map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
-
-    // Logging.
-    console.log(Drupal.settings);
   };
 
   // Attach initializeMap behavior.
