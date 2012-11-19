@@ -7,18 +7,87 @@
 /**
  * Callback for hook_menu().
  *
+ * This does not handle non-JavaScript users since JS is required to even see
+ * the map.
+ *
  * @param $county
  *   The name of the county.
  *
  * @return $data
- *   JSON formatted data.
+ *   Formatted HTML data.
  */
-function _outreach_maps_load_county($title, $type = 'ajax') {
-  $output = 'Delivered via AJAX.';
+function _outreach_maps_load_county($title) {
+  // Create an EFQ to get county info.
+  $query = new EntityFieldQuery();
 
-  // Deliver the AJAX response.
-  $commands = array();
-  $commands[] = ajax_command_html('.marker-popup', $output);
-  $page = array('#type' => 'ajax', '#commands' => $commands);
-  ajax_deliver($page);
+  // Set some conditions.
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'county')
+  ->propertyCondition('status', 1)
+  ->propertyCondition('title', $title);
+
+  // Execute the query.
+  $result = $query->execute();
+
+  // Check for a result.
+  if (isset($result['node'])) {
+    $keys = array_keys($result['node']);
+
+    // node_load expects a single $nid parameter, not an array.
+    $nid = $keys[0];
+    $node = node_load($nid);
+
+    // Get and format all fields.
+    $enrollment = number_format($node->field_enrollment_total['und']['0']['value']);
+    $alumni = number_format($node->field_alumni['und']['0']['value']);
+    $uihc_clinic_vists = number_format($node->field_uihc_clinic_visits['und']['0']['value']);
+    $uihc_outreach_vists = number_format($node->field_uihc_outreach_visits['und']['0']['value']);
+
+    // Hometown Hawkeye fields.
+    $hometown_hawkeyes = array(
+      'Students: ' . $enrollment,
+      'Alumni: ' . $alumni,
+    );
+
+    // Healthcare fields.
+    $healthcare = array(
+      'UIHC clinic visits: ' . $uihc_clinic_vists,
+      'UIHC outreach visits: ' . $uihc_outreach_vists,
+    );
+
+    // Create a data variable to pass back to the page.
+    // Begin Hometown Hawkeyes.
+    $data = '<div class="accordion">';
+    $data .= '<h6>Hometown Hawkeyes</h6>';
+    $data .= '<div>';
+
+    // Theme HH fields and append to data.
+    $data .= theme('item_list', array('items' => $hometown_hawkeyes, 'attributes' => array('class' => 'test')));
+
+    // End Hometown Hawkeyes.
+    $data .= '</div>';
+
+    // Begin Healthcare.
+    $data .= '<h6>Healthcare</h6>';
+    $data .= '<div>';
+
+    // Theme HH fields and append to data.
+    $data .= theme('item_list', array('items' => $healthcare, 'attributes' => array('class' => 'test')));
+
+    // End Healthcare.
+    $data .= '</div>';
+
+    $data .= l('See More »', 'county/' . $title);
+    // End accordion.
+    $data .= '</div>';
+
+    // Deliver the AJAX response.
+    $commands = array();
+    $commands[] = ajax_command_after('.marker-popup h2', $data);
+    $page = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($page);
+  }
+  else {
+    return 'County not found.';
+  }
 }
