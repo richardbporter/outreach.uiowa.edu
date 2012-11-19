@@ -55,7 +55,7 @@
       $(countyLink).addClass('marker use-ajax');
       $(countyLink).addClass(f.properties.text.toLowerCase());
       $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase);
+      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase());
       return countyLink;
     });
 
