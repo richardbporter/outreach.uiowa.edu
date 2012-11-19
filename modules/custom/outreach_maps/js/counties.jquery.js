@@ -75,7 +75,7 @@
       $.ajax({
         url: '/outreach-maps/county/' + f.properties.text.toLowerCase(),
         dataType: 'json',
-        //async: false,
+        async: false,
         success: function(county) {
           console.log(county, 'county');
           o += '<h2>' + county.name + '</h2>';
@@ -98,6 +98,16 @@
     attach: function(context, settings) {
       $('#map', context).once('initializeMap', function() {
         Drupal.initializeMap();
+      });
+    }
+  };
+
+  Drupal.behaviors.disableLinks = {
+    attach: function(context, settings) {
+      $('.marker', context).once('disableLinks', function() {
+        $('.marker').click(function(event) {
+          event.preventDefault();
+        });
       });
     }
   };
