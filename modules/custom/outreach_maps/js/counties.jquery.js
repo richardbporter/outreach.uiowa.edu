@@ -29,7 +29,7 @@
     map.setZoomRange(7, 9);
 
     // Zoom in one step closer if the viewport permits.
-    if ($(window).width() > 1290 && $(window).height() > 900) {
+    if ($(window).width() > 1290 && $(window).height() > 800) {
       map.zoom(8, true);
     }
     else {
@@ -90,5 +90,6 @@
         Drupal.initializeMap();
       });
     }
-  }
+  };
+
 })(jQuery);
