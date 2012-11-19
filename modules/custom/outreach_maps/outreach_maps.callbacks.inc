@@ -13,33 +13,12 @@
  * @return $data
  *   JSON formatted data.
  */
-function _outreach_maps_load_county($title) {
-  $query = new EntityFieldQuery();
+function _outreach_maps_load_county($title, $type = 'ajax') {
+  $output = 'Delivered via AJAX.';
 
-  $query->entityCondition('entity_type', 'node')
-  ->entityCondition('bundle', 'county')
-  ->propertyCondition('status', 1)
-  ->propertyCondition('title', $title);
-
-  $result = $query->execute();
-
-  if (isset($result['node'])) {
-    $key = array_keys($result['node']);
-
-    // node_load expects a single $nid parameter, not an array.
-    $nid = $key[0];
-    $county = node_load($nid);
-
-    $data = array(
-      'name' => ucfirst($title),
-      'year' => format_date(strtotime($county->field_year['und']['0']['value']), 'custom', 'Y'),
-      'students' => $county->field_enrollment_total['und']['0']['value'],
-      'alumni' => $county->field_alumni['und']['0']['value'],
-    );
-
-    return drupal_json_output($data);
-  }
-  else {
-    return 'No county found.';
-  }
+  // Deliver the AJAX response.
+  $commands = array();
+  $commands[] = ajax_command_html('.marker-popup', $output);
+  $page = array('#type' => 'ajax', '#commands' => $commands);
+  ajax_deliver($page);
 }

@@ -18,7 +18,7 @@ function outreach_maps_preprocess_page(&$variables) {
     // Add the necessary scripts.
     drupal_add_js('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '90'));
     drupal_add_js($path . '/js/counties.jquery.js', array('weight' => '91'));
-
+    drupal_add_js('misc/ajax.js', array('weight' => '92'));
 
     // Add default styles for controls.
     drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css', array('type' => 'external'));

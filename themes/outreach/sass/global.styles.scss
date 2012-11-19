@@ -2024,8 +2024,10 @@ tr.error {
   margin-top: -10px;
 }
 
-.marker-popup span {
-  display: block;
+.marker-popup {
+  span {
+    display: block;
+  }
 }
 
 

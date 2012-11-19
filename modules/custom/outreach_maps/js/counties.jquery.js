@@ -42,20 +42,20 @@
     // Create the county markers layer with custom factory function.
     var countyMarkers = mapbox.markers.layer().features([{
       // Polk County
-      "geometry": { "type": "Point", "coordinates": [-93.5697204, 41.6842807]},
-      "properties": { "text": "Polk" }
+      'geometry': { 'type': 'Point', 'coordinates': [-93.5697204, 41.6842807]},
+      'properties': { 'text': 'Polk' }
     }, {
       // Harrison County
-      "geometry": { "type": "Point", "coordinates": [-95.8271491, 41.6885843]},
-      "properties": { "text": "Harrison" }
+      'geometry': { 'type': 'Point', 'coordinates': [-95.8271491, 41.6885843]},
+      'properties': { 'text': 'Harrison' }
     }]).factory(function(f) {
       // Define a new factory function. This takes a GeoJSON object
       // as its input and returns an element that represents the point.
       var countyLink = document.createElement('a');
-      $(countyLink).addClass('marker');
+      $(countyLink).addClass('marker use-ajax');
       $(countyLink).addClass(f.properties.text.toLowerCase());
       $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', '#');
+      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase);
       return countyLink;
     });
 
@@ -71,21 +71,7 @@
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
     countyInteraction.formatter(function(f) {
-      var o = '';
-      $.ajax({
-        url: '/outreach-maps/county/' + f.properties.text.toLowerCase(),
-        dataType: 'json',
-        async: false,
-        success: function(county) {
-          console.log(county, 'county');
-          o += '<h2>' + county.name + '</h2>';
-          o += '<div class="hh">';
-          o += '<strong>Hometown Hawkeyes</strong>';
-          o += '<span>Students: ' + county.students + '</span>';
-          o += '<span>Alumni: ' + county.alumni + '</span>';
-          o += '</div>';
-        }
-      });
+      var o = '<h2>' + f.properties.text + '</h2>';
       return o;
     });
 
@@ -98,16 +84,6 @@
     attach: function(context, settings) {
       $('#map', context).once('initializeMap', function() {
         Drupal.initializeMap();
-      });
-    }
-  };
-
-  Drupal.behaviors.disableLinks = {
-    attach: function(context, settings) {
-      $('.marker', context).once('disableLinks', function() {
-        $('.marker').click(function(event) {
-          event.preventDefault();
-        });
       });
     }
   };

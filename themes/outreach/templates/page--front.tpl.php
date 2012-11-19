@@ -225,6 +225,7 @@
             <div id="map">
               <a href="#" class="zoomer zoomin">+</a>
               <a href="#" class="zoomer zoomout">-</a>
+              <div class="marker-popup"></div>
             </div>
 
             <?php print render($title_suffix); // Prints page level contextual links ?>
