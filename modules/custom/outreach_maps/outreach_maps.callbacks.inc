@@ -56,8 +56,9 @@ function _outreach_maps_load_county($title) {
     );
 
     // Create a data variable to pass back to the page.
+    $data = '';
+
     // Begin Hometown Hawkeyes.
-    $data = '<div class="accordion">';
     $data .= '<h6>Hometown Hawkeyes</h6>';
     $data .= '<div>';
 
@@ -78,8 +79,6 @@ function _outreach_maps_load_county($title) {
     $data .= '</div>';
 
     $data .= l('See More »', 'county/' . $title);
-    // End accordion.
-    $data .= '</div>';
 
     // Deliver the AJAX response.
     $commands = array();

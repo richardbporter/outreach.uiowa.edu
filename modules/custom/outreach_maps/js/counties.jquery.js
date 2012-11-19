@@ -71,7 +71,7 @@
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
     countyInteraction.formatter(function(f) {
-      var o = '<h2>' + f.properties.text + '</h2>';
+      var o = '<h2>' + f.properties.text + ' County</h2>';
       return o;
     });
 
