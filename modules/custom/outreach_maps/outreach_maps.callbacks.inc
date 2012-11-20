@@ -10,8 +10,8 @@
  * This does not handle non-JavaScript users since JS is required to even see
  * the map.
  *
- * @param $county
- *   The name of the county.
+ * @param $title
+ *   The name of the county, title of the node.
  *
  * @return $data
  *   Formatted HTML data.
@@ -82,7 +82,9 @@ function _outreach_maps_load_county($title) {
 
     // Deliver the AJAX response.
     $commands = array();
-    $commands[] = ajax_command_after('.marker-popup h2', $data);
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'hide');
+    $commands[] = ajax_command_html('#' . $title . '-content', $data);
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'fadeIn', array('fast'));
     $page = array('#type' => 'ajax', '#commands' => $commands);
     ajax_deliver($page);
   }
