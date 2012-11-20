@@ -39,9 +39,8 @@
     // Add the counties layer.
     map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
 
-    // Initalize the features array and push the county GeoJSON object onto it.
-    var features = [];
-    features.push($.parseJSON(Drupal.settings.countyGeoJSON));
+    // Initalize the features variable and parse the county GeoJSON object into it.
+    var features = $.parseJSON(Drupal.settings.countyGeoJSON);
 
     // Create the county markers layer with custom factory function.
     var countyMarkers = mapbox.markers.layer().features(features).factory(function(f) {
