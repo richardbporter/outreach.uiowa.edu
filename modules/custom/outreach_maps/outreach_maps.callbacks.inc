@@ -20,6 +20,11 @@ function _outreach_maps_load_county($title) {
   // Replace the hypen with a space for the EFQ.
   $name = str_replace('-', ' ', $title);
 
+  // Manually replace O'Brien for now.
+  if ($name == 'obrien') {
+    $name = "O'Brien";
+  }
+
   // Create an EFQ to get county info.
   $query = new EntityFieldQuery();
 
