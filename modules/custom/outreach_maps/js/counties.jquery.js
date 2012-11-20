@@ -50,7 +50,7 @@
       $(countyLink).addClass('marker use-ajax');
       $(countyLink).addClass(f.properties.text.toLowerCase().replace(' ', '-'));
       $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-'));
+      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));
 
       // Add function that centers marker on click.
         MM.addEvent(countyLink, 'click', function(e) {
@@ -76,14 +76,8 @@
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
     countyInteraction.formatter(function(f) {
-      var o ='';
-      if (f.properties.text == 'OBrien') {
-        o = "<h2>O'Brien County</h2>";
-      }
-      else {
-        o = '<h2>' + f.properties.text + ' County</h2>';
-      }
-      o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-') + '-content"></div>';
+      var o = '<h2>' + f.properties.text + ' County</h2>';
+      o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
 

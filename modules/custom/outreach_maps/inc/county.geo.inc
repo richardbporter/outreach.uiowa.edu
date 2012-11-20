@@ -507,7 +507,7 @@ function _outreach_maps_return_county_geo_json() {
       'coordinates' => array(-95.6256244, 43.0837455),
     ),
     'properties' => array(
-      'text' => 'OBrien',
+      'text' => "O'Brien",
     )),
     array('geometry' => array(
       'type' => 'Point',
