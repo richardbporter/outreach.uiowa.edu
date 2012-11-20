@@ -39,16 +39,12 @@
     // Add the counties layer.
     map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
 
+    // Initalize the features array and push the county GeoJSON object onto it.
+    var features = [];
+    features.push($.parseJSON(Drupal.settings.countyGeoJSON));
+
     // Create the county markers layer with custom factory function.
-    var countyMarkers = mapbox.markers.layer().features([{
-      // Polk County
-      'geometry': { 'type': 'Point', 'coordinates': [-93.5697204, 41.6842807]},
-      'properties': { 'text': 'Polk' }
-    }, {
-      // Harrison County
-      'geometry': { 'type': 'Point', 'coordinates': [-95.8271491, 41.6885843]},
-      'properties': { 'text': 'Harrison' }
-    }]).factory(function(f) {
+    var countyMarkers = mapbox.markers.layer().features(features).factory(function(f) {
       // Define a new factory function. This takes a GeoJSON object
       // as its input and returns an element that represents the point.
       var countyLink = document.createElement('a');
@@ -72,6 +68,7 @@
     // Provide a function that returns html to be used in tooltip.
     countyInteraction.formatter(function(f) {
       var o = '<h2>' + f.properties.text + ' County</h2>';
+      o += '<div id="' + f.properties.text.toLowerCase() + '-content"></div>';
       return o;
     });
 
