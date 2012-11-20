@@ -11,12 +11,15 @@
  * the map.
  *
  * @param $title
- *   The name of the county, title of the node.
+ *   The name of the county, title of the node. Hyphenated in URL.
  *
  * @return $data
  *   Formatted HTML data.
  */
 function _outreach_maps_load_county($title) {
+  // Replace the hypen with a space for the EFQ.
+  $name = str_replace('-', ' ', $title);
+
   // Create an EFQ to get county info.
   $query = new EntityFieldQuery();
 
@@ -24,7 +27,7 @@ function _outreach_maps_load_county($title) {
   $query->entityCondition('entity_type', 'node')
   ->entityCondition('bundle', 'county')
   ->propertyCondition('status', 1)
-  ->propertyCondition('title', $title);
+  ->propertyCondition('title', $name);
 
   // Execute the query.
   $result = $query->execute();

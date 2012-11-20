@@ -48,9 +48,9 @@
       // as its input and returns an element that represents the point.
       var countyLink = document.createElement('a');
       $(countyLink).addClass('marker use-ajax');
-      $(countyLink).addClass(f.properties.text.toLowerCase());
+      $(countyLink).addClass(f.properties.text.toLowerCase().replace(' ', '-'));
       $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase());
+      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-'));
 
       // Add function that centers marker on click.
         MM.addEvent(countyLink, 'click', function(e) {
@@ -77,7 +77,7 @@
     // Provide a function that returns html to be used in tooltip.
     countyInteraction.formatter(function(f) {
       var o = '<h2>' + f.properties.text + ' County</h2>';
-      o += '<div id="' + f.properties.text.toLowerCase() + '-content"></div>';
+      o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-') + '-content"></div>';
       return o;
     });
 
