@@ -62,7 +62,7 @@ function _outreach_maps_load_county($title) {
     $data .= '<h6>Hometown Hawkeyes</h6>';
     $data .= '<div>';
 
-    // Theme HH fields and append to data.
+    // Theme Hometown Hawkeyes fields and append to data.
     $data .= theme('item_list', array('items' => $hometown_hawkeyes, 'attributes' => array('class' => 'test')));
 
     // End Hometown Hawkeyes.
@@ -72,7 +72,7 @@ function _outreach_maps_load_county($title) {
     $data .= '<h6>Healthcare</h6>';
     $data .= '<div>';
 
-    // Theme HH fields and append to data.
+    // Theme Healthcare fields and append to data.
     $data .= theme('item_list', array('items' => $healthcare, 'attributes' => array('class' => 'test')));
 
     // End Healthcare.
