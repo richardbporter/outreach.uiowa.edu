@@ -51,6 +51,16 @@
       $(countyLink).addClass(f.properties.text.toLowerCase());
       $(countyLink).text(f.properties.text);
       $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase());
+
+      // Add function that centers marker on click.
+        MM.addEvent(countyLink, 'click', function(e) {
+            map.ease.location({
+              lat: f.geometry.coordinates[1],
+              lon: f.geometry.coordinates[0]
+            }).zoom(map.zoom()).optimal();
+        });
+
+
       return countyLink;
     });
 
