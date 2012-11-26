@@ -241,7 +241,7 @@ var {
  * Wraps the header
  */
 #header-wrapper {
-  @include background-image(linear-gradient($grey, darken($grey, 5%)));
+  background-color: rgba(darken($grey, 5%), 0.7);
   border-bottom: 4px solid darken($gold, 10%);
   .container {
     margin: 0 auto;
@@ -262,6 +262,14 @@ var {
       }
     }
   }
+}
+
+.map #header-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
 }
 
 
@@ -2028,6 +2036,10 @@ tr.error {
   @include text-shadow(1px 1px 1px rgba($grey, 0.4));
 }
 
+.seven {
+  font-size: 75%;
+}
+
 .marker-popup {
   span {
 
@@ -2035,6 +2047,10 @@ tr.error {
   h6 {
     margin: 0 0;
   }
+}
+
+.zoomer {
+  top: 80px;
 }
 
 .ajax-progress-throbber {
