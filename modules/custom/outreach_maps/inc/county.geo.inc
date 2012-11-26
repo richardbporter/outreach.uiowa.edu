@@ -719,7 +719,7 @@ function _outreach_maps_return_county_geo_json() {
  */
 function _outreach_maps_csv_array() {
   $row = 1;
-  if (($handle = fopen(drupal_get_path('module', 'outreach_maps') . '/inc/center.csv', 'r')) !== FALSE) {
+  if (($handle = fopen(drupal_get_path('module', 'outreach_maps') . '/inc/county.csv', 'r')) !== FALSE) {
       while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
           echo "array('geometry' => array(\n  'type' => 'Point',\n  'coordinates' => array(". $data[2] . ", " . $data[1] . "), \n),\n'properties' => array(\n  'text' => '" . $data[0] . "',\n)),\n";
           $row++;
