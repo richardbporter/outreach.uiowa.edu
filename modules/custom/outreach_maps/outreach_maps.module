@@ -28,7 +28,7 @@ function outreach_maps_preprocess_page(&$variables) {
     drupal_add_js(array('countyGeoJSON' => $county_geo_json), 'setting');
 
     // Main script for county map.
-    drupal_add_js($path . '/js/counties.jquery.js', array('weight' => '91'));
+    drupal_add_js($path . '/js/county.jquery.js', array('weight' => '91'));
 
     // Adding drupal.ajax manually because it needs to run after the map script.
     drupal_add_js('misc/ajax.js', array('weight' => '92'));
