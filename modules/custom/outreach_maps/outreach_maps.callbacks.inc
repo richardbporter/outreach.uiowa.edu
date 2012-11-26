@@ -2,6 +2,8 @@
 /**
  * @file
  * This file contains all the callback and helper functions for the Outreach Maps module.
+ *
+ * @TODO: Translate HTML for security reasons. Render Arrays?
  */
 
 /**
