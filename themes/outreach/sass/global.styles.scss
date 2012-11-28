@@ -2041,6 +2041,11 @@ tr.error {
   @include text-shadow(1px 1px 1px rgba($grey, 0.4));
 }
 
+.house-marker {
+  position: absolute;
+  pointer-events: all;
+}
+
 .seven {
   font-size: 70%;
   margin-left: -10px;
