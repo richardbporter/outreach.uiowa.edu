@@ -1,6 +1,6 @@
 /**
  * @file
- * This file holds the application code for the counties map.
+ * This file holds the application code for the county map.
  */
 
 // Namespace jQuery to avoid conflicts.
@@ -28,7 +28,7 @@
     map.setZoomRange(7, 9);
     map.zoom(8, true);
 
-    // Add the counties layer.
+    // Add the county layer.
     map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
 
     // Initalize the features variable and parse the county GeoJSON object into it.
