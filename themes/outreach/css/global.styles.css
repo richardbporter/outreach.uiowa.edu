@@ -87,7 +87,7 @@ var {
  * wrapper to style the entire main content column
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003188}}
-.map #main-content {
+.node-type-map #main-content {
   margin-left: 0;
   margin-right: 0;
 }
@@ -153,7 +153,7 @@ var {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003272}}
-.map #header-wrapper {
+.node-type-map #header-wrapper {
   position: absolute;
   top: 0;
   left: 0;
