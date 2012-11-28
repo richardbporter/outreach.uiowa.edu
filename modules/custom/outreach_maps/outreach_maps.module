@@ -26,7 +26,7 @@ function outreach_maps_preprocess_page(&$variables) {
       // County map.
       if ($variables['map'] == 'county') {
         // Include the county GeoJSON file.
-        module_load_include('inc', 'outreach_maps', 'inc/county.geo');
+        module_load_include('inc', 'outreach_maps', 'inc/geo/county.geo');
 
         // Get the county GeoJSON from the include file.
         $county_geo_json = _outreach_maps_return_county_geo_json();
@@ -77,7 +77,7 @@ function outreach_maps_menu() {
     'access callback' => 'user_access',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
-    'file' => 'outreach_maps.callbacks.inc',
+    'file' => 'inc/outreach_maps.callbacks.inc',
 );
 
   return $items;
