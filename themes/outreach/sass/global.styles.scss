@@ -185,6 +185,11 @@ var {
  */
 #main-content {}
 
+.map #main-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 
 /*
  * Wraps the content region, avoid applying styles to this wrapper, its used
@@ -271,7 +276,6 @@ var {
   width: 100%;
   z-index: 99;
 }
-
 
 /*
  * Wraps the nav elements
@@ -2023,8 +2027,9 @@ tr.error {
  *   own repo at the moment.
  * ========================================================================== */
 #map {
+  position: absolute;
   width: 100%;
-  height: 800px;
+  height: 100%;
 }
 
 .marker {
@@ -2037,7 +2042,8 @@ tr.error {
 }
 
 .seven {
-  font-size: 75%;
+  font-size: 70%;
+  margin-left: -10px;
 }
 
 .marker-popup {
