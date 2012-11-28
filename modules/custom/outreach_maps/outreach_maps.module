@@ -10,8 +10,9 @@
  * @param array $variables
  */
 function outreach_maps_preprocess_page(&$variables) {
-  // If this is a map page.
+  // If node type is set.
   if (isset($variables['node']->type)) {
+    // If this is a map page.
     if ($variables['node']->type == 'map') {
       // Add map page template suggestion hook.
       $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
