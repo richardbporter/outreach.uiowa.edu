@@ -12,49 +12,51 @@
 function outreach_maps_preprocess_page(&$variables) {
   // If this is a map page.
   if (isset($variables['node']->type)) {
-    // Add map page template suggestion hook.
-    $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
+    if ($variables['node']->type == 'map') {
+      // Add map page template suggestion hook.
+      $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
 
-    // Create a map variable.
-    $variables['map'] = $variables['node']->field_map['und']['0']['value'];
+      // Create a map variable.
+      $variables['map'] = $variables['node']->field_map['und']['0']['value'];
 
-    // Get the path to the outreach_maps module.
-    $path = drupal_get_path('module', 'outreach_maps');
+      // Get the path to the outreach_maps module.
+      $path = drupal_get_path('module', 'outreach_maps');
 
-    // County map.
-    if ($variables['map'] == 'county') {
-      // Include the county GeoJSON file.
-      module_load_include('inc', 'outreach_maps', 'inc/county.geo');
+      // County map.
+      if ($variables['map'] == 'county') {
+        // Include the county GeoJSON file.
+        module_load_include('inc', 'outreach_maps', 'inc/county.geo');
 
-      // Get the county GeoJSON from the include file.
-      $county_geo_json = _outreach_maps_return_county_geo_json();
+        // Get the county GeoJSON from the include file.
+        $county_geo_json = _outreach_maps_return_county_geo_json();
 
-      // Include mapbox.js.
-      drupal_add_js('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '90'));
+        // Include mapbox.js.
+        drupal_add_js('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '90'));
 
-      // Add jQuery UI components.
-      drupal_add_library('system', 'ui.dialog');
+        // Add jQuery UI components.
+        drupal_add_library('system', 'ui.dialog');
 
-      // County geo data with GeoJSON passed in Drupal.settings.
-      drupal_add_js(array('countyGeoJSON' => $county_geo_json), 'setting');
+        // County geo data with GeoJSON passed in Drupal.settings.
+        drupal_add_js(array('countyGeoJSON' => $county_geo_json), 'setting');
 
-      // Main script for county map.
-      drupal_add_js($path . '/js/county.jquery.js', array('weight' => '91'));
+        // Main script for county map.
+        drupal_add_js($path . '/js/county.jquery.js', array('weight' => '91'));
 
-      // Adding drupal.ajax manually because it needs to run after the map script.
-      drupal_add_js('misc/ajax.js', array('weight' => '92'));
+        // Adding drupal.ajax manually because it needs to run after the map script.
+        drupal_add_js('misc/ajax.js', array('weight' => '92'));
 
-      // Add default styles for MapBox controls.
-      drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css', array('type' => 'external'));
-    }
-    elseif ($variables['map'] == 'house') {
-      // House map.
-    }
-    elseif ($variables['map'] == 'senate') {
-      // Senate map.
-    }
-    elseif ($variables['map'] == 'congressional') {
-      // Congressional map.
+        // Add default styles for MapBox controls.
+        drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css', array('type' => 'external'));
+      }
+      elseif ($variables['map'] == 'house') {
+        // House map.
+      }
+      elseif ($variables['map'] == 'senate') {
+        // Senate map.
+      }
+      elseif ($variables['map'] == 'congressional') {
+        // Congressional map.
+      }
     }
   }
 }
