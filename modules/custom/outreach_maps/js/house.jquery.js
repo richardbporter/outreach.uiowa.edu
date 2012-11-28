@@ -39,10 +39,14 @@
       // Define a new factory function. This takes a GeoJSON object
       // as its input and returns an element that represents the point.
       var houseLink = document.createElement('a');
-      $(houseLink).addClass('marker use-ajax');
+      $(houseLink).addClass('house-marker use-ajax');
       $(houseLink).addClass(f.properties.text);
       $(houseLink).text(f.properties.text);
       $(houseLink).attr('href', '/outreach-maps/house/' + f.properties.text);
+
+      // var houseImage = document.createElement('img');
+      // $(houseImage).attr('src', '/sites/outreach.uiowa.edu/themes/outreach/images/marker-24.png');
+      // $(houseLink).html(houseImage);
 
       // Add function that centers marker on click.
         MM.addEvent(houseLink, 'click', function(e) {
@@ -68,7 +72,7 @@
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
     houseInteraction.formatter(function(f) {
-      var o = '<h2>' + f.properties.text + ' house</h2>';
+      var o = '<h2>House District ' + f.properties.text + '</h2>';
       o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
