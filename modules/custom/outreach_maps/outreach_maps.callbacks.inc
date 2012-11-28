@@ -104,7 +104,10 @@ function _outreach_maps_load_county($title) {
 }
 
 /**
- * Helper function to convert CSV data to an array foramtted for GeoJSON.
+ * Helper function to convert CSV data to an array formatted for GeoJSON. Writes
+ * output to screen. Intended to be used once to create GeoJSON files.
+ *
+ * @param $file
  */
 function _outreach_maps_csv_array($file) {
   $row = 1;
