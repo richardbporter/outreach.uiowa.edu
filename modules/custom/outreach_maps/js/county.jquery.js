@@ -39,7 +39,7 @@
       // Define a new factory function. This takes a GeoJSON object
       // as its input and returns an element that represents the point.
       var countyLink = document.createElement('a');
-      $(countyLink).addClass('marker use-ajax');
+      $(countyLink).addClass('house-marker use-ajax');
       $(countyLink).addClass(f.properties.text.toLowerCase().replace(' ', '-'));
       $(countyLink).text(f.properties.text);
       $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));

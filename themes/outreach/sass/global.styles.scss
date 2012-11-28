@@ -2032,7 +2032,7 @@ tr.error {
   height: 100%;
 }
 
-.marker {
+.house-marker {
   position: absolute;  // Markers have to be positioned absolutely.
   pointer-events: all;  // Allows for interactive markers.
   color: $grey;
@@ -2042,8 +2042,10 @@ tr.error {
 }
 
 .house-marker {
-  position: absolute;
-  pointer-events: all;
+  position: absolute;  // Markers have to be positioned absolutely.
+  pointer-events: all;  // Allows for interactive markers.
+  color: $grey;
+  @include text-shadow(1px 1px 1px rgba($grey, 0.4));
 }
 
 .seven {
