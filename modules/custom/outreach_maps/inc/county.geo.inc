@@ -713,17 +713,3 @@ function _outreach_maps_return_county_geo_json() {
   // Return formatted JSON.
   return $county_geo_json;
 }
-
-/**
- * Helper function to convert CSV data to an array foramtted for GeoJSON.
- */
-function _outreach_maps_csv_array() {
-  $row = 1;
-  if (($handle = fopen(drupal_get_path('module', 'outreach_maps') . '/inc/county.csv', 'r')) !== FALSE) {
-      while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-          echo "array('geometry' => array(\n  'type' => 'Point',\n  'coordinates' => array(". $data[2] . ", " . $data[1] . "), \n),\n'properties' => array(\n  'text' => '" . $data[0] . "',\n)),\n";
-          $row++;
-      }
-      fclose($handle);
-  }
-}
