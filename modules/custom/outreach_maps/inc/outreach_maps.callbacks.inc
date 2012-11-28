@@ -1,0 +1,121 @@
+<?php
+/**
+ * @file
+ * This file contains all the callback and helper functions for the Outreach Maps module.
+ *
+ * @TODO: Translate HTML for security reasons. Render Arrays?
+ */
+
+/**
+ * Callback for hook_menu().
+ *
+ * This does not handle non-JavaScript users since JS is required to even see
+ * the map.
+ *
+ * @param $title
+ *   The name of the county, title of the node. Hyphenated in URL.
+ *
+ * @return $data
+ *   Formatted HTML data.
+ */
+function _outreach_maps_load_county($title) {
+  // Replace the hypen with a space for the EFQ.
+  $name = str_replace('-', ' ', $title);
+
+  // Manually replace O'Brien for now.
+  if ($name == 'obrien') {
+    $name = "O'Brien";
+  }
+
+  // Create an EFQ to get county info.
+  $query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'county')
+  ->propertyCondition('status', 1)
+  ->propertyCondition('title', $name);
+
+  // Execute the query.
+  $result = $query->execute();
+
+  // Check for a result.
+  if (isset($result['node'])) {
+    $keys = array_keys($result['node']);
+
+    // node_load expects a single $nid parameter, not an array.
+    $nid = $keys[0];
+    $node = node_load($nid);
+
+    // Get and format all fields.
+    $enrollment = number_format($node->field_enrollment_total['und']['0']['value']);
+    $alumni = number_format($node->field_alumni['und']['0']['value']);
+    $uihc_clinic_vists = number_format($node->field_uihc_clinic_visits['und']['0']['value']);
+    $uihc_outreach_vists = number_format($node->field_uihc_outreach_visits['und']['0']['value']);
+
+    // Hometown Hawkeye fields.
+    $hometown_hawkeyes = array(
+      'Students: ' . $enrollment,
+      'Alumni: ' . $alumni,
+    );
+
+    // Healthcare fields.
+    $healthcare = array(
+      'UIHC clinic visits: ' . $uihc_clinic_vists,
+      'UIHC outreach visits: ' . $uihc_outreach_vists,
+    );
+
+    // Create a data variable to pass back to the page.
+    $data = '';
+
+    // Begin Hometown Hawkeyes.
+    $data .= '<h6>Hometown Hawkeyes</h6>';
+    $data .= '<div>';
+
+    // Theme Hometown Hawkeyes fields and append to data.
+    $data .= theme('item_list', array('items' => $hometown_hawkeyes, 'attributes' => array('class' => 'test')));
+
+    // End Hometown Hawkeyes.
+    $data .= '</div>';
+
+    // Begin Healthcare.
+    $data .= '<h6>Healthcare</h6>';
+    $data .= '<div>';
+
+    // Theme Healthcare fields and append to data.
+    $data .= theme('item_list', array('items' => $healthcare, 'attributes' => array('class' => 'test')));
+
+    // End Healthcare.
+    $data .= '</div>';
+
+    $data .= l('See More »', 'county/' . $title);
+
+    // Deliver the AJAX response.
+    $commands = array();
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'hide');
+    $commands[] = ajax_command_html('#' . $title . '-content', $data);
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'fadeIn', array('fast'));
+    $page = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($page);
+  }
+  else {
+    return 'County not found.';
+  }
+}
+
+/**
+ * Helper function to convert CSV data to an array formatted for GeoJSON. Writes
+ * output to screen. Intended to be used once to create GeoJSON files.
+ *
+ * @param $file
+ */
+function _outreach_maps_csv_array($file) {
+  $row = 1;
+  if (($handle = fopen(drupal_get_path('module', 'outreach_maps') . '/inc/csv/' . $file . '.csv', 'r')) !== FALSE) {
+      while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+          echo "array('geometry' => array(\n  'type' => 'Point',\n  'coordinates' => array(". $data[2] . ", " . $data[1] . "), \n),\n'properties' => array(\n  'text' => '" . $data[0] . "',\n)),\n";
+          $row++;
+      }
+      fclose($handle);
+  }
+}
