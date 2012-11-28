@@ -6,7 +6,7 @@
 // Namespace jQuery to avoid conflicts.
 (function($) {
   // Initialize the county map.
-  Drupal.initializeMap = function() {
+  Drupal.countyMap = function() {
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-eyt0wixl');
 
@@ -25,16 +25,8 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    //map.setPanLimits([{ lat: 41.2053, lon: -77.1827 }, { lat: 43.0040, lon: -108.1540 }]);
     map.setZoomRange(7, 9);
-
-    // Zoom in one step closer if the viewport permits.
-    if ($(window).width() > 1290 && $(window).height() > 800) {
-      map.zoom(8, true);
-    }
-    else {
-      map.zoom(7, true);
-    }
+    map.zoom(8, true);
 
     // Add the counties layer.
     map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
@@ -81,15 +73,25 @@
       return o;
     });
 
+    // Reduce font size for zoom level 7.
+    map.addCallback("zoomed", function(map, zoomOffset) {
+      var z = Math.round(map.zoom());
+      if (zoomOffset == -1 && z == 7) {
+        $('.marker').addClass('seven');
+      } else {
+        $('.marker').removeClass('seven');
+      }
+    });
+
     // Add attribution.
     map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  // Attach initializeMap behavior.
-  Drupal.behaviors.initializeMap = {
+  // Attach countyMap behavior.
+  Drupal.behaviors.countyMap = {
     attach: function(context, settings) {
-      $('#map', context).once('initializeMap', function() {
-        Drupal.initializeMap();
+      $('#map', context).once('countyMap', function() {
+        Drupal.countyMap();
       });
     }
   };
