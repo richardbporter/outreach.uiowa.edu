@@ -21,15 +21,20 @@ function outreach_maps_preprocess_html(&$variables) {
  * @param array $variables
  */
 function outreach_maps_preprocess_page(&$variables) {
+  // Add per-content type page suggestion.
+  if (isset($variables['node']->type)) {
+    $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
+  }
+
+  // Get the path to the outreach_maps module.
+  $path = drupal_get_path('module', 'outreach_maps');
+
   // The county map is the default map for the front page.
   if ($variables['is_front'] == TRUE) {
     // Include the county GeoJSON file.
     module_load_include('inc', 'outreach_maps', 'inc/county.geo');
 
-    // Get the path to the outreach_maps module.
-    $path = drupal_get_path('module', 'outreach_maps');
-
-    // Get the county GeoJSON and pass it to the script in Drupal.settings.
+    // Get the county GeoJSON from the include file.
     $county_geo_json = _outreach_maps_return_county_geo_json();
 
     // Include mapbox.js.
@@ -38,7 +43,7 @@ function outreach_maps_preprocess_page(&$variables) {
     // Add jQuery UI components.
     drupal_add_library('system', 'ui.dialog');
 
-    // County geo data.
+    // County geo data with GeoJSON passed in Drupal.settings.
     drupal_add_js(array('countyGeoJSON' => $county_geo_json), 'setting');
 
     // Main script for county map.
