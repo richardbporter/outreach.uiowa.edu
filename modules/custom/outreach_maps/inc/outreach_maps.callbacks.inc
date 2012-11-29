@@ -65,35 +65,41 @@ function _outreach_maps_load_county($title) {
       'UIHC outreach visits: ' . $uihc_outreach_vists,
     );
 
-    // Create a data variable to pass back to the page.
-    $data = '';
+    // Create a render array to store the fields.
+    $data = array(
+      'hometown_hawkeyes_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Hometown Hawkeyes</h6>',
+      ),
+      'hometown_hawkeyes_list' => array(
+        '#items' => $hometown_hawkeyes,
+        '#theme' => 'item_list',
+      ),
+      'healthcare_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Healthcare</h6>',
+      ),
+      'healthcare_list' => array(
+        '#items' => $healthcare,
+        '#theme' => 'item_list',
+      ),
+      'more_link' => array(
+        '#text' => t('See More »'),
+        '#path' => 'county/' . $title,
+        '#theme' => 'link',
+        '#options' => array(
+          'attributes' => array(),
+        ),
+      ),
+    );
 
-    // Begin Hometown Hawkeyes.
-    $data .= '<h6>Hometown Hawkeyes</h6>';
-    $data .= '<div>';
-
-    // Theme Hometown Hawkeyes fields and append to data.
-    $data .= theme('item_list', array('items' => $hometown_hawkeyes, 'attributes' => array('class' => 'test')));
-
-    // End Hometown Hawkeyes.
-    $data .= '</div>';
-
-    // Begin Healthcare.
-    $data .= '<h6>Healthcare</h6>';
-    $data .= '<div>';
-
-    // Theme Healthcare fields and append to data.
-    $data .= theme('item_list', array('items' => $healthcare, 'attributes' => array('class' => 'test')));
-
-    // End Healthcare.
-    $data .= '</div>';
-
-    $data .= l('See More »', 'county/' . $title);
+    // Convert the render array to markup to pass to ajax_command_html().
+    $html = drupal_render($data);
 
     // Deliver the AJAX response.
     $commands = array();
     $commands[] = ajax_command_invoke('#' . $title . '-content', 'hide');
-    $commands[] = ajax_command_html('#' . $title . '-content', $data);
+    $commands[] = ajax_command_html('#' . $title . '-content', $html);
     $commands[] = ajax_command_invoke('#' . $title . '-content', 'fadeIn', array('fast'));
     $page = array('#type' => 'ajax', '#commands' => $commands);
     ajax_deliver($page);
