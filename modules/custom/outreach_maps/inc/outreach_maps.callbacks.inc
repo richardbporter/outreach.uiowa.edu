@@ -1,22 +1,23 @@
 <?php
 /**
  * @file
- * This file contains all the callback and helper functions for the Outreach Maps module.
  *
- * @TODO: Translate HTML for security reasons. Render Arrays?
+ * This file contains all the callback and helper functions for the Outreach
+ * Maps module.
+ *
+ * Each map has a separate callback since the fields are so different.
+ *
+ * These functions do not handle non-JavaScript users since JS
+ * is required to even see the map.
  */
 
 /**
- * Callback for hook_menu().
- *
- * This does not handle non-JavaScript users since JS is required to even see
- * the map.
+ * Callback for county map in hook_menu().
  *
  * @param $title
  *   The name of the county, title of the node. Hyphenated in URL.
  *
- * @return $data
- *   Formatted HTML data.
+ * @return JSON AJAX response
  */
 function _outreach_maps_load_county($title) {
   // Replace the hypen with a space for the EFQ.
@@ -106,6 +107,288 @@ function _outreach_maps_load_county($title) {
   }
   else {
     return 'County not found.';
+  }
+}
+
+/**
+ * Callback for house map in hook_menu().
+ *
+ * @param $title
+ *   The number of the house district, title of the node. Hyphenated in URL.
+ *
+ * @return JSON AJAX response
+ */
+function _outreach_maps_load_house($title) {
+  // Replace the hypen with a space for the EFQ.
+  $name = str_replace('-', ' ', $title);
+
+  // Create an EFQ to get house info.
+  $query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'house')
+  ->propertyCondition('status', 1)
+  ->propertyCondition('title', $name);
+
+  // Execute the query.
+  $result = $query->execute();
+
+  // Check for a result.
+  if (isset($result['node'])) {
+    $keys = array_keys($result['node']);
+
+    // node_load expects a single $nid parameter, not an array.
+    $nid = $keys[0];
+    $node = node_load($nid);
+
+    // Get and format all fields.
+    $enrollment = number_format($node->field_enrollment_total['und']['0']['value']);
+    $alumni = number_format($node->field_alumni['und']['0']['value']);
+    $uihc_clinic_vists = number_format($node->field_uihc_clinic_visits['und']['0']['value']);
+    $uihc_outreach_vists = number_format($node->field_uihc_outreach_visits['und']['0']['value']);
+
+    // Hometown Hawkeye fields.
+    $hometown_hawkeyes = array(
+      'Students: ' . $enrollment,
+      'Alumni: ' . $alumni,
+    );
+
+    // Healthcare fields.
+    $healthcare = array(
+      'UIHC clinic visits: ' . $uihc_clinic_vists,
+      'UIHC outreach visits: ' . $uihc_outreach_vists,
+    );
+
+    // Create a render array to store the fields.
+    $data = array(
+      'hometown_hawkeyes_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Hometown Hawkeyes</h6>',
+      ),
+      'hometown_hawkeyes_list' => array(
+        '#items' => $hometown_hawkeyes,
+        '#theme' => 'item_list',
+      ),
+      'healthcare_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Healthcare</h6>',
+      ),
+      'healthcare_list' => array(
+        '#items' => $healthcare,
+        '#theme' => 'item_list',
+      ),
+      'more_link' => array(
+        '#text' => t('See More »'),
+        '#path' => 'house/' . $title,
+        '#theme' => 'link',
+        '#options' => array(
+          'attributes' => array(),
+        ),
+      ),
+    );
+
+    // Convert the render array to markup to pass to ajax_command_html().
+    $html = drupal_render($data);
+
+    // Deliver the AJAX response.
+    $commands = array();
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'hide');
+    $commands[] = ajax_command_html('#' . $title . '-content', $html);
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'fadeIn', array('fast'));
+    $page = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($page);
+  }
+  else {
+    return 'House District not found.';
+  }
+}
+
+/**
+ * Callback for senate map in hook_menu().
+ *
+ * @param $title
+ *   The number of the senate district, title of the node. Hyphenated in URL.
+ *
+ * @return JSON AJAX response
+ */
+function _outreach_maps_load_senate($title) {
+  // Replace the hypen with a space for the EFQ.
+  $name = str_replace('-', ' ', $title);
+
+  // Create an EFQ to get senate info.
+  $query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'senate')
+  ->propertyCondition('status', 1)
+  ->propertyCondition('title', $name);
+
+  // Execute the query.
+  $result = $query->execute();
+
+  // Check for a result.
+  if (isset($result['node'])) {
+    $keys = array_keys($result['node']);
+
+    // node_load expects a single $nid parameter, not an array.
+    $nid = $keys[0];
+    $node = node_load($nid);
+
+    // Get and format all fields.
+    $enrollment = number_format($node->field_enrollment_total['und']['0']['value']);
+    $alumni = number_format($node->field_alumni['und']['0']['value']);
+    $uihc_clinic_vists = number_format($node->field_uihc_clinic_visits['und']['0']['value']);
+    $uihc_outreach_vists = number_format($node->field_uihc_outreach_visits['und']['0']['value']);
+
+    // Hometown Hawkeye fields.
+    $hometown_hawkeyes = array(
+      'Students: ' . $enrollment,
+      'Alumni: ' . $alumni,
+    );
+
+    // Healthcare fields.
+    $healthcare = array(
+      'UIHC clinic visits: ' . $uihc_clinic_vists,
+      'UIHC outreach visits: ' . $uihc_outreach_vists,
+    );
+
+    // Create a render array to store the fields.
+    $data = array(
+      'hometown_hawkeyes_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Hometown Hawkeyes</h6>',
+      ),
+      'hometown_hawkeyes_list' => array(
+        '#items' => $hometown_hawkeyes,
+        '#theme' => 'item_list',
+      ),
+      'healthcare_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Healthcare</h6>',
+      ),
+      'healthcare_list' => array(
+        '#items' => $healthcare,
+        '#theme' => 'item_list',
+      ),
+      'more_link' => array(
+        '#text' => t('See More »'),
+        '#path' => 'senate/' . $title,
+        '#theme' => 'link',
+        '#options' => array(
+          'attributes' => array(),
+        ),
+      ),
+    );
+
+    // Convert the render array to markup to pass to ajax_command_html().
+    $html = drupal_render($data);
+
+    // Deliver the AJAX response.
+    $commands = array();
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'hide');
+    $commands[] = ajax_command_html('#' . $title . '-content', $html);
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'fadeIn', array('fast'));
+    $page = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($page);
+  }
+  else {
+    return 'Senate District not found.';
+  }
+}
+
+/**
+ * Callback for congressional map in hook_menu().
+ *
+ * @param $title
+ *   The number of the congressional district, title of the node. Hyphenated in URL.
+ *
+ * @return JSON AJAX response
+ */
+function _outreach_maps_load_congressional($title) {
+  // Replace the hypen with a space for the EFQ.
+  $name = str_replace('-', ' ', $title);
+
+  // Create an EFQ to get congressional info.
+  $query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'congressional')
+  ->propertyCondition('status', 1)
+  ->propertyCondition('title', $name);
+
+  // Execute the query.
+  $result = $query->execute();
+
+  // Check for a result.
+  if (isset($result['node'])) {
+    $keys = array_keys($result['node']);
+
+    // node_load expects a single $nid parameter, not an array.
+    $nid = $keys[0];
+    $node = node_load($nid);
+
+    // Get and format all fields.
+    $enrollment = number_format($node->field_enrollment_total['und']['0']['value']);
+    $alumni = number_format($node->field_alumni['und']['0']['value']);
+    $uihc_clinic_vists = number_format($node->field_uihc_clinic_visits['und']['0']['value']);
+    $uihc_outreach_vists = number_format($node->field_uihc_outreach_visits['und']['0']['value']);
+
+    // Hometown Hawkeye fields.
+    $hometown_hawkeyes = array(
+      'Students: ' . $enrollment,
+      'Alumni: ' . $alumni,
+    );
+
+    // Healthcare fields.
+    $healthcare = array(
+      'UIHC clinic visits: ' . $uihc_clinic_vists,
+      'UIHC outreach visits: ' . $uihc_outreach_vists,
+    );
+
+    // Create a render array to store the fields.
+    $data = array(
+      'hometown_hawkeyes_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Hometown Hawkeyes</h6>',
+      ),
+      'hometown_hawkeyes_list' => array(
+        '#items' => $hometown_hawkeyes,
+        '#theme' => 'item_list',
+      ),
+      'healthcare_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Healthcare</h6>',
+      ),
+      'healthcare_list' => array(
+        '#items' => $healthcare,
+        '#theme' => 'item_list',
+      ),
+      'more_link' => array(
+        '#text' => t('See More »'),
+        '#path' => 'congressional/' . $title,
+        '#theme' => 'link',
+        '#options' => array(
+          'attributes' => array(),
+        ),
+      ),
+    );
+
+    // Convert the render array to markup to pass to ajax_command_html().
+    $html = drupal_render($data);
+
+    // Deliver the AJAX response.
+    $commands = array();
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'hide');
+    $commands[] = ajax_command_html('#' . $title . '-content', $html);
+    $commands[] = ajax_command_invoke('#' . $title . '-content', 'fadeIn', array('fast'));
+    $page = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($page);
+  }
+  else {
+    return 'Congressional District not found.';
   }
 }
 
