@@ -1373,7 +1373,7 @@ div.messages ul {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032035}}
-.house-marker {
+.county-marker {
   position: absolute;
   pointer-events: all;
   color: #3b3b3c;
@@ -1383,7 +1383,7 @@ div.messages ul {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032044}}
-.house-marker {
+.house-marker, .senate-marker, .congressional-marker {
   position: absolute;
   pointer-events: all;
   color: #3b3b3c;
