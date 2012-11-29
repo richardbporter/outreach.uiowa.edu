@@ -60,11 +60,33 @@ function outreach_maps_preprocess_page(&$variables) {
         // Main script for house map.
         drupal_add_js($path . '/js/house.jquery.js', array('weight' => '91'));
       }
+      // Senate map.
       elseif ($variables['map'] == 'senate') {
-        // Senate map.
+        // Include the senate GeoJSON file.
+        module_load_include('inc', 'outreach_maps', 'inc/geo/senate.geo');
+
+        // Get the senate GeoJSON from the include file.
+        $senate_geo_json = _outreach_maps_return_senate_geo_json();
+
+        // senate geo data with GeoJSON passed in Drupal.settings.
+        drupal_add_js(array('senateGeoJSON' => $senate_geo_json), 'setting');
+
+        // Main script for senate map.
+        drupal_add_js($path . '/js/senate.jquery.js', array('weight' => '91'));
       }
+      // Congressional map.
       elseif ($variables['map'] == 'congressional') {
-        // Congressional map.
+        // Include the congressional GeoJSON file.
+        module_load_include('inc', 'outreach_maps', 'inc/geo/congressional.geo');
+
+        // Get the congressional GeoJSON from the include file.
+        $congressional_geo_json = _outreach_maps_return_congressional_geo_json();
+
+        // congressional geo data with GeoJSON passed in Drupal.settings.
+        drupal_add_js(array('congressionalGeoJSON' => $congressional_geo_json), 'setting');
+
+        // Main script for congressional map.
+        drupal_add_js($path . '/js/congressional.jquery.js', array('weight' => '91'));
       }
 
       // Adding drupal.ajax manually because it needs to run after the map script.
