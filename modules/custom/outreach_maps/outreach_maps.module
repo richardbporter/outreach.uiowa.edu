@@ -98,12 +98,14 @@ function outreach_maps_preprocess_page(&$variables) {
 /**
  * Implements hook_menu().
  *
+ * A menu callback is required when using ajax outside of the Form API.
+ *
  * @return array items
  */
 function outreach_maps_menu() {
    $items = array();
 
-  // A menu callback is required when using ajax outside of the Form API.
+  // County map callback.
   $items['outreach-maps/county/%'] = array(
     'page callback' => '_outreach_maps_load_county',
     'page arguments' => array(2),
@@ -111,7 +113,37 @@ function outreach_maps_menu() {
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
     'file' => 'inc/outreach_maps.callbacks.inc',
-);
+  );
+
+  // House map callback.
+  $items['outreach-maps/house/%'] = array(
+    'page callback' => '_outreach_maps_load_house',
+    'page arguments' => array(2),
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file' => 'inc/outreach_maps.callbacks.inc',
+  );
+
+  // Senate map callback.
+  $items['outreach-maps/senate/%'] = array(
+    'page callback' => '_outreach_maps_load_senate',
+    'page arguments' => array(2),
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file' => 'inc/outreach_maps.callbacks.inc',
+  );
+
+  // Congressional map callback.
+  $items['outreach-maps/congressional/%'] = array(
+    'page callback' => '_outreach_maps_load_congressional',
+    'page arguments' => array(2),
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file' => 'inc/outreach_maps.callbacks.inc',
+  );
 
   return $items;
 }
