@@ -14,700 +14,700 @@ function _outreach_maps_return_house_geo_json() {
   $house_geo_data = array(
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-96.4618196, 42.536102),
+      'coordinates' => array(-95.80151412, 43.38846543),
     ),
       'properties' => array(
       'text' => '1',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-96.370063, 42.5219075),
+      'coordinates' => array(-94.94168154, 43.10667194),
     ),
       'properties' => array(
       'text' => '2',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-96.3269156, 42.8111378),
+      'coordinates' => array(-95.68586148, 42.9164057),
     ),
       'properties' => array(
       'text' => '3',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-96.2209888, 43.2793152),
+      'coordinates' => array(-96.23005153, 43.06739291),
     ),
       'properties' => array(
       'text' => '4',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.5389799, 43.1534068),
+      'coordinates' => array(-96.18245462, 42.64909341),
     ),
       'properties' => array(
       'text' => '5',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.1267816, 43.3237634),
+      'coordinates' => array(-96.27250976, 42.37023502),
     ),
       'properties' => array(
       'text' => '6',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-94.4937474, 43.235741),
+      'coordinates' => array(-94.22200187, 43.3648643),
     ),
       'properties' => array(
       'text' => '7',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-94.3943755, 42.787924),
+      'coordinates' => array(-93.87302354, 42.96499264),
     ),
       'properties' => array(
       'text' => '8',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.7823966, 42.5804596),
+      'coordinates' => array(-94.18616082, 42.54721467),
     ),
       'properties' => array(
       'text' => '9',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.4727423, 42.1303691),
+      'coordinates' => array(-94.50804308, 42.58878263),
     ),
       'properties' => array(
       'text' => '10',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.5934867, 43.2931365),
+      'coordinates' => array(-95.12837232, 42.56164431),
     ),
       'properties' => array(
       'text' => '11',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.3300389, 42.8987015),
+      'coordinates' => array(-94.9525058, 41.91692898),
     ),
       'properties' => array(
       'text' => '12',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.1997949, 43.1486093),
+      'coordinates' => array(-96.30551596, 42.5193624),
     ),
       'properties' => array(
       'text' => '13',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.8187911, 43.1902295),
+      'coordinates' => array(-96.44072788, 42.52758673),
     ),
       'properties' => array(
       'text' => '14',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.2246046, 43.2060253),
+      'coordinates' => array(-95.88847339, 41.27219807),
     ),
       'properties' => array(
       'text' => '15',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.5136223, 43.3066296),
+      'coordinates' => array(-95.85642862, 41.23050897),
     ),
       'properties' => array(
       'text' => '16',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.7017284, 42.7405297),
+      'coordinates' => array(-95.83338494, 42.08738114),
     ),
       'properties' => array(
       'text' => '17',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.0485616, 42.8242485),
+      'coordinates' => array(-95.44352294, 41.79464714),
     ),
       'properties' => array(
       'text' => '18',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.5094294, 42.5490073),
+      'coordinates' => array(-93.96759345, 41.67545631),
     ),
       'properties' => array(
       'text' => '19',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.4571184, 42.4075008),
+      'coordinates' => array(-94.47921111, 41.53154577),
     ),
       'properties' => array(
       'text' => '20',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.3522233, 42.3774932),
+      'coordinates' => array(-94.72413034, 41.14637178),
     ),
       'properties' => array(
       'text' => '21',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.2890729, 42.5097258),
+      'coordinates' => array(-95.61187414, 41.35217305),
     ),
       'properties' => array(
       'text' => '22',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.9129404, 42.4562754),
+      'coordinates' => array(-95.50807253, 40.92295064),
     ),
       'properties' => array(
       'text' => '23',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.4260778, 42.7908687),
+      'coordinates' => array(-94.73336387, 40.7540842),
     ),
       'properties' => array(
       'text' => '24',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.5657859, 42.1668803),
+      'coordinates' => array(-93.91490418, 41.3192309),
     ),
       'properties' => array(
       'text' => '25',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.2883423, 41.8806215),
+      'coordinates' => array(-93.50265539, 41.35894984),
     ),
       'properties' => array(
       'text' => '26',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.6998856, 42.5290984),
+      'coordinates' => array(-93.60485528, 40.84382356),
     ),
       'properties' => array(
       'text' => '27',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.7076537, 42.4818925),
+      'coordinates' => array(-93.12837348, 41.29396769),
     ),
       'properties' => array(
       'text' => '28',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.5645139, 41.8654141),
+      'coordinates' => array(-93.07482369, 41.7216309),
     ),
       'properties' => array(
       'text' => '29',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.5955962, 41.7194393),
+      'coordinates' => array(-93.43352988, 41.68683607),
     ),
       'properties' => array(
       'text' => '30',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.0849176, 42.1967016),
+      'coordinates' => array(-93.51816826, 41.59686619),
     ),
       'properties' => array(
       'text' => '31',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.1579925, 42.4798567),
+      'coordinates' => array(-93.58549696, 41.61698144),
     ),
       'properties' => array(
       'text' => '32',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.6870028, 41.9310251),
+      'coordinates' => array(-93.57251923, 41.55494206),
     ),
       'properties' => array(
       'text' => '33',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.7207974, 41.9820026),
+      'coordinates' => array(-93.62575661, 41.54703027),
     ),
       'properties' => array(
       'text' => '34',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.6814864, 42.1570793),
+      'coordinates' => array(-93.63559619, 41.61749852),
     ),
       'properties' => array(
       'text' => '35',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.5559994, 42.1011747),
+      'coordinates' => array(-93.68039826, 41.6262608),
     ),
       'properties' => array(
       'text' => '36',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.6760099, 42.0282492),
+      'coordinates' => array(-93.58856207, 41.7748918),
     ),
       'properties' => array(
       'text' => '37',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.6288931, 41.9801771),
+      'coordinates' => array(-93.60802189, 41.68872523),
     ),
       'properties' => array(
       'text' => '38',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.0764405, 42.0434444),
+      'coordinates' => array(-93.75519347, 41.7119657),
     ),
       'properties' => array(
       'text' => '39',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.6596273, 42.2440448),
+      'coordinates' => array(-93.75507288, 41.63378457),
     ),
       'properties' => array(
       'text' => '40',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.005584, 41.7097337),
+      'coordinates' => array(-93.67358334, 41.55740654),
     ),
       'properties' => array(
       'text' => '41',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.3390944, 41.6071009),
+      'coordinates' => array(-93.74870949, 41.53551145),
     ),
       'properties' => array(
       'text' => '42',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.8890423, 42.1151199),
+      'coordinates' => array(-93.75590377, 41.59873329),
     ),
       'properties' => array(
       'text' => '43',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.1550032, 42.2338503),
+      'coordinates' => array(-93.84644012, 41.58887219),
     ),
       'properties' => array(
       'text' => '44',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.6345599, 41.9914346),
+      'coordinates' => array(-93.56219743, 42.02229826),
     ),
       'properties' => array(
       'text' => '45',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.7283076, 42.0153706),
+      'coordinates' => array(-93.6431582, 42.0436918),
     ),
       'properties' => array(
       'text' => '46',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-94.0065868, 41.7112328),
+      'coordinates' => array(-94.23910273, 42.02994345),
     ),
       'properties' => array(
       'text' => '47',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.9986327, 42.0260308),
+      'coordinates' => array(-93.78822269, 42.30094722),
     ),
       'properties' => array(
       'text' => '48',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-94.115614, 42.5521308),
+      'coordinates' => array(-93.33392482, 42.13873876),
     ),
       'properties' => array(
       'text' => '49',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-94.4472162, 42.2309402),
+      'coordinates' => array(-92.90844997, 42.4736364),
     ),
       'properties' => array(
       'text' => '50',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.0053883, 42.0724908),
+      'coordinates' => array(-92.66103992, 43.36465641),
     ),
       'properties' => array(
       'text' => '51',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.1435412, 42.6012528),
+      'coordinates' => array(-92.61712218, 43.06237836),
     ),
       'properties' => array(
       'text' => '52',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.8489068, 42.6697649),
+      'coordinates' => array(-93.20064002, 43.08375398),
     ),
       'properties' => array(
       'text' => '53',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-96.3670642, 42.4401733),
+      'coordinates' => array(-93.16045255, 42.82891308),
     ),
       'properties' => array(
       'text' => '54',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.7055571, 42.2491601),
+      'coordinates' => array(-91.77235473, 43.10602259),
     ),
       'properties' => array(
       'text' => '55',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.8813676, 41.786828),
+      'coordinates' => array(-91.34608, 43.057418),
     ),
       'properties' => array(
       'text' => '56',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.2031037, 41.5162469),
+      'coordinates' => array(-90.87879561, 42.4837099),
     ),
       'properties' => array(
       'text' => '57',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-94.6145644, 41.5384032),
+      'coordinates' => array(-90.78155608, 42.15481148),
     ),
       'properties' => array(
       'text' => '58',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.7531966, 41.5993309),
+      'coordinates' => array(-92.45655305, 42.53612431),
     ),
       'properties' => array(
       'text' => '59',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.7450114, 41.5529682),
+      'coordinates' => array(-92.4685245, 42.42301962),
     ),
       'properties' => array(
       'text' => '60',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.6732224, 41.5536519),
+      'coordinates' => array(-92.21029106, 42.40137019),
     ),
       'properties' => array(
       'text' => '61',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.6178058, 41.5371126),
+      'coordinates' => array(-92.3275159, 42.51346602),
     ),
       'properties' => array(
       'text' => '62',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.7459097, 41.6340563),
+      'coordinates' => array(-92.30356632, 42.71125521),
     ),
       'properties' => array(
       'text' => '63',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.682774, 41.6229551),
+      'coordinates' => array(-91.86888526, 42.62207615),
     ),
       'properties' => array(
       'text' => '64',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.6371236, 41.6221701),
+      'coordinates' => array(-91.63058448, 41.97400492),
     ),
       'properties' => array(
       'text' => '65',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.6225175, 41.5855995),
+      'coordinates' => array(-91.68184076, 42.02012035),
     ),
       'properties' => array(
       'text' => '66',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.5393876, 41.5570947),
+      'coordinates' => array(-91.64737757, 42.06124102),
     ),
       'properties' => array(
       'text' => '67',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.5680198, 41.6211611),
+      'coordinates' => array(-91.54947524, 41.9477915),
     ),
       'properties' => array(
       'text' => '68',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.5950026, 41.7701132),
+      'coordinates' => array(-91.71484836, 41.90958028),
     ),
       'properties' => array(
       'text' => '69',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.6027153, 41.7095071),
+      'coordinates' => array(-91.77126034, 41.99224528),
     ),
       'properties' => array(
       'text' => '70',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.1168681, 41.4074919),
+      'coordinates' => array(-92.91817787, 42.12561235),
     ),
       'properties' => array(
       'text' => '71',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.013886, 41.1234462),
+      'coordinates' => array(-92.68582679, 42.06427763),
     ),
       'properties' => array(
       'text' => '72',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.833335, 41.3370938),
+      'coordinates' => array(-91.20170294, 41.76706056),
     ),
       'properties' => array(
       'text' => '73',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.5715315, 41.4143141),
+      'coordinates' => array(-91.58357178, 41.713649),
     ),
       'properties' => array(
       'text' => '74',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.564631, 41.5059191),
+      'coordinates' => array(-92.0705249, 42.03287119),
     ),
       'properties' => array(
       'text' => '75',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.2119317, 41.5636435),
+      'coordinates' => array(-92.32696917, 41.6707117),
     ),
       'properties' => array(
       'text' => '76',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.5480233, 41.6582445),
+      'coordinates' => array(-91.64421796, 41.63950814),
     ),
       'properties' => array(
       'text' => '77',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.5056066, 41.6479283),
+      'coordinates' => array(-91.98040394, 41.34949785),
     ),
       'properties' => array(
       'text' => '78',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.1487498, 41.7199179),
+      'coordinates' => array(-92.78743663, 41.3511791),
     ),
       'properties' => array(
       'text' => '79',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.9788427, 41.484804),
+      'coordinates' => array(-92.74822157, 40.99227472),
     ),
       'properties' => array(
       'text' => '80',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.5389508, 41.5692214),
+      'coordinates' => array(-92.31494532, 41.00318021),
     ),
       'properties' => array(
       'text' => '81',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.4766386, 41.5663401),
+      'coordinates' => array(-92.14603042, 40.81461948),
     ),
       'properties' => array(
       'text' => '82',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.5976229, 41.8142127),
+      'coordinates' => array(-91.44102513, 40.57346131),
     ),
       'properties' => array(
       'text' => '83',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.7188378, 41.6181822),
+      'coordinates' => array(-91.59367446, 40.95374326),
     ),
       'properties' => array(
       'text' => '84',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.5975221, 41.5753267),
+      'coordinates' => array(-91.51281529, 41.67128771),
     ),
       'properties' => array(
       'text' => '85',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-90.5957119, 41.525113),
+      'coordinates' => array(-91.52205342, 41.6246248),
     ),
       'properties' => array(
       'text' => '86',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.2516556, 41.1383295),
+      'coordinates' => array(-91.11430441, 40.82402718),
     ),
       'properties' => array(
       'text' => '87',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.0572423, 40.9357725),
+      'coordinates' => array(-91.21819268, 41.19400734),
     ),
       'properties' => array(
       'text' => '88',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.7039698, 41.3553895),
+      'coordinates' => array(-90.62767623, 41.55280836),
     ),
       'properties' => array(
       'text' => '89',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.0588393, 40.9040124),
+      'coordinates' => array(-90.65365163, 41.49664473),
     ),
       'properties' => array(
       'text' => '90',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.5070215, 40.8678752),
+      'coordinates' => array(-90.95381004, 41.47744578),
     ),
       'properties' => array(
       'text' => '91',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-91.494798, 40.542706),
+      'coordinates' => array(-90.74234796, 41.62778575),
     ),
       'properties' => array(
       'text' => '92',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.5053628, 40.9929264),
+      'coordinates' => array(-90.53574149, 41.55012382),
     ),
       'properties' => array(
       'text' => '93',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-92.8752438, 40.7439859),
+      'coordinates' => array(-90.48119755, 41.57386603),
     ),
       'properties' => array(
       'text' => '94',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-93.8951902, 40.9183945),
+      'coordinates' => array(-91.60914656, 42.18708307),
     ),
       'properties' => array(
       'text' => '95',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-94.6473724, 40.8641956),
+      'coordinates' => array(-91.33592663, 42.40153636),
     ),
       'properties' => array(
       'text' => '96',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.4131345, 40.7938978),
+      'coordinates' => array(-90.60877726, 41.82621926),
     ),
       'properties' => array(
       'text' => '97',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.6086107, 41.2321899),
+      'coordinates' => array(-90.32040078, 41.93511193),
     ),
       'properties' => array(
       'text' => '98',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.8339678, 41.2725337),
+      'coordinates' => array(-90.72497078, 42.48738619),
     ),
       'properties' => array(
       'text' => '99',
     )),
     array('geometry' => array(
       'type' => 'Point',
-      'coordinates' => array(-95.8784388, 41.2272769),
+      'coordinates' => array(-90.7024957, 42.5326451),
     ),
       'properties' => array(
       'text' => '100',
