@@ -1,12 +1,12 @@
 /**
  * @file
- * This file holds the application code for the county map.
+ * This file holds the application code for the congressional map.
  */
 
 // Namespace jQuery to avoid conflicts.
 (function($) {
-  // Initialize the county map.
-  Drupal.countyMap = function() {
+  // Initialize the congressional map.
+  Drupal.congressionalMap = function() {
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-eyt0wixl');
 
@@ -25,27 +25,31 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 9);
+    map.setZoomRange(7, 10);
     map.zoom(8, true);
 
-    // Add the county layer.
-    map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
+    // Add the congressional layer.
+    map.addLayer(mapbox.layer().id('uiowa-its.iowa-congressional-districts'));
 
-    // Initalize the features variable and parse the county GeoJSON object into it.
-    var features = $.parseJSON(Drupal.settings.countyGeoJSON);
+    // Initalize the features variable and parse the congressional GeoJSON object into it.
+    var features = $.parseJSON(Drupal.settings.congressionalGeoJSON);
 
-    // Create the county markers layer with custom factory function.
-    var countyMarkers = mapbox.markers.layer().features(features).factory(function(f) {
+    // Create the congressional markers layer with custom factory function.
+    var congressionalMarkers = mapbox.markers.layer().features(features).factory(function(f) {
       // Define a new factory function. This takes a GeoJSON object
       // as its input and returns an element that represents the point.
-      var countyLink = document.createElement('a');
-      $(countyLink).addClass('county-marker use-ajax');
-      $(countyLink).addClass(f.properties.text.toLowerCase().replace(' ', '-'));
-      $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));
+      var congressionalLink = document.createElement('a');
+      $(congressionalLink).addClass('congressional-marker use-ajax');
+      $(congressionalLink).addClass(f.properties.text);
+      $(congressionalLink).text(f.properties.text);
+      $(congressionalLink).attr('href', '/outreach-maps/congressional/' + f.properties.text);
+
+      // var congressionalImage = document.createElement('img');
+      // $(congressionalImage).attr('src', '/sites/outreach.uiowa.edu/themes/outreach/images/marker-24.png');
+      // $(congressionalLink).html(congressionalImage);
 
       // Add function that centers marker on click.
-        MM.addEvent(countyLink, 'click', function(e) {
+        MM.addEvent(congressionalLink, 'click', function(e) {
             map.ease.location({
               lat: f.geometry.coordinates[1],
               lon: f.geometry.coordinates[0]
@@ -53,22 +57,22 @@
         });
 
 
-      return countyLink;
+      return congressionalLink;
     });
 
-     // Create county interaction.
-    var countyInteraction = mapbox.markers.interaction(countyMarkers);
+     // Create congressional interaction.
+    var congressionalInteraction = mapbox.markers.interaction(congressionalMarkers);
 
     // Turn off hover tooltips.
-    countyInteraction.showOnHover(false);
+    congressionalInteraction.showOnHover(false);
 
     // Add the couny markers layer to the map.
-    map.addLayer(countyMarkers);
+    map.addLayer(congressionalMarkers);
 
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
-    countyInteraction.formatter(function(f) {
-      var o = '<h2>' + f.properties.text + ' County</h2>';
+    congressionalInteraction.formatter(function(f) {
+      var o = '<h2>Congressional District ' + f.properties.text + '</h2>';
       o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
@@ -87,11 +91,11 @@
     map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  // Attach countyMap behavior.
-  Drupal.behaviors.countyMap = {
+  // Attach congressionalMap behavior.
+  Drupal.behaviors.congressionalMap = {
     attach: function(context, settings) {
-      $('#map', context).once('countyMap', function() {
-        Drupal.countyMap();
+      $('#map', context).once('congressionalMap', function() {
+        Drupal.congressionalMap();
       });
     }
   };

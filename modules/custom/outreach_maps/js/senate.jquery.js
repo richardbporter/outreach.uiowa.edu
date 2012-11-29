@@ -1,12 +1,12 @@
 /**
  * @file
- * This file holds the application code for the county map.
+ * This file holds the application code for the senate map.
  */
 
 // Namespace jQuery to avoid conflicts.
 (function($) {
-  // Initialize the county map.
-  Drupal.countyMap = function() {
+  // Initialize the senate map.
+  Drupal.senateMap = function() {
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-eyt0wixl');
 
@@ -25,27 +25,31 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 9);
+    map.setZoomRange(7, 10);
     map.zoom(8, true);
 
-    // Add the county layer.
-    map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
+    // Add the senate layer.
+    map.addLayer(mapbox.layer().id('uiowa-its.iowa-senate-districts'));
 
-    // Initalize the features variable and parse the county GeoJSON object into it.
-    var features = $.parseJSON(Drupal.settings.countyGeoJSON);
+    // Initalize the features variable and parse the senate GeoJSON object into it.
+    var features = $.parseJSON(Drupal.settings.senateGeoJSON);
 
-    // Create the county markers layer with custom factory function.
-    var countyMarkers = mapbox.markers.layer().features(features).factory(function(f) {
+    // Create the senate markers layer with custom factory function.
+    var senateMarkers = mapbox.markers.layer().features(features).factory(function(f) {
       // Define a new factory function. This takes a GeoJSON object
       // as its input and returns an element that represents the point.
-      var countyLink = document.createElement('a');
-      $(countyLink).addClass('county-marker use-ajax');
-      $(countyLink).addClass(f.properties.text.toLowerCase().replace(' ', '-'));
-      $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', '/outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));
+      var senateLink = document.createElement('a');
+      $(senateLink).addClass('senate-marker use-ajax');
+      $(senateLink).addClass(f.properties.text);
+      $(senateLink).text(f.properties.text);
+      $(senateLink).attr('href', '/outreach-maps/senate/' + f.properties.text);
+
+      // var senateImage = document.createElement('img');
+      // $(senateImage).attr('src', '/sites/outreach.uiowa.edu/themes/outreach/images/marker-24.png');
+      // $(senateLink).html(senateImage);
 
       // Add function that centers marker on click.
-        MM.addEvent(countyLink, 'click', function(e) {
+        MM.addEvent(senateLink, 'click', function(e) {
             map.ease.location({
               lat: f.geometry.coordinates[1],
               lon: f.geometry.coordinates[0]
@@ -53,22 +57,22 @@
         });
 
 
-      return countyLink;
+      return senateLink;
     });
 
-     // Create county interaction.
-    var countyInteraction = mapbox.markers.interaction(countyMarkers);
+     // Create senate interaction.
+    var senateInteraction = mapbox.markers.interaction(senateMarkers);
 
     // Turn off hover tooltips.
-    countyInteraction.showOnHover(false);
+    senateInteraction.showOnHover(false);
 
     // Add the couny markers layer to the map.
-    map.addLayer(countyMarkers);
+    map.addLayer(senateMarkers);
 
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
-    countyInteraction.formatter(function(f) {
-      var o = '<h2>' + f.properties.text + ' County</h2>';
+    senateInteraction.formatter(function(f) {
+      var o = '<h2>Senate District ' + f.properties.text + '</h2>';
       o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
@@ -87,11 +91,11 @@
     map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  // Attach countyMap behavior.
-  Drupal.behaviors.countyMap = {
+  // Attach senateMap behavior.
+  Drupal.behaviors.senateMap = {
     attach: function(context, settings) {
-      $('#map', context).once('countyMap', function() {
-        Drupal.countyMap();
+      $('#map', context).once('senateMap', function() {
+        Drupal.senateMap();
       });
     }
   };
