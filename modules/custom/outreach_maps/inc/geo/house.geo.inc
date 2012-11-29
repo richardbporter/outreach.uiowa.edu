@@ -13,8 +13,8 @@ function _outreach_maps_return_house_geo_json() {
   // Create house data array.
   $house_geo_data = array(
     array('geometry' => array(
-    'type' => 'Point',
-    'coordinates' => array(-96.4618196, 42.536102),
+      'type' => 'Point',
+      'coordinates' => array(-96.4618196, 42.536102),
     ),
       'properties' => array(
       'text' => '1',
