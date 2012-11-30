@@ -31,7 +31,7 @@ function outreach_maps_preprocess_page(&$variables) {
 
       // Add jQuery UI components.
       drupal_add_library('system', 'ui.dialog');
-      drupal_add_library('system', 'ui.accordion');
+      //drupal_add_library('system', 'ui.accordion');
 
       // County map.
       if ($variables['map'] == 'county') {
@@ -147,4 +147,43 @@ function outreach_maps_menu() {
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ *
+ * @return array field formatter
+ */
+function outreach_maps_field_formatter_info() {
+  return array(
+    'outreach_maps_number_formatter' => array(
+      'label' => t('Number'),
+      'description' => t('Formats a number.'),
+      'field types' => array('text'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ *
+ * Returns a formatted number.
+ *
+ * @param  $entity_type
+ * @param  $entity
+ * @param  $field
+ * @param  $instance
+ * @param  $langcode
+ * @param  $items
+ * @param  $display
+ * @return
+ */
+function outreach_maps_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  foreach ($items as $delta => $item) {
+    $element[0]['#markup'] = number_format($item['value']);
+  }
+
+  return $element;
 }
