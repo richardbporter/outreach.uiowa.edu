@@ -77,9 +77,9 @@
     map.addCallback("zoomed", function(map, zoomOffset) {
       var z = Math.round(map.zoom());
       if (zoomOffset == -1 && z == 7) {
-        $('.marker').addClass('seven');
+        $('.county-marker').addClass('smaller');
       } else {
-        $('.marker').removeClass('seven');
+        $('.county-marker').removeClass('smaller');
       }
     });
 
