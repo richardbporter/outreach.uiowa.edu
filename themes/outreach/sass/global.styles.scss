@@ -2048,15 +2048,12 @@ tr.error {
   @include text-shadow(1px 1px 1px rgba($grey, 0.4));
 }
 
-.seven {
+.smaller {
   font-size: 70%;
   margin-left: -10px;
 }
 
 .marker-popup {
-  span {
-
-  }
   h6 {
     margin: 0 0;
   }
