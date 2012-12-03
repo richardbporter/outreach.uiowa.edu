@@ -262,3 +262,130 @@ function _outreach_maps_csv_array($file) {
       fclose($handle);
   }
 }
+
+/**
+ * Helper function to migrate county fields to district content types.
+ *
+ * @param string $district The type of district, house, senate or congressional.
+ *
+ * This iterates over each county, then each value of a district field and sets
+ * the corresponding district county field to the current county. The district
+ * county field is an entity reference.
+ */
+function _outreach_maps_migrate_fields($district) {
+  // Create an EFQ to get all counties.
+  $county_query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $county_query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'county')
+  ->propertyCondition('status', 1);
+
+  // Execute the query.
+  $county_result = $county_query->execute();
+
+  // Check for a result.
+  if (isset($county_result['node'])) {
+    $keys = array_keys($result['node']);
+
+    // Load all nodes.
+    $county_nids = $keys[0];
+    $county_nodes = node_load_multiple($nids);
+
+    foreach ($county_nodes as $county) {
+
+    }
+  }
+
+}
+
+/**
+ * Helper function to set the district number field on each district type.
+ *
+ * @param string $district_type The type of district, house, senate or congressional.
+ */
+function _outreach_maps_set_district_number($district_type) {
+  $field = '';
+  switch ($district_type) {
+    case 'house':
+      $field = 'field_house_district_num';
+      break;
+    case 'senate':
+      $field = 'field_senate_district_num';
+      break;
+    case 'congressional':
+      $field = 'field_congressional_district_num';
+      break;
+    default:
+      return drupal_set_error('Incorrect field.');
+      break;
+  }
+
+  $query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', $district_type . '_district')
+  ->propertyCondition('status', 1);
+
+  // Execute the query.
+  $result = $query->execute();
+
+  // Check for a result.
+  if (isset($result['node'])) {
+    $keys = array_keys($result['node']);
+
+    // Load all nodes.
+    $districts = node_load_multiple($keys);
+
+    foreach ($districts as $district) {
+      $title_parts = explode(' ', $district->title);
+
+      foreach ($title_parts as $char) {
+        if (is_numeric($char)) {
+          $district->{$field}[LANGUAGE_NONE]['0']['value'] = $char;
+          node_save($district);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Helper function to create a certain number of districts.
+ *
+ * @param  string $district_type The type of district, house, senate or congressional.
+ * @param  integer $count         The number of districts to create. Each step in
+ * the loop will use the current count as the district number.
+ */
+function _outreach_maps_create_districts($district_type, $count) {
+  $field = '';
+  switch ($district_type) {
+    case 'house':
+      $field = 'field_house_district_num';
+      break;
+    case 'senate':
+      $field = 'field_senate_district_num';
+      break;
+    case 'congressional':
+      $field = 'field_congressional_district_num';
+      break;
+    default:
+      return drupal_set_error('Incorrect field.');
+      break;
+  }
+
+ for ($i=1; $i <= $count; $i++) {
+   $node = new StdClass();
+   $node->type = $district_type . '_district';
+   node_object_prepare($node);
+
+   $title = ucwords(str_replace('_', ' ', $district_type)) . ' District ' . $i;
+   $node->title = $title;
+   $node->language = LANGUAGE_NONE;
+
+   $node->{$field}[LANGUAGE_NONE]['0']['value'] = $i;
+
+   node_save($node);
+ }
+}
