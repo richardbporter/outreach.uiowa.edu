@@ -266,13 +266,11 @@ function _outreach_maps_csv_array($file) {
 /**
  * Helper function to migrate county fields to district content types.
  *
- * @param string $district The type of district, house, senate or congressional.
- *
  * This iterates over each county, then each value of a district field and sets
  * the corresponding district county field to the current county. The district
- * county field is an entity reference.
+ * county field is a term reference.
  */
-function _outreach_maps_migrate_fields($district) {
+function _outreach_maps_migrate_fields() {
   // Create an EFQ to get all counties.
   $county_query = new EntityFieldQuery();
 
@@ -286,14 +284,61 @@ function _outreach_maps_migrate_fields($district) {
 
   // Check for a result.
   if (isset($county_result['node'])) {
-    $keys = array_keys($result['node']);
+    $keys = array_keys($county_result['node']);
 
     // Load all nodes.
-    $county_nids = $keys[0];
-    $county_nodes = node_load_multiple($nids);
+    $county_nodes = node_load_multiple($keys);
 
     foreach ($county_nodes as $county) {
+      foreach ($county->field_temp1[LANGUAGE_NONE] as $key => $value) {
 
+        $field_value = !empty($county->field_temp1[LANGUAGE_NONE][$key]['value']) ? $county->field_temp1[LANGUAGE_NONE][$key]['value'] : NULL;
+
+        if ($field_value) {
+          // Create an EFQ to get congressional info.
+            $query = new EntityFieldQuery();
+
+            // Set some conditions.
+            $query->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'house_district')
+            ->propertyCondition('status', 1)
+            ->fieldCondition('field_house_district_num', 'value', $field_value, '=');
+
+            // Execute the query.
+            $result = $query->execute();
+
+            // Check for a result.
+            if (isset($result['node'])) {
+              $keys = array_keys($result['node']);
+
+              // node_load expects a single $nid parameter, not an array.
+              $nid = $keys[0];
+              $node = node_load($nid);
+
+              $i = 0;
+
+              foreach ($node->field_county[LANGUAGE_NONE] as $k => $v) {
+                $exists = FALSE;
+                if (isset($v['target_id'])) {
+                  if ($v['target_id'] == $county->nid) {
+                    $exists = TRUE;
+                    dpm($v['target_id']);
+                  }
+                }
+                else {
+                  $node->field_county[LANGUAGE_NONE][$i]['target_id'] = $county->nid;
+                  node_save($node);
+                }
+                $i++;
+              }
+
+              if ($exists == FALSE) {
+                $node->field_county[LANGUAGE_NONE][$i]['target_id'] = $county->nid;
+                node_save($node);
+              }
+          }
+        }
+      }
     }
   }
 
