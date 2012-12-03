@@ -63,12 +63,9 @@ function _outreach_maps_load_county($title) {
       'clinic_visits' => array(field_view_field('node', $node, 'field_uihc_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
       'outreach_visits' => array(field_view_field('node', $node, 'field_uihc_outreach_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
       'more_link' => array(
-        '#text' => t('See More »'),
-        '#path' => 'county/' . $title,
-        '#theme' => 'link',
-        '#options' => array(
-          'attributes' => array('html' => FALSE),
-        ),
+        '#type' => 'link',
+        '#title' => t('See More »'),
+        '#href' => 'county/' . $title,
       ),
     );
 
