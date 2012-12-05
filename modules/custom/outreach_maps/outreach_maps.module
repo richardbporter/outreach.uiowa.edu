@@ -92,6 +92,9 @@ function outreach_maps_preprocess_page(&$variables) {
 
       // Adding drupal.ajax manually because it needs to run after the map script.
       drupal_add_js('misc/ajax.js', array('weight' => '92'));
+
+      // Add Outreach Maps css after scripts run.
+      drupal_add_css($path . 'css/outreach.maps.css');
     }
   }
 }
