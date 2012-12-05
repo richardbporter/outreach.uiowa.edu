@@ -185,12 +185,6 @@ var {
  */
 #main-content {}
 
-.node-type-map #main-content {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-
 /*
  * Wraps the content region, avoid applying styles to this wrapper, its used
  * mainly for position and invisible gutters and can be problematic to style
@@ -269,14 +263,6 @@ var {
   }
 }
 
-.node-type-map #header-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-}
-
 /*
  * Wraps the nav elements
  */
@@ -313,23 +299,14 @@ var {
 /*
  * Wraps the main content column
  */
-.node-type-map #content-wrapper {
+#content-wrapper {
+  background: url("images/grid12.png") $light;
   .container {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
-
-.node-type-county, .node-type-senate-district, .node-type-house-district, .node-type-congressional-district {
-  #content-wrapper {
-    background: url("images/grid12.png") $light;
-    .container {
-      max-width: 1140px;
-      background-color: $white;
-      color: $grey;
-      @include box-shadow(rgba($grey, 0.3) 0 0 10px 4px);
-      @include noise();
-    }
+    max-width: 1140px;
+    background-color: $white;
+    color: $grey;
+    @include box-shadow(rgba($grey, 0.3) 0 0 10px 4px);
+    @include noise();
   }
 }
 
@@ -2019,62 +1996,4 @@ tr.error {
 .field-type-image figure {
   float: right;
   margin-top: 75px;
-}
-
-/* =============================================================================
- *   Maps
- *   This could have been packaged with the module, but the module is not its
- *   own repo at the moment.
- * ========================================================================== */
-#map {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.county-marker {
-  position: absolute;  // Markers have to be positioned absolutely.
-  pointer-events: all;  // Allows for interactive markers.
-  color: $grey;
-  margin-left: -20px;
-  margin-top: -10px;
-  @include text-shadow(1px 1px 1px rgba($grey, 0.4));
-}
-
-.house-marker, .senate-marker, .congressional-marker {
-  position: absolute;  // Markers have to be positioned absolutely.
-  pointer-events: all;  // Allows for interactive markers.
-  color: $grey;
-  @include text-shadow(1px 1px 1px rgba($grey, 0.4));
-}
-
-.smaller {
-  font-size: 70%;
-  margin-left: -10px;
-}
-
-.marker-popup {
-  h6 {
-    margin: 0 0;
-  }
-}
-
-.zoomer {
-  top: 80px;
-}
-
-.ajax-progress-throbber {
-  display: none !important;
-}
-
-.ida, .sac {
-  margin-left: -10px;
-}
-
-.winnebago, .winneshiek, .palo-alto, .chickasaw, .pocahontas, .humboldt, .black-hawk, .audubon, .poweshiek, .washington, .appanoose, .van-buren, .des-moines {
-  margin-left: -30px;
-}
-
-.cerro-gordo, .buena-vista, .montgomery {
-  margin-left: -35px;
 }
