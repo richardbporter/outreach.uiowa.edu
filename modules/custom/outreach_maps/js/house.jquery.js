@@ -40,7 +40,7 @@
       // as its input and returns an element that represents the point.
       var houseLink = document.createElement('a');
       $(houseLink).addClass('house-marker use-ajax');
-      $(houseLink).addClass(f.properties.text);
+      $(houseLink).addClass('house-' + f.properties.text);
       $(houseLink).text(f.properties.text);
       $(houseLink).attr('href', '/outreach-maps/house/' + f.properties.text);
 

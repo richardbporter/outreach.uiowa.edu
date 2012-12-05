@@ -40,7 +40,7 @@
       // as its input and returns an element that represents the point.
       var senateLink = document.createElement('a');
       $(senateLink).addClass('senate-marker use-ajax');
-      $(senateLink).addClass(f.properties.text);
+      $(senateLink).addClass('senate-' + f.properties.text);
       $(senateLink).text(f.properties.text);
       $(senateLink).attr('href', '/outreach-maps/senate/' + f.properties.text);
 

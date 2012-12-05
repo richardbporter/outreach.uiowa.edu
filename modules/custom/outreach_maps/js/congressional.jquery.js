@@ -40,7 +40,7 @@
       // as its input and returns an element that represents the point.
       var congressionalLink = document.createElement('a');
       $(congressionalLink).addClass('congressional-marker use-ajax');
-      $(congressionalLink).addClass(f.properties.text);
+      $(congressionalLink).addClass('congressional' + f.properties.text);
       $(congressionalLink).text(f.properties.text);
       $(congressionalLink).attr('href', '/outreach-maps/congressional/' + f.properties.text);
 
