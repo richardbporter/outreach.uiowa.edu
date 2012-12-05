@@ -1,0 +1,9 @@
+// This is the base SASS file for the Outreach Maps module. It holds
+// configuration options, mixins, variables, etc.
+
+// Import compass libraries.
+@import "compass/support";
+@import "compass/css3";
+
+// Variables
+$grey: #3B3B3C;
