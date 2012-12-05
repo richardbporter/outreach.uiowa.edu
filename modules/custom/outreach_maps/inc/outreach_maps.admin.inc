@@ -78,8 +78,8 @@ function _outreach_maps_load_county($title) {
     $commands[] = ajax_command_html('#' . $title . '-content', $html);
     $commands[] = ajax_command_invoke('#' . $title . '-content', 'fadeIn', array('fast'));
 
-    $page = array('#type' => 'ajax', '#commands' => $commands);
-    ajax_deliver($page);
+    $response = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($response);
   }
   else {
     return 'County not found.';
@@ -100,9 +100,9 @@ function _outreach_maps_load_house($district_number) {
 
   // Set some conditions.
   $query->entityCondition('entity_type', 'node')
-  ->entityCondition('bundle', 'house')
+  ->entityCondition('bundle', 'house_district')
   ->propertyCondition('status', 1)
-  ->fieldCondition('field_district_number', 'value', '=', $district_number);
+  ->fieldCondition('field_house_district_num', 'value', $district_number, '=');
 
   // Execute the query.
   $result = $query->execute();
@@ -119,8 +119,16 @@ function _outreach_maps_load_house($district_number) {
 
     // Create a render array to store the fields.
     $data = array(
-      '#type' => 'markup',
-      '#markup' => '<p>This is some content for House District '. $district_number . '.',
+      'counties_heading' => array(
+        '#type' => 'markup',
+        '#markup' => '<h6>Counties</h6>',
+      ),
+      'counties' => array(field_view_field('node', $node, 'field_county', array('label' => 'hidden'))),
+      'more_link' => array(
+        '#type' => 'link',
+        '#title' => t('See More »'),
+        '#href' => 'house/house-district-' . $district_number,
+      ),
     );
 
     // Convert the render array to markup to pass to ajax_command_html().
@@ -131,11 +139,11 @@ function _outreach_maps_load_house($district_number) {
     $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'hide');
     $commands[] = ajax_command_html('#' . $district_number . '-content', $html);
     $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'fadeIn', array('fast'));
-    $page = array('#type' => 'ajax', '#commands' => $commands);
-    ajax_deliver($page);
+    $response = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($response);
   }
   else {
-    return 'House District not found.';
+    return 'No data found.';
   }
 }
 
@@ -184,8 +192,8 @@ function _outreach_maps_load_senate($district_number) {
     $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'hide');
     $commands[] = ajax_command_html('#' . $district_number . '-content', $html);
     $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'fadeIn', array('fast'));
-    $page = array('#type' => 'ajax', '#commands' => $commands);
-    ajax_deliver($page);
+    $response = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($response);
   }
   else {
     return 'Senate District not found.';
@@ -238,8 +246,8 @@ function _outreach_maps_load_congressional($district_number) {
     $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'hide');
     $commands[] = ajax_command_html('#' . $district_number . '-content', $html);
     $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'fadeIn', array('fast'));
-    $page = array('#type' => 'ajax', '#commands' => $commands);
-    ajax_deliver($page);
+    $response = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($response);
   }
   else {
     return 'Congressional District not found.';
@@ -266,11 +274,14 @@ function _outreach_maps_csv_array($file) {
 /**
  * Helper function to migrate county fields to district content types.
  *
+ * @param string $field The field to migrate.
+ * @param string $district_type The district type to migrate the fields to.
+ *
  * This iterates over each county, then each value of a district field and sets
  * the corresponding district county field to the current county. The district
  * county field is a term reference.
  */
-function _outreach_maps_migrate_fields() {
+function _outreach_maps_migrate_fields(field, district_type) {
   // Create an EFQ to get all counties.
   $county_query = new EntityFieldQuery();
 
@@ -290,9 +301,9 @@ function _outreach_maps_migrate_fields() {
     $county_nodes = node_load_multiple($keys);
 
     foreach ($county_nodes as $county) {
-      foreach ($county->field_temp1[LANGUAGE_NONE] as $key => $value) {
+      foreach ($county->{$field}[LANGUAGE_NONE] as $key => $value) {
 
-        $field_value = !empty($county->field_temp1[LANGUAGE_NONE][$key]['value']) ? $county->field_temp1[LANGUAGE_NONE][$key]['value'] : NULL;
+        $field_value = !empty($county->{$field}[LANGUAGE_NONE][$key]['value']) ? $county->{$field}[LANGUAGE_NONE][$key]['value'] : NULL;
 
         if ($field_value) {
           // Create an EFQ to get congressional info.
@@ -300,9 +311,9 @@ function _outreach_maps_migrate_fields() {
 
             // Set some conditions.
             $query->entityCondition('entity_type', 'node')
-            ->entityCondition('bundle', 'house_district')
+            ->entityCondition('bundle', '$district_type' . '_district')
             ->propertyCondition('status', 1)
-            ->fieldCondition('field_house_district_num', 'value', $field_value, '=');
+            ->fieldCondition('field_' . $district_type . '_district_num', 'value', $field_value, '=');
 
             // Execute the query.
             $result = $query->execute();
@@ -324,10 +335,6 @@ function _outreach_maps_migrate_fields() {
                     $exists = TRUE;
                     dpm($v['target_id']);
                   }
-                }
-                else {
-                  $node->field_county[LANGUAGE_NONE][$i]['target_id'] = $county->nid;
-                  node_save($node);
                 }
                 $i++;
               }
