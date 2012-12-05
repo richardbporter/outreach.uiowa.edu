@@ -52,13 +52,13 @@ function _outreach_maps_load_county($title) {
     $data = array(
       'hometown_hawkeyes_heading' => array(
         '#type' => 'markup',
-        '#markup' => '<h6>Hometown Hawkeyes</h6>',
+        '#markup' => '<h3>Hometown Hawkeyes</h3>',
       ),
       'enrollment_total' => array(field_view_field('node', $node, 'field_enrollment_total', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
       'alumni' => array(field_view_field('node', $node, 'field_alumni', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
       'healthcare_heading' => array(
         '#type' => 'markup',
-        '#markup' => '<h6>Healthcare</h6>',
+        '#markup' => '<h3>Healthcare</h3>',
       ),
       'clinic_visits' => array(field_view_field('node', $node, 'field_uihc_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
       'outreach_visits' => array(field_view_field('node', $node, 'field_outreach_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
