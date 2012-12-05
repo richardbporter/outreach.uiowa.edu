@@ -48,16 +48,7 @@
   height: 100%;
 }
 
-.county-marker {
-  position: absolute;  // Markers have to be positioned absolutely.
-  pointer-events: all;  // Allows for interactive markers.
-  color: $grey;
-  margin-left: -20px;
-  margin-top: -10px;
-  @include text-shadow(1px 1px 1px rgba($grey, 0.4));
-}
-
-.house-marker, .senate-marker, .congressional-marker {
+.county-marker, .house-marker, .senate-marker, .congressional-marker {
   position: absolute;  // Markers have to be positioned absolutely.
   pointer-events: all;  // Allows for interactive markers.
   color: $grey;
@@ -86,6 +77,11 @@
 /* =============================================================================
  *   County
  * ========================================================================== */
+ .county-marker {
+  margin-left: -20px;
+  margin-top: -10px;
+ }
+
 .ida, .sac {
   margin-left: -10px;
 }
@@ -101,12 +97,27 @@
 /* =============================================================================
  *   House
  * ========================================================================== */
-
+.house-marker {
+  margin-left: -10px;
+  margin-top: -10px;
+}
 
 /* =============================================================================
  *   Senate
  * ========================================================================== */
+.senate-marker {
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.senate-1 {
+  margin-top: -30px;
+}
 
  /* =============================================================================
  *   Congessional
  * ========================================================================== */
+ .congressional-marker {
+  margin-left: -10px;
+  margin-top: -10px;
+}
