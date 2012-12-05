@@ -82,27 +82,28 @@ function _outreach_maps_load_county($title) {
     ajax_deliver($response);
   }
   else {
-    return 'County not found.';
+    return 'No data found.';
   }
 }
 
 /**
- * Callback for house map in hook_menu().
+ * Callback for district maps in hook_menu().
  *
- * @param $district_number
- *   The number of the house district, title of the node. Hyphenated in URL.
+ * @param string $district_type The type of district, house, senate or congressional.
  *
- * @return JSON AJAX response
+ * @param int $district_number The district number, field value.
+ *
+ * @return JSON $response AJAX command response.
  */
-function _outreach_maps_load_house($district_number) {
-  // Create an EFQ to get house info.
+function _outreach_maps_load_district($district_type, $district_number) {
+  // Create an EFQ to get district info.
   $query = new EntityFieldQuery();
 
   // Set some conditions.
   $query->entityCondition('entity_type', 'node')
-  ->entityCondition('bundle', 'house_district')
+  ->entityCondition('bundle', $district_type . '_district')
   ->propertyCondition('status', 1)
-  ->fieldCondition('field_house_district_num', 'value', $district_number, '=');
+  ->fieldCondition('field_' . $district_type . '_district_num', 'value', $district_number, '=');
 
   // Execute the query.
   $result = $query->execute();
@@ -115,8 +116,6 @@ function _outreach_maps_load_house($district_number) {
     $nid = $keys[0];
     $node = node_load($nid);
 
-    // Get a list of counties in this district.
-
     // Create a render array to store the fields.
     $data = array(
       'counties_heading' => array(
@@ -127,7 +126,7 @@ function _outreach_maps_load_house($district_number) {
       'more_link' => array(
         '#type' => 'link',
         '#title' => t('See More »'),
-        '#href' => 'house/house-district-' . $district_number,
+        '#href' => $district_type . '/' . $district_type . '-district-' . $district_number,
       ),
     );
 
@@ -144,113 +143,6 @@ function _outreach_maps_load_house($district_number) {
   }
   else {
     return 'No data found.';
-  }
-}
-
-/**
- * Callback for senate map in hook_menu().
- *
- * @param $district_number
- *   The number of the senate district, title of the node. Hyphenated in URL.
- *
- * @return JSON AJAX response
- */
-function _outreach_maps_load_senate($district_number) {
-  // Create an EFQ to get senate info.
-  $query = new EntityFieldQuery();
-
-  // Set some conditions.
-  $query->entityCondition('entity_type', 'node')
-  ->entityCondition('bundle', 'senate')
-  ->propertyCondition('status', 1)
-  ->propertyCondition('title', $name);
-
-  // Execute the query.
-  $result = $query->execute();
-
-  // Check for a result.
-  if (isset($result['node'])) {
-    $keys = array_keys($result['node']);
-
-    // node_load expects a single $nid parameter, not an array.
-    $nid = $keys[0];
-    $node = node_load($nid);
-
-    // Get a list of counties in this district.
-
-    // Create a render array to store the fields.
-    $data = array(
-      '#type' => 'markup',
-      '#markup' => '<p>This is some content for Congressional District '. $district_number . '.',
-    );
-
-    // Convert the render array to markup to pass to ajax_command_html().
-    $html = drupal_render($data);
-
-    // Deliver the AJAX response.
-    $commands = array();
-    $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'hide');
-    $commands[] = ajax_command_html('#' . $district_number . '-content', $html);
-    $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'fadeIn', array('fast'));
-    $response = array('#type' => 'ajax', '#commands' => $commands);
-    ajax_deliver($response);
-  }
-  else {
-    return 'Senate District not found.';
-  }
-}
-
-/**
- * Callback for congressional map in hook_menu().
- *
- * @param $district_number
- *   The number of the congressional district, title of the node. Hyphenated in URL.
- *
- * @return JSON AJAX response
- */
-function _outreach_maps_load_congressional($district_number) {
-  // Create an EFQ to get congressional info.
-  $query = new EntityFieldQuery();
-
-  // Set some conditions.
-  $query->entityCondition('entity_type', 'node')
-  ->entityCondition('bundle', 'congressional')
-  ->propertyCondition('status', 1)
-  ->propertyCondition('title', $name);
-
-  // Execute the query.
-  $result = $query->execute();
-
-  // Check for a result.
-  if (isset($result['node'])) {
-    $keys = array_keys($result['node']);
-
-    // node_load expects a single $nid parameter, not an array.
-    $nid = $keys[0];
-    $node = node_load($nid);
-
-
-    // Get a list of counties in this district.
-
-    // Create a render array to store the fields.
-    $data = array(
-      '#type' => 'markup',
-      '#markup' => '<p>This is some content for Congressional District '. $district_number . '.',
-    );
-
-    // Convert the render array to markup to pass to ajax_command_html().
-    $html = drupal_render($data);
-
-    // Deliver the AJAX response.
-    $commands = array();
-    $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'hide');
-    $commands[] = ajax_command_html('#' . $district_number . '-content', $html);
-    $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'fadeIn', array('fast'));
-    $response = array('#type' => 'ajax', '#commands' => $commands);
-    ajax_deliver($response);
-  }
-  else {
-    return 'Congressional District not found.';
   }
 }
 
@@ -281,7 +173,7 @@ function _outreach_maps_csv_array($file) {
  * the corresponding district county field to the current county. The district
  * county field is a term reference.
  */
-function _outreach_maps_migrate_fields(field, district_type) {
+function _outreach_maps_migrate_fields($field, $district_type) {
   // Create an EFQ to get all counties.
   $county_query = new EntityFieldQuery();
 

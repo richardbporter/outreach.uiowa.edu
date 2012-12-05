@@ -29,6 +29,9 @@ function outreach_maps_preprocess_page(&$variables) {
       // Add default styles for MapBox controls.
       drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css', array('type' => 'external'));
 
+       // Add Outreach Maps CSS.
+      drupal_add_css($path . '/css/outreach.maps.css');
+
       // Add jQuery UI components.
       drupal_add_library('system', 'ui.dialog');
       //drupal_add_library('system', 'ui.accordion');
@@ -92,9 +95,6 @@ function outreach_maps_preprocess_page(&$variables) {
 
       // Adding drupal.ajax manually because it needs to run after the map script.
       drupal_add_js('misc/ajax.js', array('weight' => '92'));
-
-      // Add Outreach Maps css after scripts run.
-      drupal_add_css($path . 'css/outreach.maps.css');
     }
   }
 }
@@ -121,8 +121,8 @@ function outreach_maps_menu() {
 
   // House map callback.
   $items['outreach-maps/house/%'] = array(
-    'page callback' => '_outreach_maps_load_house',
-    'page arguments' => array(2),
+    'page callback' => '_outreach_maps_load_district',
+    'page arguments' => array(1, 2),
     'access callback' => 'user_access',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
@@ -131,8 +131,8 @@ function outreach_maps_menu() {
 
   // Senate map callback.
   $items['outreach-maps/senate/%'] = array(
-    'page callback' => '_outreach_maps_load_senate',
-    'page arguments' => array(2),
+    'page callback' => '_outreach_maps_load_district',
+    'page arguments' => array(1, 2),
     'access callback' => 'user_access',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
@@ -141,8 +141,8 @@ function outreach_maps_menu() {
 
   // Congressional map callback.
   $items['outreach-maps/congressional/%'] = array(
-    'page callback' => '_outreach_maps_load_congressional',
-    'page arguments' => array(2),
+    'page callback' => '_outreach_maps_load_district',
+    'page arguments' => array(1, 2),
     'access callback' => 'user_access',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
