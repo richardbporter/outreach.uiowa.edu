@@ -299,7 +299,7 @@ function _outreach_maps_set_district_number($district_type) {
  * Helper function to create a certain number of districts.
  *
  * @param  string $district_type The type of district, house, senate or congressional.
- * @param  integer $count         The number of districts to create. Each step in
+ * @param  integer $count        The number of districts to create. Each step in
  * the loop will use the current count as the district number.
  */
 function _outreach_maps_create_districts($district_type, $count) {

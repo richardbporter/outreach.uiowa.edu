@@ -10,31 +10,24 @@
  * @param array $variables
  */
 function outreach_maps_preprocess_page(&$variables) {
-  // If node type is set.
+  // If node type is set and it is a map page.
   if (isset($variables['node']->type)) {
-    // If this is a map page.
     if ($variables['node']->type == 'map') {
       // Add map page template suggestion hook.
       $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
 
-      // Create a map variable.
+      // Create a map preprocess variable.
       $variables['map'] = $variables['node']->field_map['und']['0']['value'];
 
       // Get the path to the outreach_maps module.
       $path = drupal_get_path('module', 'outreach_maps');
 
-      // Include mapbox.js.
+      // Include the necessary scripts and styles.
       drupal_add_js('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '90'));
-
-      // Add default styles for MapBox controls.
       drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css', array('type' => 'external'));
-
-       // Add Outreach Maps CSS.
       drupal_add_css($path . '/css/outreach.maps.css');
-
-      // Add jQuery UI components.
       drupal_add_library('system', 'ui.dialog');
-      //drupal_add_library('system', 'ui.accordion');
+      drupal_add_library('system', 'ui.accordion');
 
       // County map.
       if ($variables['map'] == 'county') {
@@ -44,10 +37,10 @@ function outreach_maps_preprocess_page(&$variables) {
         // Get the county GeoJSON from the include file.
         $county_geo_json = _outreach_maps_return_county_geo_json();
 
-        // County geo data with GeoJSON passed in Drupal.settings.
+        // Create Drupal.setting of county GeoJSON.
         drupal_add_js(array('countyGeoJSON' => $county_geo_json), 'setting');
 
-        // Main script for county map.
+        // Add the script to build the county map.
         drupal_add_js($path . '/js/county.jquery.js', array('weight' => '91'));
       }
       // House map.
@@ -58,10 +51,10 @@ function outreach_maps_preprocess_page(&$variables) {
         // Get the house GeoJSON from the include file.
         $house_geo_json = _outreach_maps_return_house_geo_json();
 
-        // house geo data with GeoJSON passed in Drupal.settings.
+        // Create Drupal.setting of house GeoJSON.
         drupal_add_js(array('houseGeoJSON' => $house_geo_json), 'setting');
 
-        // Main script for house map.
+        // Add the script to build the house map.
         drupal_add_js($path . '/js/house.jquery.js', array('weight' => '91'));
       }
       // Senate map.
@@ -72,10 +65,10 @@ function outreach_maps_preprocess_page(&$variables) {
         // Get the senate GeoJSON from the include file.
         $senate_geo_json = _outreach_maps_return_senate_geo_json();
 
-        // senate geo data with GeoJSON passed in Drupal.settings.
+        // Create Drupal.setting of county GeoJSON.
         drupal_add_js(array('senateGeoJSON' => $senate_geo_json), 'setting');
 
-        // Main script for senate map.
+        // Add the script to build the senate map.
         drupal_add_js($path . '/js/senate.jquery.js', array('weight' => '91'));
       }
       // Congressional map.
@@ -86,14 +79,14 @@ function outreach_maps_preprocess_page(&$variables) {
         // Get the congressional GeoJSON from the include file.
         $congressional_geo_json = _outreach_maps_return_congressional_geo_json();
 
-        // congressional geo data with GeoJSON passed in Drupal.settings.
+        // Create Drupal.setting of county GeoJSON.
         drupal_add_js(array('congressionalGeoJSON' => $congressional_geo_json), 'setting');
 
-        // Main script for congressional map.
+        // Add the script to build the congressional map.
         drupal_add_js($path . '/js/congressional.jquery.js', array('weight' => '91'));
       }
 
-      // Adding drupal.ajax manually because it needs to run after the map script.
+      // Adding drupal.ajax manually because it needs to run after the map scripts.
       drupal_add_js('misc/ajax.js', array('weight' => '92'));
     }
   }
