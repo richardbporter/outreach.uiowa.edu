@@ -159,7 +159,7 @@ function outreach_maps_field_formatter_info() {
     'outreach_maps_number_formatter' => array(
       'label' => t('Number'),
       'description' => t('Formats a number.'),
-      'field types' => array('text'),
+      'field types' => array('text, integer, float'),
     ),
   );
 }
