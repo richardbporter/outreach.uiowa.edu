@@ -120,7 +120,7 @@ function _outreach_maps_load_district($district_type, $district_number) {
     $data = array(
       'counties_heading' => array(
         '#type' => 'markup',
-        '#markup' => '<h6>Counties</h6>',
+        '#markup' => '<h3>Counties</h3>',
       ),
       'counties' => array(field_view_field('node', $node, 'field_county', array('label' => 'hidden'))),
       'more_link' => array(
