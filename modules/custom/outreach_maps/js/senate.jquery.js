@@ -8,7 +8,7 @@
   // Initialize the senate map.
   Drupal.senateMap = function() {
     // Create a base layer object.
-    var baseLayer = mapbox.layer().id('uiowa-its.map-eyt0wixl');
+    var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
     // Create array of event handlers.
     var eventHandlers = [
@@ -25,7 +25,7 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 10);
+    map.setZoomRange(6, 12);
     map.zoom(8, true);
 
     // Add the senate layer.

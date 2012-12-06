@@ -8,7 +8,7 @@
   // Initialize the county map.
   Drupal.countyMap = function() {
     // Create a base layer object.
-    var baseLayer = mapbox.layer().id('uiowa-its.map-eyt0wixl');
+    var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
     // Create array of event handlers.
     var eventHandlers = [
@@ -25,7 +25,7 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 9);
+    map.setZoomRange(6, 12);
     map.zoom(8, true);
 
     // Add the county layer.
@@ -76,7 +76,7 @@
     // Reduce font size for zoom level 7.
     map.addCallback("zoomed", function(map, zoomOffset) {
       var z = Math.round(map.zoom());
-      if (zoomOffset == -1 && z == 7) {
+      if (zoomOffset == -1 && z <= 7) {
         $('.county-marker').addClass('smaller');
       } else {
         $('.county-marker').removeClass('smaller');
