@@ -240,7 +240,7 @@ var {
  * Wraps the header
  */
 #header-wrapper {
-  background-color: rgba(darken($grey, 5%), 0.7);
+  @include background-image(linear-gradient(lighten($black, 26%), lighten($black, 16%)));
   border-bottom: 4px solid darken($gold, 10%);
   .container {
     margin: 0 auto;
@@ -253,6 +253,8 @@ var {
         li {
           a {
             color: $light;
+            border-right: 1px solid $black;
+            text-transform: uppercase;
             &.active {
               text-decoration: underline;
             }
