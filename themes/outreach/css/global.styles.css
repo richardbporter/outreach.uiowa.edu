@@ -38,25 +38,25 @@ html {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\0000345}}
 body {
-  font-family: "Trebuchet MS", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 87.5%;
 }
 
 /* =============================================================================
  *   HTML Elements
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\0000357}}
 h2 {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003135}}
 hr {
   border: solid rgba(59, 59, 60, 0.3);
   border-width: 1px 0 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003145}}
 pre,
 code,
 tt,
@@ -86,6 +86,11 @@ var {
  * Wraps the main-content-header, the content region and feed-icons. Use this
  * wrapper to style the entire main content column
  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003185}}
+.not-front #main-content {
+  padding-top: 20px;
+}
+
 /*
  * Wraps the content region, avoid applying styles to this wrapper, its used
  * mainly for position and invisible gutters and can be problematic to style
@@ -112,7 +117,7 @@ var {
 /*
  * Wraps the UI bar
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003235}}
 #ui-wrapper {
   box-shadow: none;
 }
@@ -120,7 +125,7 @@ var {
 /*
  * Wraps the header
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003243}}
 #header-wrapper {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQyNDI0MiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI5MjkyOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -129,35 +134,41 @@ var {
   background-image: -moz-linear-gradient(#424242, #292929);
   background-image: -o-linear-gradient(#424242, #292929);
   background-image: linear-gradient(#424242, #292929);
-  border-bottom: 4px solid #d1a700;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003245}}
 #header-wrapper .container {
   margin: 0 auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003247}}
-#header-wrapper .container #nav-wrapper {
-  margin: -38px 0 0 0;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003248}}
+#header-wrapper .container #nav-wrapper .nav {
+  margin: 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003249}}
-#header-wrapper .container #nav-wrapper nav {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003250}}
+#header-wrapper .container #nav-wrapper .nav nav {
   margin-right: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003254}}
-#header-wrapper .container #nav-wrapper ul li a {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003255}}
+#header-wrapper .container #nav-wrapper .nav ul li a {
   color: #eeeeee;
   border-right: 1px solid black;
   text-transform: uppercase;
+  font-weight: 100;
+  height: 45px;
+  line-height: 60px;
+  -webkit-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
+  box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003258}}
-#header-wrapper .container #nav-wrapper ul li a.active {
-  text-decoration: underline;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003265}}
+#header-wrapper .container #nav-wrapper .nav ul li a:hover, #header-wrapper .container #nav-wrapper .nav ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
 }
 
 /*
  * Wraps the nav elements
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003271}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003280}}
 #nav-wrapper {
   float: right;
 }
@@ -174,11 +185,11 @@ var {
 /*
  * Wraps the main content column
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003304}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003313}}
 #content-wrapper {
   background: url("images/grid12.png") #eeeeee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003306}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003315}}
 #content-wrapper .container {
   max-width: 1140px;
   background-color: white;
@@ -207,7 +218,12 @@ var {
 /*
  * Wraps all the branding elements, logo, name and slogan
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003347}}
+#branding {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003352}}
 #ui-wrapper #ui-logo {
   border-top: none;
 }
@@ -215,7 +231,7 @@ var {
 /*
  * Logo
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003360}}
 #logo img {
   vertical-align: bottom;
 }
@@ -226,12 +242,12 @@ var {
 /*
  * Site name (h1)
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003375}}
 #site-name {
-  margin: 5px 20px 0 -10px;
   float: left;
+  margin: 0 0 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003380}}
 #site-name a:link, #site-name a:visited {
   display: block !important;
   text-indent: 100%;
@@ -242,11 +258,11 @@ var {
   text-shadow: none;
   color: transparent;
   background-color: transparent;
-  width: 300px;
-  height: 45px;
-  background: url("images/logo.png") center no-repeat;
+  width: 265px;
+  height: 40px;
+  background: url("images/wordmark.png") center no-repeat;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003387}}
 #site-name a:hover, #site-name a:focus {
   text-decoration: none;
 }
@@ -254,11 +270,12 @@ var {
 /*
  * Site slogan (h2)
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003397}}
 #site-slogan {
   float: left;
-  margin: 16px 0 0 -20px;
+  margin: 20px 0 0 10px;
   color: #999999;
+  font-size: 100%;
   font-weight: normal;
   font-style: italic;
   text-shadow: 0 2px 3px #3b3b3c;
@@ -273,7 +290,7 @@ var {
 /*
  * The main page title (h1)
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003409}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003421}}
 #page-title {
   margin: 0;
 }
@@ -287,14 +304,14 @@ var {
 /*
  * Aggregator feed source
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003427}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003439}}
 #aggregator .feed-source .feed-icon {
   display: inline;
   float: none;
   margin-right: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003435}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003447}}
 .feed-details dt,
 .feed-details dd {
   display: inline;
@@ -307,16 +324,16 @@ var {
 /*
  * Generic styles for links. See the ul.links declaration in node and comment stylesheets
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003450}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003462}}
 ul.links {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003454}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003466}}
 ul.links.inline {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003458}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003470}}
 ul.links li {
   display: inline;
   list-style: none;
@@ -326,7 +343,7 @@ ul.links li {
 /*
  * Search results are an ordered list so reset the margin
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003469}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003481}}
 .search-results {
   margin: 0;
 }
@@ -377,22 +394,22 @@ ul.links li {
 /* =============================================================================
  *   Links
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003561}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003573}}
 a {
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003571}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003583}}
 a:hover, a:focus {
   text-decoration: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003577}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003589}}
 .openlayers-popup a {
   font-weight: bold;
   color: white;
   border-bottom: 1px solid white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003581}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003593}}
 .openlayers-popup a:hover {
   border-bottom: 1px solid #b2b2b2;
   text-decoration: none;
@@ -408,18 +425,18 @@ a:hover, a:focus {
  *  - #secondary-menu (secondary/user menu)
  * You can target all of these with .nav or div[id$="menu-bar"]
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003601}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003613}}
 .nav {
   clear: both;
   margin: 10px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003606}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003618}}
 .nav ul,
 .nav ul.menu {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003612}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003624}}
 .nav li,
 .nav ul.menu li {
   display: inline;
@@ -428,14 +445,14 @@ a:hover, a:focus {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003621}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003633}}
 .nav li a,
 .nav ul.menu li a {
   display: block;
   white-space: nowrap;
   padding: 0 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003632}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003644}}
 .nav .block {
   margin-bottom: 0;
 }
@@ -443,11 +460,11 @@ a:hover, a:focus {
 /* =============================================================================
  *   Superfish
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003642}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003654}}
 ul.sf-menu {
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003645}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003657}}
 ul.sf-menu a {
   border-left: 0;
   border-top: 0;
@@ -456,11 +473,11 @@ ul.sf-menu a {
   height: 2.5em;
   line-height: 2.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003659}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003671}}
 ul.sf-menu li:hover, ul.sf-menu li.sfHover {
   outline: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003667}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003679}}
 ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
   outline: 0;
 }
@@ -468,12 +485,12 @@ ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
 /*
  * Superfish blocks
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003681}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003693}}
 .block-superfish ul {
   margin: 0 !important;
   padding: 0 !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003692}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003704}}
 .block-superfish li {
   margin: 0 !important;
   padding: 0 !important;
@@ -482,22 +499,22 @@ ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
 /*
  * Vertical style
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003702}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003714}}
 .sf-vertical {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003705}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003717}}
 .sf-vertical li {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003711}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003723}}
 .sf-vertical li:hover ul, .sf-vertical li.sfHover ul {
   left: 100%;
   top: 0;
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003718}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003730}}
 .sf-vertical li a {
   padding: 0 10px;
 }
@@ -505,7 +522,7 @@ ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
 /*
  * Navbar style
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003728}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003740}}
 .sf-navbar {
   padding-bottom: 0 !important;
 }
@@ -513,7 +530,7 @@ ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
 /*
  * Sensible padding for the default style
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003736}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003748}}
 .sf-menu.sf-style-default a {
   padding: 0 10px;
 }
@@ -521,21 +538,21 @@ ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
 /* =============================================================================
  *   Menus, usually blocks
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003745}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003757}}
 ul.menu {
   padding-left: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003748}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003760}}
 ul.menu ul {
   padding-left: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003756}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003768}}
 ul.menu li {
   margin: 0;
 }
 
 /* If li.content exists it's a problem, so reset the padding */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003785}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003797}}
 .block .menu li.content {
   padding: 0;
 }
@@ -543,13 +560,13 @@ ul.menu li {
 /* =============================================================================
  *   Book navigation menu
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003802}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003814}}
 .book-navigation .page-up {
   /* Prevent text wrapping to a new line, assumes English "up" is used (two characters) */
   min-width: 2em;
   white-space: nowrap;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003808}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003820}}
 .book-navigation .menu {
   margin-left: 0;
 }
@@ -557,31 +574,31 @@ ul.menu li {
 /* =============================================================================
  *   Breadcrumbs
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003818}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003830}}
 #breadcrumb {
   margin: 10px 0;
   /* If the label is set to show in theme settings the label class is added */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003822}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003834}}
 #breadcrumb .breadcrumb-label {
   font-size: 1em;
   display: inline;
   padding-right: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003827}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003839}}
 #breadcrumb .breadcrumb-label:after {
   content: ":";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003832}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003844}}
 #breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003837}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003849}}
 #breadcrumb .with-breadcrumb-label ol {
   display: inline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003841}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003853}}
 #breadcrumb li {
   list-style: none;
   display: inline;
@@ -590,31 +607,31 @@ ul.menu li {
 /* =============================================================================
  *   Pagers
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003868}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003880}}
 ul.pager {
   clear: both;
   margin: 0;
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003875}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003887}}
 .item-list ul.pager li {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003880}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003892}}
 ul.pager li {
   background-image: none;
   display: inline;
   list-style-type: none;
   padding: .5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003886}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003898}}
 ul.pager li.pager-current {
   font-weight: 700;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003892}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003904}}
 .block ul.pager li {
   margin: 0;
 }
@@ -625,7 +642,7 @@ ul.pager li.pager-current {
 /* =============================================================================
  *   Skip Navigation
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003929}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003941}}
 #skip-link {
   left: 50%;
   margin-left: -6.5em;
@@ -635,7 +652,7 @@ ul.pager li.pager-current {
   width: 12em;
   z-index: 50;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003938}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003950}}
 #skip-link a {
   background: #444;
   background: rgba(0, 0, 0, 0.6);
@@ -646,7 +663,7 @@ ul.pager li.pager-current {
   text-align: center;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003949}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003961}}
 #skip-link a:link, #skip-link a:visited {
   background: #444;
   background: rgba(0, 0, 0, 0.6);
@@ -657,7 +674,7 @@ ul.pager li.pager-current {
   text-align: center;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003961}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003973}}
 #skip-link a:hover, #skip-link a:focus, #skip-link a:active {
   outline: 0;
 }
@@ -665,24 +682,24 @@ ul.pager li.pager-current {
 /* =============================================================================
  *   Tabs (local tasks)
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003972}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003984}}
 #tasks {
   margin-bottom: 15px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003977}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003989}}
 ul.primary {
   border-bottom-color: #cccccc;
   margin: 20px 0;
   padding: 0 0 0 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003982}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003994}}
 ul.primary li {
   display: block;
   float: left;
   margin: 0 1px -1px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003987}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003999}}
 ul.primary li a {
   background-color: whitesmoke;
   border-color: #cccccc;
@@ -693,12 +710,12 @@ ul.primary li a {
   height: 1.5em;
   line-height: 1.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\00003998}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031010}}
 ul.primary li a:hover, ul.primary li a:focus {
   background-color: #eeeeee;
   border-color: #cccccc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031008}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031020}}
 ul.primary li.active a,
 ul.primary li.active a:hover,
 ul.primary li.active a:focus {
@@ -706,19 +723,19 @@ ul.primary li.active a:focus {
   border-bottom-color: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031016}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031028}}
 ul.secondary {
   border-bottom: 1px solid #cccccc;
   margin: 1em 0 0;
   padding: 0 .3em 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031021}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031033}}
 ul.secondary li {
   border-right: 0;
   list-style: none;
   padding: 0 10px 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031028}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031040}}
 ul.secondary li a:hover, ul.secondary li a.active {
   border-bottom: none;
   text-decoration: underline;
@@ -727,7 +744,7 @@ ul.secondary li a:hover, ul.secondary li a.active {
 /* =============================================================================
  *   Action links
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031041}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031053}}
 ul.action-links {
   margin: 20px 0 0;
   list-style: none;
@@ -748,7 +765,7 @@ ul.action-links {
 /*
  * Labels are h2 in Adaptivetheme. Use a strong selector to mitigate unwanted ineritance issues
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031074}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031086}}
 .field-label {
   font-size: 1em;
   font-weight: 300 !important;
@@ -766,17 +783,17 @@ ul.action-links {
 /*
  * Taxonomy
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031115}}
 .field-type-taxonomy-term-reference {
   /* The same bottom margin as p, blockquote, ul, ol and dl */
   margin-bottom: 1.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031120}}
 .field-type-taxonomy-term-reference.field-label-inline .field-items {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031125}}
 .field-type-taxonomy-term-reference.field-label-inline .field-item {
   display: inline;
   list-style: none;
@@ -834,7 +851,7 @@ ul.action-links {
 /*
  * Float left setting
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031240}}
 .ia-l .field-type-image figure,
 .iat-l .field-type-image figure {
   margin: 5px 20px 15px 0;
@@ -843,7 +860,7 @@ ul.action-links {
 /*
  * Centered setting
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031237}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031249}}
 .ia-c .field-type-image figure,
 .iat-c .field-type-image figure {
   margin: 5px auto 15px;
@@ -852,7 +869,7 @@ ul.action-links {
 /*
  * Float right setting
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031258}}
 .ia-r .field-type-image figure,
 .iat-r .field-type-image figure {
   margin: 5px 0 15px 20px;
@@ -864,7 +881,7 @@ ul.action-links {
 /*
  * Main wrapper for most blocks, block_system_main does not have it
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031259}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031271}}
 .block {
   margin-bottom: 20px;
 }
@@ -887,7 +904,7 @@ ul.action-links {
 /*
  * Block title
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031309}}
 .block-title {
   margin: 0;
 }
@@ -898,12 +915,12 @@ ul.action-links {
 /*
  * Match item list and block menu margin and padding
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031326}}
 .block-content ul,
 .block-content ol {
   padding: 0 0 0 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031330}}
 .block-content li {
   margin: 0;
   padding: 0;
@@ -993,11 +1010,11 @@ ul.action-links {
 /* =============================================================================
  *   Node Styling
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031491}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031503}}
 .node {
   margin-bottom: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031508}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031520}}
 .node .node-title {
   margin: 0;
 }
@@ -1013,15 +1030,15 @@ ul.action-links {
 /*
  * Wrapper for the list of comments and its titles
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031566}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031578}}
 #comments {
   margin: 1.5em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031570}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031582}}
 #comments h2.comment-title {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031574}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031586}}
 #comments h2.comment-form {
   margin: 0;
 }
@@ -1029,7 +1046,7 @@ ul.action-links {
 /*
  * Wrapper for a single comment
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031584}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031596}}
 .comment {
   margin-bottom: 20px;
 }
@@ -1037,7 +1054,7 @@ ul.action-links {
 /*
  * Comment title
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031615}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031627}}
 .comment-title {
   margin: 0;
 }
@@ -1051,7 +1068,7 @@ ul.action-links {
 /*
  * "New" marker for comments that are new for the current user
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031647}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031659}}
 .new {
   color: #cc0000;
 }
@@ -1059,7 +1076,7 @@ ul.action-links {
 /*
  * Nested comments are indented
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031655}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031667}}
 .indented {
   margin-left: 40px;
 }
@@ -1070,17 +1087,17 @@ ul.action-links {
 /*
  * Wrapper for a form element (or group of form elements) and its label
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031671}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031683}}
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid #cc0000;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031675}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031687}}
 .form-item label {
   font-weight: 700;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031682}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031694}}
 .form-item .description {
   font-size: 0.85em;
 }
@@ -1088,7 +1105,7 @@ ul.action-links {
 /*
  * Highlight marks and form required mark
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031696}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031708}}
 .marker,
 .form-required {
   color: #cc0000;
@@ -1097,7 +1114,7 @@ ul.action-links {
 /*
  * The submit button
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031710}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031722}}
 .container-inline div,
 .container-inline label {
   display: inline;
@@ -1106,7 +1123,7 @@ ul.action-links {
 /*
  * Define consistent borders
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031718}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031730}}
 fieldset {
   border: 1px solid #cccccc;
 }
@@ -1117,7 +1134,7 @@ fieldset {
 /*
  * Buttons used by contrib modules like Media
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031732}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031744}}
 a.button {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -1127,7 +1144,7 @@ a.button {
 /*
  * Password confirmation
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031741}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031753}}
 .password-parent,
 .confirm-parent {
   margin: 0;
@@ -1136,18 +1153,18 @@ a.button {
 /* =============================================================================
  *   Tables
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031750}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031762}}
 table {
   margin: 10px 0;
   padding: 0;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031755}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031767}}
 table.sticky-header {
   z-index: 10;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031766}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031778}}
 table,
 thead,
 tbody,
@@ -1157,27 +1174,27 @@ td {
   border-color: #cccccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031773}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031785}}
 table,
 td,
 th {
   vertical-align: middle;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031780}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031792}}
 caption,
 th,
 td {
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031785}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031797}}
 thead tr {
   font-weight: 700;
   background-color: #e5e5e5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031792}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031804}}
 td,
 th {
   border-bottom: 0;
@@ -1185,29 +1202,29 @@ th {
   padding: 5px 7px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031802}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031814}}
 tbody tr {
   border-top: 1px solid #cccccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031807}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031819}}
 tr {
   /* Table row striping */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031809}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031821}}
 tr.odd {
   background: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031816}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031828}}
 tr.info, tr.even, tr:nth-child(2n+2) {
   border-bottom: 0;
   background-color: whitesmoke;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031825}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031837}}
 tr.odd td.active {
   background-color: #eeeeee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031829}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031841}}
 tr.even td.active {
   background-color: #ebebeb;
 }
@@ -1216,7 +1233,7 @@ tr.even td.active {
  * Forum tables
  * Core sets white-space to nowrap, which makes no sense
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031857}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031869}}
 #forum td .created,
 #forum td .posts,
 #forum td .topics,
@@ -1229,12 +1246,12 @@ tr.even td.active {
 /* =============================================================================
  *   Messages
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031868}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031880}}
 div.messages {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031873}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031885}}
 div.messages ul {
   margin-top: 0;
   margin-bottom: 0;
@@ -1243,7 +1260,7 @@ div.messages ul {
 /*
  * Unpublished nodes
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031914}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031926}}
 .node-unpublished p.unpublished,
 .comment-unpublished p.unpublished {
   color: pink;
@@ -1269,28 +1286,28 @@ div.messages ul {
 /* =============================================================================
  *    Maintenance pages
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031925}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031937}}
 .maintenance-page .container {
   padding: 40px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031930}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031942}}
 .maintenance-page #site-name,
 .maintenance-page #page-title {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031937}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031949}}
 .db-offline .container {
   margin: 0 auto;
   padding: 40px 0;
   width: 100%;
   max-width: 960px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031944}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031956}}
 .db-offline div.messages {
   margin: 20px 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031948}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031960}}
 .db-offline #content {
   padding: 20px 0;
 }
@@ -1301,7 +1318,7 @@ div.messages ul {
 /*
  * Admin menu overrides
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031961}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031973}}
 #admin-menu {
   margin: 0;
   padding: 0;
@@ -1310,7 +1327,7 @@ div.messages ul {
 /*
  * Devel Module
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031970}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031982}}
 .dev-query {
   background: #eeeeee;
   padding: 30px;
@@ -1319,11 +1336,11 @@ div.messages ul {
 /*
  * Styleguide module tweaks
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031979}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031991}}
 #styleguide-header {
   padding: 0 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031982}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031994}}
 #styleguide-header .item-list {
   font-family: inherit;
   margin: 0 20px 20px 0;
@@ -1331,17 +1348,17 @@ div.messages ul {
   width: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031990}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032002}}
 .field-type-computed .field-item:after {
   content: "%";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031994}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032006}}
 .field-name-field-enrollment-total .field-item:after {
   content: "";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000031998}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/global\.styles\.scss}line{font-family:\000032010}}
 .field-type-image figure {
   float: right;
   margin-top: 75px;
