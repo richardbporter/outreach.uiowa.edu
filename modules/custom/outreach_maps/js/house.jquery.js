@@ -28,6 +28,11 @@
     map.setZoomRange(6, 12);
     map.zoom(8, true);
 
+    // Create an array of house districts that are close together.
+    var clustered = [
+      '31', '32', '33', '34', '35', '36', '40', '41', '42', '43', '44'
+    ];
+
     // Add the house layer.
     map.addLayer(mapbox.layer().id('uiowa-its.iowa-house-districts'));
 
@@ -41,6 +46,11 @@
       var houseLink = document.createElement('a');
       $(houseLink).addClass('house-marker use-ajax');
       $(houseLink).addClass('house-' + f.properties.text);
+      console.log($.inArray(f.properties.text, clustered), f.properties.text);
+      // If this district is clustered.
+      if ($.inArray(f.properties.text, clustered) != -1) {
+        $(houseLink).addClass('cluster');
+      }
       $(houseLink).text(f.properties.text);
       $(houseLink).attr('href', '/outreach-maps/house/' + f.properties.text);
 
@@ -85,6 +95,12 @@
       } else {
         $('.marker').removeClass('seven');
       }
+    });
+
+    // Cluster click handlers.
+    $('#polk').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 41.6842807, lon: -93.5697204 }).zoom(11).optimal();
     });
 
     // Add attribution.
