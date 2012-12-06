@@ -82,6 +82,11 @@
   display: none !important;
 }
 
+.field-name-field-county .field-item {
+  // Float these side by side?
+}
+
+
 /* =============================================================================
  *   County
  * ========================================================================== */
@@ -94,12 +99,12 @@
   margin-left: -10px;
 }
 
-.winnebago, .winneshiek, .palo-alto, .chickasaw, .pocahontas, .humboldt, .black-hawk, .audubon, .poweshiek, .washington, .appanoose, .van-buren, .des-moines {
+.winnebago, .winneshiek, .palo-alto, .chickasaw, .humboldt, .audubon, .buchanan, .delaware, .poweshiek, .washington, .appanoose, .van-buren, .des-moines, .marshall {
   margin-left: -30px;
 }
 
-.cerro-gordo, .buena-vista, .montgomery, .pottawattamie {
-  margin-left: -35px;
+.cerro-gordo, .buena-vista, .montgomery, .pocahontas, .pottawattamie, .black-hawk {
+  margin-left: -40px;
 }
 
 /* =============================================================================
@@ -109,6 +114,15 @@
   margin-left: -10px;
   margin-top: -10px;
 }
+
+.house-21 {
+  margin-top: 5px;
+}
+
+.house-72 {
+  margin-left: 5px;
+}
+
 
 /* =============================================================================
  *   Senate
