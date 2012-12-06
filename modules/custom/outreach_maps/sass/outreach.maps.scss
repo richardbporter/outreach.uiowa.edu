@@ -28,7 +28,7 @@
   width: 100%;
   z-index: 99;
   .container {
-    max-width: 100%;
+
   }
 }
 
@@ -59,7 +59,7 @@
   position: absolute;  // Markers have to be positioned absolutely.
   pointer-events: all;  // Allows for interactive markers.
   color: $grey;
-  @include text-shadow(1px 1px 1px rgba($grey, 0.4));
+  @include text-shadow(1px 2px 2px rgba(lighten($grey, 60%), 0.4));
 }
 
 .smaller {
@@ -68,6 +68,7 @@
 }
 
 .marker-popup {
+  color: $grey;
   h3 {
     margin: 0 0;
   }
