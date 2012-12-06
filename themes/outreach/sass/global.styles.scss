@@ -43,7 +43,7 @@ html {
 }
 
 body {
-  font-family: $sans-serif-small; // Set from _custom.scss font variables
+  font-family: $sans-serif-arial-helvetica; // Set from _custom.scss font variables
   font-size: 87.5%;
 }
 
@@ -51,7 +51,6 @@ body {
 /* =============================================================================
  *   HTML Elements
  * ========================================================================== */
-
 h1 {}
 
 
@@ -183,7 +182,9 @@ var {
  * Wraps the main-content-header, the content region and feed-icons. Use this
  * wrapper to style the entire main content column
  */
-#main-content {}
+.not-front #main-content {
+  padding-top: 20px;
+}
 
 /*
  * Wraps the content region, avoid applying styles to this wrapper, its used
@@ -241,22 +242,30 @@ var {
  */
 #header-wrapper {
   @include background-image(linear-gradient(lighten($black, 26%), lighten($black, 16%)));
-  border-bottom: 4px solid darken($gold, 10%);
   .container {
     margin: 0 auto;
     #nav-wrapper {
-      margin: -38px 0 0 0;
-      nav {
-        margin-right: 0;
-      }
-      ul {
-        li {
-          a {
-            color: $light;
-            border-right: 1px solid $black;
-            text-transform: uppercase;
-            &.active {
-              text-decoration: underline;
+      .nav {
+        margin: 0 0;
+        nav {
+          margin-right: 0;
+        }
+        ul {
+          li {
+            a {
+              color: $light;
+              border-right: 1px solid $black;
+              text-transform: uppercase;
+              font-weight: 100;
+              height: 45px;
+              line-height: 60px;
+              @include box-shadow(-1px 0px 0px rgba(255, 255, 255, 0.2) inset);
+              &.active {
+              }
+              &:hover, &:focus {
+                background-color: rgba($white, 0.1);
+                text-decoration: none;
+              }
             }
           }
         }
@@ -335,7 +344,9 @@ var {
 /*
  * Wraps all the branding elements, logo, name and slogan
  */
-#branding {}
+#branding {
+  float: left;
+}
 
 
 #ui-wrapper #ui-logo {
@@ -362,15 +373,15 @@ var {
  * Site name (h1)
  */
 #site-name {
-  margin: 5px 20px 0 -10px;
   float: left;
+  margin: 0 0 0 0;
   a {
     &:link,
     &:visited {
       @include ir();
-      width: 300px;
-      height: 45px;
-      background: url("images/logo.png") center no-repeat;
+      width: 265px;
+      height: 40px;
+      background: url("images/wordmark.png") center no-repeat;
     }
     &:hover,
     &:focus {
@@ -385,8 +396,9 @@ var {
  */
 #site-slogan {
   float: left;
-  margin: 16px 0 0 -20px;
+  margin: 20px 0 0 10px;
   color: darken($white, 40%);
+  font-size: 100%;
   font-weight: normal;
   font-style: italic;
   @include text-shadow(0 2px 3px $grey);
