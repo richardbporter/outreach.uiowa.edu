@@ -192,7 +192,17 @@
 
             <?php print render($title_prefix); ?>
 
-
+            <?php if ($map_name == 'house'): ?>
+              <div id='map-ui'>
+                <ul>
+                  <li><a href='#' id='polk'>Polk County</a></li>
+                  <li><a href='#' id='black-hawk'>Black Hawk County</a></li>
+                  <li><a href='#' id='johnson'>Johnson County</a></li>
+                  <li><a href='#' id='linn'>Linn County</a></li>
+                  <li><a href='#' id='scott'>Scott County</a></li>
+                </ul>
+              </div>
+            <?php endif; ?>
 
             <!-- Begin map. -->
             <div id="map">
