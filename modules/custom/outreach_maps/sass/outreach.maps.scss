@@ -57,12 +57,12 @@
 
 #map-ui {
   position: absolute;
-  top: 200px;
+  top: 150px;
   left: 10px;
   z-index: 100;
   ul {
     list-style: none;
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
     a {
       font-size: 13px;
@@ -73,11 +73,14 @@
       padding: 0;
       border: 1px solid darken($white, 20%);
       border-bottom-width: 0;
-      min-width: 138px;
+      width: 49px;
       padding: 5px;
       text-decoration: none;
       &:hover {
         background: rgba(darken($white, 10%), 0.7);
+      }
+      &.wide {
+        min-width: 120px;
       }
     }
     li:last-child a {
@@ -90,7 +93,11 @@
   }
 }
 
-.county-marker, .house-marker, .senate-marker, .congressional-marker {
+.zoomer {
+  @include opacity(0.5);
+}
+
+.county-marker, .house-marker, .senate-marker, .congressional-marker, .cluster-marker {
   position: absolute;  // Markers have to be positioned absolutely.
   pointer-events: all;  // Allows for interactive markers.
   color: $grey;
@@ -119,6 +126,14 @@
 
 .field-name-field-county .field-item {
   // Float these side by side?
+}
+
+.cluster {
+  display: none;
+}
+
+.cluster-marker {
+  cursor: pointer;
 }
 
 
