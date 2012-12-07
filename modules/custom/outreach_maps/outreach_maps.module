@@ -18,7 +18,6 @@ function outreach_maps_preprocess_page(&$variables) {
 
       // Create preprocess variables.
       $variables['map'] = $variables['node']->field_map['und']['0']['value'];
-      $variables['map_name'] = '';
 
       // Get the path to the outreach_maps module.
       $path = drupal_get_path('module', 'outreach_maps');
@@ -46,9 +45,6 @@ function outreach_maps_preprocess_page(&$variables) {
       }
       // House map.
       elseif ($variables['map'] == 'house') {
-        // This map has clusters.
-        $variables['map_name'] = 'house';
-
         // Include the house GeoJSON file.
         module_load_include('inc', 'outreach_maps', 'inc/geo/house.geo');
 
