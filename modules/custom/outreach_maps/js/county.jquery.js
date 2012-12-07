@@ -76,10 +76,10 @@
     // Reduce font size for zoom level 7.
     map.addCallback("zoomed", function(map, zoomOffset) {
       var z = Math.round(map.zoom());
-      if (zoomOffset == -1 && z <= 7) {
-        $('.county-marker').addClass('smaller');
+      if (z <= 7) {
+        $('#map a.county-marker').stop().fadeOut('fast');
       } else {
-        $('.county-marker').removeClass('smaller');
+        $('#map a.county-marker').stop().fadeIn('fast');
       }
     });
 
