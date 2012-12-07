@@ -192,23 +192,28 @@
 
             <?php print render($title_prefix); ?>
 
-            <?php if ($map_name == 'house'): ?>
-              <div id='map-ui'>
-                <ul>
-                  <li><a href='#' id='polk'>Polk County</a></li>
-                  <li><a href='#' id='black-hawk'>Black Hawk County</a></li>
-                  <li><a href='#' id='johnson'>Johnson County</a></li>
-                  <li><a href='#' id='linn'>Linn County</a></li>
-                  <li><a href='#' id='scott'>Scott County</a></li>
-                </ul>
-              </div>
-            <?php endif; ?>
-
             <!-- Begin map. -->
             <div id="map">
               <a href="#" class="zoomer zoomin">+</a>
               <a href="#" class="zoomer zoomout">-</a>
               <div class="marker-popup"></div>
+            </div>
+
+            <div id='map-ui'>
+              <ul>
+                <li><a href="#">Share +</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+
+              <?php if ($map == 'house' || $map == 'senate'): ?>
+                <ul>
+                  <li><a class="wide" href='#' id='polk'>Polk County</a></li>
+                  <li><a class="wide" href='#' id='black-hawk'>Black Hawk County</a></li>
+                  <li><a class="wide" href='#' id='johnson'>Johnson County</a></li>
+                  <li><a class="wide" href='#' id='linn'>Linn County</a></li>
+                  <li><a class="wide" href='#' id='scott'>Scott County</a></li>
+                </ul>
+              <?php endif; ?>
             </div>
 
             <?php print $feed_icons; ?>
