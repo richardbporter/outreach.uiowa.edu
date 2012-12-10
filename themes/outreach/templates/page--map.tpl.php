@@ -201,7 +201,7 @@
 
             <div id='map-ui'>
               <ul>
-                <li><a id="social-button" href="#">Share +</a></li>
+                <li><a id="share-button" href="#">Share +</a></li>
                 <li><a id="about-button" href="#">About</a></li>
               </ul>
 
@@ -229,8 +229,12 @@
             </div>
 
             <div id="about-message" title="About">
-              <p>The University of Iowa impacts the lives of Iowans from border to border and river to river. We invite you to learn more about our connections in your community.</p>
-              <p>Click on a county or district name to bring up information about it. Use the zoom controls in the top left to zoom in/out. Click and drag the map around to see more/less of Iowa.  </p>
+              <p>The University of Iowa impacts the lives of Iowans from border
+              to border and river to river. We invite you to learn more about
+              our connections in your community.</p>
+              <p>Click on a county or district name to bring up information
+              about it. Use the zoom controls in the top left to zoom in/out.
+              Click and drag the map around to see more/less of Iowa.</p>
             </div>
 
             <?php print $feed_icons; ?>
