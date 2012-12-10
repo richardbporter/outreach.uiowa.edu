@@ -205,12 +205,24 @@
                 <li><a href="#">About</a></li>
               </ul>
 
-              <?php if ($map == 'house' || $map == 'senate'): ?>
+              <?php if ($map == 'house'): ?>
                 <ul>
+                  <li><a class="wide" href='#' id='black-hawk'>Black Hawk County</a></li>
+                  <li><a class="wide" href='#' id='dubuque'>Dubuque County</a></li>
+                  <li><a class="wide" href='#' id='johnson'>Johnson County</a></li>
+                  <li><a class="wide" href='#' id='linn'>Linn County</a></li>
                   <li><a class="wide" href='#' id='polk'>Polk County</a></li>
+                  <li><a class="wide" href='#' id='pottawattamie'>Pottawattamie County</a></li>
+                  <li><a class="wide" href='#' id='scott'>Scott County</a></li>
+                  <li><a class="wide" href='#' id='story'>Story County</a></li>
+                  <li><a class="wide" href='#' id='woodbury'>Woodbury County</a></li>
+                </ul>
+              <?php elseif ($map == 'senate'): ?>
+                <ul>
                   <li><a class="wide" href='#' id='black-hawk'>Black Hawk County</a></li>
                   <li><a class="wide" href='#' id='johnson'>Johnson County</a></li>
                   <li><a class="wide" href='#' id='linn'>Linn County</a></li>
+                  <li><a class="wide" href='#' id='polk'>Polk County</a></li>
                   <li><a class="wide" href='#' id='scott'>Scott County</a></li>
                 </ul>
               <?php endif; ?>
