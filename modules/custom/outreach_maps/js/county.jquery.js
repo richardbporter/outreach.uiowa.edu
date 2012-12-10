@@ -6,7 +6,7 @@
 // Namespace jQuery to avoid conflicts.
 (function($) {
   // Initialize the county map.
-  Drupal.countyMap = function() {
+  Drupal.outreachMapsCounty = function() {
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
@@ -87,11 +87,31 @@
     map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  // Attach countyMap behavior.
-  Drupal.behaviors.countyMap = {
+  Drupal.outreachMapsDialog = function() {
+    $('#about-button').click(function(e) {
+      e.preventDefault();
+      $('#about-message').dialog({
+        modal: true,
+        resizable: false,
+        draggable: false,
+        closeOnEscape: true,
+        buttons: {
+          Ok: function() {
+            $(this).dialog('close');
+          }
+        }
+      });
+    });
+  };
+
+  // Attach outreachMapsCounty behavior.
+  Drupal.behaviors.outreachMapsCounty = {
     attach: function(context, settings) {
-      $('#map', context).once('countyMap', function() {
-        Drupal.countyMap();
+      $('#map', context).once('outreachMapsCounty', function() {
+        Drupal.outreachMapsCounty();
+      });
+      $('#about-button', context).once('outreachMapsDialog', function() {
+        Drupal.outreachMapsDialog();
       });
     }
   };
