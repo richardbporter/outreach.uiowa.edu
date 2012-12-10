@@ -102,11 +102,12 @@
   pointer-events: all;  // Allows for interactive markers.
   color: $grey;
   @include text-shadow(1px 2px 2px rgba(lighten($grey, 60%), 0.4));
+  padding: 2px;
 }
 
 .smaller {
   font-size: 60%;
-  margin-left: -10px;
+  margin-left: 0;
 }
 
 .marker-popup {
@@ -132,16 +133,6 @@
   }
 }
 
-#district-4-content {
-  .field-name-field-county .field-item {
-    width: 25%;
-    float: left;
-    .odd {
-      text-align: right;
-    }
-  }
-}
-
 .cluster {
   display: none;
 }
@@ -160,6 +151,9 @@
  .county-marker {
   margin-left: -20px;
   margin-top: -10px;
+  &.smaller {
+    margin-left: -15px;
+  }
  }
 
 .ida, .sac {
@@ -168,10 +162,16 @@
 
 .winnebago, .winneshiek, .palo-alto, .chickasaw, .humboldt, .audubon, .buchanan, .delaware, .poweshiek, .washington, .appanoose, .van-buren, .des-moines, .marshall {
   margin-left: -30px;
+  &.smaller {
+    margin-left: -20px;
+  }
 }
 
 .cerro-gordo, .buena-vista, .montgomery, .pocahontas, .pottawattamie, .black-hawk {
   margin-left: -40px;
+  &.smaller {
+    margin-left: -20px;
+  }
 }
 
 /* =============================================================================
@@ -180,6 +180,7 @@
 .house-marker {
   margin-left: -10px;
   margin-top: -10px;
+  font-size: 1.2em;
 }
 
 .house-21 {
@@ -197,6 +198,7 @@
 .senate-marker {
   margin-left: -10px;
   margin-top: -10px;
+  font-size: 1.2em;
 }
 
 .senate-1 {
@@ -209,4 +211,15 @@
  .congressional-marker {
   margin-left: -10px;
   margin-top: -10px;
+  font-size: 1.2em;
+}
+
+.congressionalMap-processed #district-4-content {
+  .field-name-field-county .field-item {
+    width: 25%;
+    float: left;
+    .odd {
+      text-align: right;
+    }
+  }
 }
