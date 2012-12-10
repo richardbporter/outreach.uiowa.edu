@@ -125,7 +125,21 @@
 }
 
 .field-name-field-county .field-item {
-  // Float these side by side?
+  width: 50%;
+  float: left;
+  .odd {
+    text-align: right;
+  }
+}
+
+#district-4-content {
+  .field-name-field-county .field-item {
+    width: 25%;
+    float: left;
+    .odd {
+      text-align: right;
+    }
+  }
 }
 
 .cluster {
