@@ -29,6 +29,9 @@ function outreach_maps_preprocess_page(&$variables) {
       drupal_add_library('system', 'ui.dialog');
       drupal_add_library('system', 'ui.accordion');
 
+      // Adding drupal.ajax manually because it needs to run after the map scripts.
+      drupal_add_js('misc/ajax.js', array('weight' => '92'));
+
       // County map.
       if ($variables['map'] == 'county') {
         // Include the county GeoJSON file.
@@ -85,9 +88,6 @@ function outreach_maps_preprocess_page(&$variables) {
         // Add the script to build the congressional map.
         drupal_add_js($path . '/js/congressional.jquery.js', array('weight' => '91'));
       }
-
-      // Adding drupal.ajax manually because it needs to run after the map scripts.
-      drupal_add_js('misc/ajax.js', array('weight' => '92'));
     }
   }
 }
