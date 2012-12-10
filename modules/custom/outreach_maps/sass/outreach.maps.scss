@@ -77,7 +77,7 @@
       padding: 5px;
       text-decoration: none;
       &:hover {
-        background: rgba(darken($white, 10%), 0.7);
+        background: rgba(lighten($grey, 50%), 0.7);
       }
       &.wide {
         min-width: 120px;
@@ -93,8 +93,16 @@
   }
 }
 
+.map-attribution a {
+  color: $grey;
+}
+
 .zoomer {
   @include opacity(0.5);
+}
+
+#about-message {
+  display: none;
 }
 
 .county-marker, .house-marker, .senate-marker, .congressional-marker, .cluster-marker {
@@ -222,4 +230,11 @@
       text-align: right;
     }
   }
+}
+
+ /* =============================================================================
+ *   jQuery UI Overrides
+ * ========================================================================== */
+.ui-widget {
+  font-family: Arial, Helvetica, sans-serif;
 }
