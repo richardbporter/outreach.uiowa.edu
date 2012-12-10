@@ -201,8 +201,8 @@
 
             <div id='map-ui'>
               <ul>
-                <li><a href="#">Share +</a></li>
-                <li><a href="#">About</a></li>
+                <li><a id="social-button" href="#">Share +</a></li>
+                <li><a id="about-button" href="#">About</a></li>
               </ul>
 
               <?php if ($map == 'house'): ?>
@@ -226,6 +226,11 @@
                   <li><a class="wide" href='#' id='scott'>Scott County</a></li>
                 </ul>
               <?php endif; ?>
+            </div>
+
+            <div id="about-message" title="About">
+              <p>The University of Iowa impacts the lives of Iowans from border to border and river to river. We invite you to learn more about our connections in your community.</p>
+              <p>Click on a county or district name to bring up information about it. Use the zoom controls in the top left to zoom in/out. Click and drag the map around to see more/less of Iowa.  </p>
             </div>
 
             <?php print $feed_icons; ?>
