@@ -25,12 +25,15 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(6, 12);
+    map.setZoomRange(7, 12);
     map.zoom(8, true);
 
     // Create an array of house districts that are close together.
     var clustered = [
-      '31', '32', '33', '34', '35', '36', '40', '41', '42', '43', '44'
+      '13', '14', '15', '16', '30', '31', '32', '33', '34', '35', '36', '37',
+      '38', '39', '40', '41', '42', '43', '44', '45', '46', '59', '60', '61',
+      '62', '65', '66', '67', '68', '69', '70', '74', '77', '85', '86', '89',
+      '90', '93', '94', '99', '100'
     ];
 
     // Add the house layer.
@@ -46,17 +49,12 @@
       var houseLink = document.createElement('a');
       $(houseLink).addClass('house-marker use-ajax');
       $(houseLink).addClass('house-' + f.properties.text);
-      console.log($.inArray(f.properties.text, clustered), f.properties.text);
       // If this district is clustered.
       if ($.inArray(f.properties.text, clustered) != -1) {
         $(houseLink).addClass('cluster');
       }
       $(houseLink).text(f.properties.text);
       $(houseLink).attr('href', '/outreach-maps/house/' + f.properties.text);
-
-      // var houseImage = document.createElement('img');
-      // $(houseImage).attr('src', '/sites/outreach.uiowa.edu/themes/outreach/images/marker-24.png');
-      // $(houseLink).html(houseImage);
 
       // Add function that centers marker on click.
         MM.addEvent(houseLink, 'click', function(e) {
@@ -87,20 +85,103 @@
       return o;
     });
 
-    // Reduce font size for zoom level 7.
-    map.addCallback("zoomed", function(map, zoomOffset) {
-      var z = Math.round(map.zoom());
-      if (zoomOffset == -1 && z == 7) {
-        $('.marker').addClass('seven');
-      } else {
-        $('.marker').removeClass('seven');
-      }
+    // Create cluster marker layer.
+    var clusterMarkers = mapbox.markers.layer().features([{
+      'geometry': {'type': 'Point', 'coordinates': [-92.3060589, 42.4728884]},
+      'properties': { 'text': 'black-hawk' }
+    }, {
+      'geometry': {'type': 'Point', 'coordinates': [-90.8787708, 42.4634808]},
+      'properties': { 'text': 'dubuque' }
+    }, {
+      'geometry': {'type': 'Point', 'coordinates': [-91.5887572, 41.6687272]},
+      'properties': { 'text': 'johnson' }
+    }, {
+      'geometry': {'type': 'Point', 'coordinates': [-91.5976735, 42.0779506]},
+      'properties': { 'text': 'linn' }
+    }, {
+      'geometry': {'type': 'Point', 'coordinates': [-93.8697204, 41.77842807]},
+      'properties': { 'text': 'polk' }
+    }, {
+      'geometry': {'type': 'Point', 'coordinates': [-95.5449053, 41.3401835]},
+      'properties': { 'text': 'pottawattamie' }
+    }, {
+      'geometry': {'type': 'Point', 'coordinates': [-90.6222899, 41.6416792]},
+      'properties': { 'text': 'scott' }
+    }, {
+      'geometry': {'type': 'Point', 'coordinates': [-93.4660934, 42.0375378]},
+      'properties': { 'text': 'story' }
+    }, {
+      'geometry': {'type': 'Point', 'coordinates': [-96.0532956, 42.3932198]},
+      'properties': { 'text': 'woodbury' }
+    }]).factory(function(f) {
+      var clusterLink = document.createElement('a');
+      $(clusterLink).addClass('cluster-marker cluster-marker-' + f.properties.text);
+      $(clusterLink).attr('href', '');
+      return clusterLink;
     });
 
+    // Add cluster markers layer.
+    map.addLayer(clusterMarkers);
+
     // Cluster click handlers.
-    $('#polk').click(function(e) {
+    $('#black-hawk, .cluster-marker-black-hawk').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 42.4728884, lon: -92.3060589 }).zoom(11).optimal();
+    });
+
+    $('#dubuque, .cluster-marker-dubuque').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 42.4634808, lon: -90.8787708 }).zoom(11).optimal();
+    });
+
+    $('#johnson, .cluster-marker-johnson').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 41.6687272, lon: -91.5887572 }).zoom(11).optimal();
+    });
+
+    $('#linn, .cluster-marker-linn').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 42.0779506, lon: -91.5976735 }).zoom(11).optimal();
+    });
+
+    $('#polk, .cluster-marker-polk').click(function(e) {
       e.preventDefault();
       map.ease.location({ lat: 41.6842807, lon: -93.5697204 }).zoom(11).optimal();
+    });
+
+    $('#pottawattamie, .cluster-marker-pottawattamie').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 41.3401835, lon: -95.5449053 }).zoom(11).optimal();
+    });
+
+    $('#scott, .cluster-marker-scott').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 41.6416792, lon: -90.6222899 }).zoom(11).optimal();
+    });
+
+    $('#story, .cluster-marker-story').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 42.0375378, lon: -93.4660934 }).zoom(11).optimal();
+    });
+
+    $('#woodbury, .cluster-marker-woodbury').click(function(e) {
+      e.preventDefault();
+      map.ease.location({ lat: 42.3932198, lon: -96.0532956 }).zoom(11).optimal();
+    });
+
+     // Perform various actions on the zoom event.
+    map.addCallback("zoomed", function(map, zoomOffset) {
+      // Get the target zoom level.
+      var z = Math.round(map.zoom());
+
+      // @TODO: Currently not using cluster markers. Add back in if client wants.
+      if (z >= 10) {
+        $('.cluster-marker').fadeOut();
+        $('.cluster').fadeIn();
+      } else {
+        $('.cluster').fadeOut();
+        $('.cluster-marker').fadeIn();
+      }
     });
 
     // Add attribution.
