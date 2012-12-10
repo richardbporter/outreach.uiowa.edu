@@ -87,31 +87,11 @@
     map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  Drupal.outreachMapsDialog = function() {
-    $('#about-button').click(function(e) {
-      e.preventDefault();
-      $('#about-message').dialog({
-        modal: true,
-        resizable: false,
-        draggable: false,
-        closeOnEscape: true,
-        buttons: {
-          Ok: function() {
-            $(this).dialog('close');
-          }
-        }
-      });
-    });
-  };
-
   // Attach outreachMapsCounty behavior.
   Drupal.behaviors.outreachMapsCounty = {
     attach: function(context, settings) {
       $('#map', context).once('outreachMapsCounty', function() {
         Drupal.outreachMapsCounty();
-      });
-      $('#about-button', context).once('outreachMapsDialog', function() {
-        Drupal.outreachMapsDialog();
       });
     }
   };
