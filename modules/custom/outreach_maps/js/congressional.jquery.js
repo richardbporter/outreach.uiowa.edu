@@ -25,7 +25,7 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(6, 12);
+    map.setZoomRange(7, 12);
     map.zoom(8, true);
 
     // Add the congressional layer.
