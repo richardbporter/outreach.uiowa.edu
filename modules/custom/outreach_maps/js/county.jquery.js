@@ -25,7 +25,7 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(6, 12);
+    map.setZoomRange(7, 12);
     map.zoom(8, true);
 
     // Add the county layer.
@@ -76,10 +76,10 @@
     // Reduce font size for zoom level 7.
     map.addCallback("zoomed", function(map, zoomOffset) {
       var z = Math.round(map.zoom());
-      if (z <= 7) {
-        $('#map a.county-marker').stop().fadeOut('fast');
+      if (z < 8) {
+        $('#map a.county-marker').addClass('smaller');
       } else {
-        $('#map a.county-marker').stop().fadeIn('fast');
+        $('#map a.county-marker').removeClass('smaller');
       }
     });
 
