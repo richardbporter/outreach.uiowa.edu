@@ -135,9 +135,9 @@ function _outreach_maps_load_district($district_type, $district_number) {
 
     // Deliver the AJAX response.
     $commands = array();
-    $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'hide');
-    $commands[] = ajax_command_html('#' . $district_number . '-content', $html);
-    $commands[] = ajax_command_invoke('#' . $district_number . '-content', 'fadeIn', array('fast'));
+    $commands[] = ajax_command_invoke('#district-' . $district_number . '-content', 'hide');
+    $commands[] = ajax_command_html('#district-' . $district_number . '-content', $html);
+    $commands[] = ajax_command_invoke('#district-' . $district_number . '-content', 'fadeIn', array('fast'));
     $response = array('#type' => 'ajax', '#commands' => $commands);
     ajax_deliver($response);
   }

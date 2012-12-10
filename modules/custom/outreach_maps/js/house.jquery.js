@@ -81,7 +81,7 @@
     // Provide a function that returns html to be used in tooltip.
     houseInteraction.formatter(function(f) {
       var o = '<h2>House District ' + f.properties.text + '</h2>';
-      o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
+      o += '<div id="district-' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
 
