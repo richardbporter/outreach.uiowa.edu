@@ -46,6 +46,19 @@
   }
 }
 
+/*
+ * Footer wrapper
+ */
+.node-type-map #footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  @include background-image(linear-gradient(lighten($black, 26%), lighten($black, 16%)));
+  .container {}
+}
+
 /* =============================================================================
  *   MapBox
  * ========================================================================== */
