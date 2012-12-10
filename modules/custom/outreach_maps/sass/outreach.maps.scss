@@ -105,7 +105,7 @@
 }
 
 .smaller {
-  font-size: 70%;
+  font-size: 60%;
   margin-left: -10px;
 }
 
@@ -132,9 +132,12 @@
   display: none;
 }
 
-.cluster-marker {
-  cursor: pointer;
-}
+// .cluster-marker {
+//   height: 80px;
+//   width: 80px;
+//   @include border-radius(40px);
+//   background-color: rgba($grey, 0.2);
+// }
 
 
 /* =============================================================================
