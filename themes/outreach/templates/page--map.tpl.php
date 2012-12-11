@@ -264,6 +264,7 @@
     <?php if ($page['footer']): ?>
       <div id="footer-wrapper">
         <div class="container clearfix">
+          <a href="#" id="help-button" title="Having trouble with the map? Click here for a list of counties.">Help</a>
           <footer<?php print $footer_attributes; ?>>
             <?php print render($page['footer']); ?>
           </footer>
