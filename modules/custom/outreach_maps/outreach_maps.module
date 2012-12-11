@@ -29,7 +29,6 @@ function outreach_maps_preprocess_page(&$variables) {
       drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css', array('type' => 'external'));
       drupal_add_css($path . '/css/outreach.maps.css');
       drupal_add_library('system', 'ui.dialog');
-      drupal_add_library('system', 'ui.accordion');
 
       // Adding drupal.ajax manually because it needs to run after the map scripts.
       drupal_add_js('misc/ajax.js', array('weight' => '92'));
