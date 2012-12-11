@@ -22,17 +22,21 @@
       });
     });
 
+    //$('#help-button').tooltip();
+
     var open = false;
 
-    $('#share-button').click(function(e) {
+    $('#help-button').click(function(e) {
       e.preventDefault();
       if(open === false) {
           $('#footer-wrapper').animate({ height: '300px' });
           $(this).css('backgroundPosition', 'bottom left');
+          $(this).text('Hide');
           open = true;
       } else {
-          $('#footer-wrapper').animate({ height: '0px' });
+          $('#footer-wrapper').animate({ height: '25px' });
           $(this).css('backgroundPosition', 'top left');
+          $(this).text('Help');
           open = false;
       }
     });
