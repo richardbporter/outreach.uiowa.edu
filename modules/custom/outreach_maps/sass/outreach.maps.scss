@@ -53,9 +53,14 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 0;
+  height: 25px;
   width: 100%;
   .container {}
+}
+
+#help-button {
+  float: right;
+  color: $light !important;
 }
 
 /* =============================================================================
@@ -180,14 +185,14 @@
   margin-left: -10px;
 }
 
-.winnebago, .winneshiek, .palo-alto, .chickasaw, .humboldt, .audubon, .buchanan, .delaware, .poweshiek, .washington, .appanoose, .van-buren, .des-moines, .marshall {
+.cherokee, .winnebago, .winneshiek, .palo-alto, .humboldt, .audubon, .buchanan, .delaware, .washington, .appanoose, .van-buren, .des-moines, .marshall {
   margin-left: -30px;
   &.smaller {
     margin-left: -20px;
   }
 }
 
-.cerro-gordo, .buena-vista, .montgomery, .pocahontas, .pottawattamie, .black-hawk {
+.cerro-gordo, .chickasaw, .buena-vista, .montgomery, .pocahontas, .pottawattamie, .poweshiek, .black-hawk, .washington {
   margin-left: -40px;
   &.smaller {
     margin-left: -20px;
