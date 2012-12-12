@@ -185,7 +185,7 @@
     });
 
     // Add attribution.
-    map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
+    // map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
   // Attach houseMap behavior.
