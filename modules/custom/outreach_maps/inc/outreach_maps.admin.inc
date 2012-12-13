@@ -142,6 +142,47 @@ function _outreach_maps_load_district($district_type, $district_number) {
 }
 
 /**
+ * Helper function to return a list of linked county titles.
+ * @return array county list
+ */
+function _outreach_maps_county_list() {
+  // List to return.
+  $list = array();
+
+   // Create an EFQ to get all counties.
+  $county_query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $county_query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'county')
+  ->propertyCondition('status', 1);
+
+  // Execute the query.
+  $county_result = $county_query->execute();
+
+  // Check for a result.
+  if (isset($county_result['node'])) {
+    $keys = array_keys($county_result['node']);
+
+    // Load all nodes.
+    $county_nodes = node_load_multiple($keys);
+
+    foreach ($county_nodes as $county) {
+      $list[] = array(
+        '#type' => 'link',
+        '#title' => $county->title,
+        '#href' => 'county/' . lcfirst($county->title),
+        '#options' => array(
+          'attributes' => array('class' => 'county-list'),
+        ),
+      );
+    }
+  }
+
+  return $list;
+}
+
+/**
  * Helper function to convert CSV data to an array formatted for GeoJSON. Writes
  * output to screen. Intended to be used once to create GeoJSON files.
  *
