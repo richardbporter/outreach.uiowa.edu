@@ -146,6 +146,36 @@ function outreach_maps_menu() {
 }
 
 /**
+ * Implements hook_block_info().
+ *
+ * @return array blocks
+ */
+function outreach_maps_block_info() {
+  $blocks['outreach_maps_county_list'] = array(
+    'info' => t('County list'),
+    'region' => 'footer',
+    'status' => 1,
+    'weight' => '99',
+  );
+
+  return $blocks;
+}
+
+function outreach_maps_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'outreach_maps_county_list':
+      module_load_include('inc', 'outreach_maps', 'inc/outreach_maps.admin');
+      $block['subject'] = NULL;
+      $block['content'] = _outreach_maps_county_list();
+      break;
+  }
+
+  return $block;
+}
+
+/**
  * Implements hook_field_formatter_info().
  *
  * @return array field formatter
