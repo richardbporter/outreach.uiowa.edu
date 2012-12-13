@@ -14,7 +14,10 @@
     var eventHandlers = [
       easey_handlers.DragHandler(),
       easey_handlers.DoubleClickHandler(),
-      easey_handlers.TouchHandler()
+      easey_handlers.TouchHandler(),
+      MM.DragHandler(),
+      MM.DoubleClickHandler(),
+      MM.TouchHandler()
     ];
 
    // Create the map object.
@@ -45,13 +48,12 @@
       $(countyLink).attr('href', Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));
 
       // Add function that centers marker on click.
-        MM.addEvent(countyLink, 'click', function(e) {
-            map.ease.location({
-              lat: f.geometry.coordinates[1],
-              lon: f.geometry.coordinates[0]
-            }).zoom(map.zoom()).optimal();
-        });
-
+      MM.addEvent(countyLink, 'click', function(e) {
+          map.ease.location({
+            lat: f.geometry.coordinates[1],
+            lon: f.geometry.coordinates[0]
+          }).zoom(map.zoom()).optimal();
+      });
 
       return countyLink;
     });
