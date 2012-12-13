@@ -54,7 +54,7 @@
         $(houseLink).addClass('cluster');
       }
       $(houseLink).text(f.properties.text);
-      $(houseLink).attr('href', 'outreach-maps/house/' + f.properties.text);
+      $(houseLink).attr('href', Drupal.settings.basePath + 'outreach-maps/house/' + f.properties.text);
 
       // Add function that centers marker on click.
         MM.addEvent(houseLink, 'click', function(e) {
