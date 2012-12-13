@@ -42,7 +42,7 @@
       $(countyLink).addClass('county-marker use-ajax');
       $(countyLink).addClass(f.properties.text.toLowerCase().replace(' ', '-'));
       $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));
+      $(countyLink).attr('href', Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));
 
       // Add function that centers marker on click.
         MM.addEvent(countyLink, 'click', function(e) {
