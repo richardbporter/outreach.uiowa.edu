@@ -82,6 +82,7 @@
     // Provide a function that returns html to be used in tooltip.
     senateInteraction.formatter(function(f) {
       var o = '<h2>Senate District ' + f.properties.text + '</h2>';
+      o += '<hr>';
       o += '<div id="district-' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
