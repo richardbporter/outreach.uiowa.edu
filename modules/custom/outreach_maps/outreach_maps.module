@@ -104,7 +104,7 @@ function outreach_maps_menu() {
    $items = array();
 
   // County map callback.
-  $items['/outreach-maps/county/%'] = array(
+  $items['outreach-maps/county/%'] = array(
     'page callback' => '_outreach_maps_load_county',
     'page arguments' => array(2),
     'access callback' => 'user_access',
@@ -114,7 +114,7 @@ function outreach_maps_menu() {
   );
 
   // House map callback.
-  $items['/outreach-maps/house/%'] = array(
+  $items['outreach-maps/house/%'] = array(
     'page callback' => '_outreach_maps_load_district',
     'page arguments' => array(1, 2),
     'access callback' => 'user_access',
@@ -124,7 +124,7 @@ function outreach_maps_menu() {
   );
 
   // Senate map callback.
-  $items['/outreach-maps/senate/%'] = array(
+  $items['outreach-maps/senate/%'] = array(
     'page callback' => '_outreach_maps_load_district',
     'page arguments' => array(1, 2),
     'access callback' => 'user_access',
@@ -134,7 +134,7 @@ function outreach_maps_menu() {
   );
 
   // Congressional map callback.
-  $items['/outreach-maps/congressional/%'] = array(
+  $items['outreach-maps/congressional/%'] = array(
     'page callback' => '_outreach_maps_load_district',
     'page arguments' => array(1, 2),
     'access callback' => 'user_access',
