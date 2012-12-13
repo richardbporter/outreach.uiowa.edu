@@ -179,3 +179,39 @@ function _outreach_maps_county_list() {
 
   return $list;
 }
+
+/**
+ * Helper function to return node title given an nid.
+ *
+ * @param  int $nid The node id.
+ * @return string $title The node title.
+ */
+function _outreach_maps_county_title($nid) {
+  // The node title to return.
+  $title = '';
+
+  // Create an EFQ to get county info.
+  $query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'county')
+  ->propertyCondition('status', 1)
+  ->propertyCondition('nid', $nid);
+
+  // Execute the query.
+  $result = $query->execute();
+
+  // Check for a result.
+  if (isset($result['node'])) {
+    $keys = array_keys($result['node']);
+
+    // node_load expects a single $nid parameter, not an array.
+    $nid = $keys[0];
+    $node = node_load($nid);
+
+    $title = $node->title;
+  }
+
+  return $title;
+}

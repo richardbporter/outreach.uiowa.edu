@@ -221,10 +221,11 @@ function outreach_maps_field_formatter_view($entity_type, $entity, $field, $inst
       break;
 
     case 'outreach_maps_county_link_formatter':
+      module_load_include('inc', 'outreach_maps', 'inc/outreach_maps.admin');
       foreach ($items as $delta => $item) {
         $element[$delta] = array(
           '#type' => 'link',
-          '#title' => $item['target_id'],
+          '#title' => _outreach_maps_county_title($item['target_id']),
           '#href' => 'node/'. $item['target_id'],
         );
       }
