@@ -140,6 +140,16 @@
   h3 {
     margin: 0 0;
   }
+  .field-name-field-county {
+    @include cf();
+    .field-item {
+      width: 50%;
+      float: left;
+      .odd {
+        text-align: right;
+      }
+    }
+  }
 }
 
 .zoomer {
@@ -148,14 +158,6 @@
 
 .ajax-progress-throbber {
   display: none !important;
-}
-
-.field-name-field-county .field-item {
-  width: 50%;
-  float: left;
-  .odd {
-    text-align: right;
-  }
 }
 
 .cluster {

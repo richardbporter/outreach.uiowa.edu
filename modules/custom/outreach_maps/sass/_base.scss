@@ -19,3 +19,9 @@ $white:         #ffffff;
 $black:         #000000;
 $grey:          #3B3B3C;
 $gold:          #F6C72F;
+
+@mixin cf {
+  overflow: hidden;   // New formatting context in better browsers
+  *overflow: visible; // Protect IE7 and older from the overflow property
+  *zoom: 1;           // Give IE hasLayout, a new formatting context equivalent
+}
