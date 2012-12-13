@@ -122,12 +122,7 @@ function _outreach_maps_load_district($district_type, $district_number) {
         '#type' => 'markup',
         '#markup' => '<h3>Counties</h3>',
       ),
-      'counties' => array(field_view_field('node', $node, 'field_county', array('label' => 'hidden'))),
-      'more_link' => array(
-        '#type' => 'link',
-        '#title' => t('See More »'),
-        '#href' => $district_type . '/' . $district_type . '-district-' . $district_number,
-      ),
+      'counties' => array(field_view_field('node', $node, 'field_county', array('label' => 'hidden', 'type' => 'outreach_maps_county_link_formatter'))),
     );
 
     // Convert the render array to markup to pass to ajax_command_html().
