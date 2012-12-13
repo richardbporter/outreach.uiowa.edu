@@ -7,3 +7,8 @@
  *
  * - Read the _README file in this directory, it contains useful help and other information.
  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000315}}
+#footer-wrapper a.county-list {
+  width: 25%;
+  float: left;
+}

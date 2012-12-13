@@ -12,3 +12,9 @@
 html {
   font-size: 112.5%;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.smartphone\.portrait\.scss}line{font-family:\0000320}}
+#footer-wrapper a.county-list {
+  width: 25%;
+  float: left;
+}

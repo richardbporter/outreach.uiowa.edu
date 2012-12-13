@@ -14,5 +14,10 @@
 
 /* Increase the body font size on small devices */
 html {
-  font-size: 112.5%; 
+  font-size: 112.5%;
+}
+
+#footer-wrapper a.county-list {
+  width: 100%;
+  float: none;
 }
