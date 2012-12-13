@@ -15,7 +15,7 @@ function _outreach_maps_csv_array($file) {
   $row = 1;
   if (($handle = fopen(drupal_get_path('module', 'outreach_maps') . '/inc/csv/' . $file . '.csv', 'r')) !== FALSE) {
       while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-          echo "array('geometry' => array(\n  'type' => 'Point',\n  'coordinates' => array(". $data[2] . ", " . $data[1] . "), \n),\n'properties' => array(\n  'text' => '" . $data[0] . "',\n)),\n";
+          echo "array('geometry' => array(\n  'type' => 'Point',\n  'coordinates' => array(" . $data[2] . ", " . $data[1] . "), \n),\n'properties' => array(\n  'text' => '" . $data[0] . "',\n)),\n";
           $row++;
       }
       fclose($handle);
@@ -179,7 +179,7 @@ function _outreach_maps_create_districts($district_type, $count) {
   }
 
  for ($i=1; $i <= $count; $i++) {
-   $node = new StdClass();
+   $node = new stdClass();
    $node->type = $district_type . '_district';
    node_object_prepare($node);
 

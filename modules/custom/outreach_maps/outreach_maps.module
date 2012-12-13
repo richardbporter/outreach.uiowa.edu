@@ -238,7 +238,7 @@ function outreach_maps_field_formatter_view($entity_type, $entity, $field, $inst
         $element[$delta] = array(
           '#type' => 'link',
           '#title' => _outreach_maps_county_title($item['target_id']),
-          '#href' => 'node/'. $item['target_id'],
+          '#href' => 'node/' . $item['target_id'],
         );
       }
       break;
