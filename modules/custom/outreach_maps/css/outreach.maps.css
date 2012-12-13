@@ -155,76 +155,98 @@
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003140}}
 .marker-popup h3 {
-  margin: 0 0;
+  margin: 10px 0 0 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003143}}
+.marker-popup .see-more {
+  display: block;
+  margin: 10px 0 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003147}}
 .marker-popup .field-name-field-county {
   overflow: hidden;
   *overflow: visible;
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003149}}
 .marker-popup .field-name-field-county .field-item {
   width: 50%;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003152}}
 .marker-popup .field-name-field-county .field-item .odd {
   text-align: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003159}}
 .zoomer {
   top: 80px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003163}}
 .ajax-progress-throbber {
   display: none !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003163}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003167}}
 .cluster {
   display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003178}}
+#tooltip {
+  position: absolute;
+  z-index: 3000;
+  width: 300px;
+  border: 1px solid #111;
+  background-color: #eee;
+  padding: 5px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003187}}
+#tooltip h3, #tooltip div {
+  margin: 0;
 }
 
 /* =============================================================================
  *   County
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003192}}
 .county-marker {
   margin-left: -20px;
   margin-top: -10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003181}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003195}}
 .county-marker.smaller {
   margin-left: -15px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003200}}
 .ida, .sac {
   margin-left: -10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003206}}
 .cherokee, .winnebago, .winneshiek, .palo-alto, .humboldt, .audubon, .buchanan,
 .delaware, .washington, .van-buren, .des-moines, .mahaska, .keokuk,
 .marshall, .wapello, .jefferson, .fremont, .ringgold, .johnson {
   margin-left: -30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003208}}
 .cherokee.smaller, .winnebago.smaller, .winneshiek.smaller, .palo-alto.smaller, .humboldt.smaller, .audubon.smaller, .buchanan.smaller,
 .delaware.smaller, .washington.smaller, .van-buren.smaller, .des-moines.smaller, .mahaska.smaller, .keokuk.smaller,
 .marshall.smaller, .wapello.smaller, .jefferson.smaller, .fremont.smaller, .ringgold.smaller, .johnson.smaller {
   margin-left: -20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003214}}
 .appanoose, .cerro-gordo, .chickasaw, .buena-vista, .montgomery, .pocahontas,
 .pottawattamie, .poweshiek, .black-hawk, .washington {
   margin-left: -40px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003216}}
 .appanoose.smaller, .cerro-gordo.smaller, .chickasaw.smaller, .buena-vista.smaller, .montgomery.smaller, .pocahontas.smaller,
 .pottawattamie.smaller, .poweshiek.smaller, .black-hawk.smaller, .washington.smaller {
   margin-left: -20px;
@@ -233,19 +255,19 @@
 /* =============================================================================
  *   House
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003224}}
 .house-marker {
   margin-left: -10px;
   margin-top: -10px;
   font-size: 1.2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003230}}
 .house-21 {
   margin-top: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003234}}
 .house-72 {
   margin-left: 5px;
 }
@@ -253,14 +275,14 @@
 /* =============================================================================
  *   Senate
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003242}}
 .senate-marker {
   margin-left: -10px;
   margin-top: -10px;
   font-size: 1.2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003248}}
 .senate-1 {
   margin-top: -30px;
 }
@@ -268,19 +290,19 @@
 /* =============================================================================
 *   Congessional
 * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003241}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003255}}
 .congressional-marker {
   margin-left: -10px;
   margin-top: -10px;
   font-size: 1.2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003262}}
 .congressionalMap-processed #district-4-content .field-name-field-county .field-item {
   width: 25%;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003251}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003265}}
 .congressionalMap-processed #district-4-content .field-name-field-county .field-item .odd {
   text-align: right;
 }
@@ -288,7 +310,7 @@
 /* =============================================================================
 *   jQuery UI Overrides
 * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003274}}
 .ui-widget {
   font-family: Arial, Helvetica, sans-serif;
 }

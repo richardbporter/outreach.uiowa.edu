@@ -138,7 +138,11 @@
 .marker-popup {
   color: $grey;
   h3 {
-    margin: 0 0;
+    margin: 10px 0 0 0;
+  }
+  .see-more {
+    display: block;
+    margin: 10px 0 0 0;
   }
   .field-name-field-county {
     @include cf();
@@ -171,6 +175,16 @@
 //   background-color: rgba($grey, 0.2);
 // }
 
+#tooltip {
+  position: absolute;
+  z-index: 3000;
+  width: 300px;
+  border: 1px solid #111;
+  background-color: #eee;
+  padding: 5px;
+  @include opacity(0.8);
+}
+#tooltip h3, #tooltip div { margin: 0; }
 
 /* =============================================================================
  *   County
