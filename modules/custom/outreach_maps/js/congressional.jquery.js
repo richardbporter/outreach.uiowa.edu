@@ -42,7 +42,7 @@
       $(congressionalLink).addClass('congressional-marker use-ajax');
       $(congressionalLink).addClass('congressional' + f.properties.text);
       $(congressionalLink).text(f.properties.text);
-      $(congressionalLink).attr('href', '/outreach-maps/congressional/' + f.properties.text);
+      $(congressionalLink).attr('href', 'outreach-maps/congressional/' + f.properties.text);
 
       // var congressionalImage = document.createElement('img');
       // $(congressionalImage).attr('src', '/sites/outreach.uiowa.edu/themes/outreach/images/marker-24.png');

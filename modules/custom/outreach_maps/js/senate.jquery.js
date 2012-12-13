@@ -51,7 +51,7 @@
         $(senateLink).addClass('cluster');
       }
       $(senateLink).text(f.properties.text);
-      $(senateLink).attr('href', '/outreach-maps/senate/' + f.properties.text);
+      $(senateLink).attr('href', 'outreach-maps/senate/' + f.properties.text);
 
       // var senateImage = document.createElement('img');
       // $(senateImage).attr('src', '/sites/outreach.uiowa.edu/themes/outreach/images/marker-24.png');
