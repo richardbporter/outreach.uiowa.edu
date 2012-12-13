@@ -337,12 +337,17 @@ var {
   @include noise(lighten($black,27%), 0.01);
   font-size: 1.2em;
   a {
-    color: #222;
-    @include text-shadow(0 1px 1px #4d4d4d);
-    @include transition-property(color);
-    @include transition-duration(0.2s);
-    &:hover {
+    &.county-list {
+      display: block;
+      width: 10%;
+      float: left;
+      color: #222;
+      @include text-shadow(0 1px 1px #4d4d4d);
+      @include transition-property(color);
+      @include transition-duration(0.2s);
+      &:hover {
       color: $light;
+    }
     }
   }
   .container {
@@ -353,10 +358,6 @@ var {
         color: darken($light, 20%);
         margin-bottom: 0;
       }
-    }
-    .views-row {
-      width: 10%;
-      float: left;
     }
   }
 }
