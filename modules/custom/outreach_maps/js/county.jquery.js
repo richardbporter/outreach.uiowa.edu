@@ -52,14 +52,6 @@
           }).zoom(map.zoom()).optimal();
       });
 
-      // Add function that centers marker on click.
-      MM.addEvent(countyLink, 'touchstart', function(e) {
-          map.ease.location({
-            lat: f.geometry.coordinates[1],
-            lon: f.geometry.coordinates[0]
-          }).zoom(map.zoom()).optimal();
-      });
-
       return countyLink;
     });
 

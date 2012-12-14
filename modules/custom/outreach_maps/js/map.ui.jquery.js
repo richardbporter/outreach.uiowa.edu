@@ -22,12 +22,12 @@
       });
     });
 
-    // $('#help-button').tooltip({
-    //   track: true,
-    //   fade: 200,
-    //   delay: 0,
-    //   showURL: false
-    // });
+    $('#help-button').tooltip({
+      track: true,
+      fade: 200,
+      delay: 0,
+      showURL: false
+    });
 
     var open = false;
 
@@ -37,13 +37,13 @@
           $('#footer-wrapper').animate({ height: '300px' });
           $(this).css('backgroundPosition', 'bottom left');
           $(this).text('Hide');
-          // $('#tooltip').css('visibility', 'hidden');
+          $('#tooltip').css('visibility', 'hidden');
           open = true;
       } else {
           $('#footer-wrapper').animate({ height: '25px' });
           $(this).css('backgroundPosition', 'top left');
           $(this).text('Help');
-          // $('#tooltip').css('visibility', 'visible');
+          $('#tooltip').css('visibility', 'visible');
           open = false;
       }
     });
