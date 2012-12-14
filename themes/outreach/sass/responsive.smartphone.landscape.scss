@@ -20,6 +20,7 @@ html {
 .tinynav {
   display: block;
   float: left;
+  margin: 0 0 0 0;
 }
 
 #header-wrapper {
@@ -39,8 +40,12 @@ html {
   margin: 0 0 0 0;
 }
 
-.zoomer {
+.countyMap-processed .zoomer {
   top: 110px;
+}
+
+.houseMap-processed .zoomer, .senateMap-processed .zoomer {
+  top: 90px;
 }
 
 #footer-wrapper a.county-list {
