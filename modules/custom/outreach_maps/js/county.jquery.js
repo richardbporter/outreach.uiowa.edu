@@ -7,6 +7,27 @@
 (function($) {
   // Initialize the county map.
   Drupal.outreachMapsCounty = function() {
+    // Add an extra function to the Drupal ajax object which allows us to trigger
+    // an ajax response without an element that triggers it.
+    Drupal.ajax.prototype.specifiedResponse = function() {
+      var ajax = this;
+
+      // Do not perform another ajax command if one is already in progress.
+      if (ajax.ajaxing) {
+        return false;
+      }
+
+      try {
+        $.ajax(ajax.options);
+      }
+      catch (err) {
+        alert('An error occurred while attempting to process ' + ajax.options.url);
+        return false;
+      }
+
+      return false;
+    };
+
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
@@ -46,10 +67,40 @@
 
       // Add function that centers marker on click.
       MM.addEvent(countyLink, 'click', function(e) {
-          map.ease.location({
-            lat: f.geometry.coordinates[1],
-            lon: f.geometry.coordinates[0]
-          }).zoom(map.zoom()).optimal();
+        map.ease.location({
+          lat: f.geometry.coordinates[1],
+          lon: f.geometry.coordinates[0]
+        }).zoom(map.zoom()).optimal();
+      });
+
+     // Add function that centers marker on touch.
+      MM.addEvent(countyLink, 'touchstart', function(e) {
+        // // Define a custom ajax action not associated with an element.
+        // var custom_settings = {};
+        // custom_settings.url = '/outreach-maps/couny/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
+        // custom_settings.event = 'touchstart';
+        // custom_settings.keypress = false;
+        // custom_settings.prevent = false;
+        // Drupal.ajax['custom_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
+
+        // // Trigger the response.
+        // Drupal.ajax['custom_ajax_action'].specifiedResponse();
+
+        // Define a custom ajax action not associated with an element.
+        var custom_settings = {};
+        custom_settings.url = '/test';
+        custom_settings.event = 'click';
+        custom_settings.keypress = false;
+        custom_settings.prevent = false;
+        Drupal.ajax['custom_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
+
+        // Trigger the response.
+        Drupal.ajax['custom_ajax_action'].specifiedResponse();
+
+        map.ease.location({
+          lat: m.geometry.coordinates[1],
+          lon: m.geometry.coordinates[0]
+        }).zoom(map.zoom()).optimal();
       });
 
       return countyLink;
@@ -82,9 +133,6 @@
         $('#map a.county-marker').removeClass('smaller');
       }
     });
-
-    // Add attribution.
-    // map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
   // Attach outreachMapsCounty behavior.
