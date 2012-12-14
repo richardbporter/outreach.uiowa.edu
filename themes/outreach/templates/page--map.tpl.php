@@ -201,7 +201,7 @@
 
             <div id='map-ui'>
               <ul>
-                <li><a id="share-button" class="use-ajax" href="test">Share +</a></li>
+                <li><a id="share-button" href="#">Share +</a></li>
                 <li><a id="about-button" href="#">About</a></li>
               </ul>
 
