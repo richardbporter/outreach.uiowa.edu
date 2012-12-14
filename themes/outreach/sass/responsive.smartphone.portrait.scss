@@ -17,6 +17,14 @@ html {
   font-size: 112.5%;
 }
 
+.tinynav {
+  display: block;
+}
+
+#primary-menu-bar ul.menu {
+  display: none;
+}
+
 #footer-wrapper a.county-list {
   width: 25%;
   float: left;

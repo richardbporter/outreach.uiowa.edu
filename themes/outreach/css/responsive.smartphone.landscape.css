@@ -14,7 +14,40 @@ html {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.smartphone\.landscape\.scss}line{font-family:\0000320}}
+.tinynav {
+  display: block;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.smartphone\.landscape\.scss}line{font-family:\0000325}}
+#header-wrapper {
+  padding-bottom: 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.smartphone\.landscape\.scss}line{font-family:\0000329}}
+#nav-wrapper {
+  float: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.smartphone\.landscape\.scss}line{font-family:\0000333}}
+#primary-menu-bar ul.menu {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.smartphone\.landscape\.scss}line{font-family:\0000337}}
+#site-slogan {
+  display: block;
+  margin: 0 0 0 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.smartphone\.landscape\.scss}line{font-family:\0000342}}
+.zoomer {
+  top: 110px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.smartphone\.landscape\.scss}line{font-family:\0000346}}
 #footer-wrapper a.county-list {
+  display: block;
   width: 100%;
   float: none;
 }

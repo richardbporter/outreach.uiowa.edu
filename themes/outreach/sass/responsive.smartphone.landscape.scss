@@ -17,7 +17,34 @@ html {
   font-size: 112.5%;
 }
 
+.tinynav {
+  display: block;
+  float: left;
+}
+
+#header-wrapper {
+  padding-bottom: 10px;
+}
+
+#nav-wrapper {
+  float: none;
+}
+
+#primary-menu-bar ul.menu {
+  display: none;
+}
+
+#site-slogan {
+  display: block;
+  margin: 0 0 0 0;
+}
+
+.zoomer {
+  top: 110px;
+}
+
 #footer-wrapper a.county-list {
+  display: block;
   width: 100%;
   float: none;
 }

@@ -71,7 +71,8 @@
   ; following as a guide:
 
   ; ie_scripts[lte IE 8][] = js/my-script.js
-
+  scripts[] = scripts/tinynav.min.js
+  scripts[] = scripts/outreach.jquery.js
 
 ;----------// Regions
 
