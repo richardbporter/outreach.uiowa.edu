@@ -89,7 +89,7 @@
         // Define a custom ajax action not associated with an element.
         var custom_settings = {};
         custom_settings.url = Drupal.settings.basePath + 'test';
-        custom_settings.event = 'click';
+        custom_settings.event = 'touchstart';
         custom_settings.keypress = false;
         custom_settings.prevent = false;
         Drupal.ajax['custom_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
