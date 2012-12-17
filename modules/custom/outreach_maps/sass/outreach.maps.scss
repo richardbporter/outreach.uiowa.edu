@@ -128,6 +128,7 @@
   color: $grey;
   @include text-shadow(1px 2px 2px rgba(lighten($grey, 60%), 0.4));
   padding: 2px;
+  font-size: 75%;
 }
 
 .smaller {
