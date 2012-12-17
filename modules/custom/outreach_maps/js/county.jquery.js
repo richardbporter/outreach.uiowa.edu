@@ -75,6 +75,11 @@
 
      // Add function that centers marker on touch.
       MM.addEvent(countyLink, 'touchstart', function(e) {
+        map.ease.location({
+          lat: m.geometry.coordinates[1],
+          lon: m.geometry.coordinates[0]
+        }).zoom(map.zoom()).optimal();
+
         // Define a custom ajax action not associated with an element.
         var custom_settings = {};
         custom_settings.url = Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
@@ -85,11 +90,6 @@
 
         // Trigger the response.
         Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
-
-        map.ease.location({
-          lat: m.geometry.coordinates[1],
-          lon: m.geometry.coordinates[0]
-        }).zoom(map.zoom()).optimal();
       });
 
       return countyLink;
