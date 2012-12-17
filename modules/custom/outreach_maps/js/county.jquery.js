@@ -65,30 +65,33 @@
       $(countyLink).text(f.properties.text);
       $(countyLink).attr('href', Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));
 
-      // Create a centering function.
-      var center = function(e) {
+      // Add function that centers marker on click.
+      MM.addEvent(countyLink, 'click', function(e) {
         map.ease.location({
           lat: f.geometry.coordinates[1],
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
-      };
+      });
 
-      // Add function that centers marker on click.
-      MM.addEvent(countyLink, 'click', center);
+     // Add function that calls ajax and centers marker on touch.
+      MM.addEvent(countyLink, 'touchstart', function(e) {
+        // Define a custom ajax action not associated with an element.
+        var custom_settings = {};
+        custom_settings.url = Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
+        custom_settings.event = 'touchstart';
+        custom_settings.keypress = false;
+        custom_settings.prevent = false;
+        Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
 
-      // Add function that centers marker on touch.
-      MM.addEvent(countyLink, 'touchstart', center);
+        // Trigger the response.
+        Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
 
-      // Define a custom ajax action not associated with an element.
-      var custom_settings = {};
-      custom_settings.url = Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
-      custom_settings.event = 'touchstart';
-      custom_settings.keypress = false;
-      custom_settings.prevent = false;
-      Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
-
-      // Trigger the response.
-      Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
+        // Center map.
+        map.ease.location({
+          lat: f.geometry.coordinates[1],
+          lon: f.geometry.coordinates[0]
+        }).zoom(map.zoom()).optimal();
+      });
 
       return countyLink;
     });
