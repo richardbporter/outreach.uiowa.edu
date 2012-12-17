@@ -88,7 +88,7 @@
 
         // Center map.
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 1, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + 0.1, // Adjust for smaller viewport.
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
