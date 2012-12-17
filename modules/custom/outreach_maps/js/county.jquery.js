@@ -113,16 +113,6 @@
       o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
-
-    // // Reduce font size for zoom level 7.
-    // map.addCallback("zoomed", function(map, zoomOffset) {
-    //   var z = Math.round(map.zoom());
-    //   if (z < 8) {
-    //     $('#map a.county-marker').addClass('smaller');
-    //   } else {
-    //     $('#map a.county-marker').removeClass('smaller');
-    //   }
-    // });
   };
 
   // Attach outreachMapsCounty behavior.
