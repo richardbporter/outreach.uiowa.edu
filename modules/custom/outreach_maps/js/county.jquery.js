@@ -80,16 +80,16 @@
           lon: m.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
 
-        // // Define a custom ajax action not associated with an element.
-        // var custom_settings = {};
-        // custom_settings.url = Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
-        // custom_settings.event = 'touchstart';
-        // custom_settings.keypress = false;
-        // custom_settings.prevent = false;
-        // Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
+        // Define a custom ajax action not associated with an element.
+        var custom_settings = {};
+        custom_settings.url = Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
+        custom_settings.event = 'touchstart';
+        custom_settings.keypress = false;
+        custom_settings.prevent = false;
+        Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
 
-        // // Trigger the response.
-        // Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
+        // Trigger the response.
+        Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
       });
 
       return countyLink;
