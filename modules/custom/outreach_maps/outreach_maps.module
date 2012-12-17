@@ -93,20 +93,6 @@ function outreach_maps_preprocess_page(&$variables) {
   }
 }
 
-function test() {
-  // Construct the HTML output.
-    $output = 'adfasdfasdfsdf';
-
-    // Set the div equal to the DEO Mailing title.
-    $div = '#site-slogan';
-
-    // Deliver the AJAX response.
-    $commands = array();
-    $commands[] = ajax_command_html($div, $output);
-    $page = array('#type' => 'ajax', '#commands' => $commands);
-    ajax_deliver($page);
-}
-
 /**
  * Implements hook_menu().
  *
@@ -116,14 +102,6 @@ function test() {
  */
 function outreach_maps_menu() {
    $items = array();
-
-   $items['test'] = array(
-    'page callback' => 'test',
-    'page arguments' => array(2),
-    'access callback' => 'user_access',
-    'access arguments' => array('access content'),
-    'type' => MENU_CALLBACK,
-  );
 
   // County map callback.
   $items['outreach-maps/county/%'] = array(
