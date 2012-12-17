@@ -77,7 +77,7 @@
       MM.addEvent(countyLink, 'touchstart', function(e) {
         // Define a custom ajax action not associated with an element.
         var custom_settings = {};
-        custom_settings.url = Drupal.settings.basePath + '/outreach-maps/couny/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
+        custom_settings.url = Drupal.settings.basePath + 'outreach-maps/couny/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
         custom_settings.event = 'touchstart';
         custom_settings.keypress = false;
         custom_settings.prevent = false;
