@@ -75,27 +75,16 @@
 
      // Add function that centers marker on touch.
       MM.addEvent(countyLink, 'touchstart', function(e) {
-        // // Define a custom ajax action not associated with an element.
-        // var custom_settings = {};
-        // custom_settings.url = '/outreach-maps/couny/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
-        // custom_settings.event = 'touchstart';
-        // custom_settings.keypress = false;
-        // custom_settings.prevent = false;
-        // Drupal.ajax['custom_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
-
-        // // Trigger the response.
-        // Drupal.ajax['custom_ajax_action'].specifiedResponse();
-
         // Define a custom ajax action not associated with an element.
         var custom_settings = {};
-        custom_settings.url = Drupal.settings.basePath + 'test';
+        custom_settings.url = Drupal.settings.basePath + '/outreach-maps/couny/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
         custom_settings.event = 'touchstart';
         custom_settings.keypress = false;
         custom_settings.prevent = false;
-        Drupal.ajax['custom_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
+        Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
 
         // Trigger the response.
-        Drupal.ajax['custom_ajax_action'].specifiedResponse();
+        Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
 
         map.ease.location({
           lat: m.geometry.coordinates[1],
@@ -124,15 +113,15 @@
       return o;
     });
 
-    // Reduce font size for zoom level 7.
-    map.addCallback("zoomed", function(map, zoomOffset) {
-      var z = Math.round(map.zoom());
-      if (z < 8) {
-        $('#map a.county-marker').addClass('smaller');
-      } else {
-        $('#map a.county-marker').removeClass('smaller');
-      }
-    });
+    // // Reduce font size for zoom level 7.
+    // map.addCallback("zoomed", function(map, zoomOffset) {
+    //   var z = Math.round(map.zoom());
+    //   if (z < 8) {
+    //     $('#map a.county-marker').addClass('smaller');
+    //   } else {
+    //     $('#map a.county-marker').removeClass('smaller');
+    //   }
+    // });
   };
 
   // Attach outreachMapsCounty behavior.
