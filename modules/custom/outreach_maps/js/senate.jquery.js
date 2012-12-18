@@ -60,7 +60,7 @@
       // Add function that centers marker on click.
       MM.addEvent(senateLink, 'click', function(e) {
           map.ease.location({
-            lat: f.geometry.coordinates[1] + 0.5,
+            lat: f.geometry.coordinates[1] + 0.2,
             lon: f.geometry.coordinates[0]
           }).zoom(map.zoom()).optimal();
       });
