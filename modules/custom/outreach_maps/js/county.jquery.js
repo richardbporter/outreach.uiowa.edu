@@ -68,12 +68,12 @@
       // Add function that centers marker on click.
       MM.addEvent(countyLink, 'click', function(e) {
         map.ease.location({
-          lat: f.geometry.coordinates[1],
+          lat: f.geometry.coordinates[1] + 0.5,
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
 
-     // Add function that calls ajax and centers marker on touch.
+      // Add function that calls ajax and centers marker on touch.
       MM.addEvent(countyLink, 'touchstart', function(e) {
         // Define a custom ajax action not associated with an element.
         var custom_settings = {};
