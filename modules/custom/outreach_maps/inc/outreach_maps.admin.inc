@@ -46,26 +46,57 @@ function _outreach_maps_load_county($title) {
     $nid = $keys[0];
     $node = node_load($nid);
 
+    // Load the fields that will be used in the marker popup.
+    $students = field_view_field('node', $node, 'field_enrollment_total', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $alumni = field_view_field('node', $node, 'field_alumni', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $uihc_visits = field_view_field('node', $node, 'field_uihc_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $outreach_visits = field_view_field('node', $node, 'field_outreach_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $physicians = field_view_field('node', $node, 'field_ui_educated_physicians', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $assitants = field_view_field('node', $node, 'field_ui_educated_assistants', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $dentists = field_view_field('node', $node, 'field_ui_educated_dentists', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $nurses = field_view_field('node', $node, 'field_ui_educated_nurses', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $pharmacists = field_view_field('node', $node, 'field_ui_educated_pharmacists', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+
+    // Inline fields.
+    $vendor_items = field_get_items('node', $node, 'field_vendors_paid');
+    $vendors = drupal_render(field_view_value('node', $node, 'field_vendors_paid', $vendor_items[0], array('type' => 'outreach_maps_number_formatter')));
+    $sum_items = field_get_items('node', $node, 'field_sum_of_payments');
+    $sum = drupal_render(field_view_value('node', $node, 'field_sum_of_payments', $sum_items[0], array('type' => 'outreach_maps_money_formatter')));
+
     // Create a render array to store the fields.
     $data = array(
       'hometown_hawkeyes_heading' => array(
         '#type' => 'markup',
-        '#markup' => '<h3>Hometown Hawkeyes</h3>',
+        '#markup' => t('Hometown Hawkeyes'),
+        '#prefix' => '<h3>',
+        '#suffix' => '</h3>',
       ),
-      'enrollment_total' => array(field_view_field('node', $node, 'field_enrollment_total', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
-      'alumni' => array(field_view_field('node', $node, 'field_alumni', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
+      'enrollment_total' => array($students),
+      'alumni' => array($alumni),
       'healthcare_heading' => array(
         '#type' => 'markup',
-        '#markup' => '<h3>Healthcare</h3>',
+        '#markup' => t('Healthcare Connections'),
+        '#prefix' => '<h3>',
+        '#suffix' => '</h3>',
       ),
-      'clinic_visits' => array(field_view_field('node', $node, 'field_uihc_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
-      'outreach_visits' => array(field_view_field('node', $node, 'field_outreach_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
-      'human_infrastructure_heading' => array(
+      'uihc_vists' => array($uihc_visits),
+      'outreach_visits' => array($outreach_visits),
+      'impact_heading' => array(
         '#type' => 'markup',
-        '#markup' => '<h3>Human Infrastructure</h3>',
+        '#markup' => t('How the UI impacts your neighborhood.'),
+        '#prefix' => '<h4>',
+        '#suffix' => '</h4>',
       ),
-      'number_of_employees' => array(field_view_field('node', $node, 'field_number_of_employees', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'))),
-      'sum_of_annual_salaries' => array(field_view_field('node', $node, 'field_sum_of_annual_salaries', array('label' => 'inline', 'type' => 'outreach_maps_money_formatter'))),
+      'ui_physicians' => array($physicians),
+      'ui_assistants' => array($assitants),
+      'ui_dentists' => array($dentists),
+      'ui_nurses' => array($nurses),
+      'vendors' => array(
+        '#type' => 'markup',
+        '#markup' => t('Last year, the UI supported @vendors local companies with purchases of @sum.', array('@vendors' => $vendors, '@sum' => $sum)),
+        '#prefix' => '<h5>',
+        '#suffix' => '</h5>',
+      ),
       'more_link' => array(
         '#type' => 'link',
         '#title' => t('See More »'),
