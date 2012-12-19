@@ -7,6 +7,27 @@
 (function($) {
   // Initialize the house map.
   Drupal.houseMap = function() {
+    // Add an extra function to the Drupal ajax object which allows us to trigger
+    // an ajax response without an element that triggers it.
+    Drupal.ajax.prototype.specifiedResponse = function() {
+      var ajax = this;
+
+      // Do not perform another ajax command if one is already in progress.
+      if (ajax.ajaxing) {
+        return false;
+      }
+
+      try {
+        $.ajax(ajax.options);
+      }
+      catch (err) {
+        alert('An error occurred while attempting to process ' + ajax.options.url);
+        return false;
+      }
+
+      return false;
+    };
+
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
