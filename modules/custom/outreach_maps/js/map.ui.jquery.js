@@ -9,7 +9,22 @@
   Drupal.outreachMapsUI = function() {
     $('#about-button').click(function(e) {
       e.preventDefault();
-      $('#about-message').dialog({
+      $('#about-dialog').dialog({
+        modal: true,
+        resizable: false,
+        draggable: false,
+        closeOnEscape: true,
+        buttons: {
+          Ok: function() {
+            $(this).dialog('close');
+          }
+        }
+      });
+    });
+
+    $('#share-button').click(function(e) {
+      e.preventDefault();
+      $('#share-dialog').dialog({
         modal: true,
         resizable: false,
         draggable: false,

@@ -227,8 +227,16 @@
                 </ul>
               <?php endif; ?>
             </div>
+            <div id="share-dialog" title="Share">
+              <p>Share this map:</p>
+              <ul>
+                <li><a id="facebook" href="http://www.facebook.com/sharer.php?u=http://outreach.uiowa.edu">Facebook</a></li>
+                <li><a id="twitter" href="http://twitter.com/share?url=http://outreach.uiowa.edu&text=Connecting across the state of Iowa.">Twitter</a></li>
+                <li><a id="plusone" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://outreach.uiowa.edu">Google +1</a></li>
+              </ul>
+            </div>
 
-            <div id="about-message" title="About">
+            <div id="about-dialog" title="About">
               <p>The University of Iowa impacts the lives of Iowans from border
               to border and river to river. We invite you to learn more about
               our connections in your community.</p>
