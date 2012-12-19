@@ -228,11 +228,11 @@
               <?php endif; ?>
             </div>
             <div id="share-dialog" title="Share">
-              <p>Share this map:</p>
+              <p>Share this map on Facebook, Twitter or Google Plus.</p>
               <ul>
-                <li><a id="facebook" href="http://www.facebook.com/sharer.php?u=http://outreach.uiowa.edu">Facebook</a></li>
-                <li><a id="twitter" href="http://twitter.com/share?url=http://outreach.uiowa.edu&text=Connecting across the state of Iowa.">Twitter</a></li>
-                <li><a id="plusone" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://outreach.uiowa.edu">Google +1</a></li>
+                <li><a id="facebook" href="http://www.facebook.com/sharer.php?u=http://outreach.uiowa.edu" target="_blank">Facebook</a></li>
+                <li><a id="twitter" href="http://twitter.com/share?url=http://outreach.uiowa.edu&text=Connecting across the state of Iowa." target="_blank">Twitter</a></li>
+                <li><a id="plusone" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://outreach.uiowa.edu" target="_blank">Google +1</a></li>
               </ul>
             </div>
 
