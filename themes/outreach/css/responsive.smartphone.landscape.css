@@ -1,0 +1,44 @@
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+/* Increase the body font size on small devices */
+html {
+  font-size: 112.5%;
+}
+
+.tinynav {
+  display: block;
+  float: left;
+  margin: 0 0 0 0;
+}
+
+#header-wrapper {
+  padding-bottom: 10px;
+}
+
+#nav-wrapper {
+  float: none;
+}
+
+#primary-menu-bar ul.menu {
+  display: none;
+}
+
+#site-slogan {
+  display: block;
+  margin: 0 0 0 0;
+}
+
+.countyMap-processed .zoomer {
+  top: 110px;
+}
+
+.houseMap-processed .zoomer, .senateMap-processed .zoomer {
+  top: 90px;
+}
