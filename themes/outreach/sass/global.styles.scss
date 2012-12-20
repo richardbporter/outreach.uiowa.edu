@@ -2,6 +2,8 @@
 // _base.scss imports _custom.scss (variables and mixins) and other partials.
 @import "base";
 
+@import "sprites/*.png";
+
 /*
  * @file
  * global.styles
@@ -2100,5 +2102,62 @@ tr.error {
 
   figure { float: none; }
 }
+
+#county_intro {
+  @include font-size(1.8);
+}
+
+.view-county.view-display-id-panel_pane_4 .views-field {
+  border-bottom: 1px solid #dedede;
+  @include box-shadow(0px 1px 0px rgba(255,255,255,.6));
+  margin: .5em 0;
+  padding-bottom: .5em;
+}
+
+
+.views-field-field-alumni,
+.views-field-field-ui-educated-physicians,
+.views-field-field-ui-educated-dentists,
+.views-field-field-ui-educated-pharmacists {
+  position: relative;
+  padding-left: 50px;
+  line-height: 2.2em;
+
+  p { margin: 0; }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+.views-field-field-alumni:after { @include sprites-sprite(alumni, $dimensions:true); }
+.views-field-field-ui-educated-physicians:after { @include sprites-sprite(doctors, $dimensions:true); }
+.views-field-field-ui-educated-dentists:after { @include sprites-sprite(dentists, $dimensions:true); }
+.views-field-field-ui-educated-pharmacists:after { @include sprites-sprite(pharmacists, $dimensions:true); }
+
+.view-county.view-display-id-panel_pane_1 {
+  .field-label {
+    min-width: 200px;
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    margin-right: 1em;
+  }
+
+
+
+  .views-field {
+    padding: .5em;
+
+    &:nth-child(odd) {
+      background-color: #e1e1e1;
+    }
+  }
+}
+
+
 
 
