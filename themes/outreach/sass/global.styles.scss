@@ -381,8 +381,6 @@ var {
   a {
     &.county-list {
       display: block;
-      width: 10%;
-      float: left;
       color: #222;
       @include text-shadow(0 1px 1px #4d4d4d);
       @include transition-property(color);
@@ -2084,11 +2082,6 @@ tr.error {
 
 .field-name-field-enrollment-total .field-item:after {
   content: "";
-}
-
-.field-type-image figure {
-  float: right;
-  margin-top: 35px;
 }
 
 /* =============================================================================
