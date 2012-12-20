@@ -3,42 +3,26 @@
  * OA Selby panel layout
 **/
 
-.selby-container,
-.selby-content-header,
-.selby-content-container-column-container {
-  margin-bottom: 1em;
-}
 
 .selby-column {
-  width: 34.043%;
+  width: 30%;
   float: left;
 }
 
-  .selby-column-inner {
-    margin-right: 20px;
-  }
-
-  .selby-content-column2-inner {
-    margin-right: 0;
-  }
-  
 .selby-content-container { /* This is floated to the left of the sidebar,
   which is styled by the generic "selby-column" class */
   float: left;
-  width: 65.957%;
+  width: 70%;
 }
 
   .selby-content-container .selby-column {
-    width: 51.613%;
+    width: 50%;
   }
-  
-  .selby-content-container .selby-content-column2 {
-    width: 48.387%;
+
+  .selby-sidebar {
+    width: 30%;
   }
-  
-    .selby-content-column2-inner {
-      margin-right: 0;
-    }
+
 
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px) {
@@ -48,9 +32,5 @@
   .selby-content-container .selby-content-column2 {
     width: 100%;
     float: none;
-  }
-  
-  .selby-column-inner {
-    margin-right: 0;
   }
 }

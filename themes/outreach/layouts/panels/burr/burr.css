@@ -3,22 +3,15 @@
  * OA Burr panel layout
 **/
 
-.burr-container {
-  margin-bottom: 1em;
-}
 
 .burr-sidebar {
-  width: 34.043%;
+  width: 30%;
   float: left;
 }
-
-  .burr-sidebar-inner {
-    margin-right: 20px;
-  }
 
 .burr-content {
   float: left;
-  width: 65.957%;
+  width: 70%;
 }
 
 /* iPhone [portrait + landscape] */
@@ -27,9 +20,5 @@
   .burr-sidebar {
     width: 100%;
     float: none;
-  }
-  
-  .burr-sidebar-inner {
-    margin-right: 0;
   }
 }

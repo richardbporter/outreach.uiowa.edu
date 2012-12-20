@@ -3,41 +3,16 @@
  * OA Sanderson panel layout
 **/
 
-.sanderson-container {
-  margin-bottom: 1em;
-}
-
 .sanderson-column-content-region {
-  width: 51.064%;
+  width: 50%;
   float: left;
 }
-
-  .sanderson-column2 {
-    width: 48.936%;
-  }
-
-  .sanderson-column-content-region-inner {
-    margin-right: 20px;
-  }
 
 .sanderson-secondary-column-content-region {
-  width: 34.043%;
+  width: 33.333333%;
   float: left;
 }
 
-  .sanderson-secondary-column-content-region-inner {
-    margin-right: 20px;
-  }
-
-  .sanderson-secondary-column3 {
-    width: 31.915%;
-  }
-  
-    .sanderson-column2-inner,
-    .sanderson-secondary-column3-inner {
-      margin-right: 0;
-    }
-    
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px) {
   .sanderson-column-content-region,
@@ -46,10 +21,5 @@
   .sanderson-secondary-column3  {
     width: 100%;
     float: none;
-  }
-  
-  .sanderson-column-content-region-inner,
-  .sanderson-secondary-column-content-region-inner {
-    margin-right: 0;
   }
 }

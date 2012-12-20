@@ -3,31 +3,17 @@
  * OA Whelan panel layout
 **/
 
-.whelan-container {
-  margin-bottom: 1em;
-}
 
 .whelan-column-content-region {
-  width: 25.532%;
+  width: 25%;
   float: left;
 }
 
-  .whelan-column-content-region-inner {
-    margin-right: 20px;
+
+  .whelan-content {
+    width: 50%;
   }
 
-  .whelan-column2 {
-    width: 23.404%;
-  }
-  
-    .whelan-column2-inner {
-      margin-right: 0;
-    }
-  
-  .whelan-content {
-    width: 51.064%;
-  }
-  
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px) {
   .whelan-column-content-region,
@@ -35,9 +21,5 @@
   .whelan-content {
     width: 100%;
     float: none;
-  }
-  
-  .whelan-column-content-region-inner {
-    margin-right: 0;
   }
 }

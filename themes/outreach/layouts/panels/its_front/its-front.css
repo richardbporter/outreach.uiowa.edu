@@ -3,21 +3,15 @@
  * OA Sanderson panel layout
 **/
 
-.its-front-container {
-  margin-bottom: 1em;
-}
+.its-front-container {}
 
 .its-front-column-content-region {
-  width: 65%;
+  width: 70%;
   float: left;
 }
 
   .its-front-column2 {
-    width: 35%;
-  }
-
-  .its-front-column-content-region-inner {
-    /* margin-right: 20px; */
+    width: 30%;
   }
 
 .its-front-secondary-column-content-region {
@@ -25,19 +19,11 @@
   float: left;
 }
 
-  .its-front-secondary-column-content-region-inner {
-    /* margin-right: 20px; */
-  }
-
   .its-front-secondary-column4 {
     width: 25%;
   }
-  
-    .its-front-column2-inner,
-    .its-front-secondary-column4-inner {
-      margin-right: 0;
-    }
-    
+
+
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px) {
   .its-front-column-content-region,
@@ -46,10 +32,5 @@
   .its-front-secondary-column4  {
     width: 100%;
     float: none;
-  }
-  
-  .its-front-column-content-region-inner,
-  .its-front-secondary-column-content-region-inner {
-    margin-right: 0;
   }
 }

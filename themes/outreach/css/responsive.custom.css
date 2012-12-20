@@ -24,7 +24,6 @@
  * Mid-tablet sizes and down
  */
 @media only screen and (max-width: 1024px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.custom\.scss}line{font-family:\0000336}}
   #primary-menu-bar ul.menu a {
     font-size: 80%;
   }
@@ -44,7 +43,6 @@
    * "Float Region blocks" is an extension for floating blocks in regions, see
    * your themes appearance settings, under the Extensions tab.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/themes\/outreach\/sass\/responsive\.custom\.scss}line{font-family:\0000358}}
   .region[class*="float-blocks"] .block {
     float: none;
     width: 100%;

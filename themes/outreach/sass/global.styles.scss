@@ -40,11 +40,17 @@
 
 html {
   background: $page;
+  font-size: 62.5%;
 }
 
 body {
   font-family: $sans-serif-arial-helvetica; // Set from _custom.scss font variables
   font-size: 87.5%;
+  @include font-size(1.6);
+  color: $base_text_color;
+  position: relative;
+  z-index: 1;
+  background-color: #333;
 }
 
 
@@ -146,6 +152,26 @@ var {
   font-family: $mono;
 }
 
+/* =============================================================================
+ *   Global Panels
+ * ========================================================================== */
+.panel-panel {
+}
+
+.panel-panel-inner {
+  margin: $panel-gutter-width;
+}
+
+.pane-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  @include font-size(1.8);
+  border-bottom: 1px solid #CCC;
+  @include box-shadow(0px 1px 0px rgba(255, 255, 255, .6));
+  margin-bottom: .5em;
+  @include text-shadow(0px 1px 0px rgba(255,255,255,.6));
+}
+
 
 /* =============================================================================
  *   Wrappers
@@ -169,13 +195,19 @@ var {
 /*
  * Wraps the sidebars the content column
  */
-#columns {}
+#columns {
+  background-color: #f5f5f5;
+}
 
 
 /*
  * Main content column wrapper
  */
 #content-column {}
+
+.content-inner {
+  padding: $region_inner_padding;
+}
 
 
 /*
@@ -606,6 +638,7 @@ ul.links {
 
 a {
   text-decoration: none;
+  color: $link_color;
 
   &:link,
   &:visited {}
@@ -1014,14 +1047,23 @@ ul.pager li {
 /* =============================================================================
  *   Tabs (local tasks)
  * ========================================================================== */
-
 #tasks {
-  margin-bottom: 15px;
+  padding: 10px;
+  background: $tasks_background_color;
+  @include box-shadow(0px 3px 4px rgba(0,0,0,.1) inset, 0px -1px 0px lighten($tasks_background_color, 5%));
+  border-bottom: 1px solid darken($tasks_background_color, 5%);
+  margin-bottom: 10px;
+
+
+  ul.primary {
+    margin: 0;
+    border-bottom: none;
+  }
 }
 
 
 ul.primary {
-  border-bottom-color: $border;
+  border-bottom-color:#ccc;
   margin: 20px 0;
   padding: 0 0 0 5px;
 
@@ -1031,36 +1073,38 @@ ul.primary {
     margin: 0 1px -1px;
 
     a {
-      background-color: $ultralight;
-      border-color: $border;
-      margin-right: 1px;
-      padding: 0 10px;
+      background-color: lighten($tasks_background_color, 5%);
+      border-color: darken($tasks_background_color, 5%);
+      margin-right: 10px;
+      padding: 5px 10px;
       display: block;
       float: left;
-      height: 1.5em;
-      line-height: 1.5em;
+      line-height: normal;
+      @include border-radius(20px);
+      @include box-shadow(0px 1px 0px lighten($tasks_background_color, 10%), 0px -3px 3px rgba(0,0,0,.1) inset);
+      color: #ccc;
 
       &:hover,
       &:focus {
-        background-color: $light;
-        border-color: $border;
+        background-color: $link_color;
+        border: 1px solid darken($link_color, 10%);
+        color: #fff;
       }
     }
   }
 
-  li.active {
-    a,
-    a:hover,
-    a:focus {
-      background-color: $page;
-      border-bottom-color: $page;
-    }
+  li.active a,
+  li.active a:hover,
+  li.active a:focus {
+    background-color: $link_color;
+    border: 1px solid darken($link_color, 10%);
+    color: #fff;
   }
 }
 
 
 ul.secondary {
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid #ccc;
   margin: 1em 0 0;
   padding: 0 .3em 1em;
 
@@ -1341,7 +1385,6 @@ ul.action-links {
  * Block title
  */
 .block-title {
-  margin: 0;
 }
 
 
@@ -2045,3 +2088,17 @@ tr.error {
   float: right;
   margin-top: 35px;
 }
+
+/* =============================================================================
+ *   Local Styles
+ * ========================================================================== */
+.field-name-field-image {
+  background: #EFEFEF;
+  border: 3px solid #EAEAEA;
+  @include box-shadow(-1px -1px 0px rgba(255, 255, 255, .4) inset, 1px 1px 0px rgba(0, 0, 0, .05) inset);
+  padding: .3em;
+
+  figure { float: none; }
+}
+
+

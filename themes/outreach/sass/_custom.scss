@@ -45,6 +45,9 @@ $primary_task:        $ultralight;
 $primary_task_hover:  $light;
 $primary_task_active: $page;
 
+$tasks_background_color: #333;
+$link_color: #107ACB;
+$base_text_color: #444;
 
 //
 // Font Variables
@@ -73,6 +76,9 @@ $mono:                        Consolas, Monaco, 'Courier New', Courier, monospac
 // setting this we use a variable.
 //
 $gutter-width: 10px;
+$region_inner_padding: 20px;
+$grid_padding: 20px;
+$panel-gutter-width: 20px;
 
 
 //
@@ -205,5 +211,18 @@ $gutter-width: 10px;
                 $color2: transparentize($color2, $intensity);
         }
         @include background(linear-gradient(top, $color, $color2), inline-image("noise.jpg"));
+}
+
+//
+//  Root EM sizing mixin with pixel fallback
+//
+@mixin font-size($sizeValue: 1.6){
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin background-rgba($r, $g, $b, $a){
+  background-color: rgb($r,$g,$b);
+  background-color: rgba($r,$g,$b,$a);
 }
 

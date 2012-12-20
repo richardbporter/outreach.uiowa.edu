@@ -540,15 +540,10 @@ table {
  * see Extensions > Modify Output > Design
  * $gutter-width is set in _base.scss
  */
-#main-content,
-.block-inner,
 .pane-inner,
-.menu-wrapper,
 .branding-elements,
-.breadcrumb-wrapper,
 .attribution,
 .at-panel .rounded-corner,
-.block-panels-mini > .block-title,
 div.messages {
   margin-left: $gutter-width;
   margin-right: $gutter-width;
@@ -557,11 +552,11 @@ div.messages {
 /*
  * Panel pages need negative margin equal to the gutter width applied to #content,
  * this is taken care of in theme settings as per above for normal gutters
- */
+*/
 #content .panel-display,
 #content .panel-flexible {
-  margin-left: -$gutter-width;
-  margin-right: -$gutter-width;
+  margin-left: -$panel-gutter-width;
+  margin-right: -$panel-gutter-width;
 }
 
 
