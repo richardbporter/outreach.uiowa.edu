@@ -209,7 +209,7 @@
   color: #3b3b3c;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003167}}
-.marker-popup h2, .marker-popup h3, .marker-popup h4, .marker-popup h5, .marker-popup h6 {
+.marker-popup h3, .marker-popup h4, .marker-popup h5, .marker-popup h6 {
   margin: 10px 0 0 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003170}}
