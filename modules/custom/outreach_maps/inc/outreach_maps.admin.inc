@@ -68,19 +68,11 @@ function _outreach_maps_load_county($title) {
       'hometown_hawkeyes_heading' => array(
         '#type' => 'markup',
         '#markup' => t('Hometown Hawkeyes'),
-        '#prefix' => '<h3>',
-        '#suffix' => '</h3>',
+        '#prefix' => '<h4>',
+        '#suffix' => '</h4>',
       ),
       'enrollment_total' => array($students),
       'alumni' => array($alumni),
-      'healthcare_heading' => array(
-        '#type' => 'markup',
-        '#markup' => t('Healthcare Connections'),
-        '#prefix' => '<h3>',
-        '#suffix' => '</h3>',
-      ),
-      'uihc_vists' => array($uihc_visits),
-      'outreach_visits' => array($outreach_visits),
       'impact_heading' => array(
         '#type' => 'markup',
         '#markup' => t('How the UI impacts your neighborhood.'),
@@ -91,12 +83,24 @@ function _outreach_maps_load_county($title) {
       'ui_assistants' => array($assitants),
       'ui_dentists' => array($dentists),
       'ui_nurses' => array($nurses),
+      'break' => array(
+        '#type' => 'markup',
+        '#markup' => '<br>',
+      ),
       'vendors' => array(
         '#type' => 'markup',
         '#markup' => t('Last year, the UI supported @vendors local companies with purchases of @sum.', array('@vendors' => $vendors, '@sum' => $sum)),
-        '#prefix' => '<h5>',
-        '#suffix' => '</h5>',
+        '#prefix' => '<p>',
+        '#suffix' => '</p>',
       ),
+      'healthcare_heading' => array(
+        '#type' => 'markup',
+        '#markup' => t('Healthcare Connections'),
+        '#prefix' => '<h4>',
+        '#suffix' => '</h4>',
+      ),
+      'uihc_vists' => array($uihc_visits),
+      'outreach_visits' => array($outreach_visits),
       'more_link' => array(
         '#type' => 'link',
         '#title' => t('See More »'),
