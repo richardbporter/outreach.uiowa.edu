@@ -1,1 +1,5 @@
+# Ignore settings.php file.
 settings.php
+
+# Ignore .sass-cache files.
+/themes/outreach/.sass-cache
