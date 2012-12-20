@@ -20,7 +20,10 @@ html {
   display: none;
 }
 
-#footer-wrapper a.county-list {
-  width: 25%;
-  float: left;
+#block-outreach-maps-outreach-maps-county-list .block-content {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  -ms-columns: 3;
+  -o-columns: 3;
+  columns: 3;
 }

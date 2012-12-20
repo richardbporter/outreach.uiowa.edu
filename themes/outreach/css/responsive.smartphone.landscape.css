@@ -42,9 +42,3 @@ html {
 .houseMap-processed .zoomer, .senateMap-processed .zoomer {
   top: 90px;
 }
-
-#footer-wrapper a.county-list {
-  display: block;
-  width: 100%;
-  float: none;
-}

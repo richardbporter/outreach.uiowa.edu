@@ -7,3 +7,10 @@
  *
  * - Read the _README file in this directory, it contains useful help and other information.
  */
+#block-outreach-maps-outreach-maps-county-list .block-content {
+  -webkit-columns: 6;
+  -moz-columns: 6;
+  -ms-columns: 6;
+  -o-columns: 6;
+  columns: 6;
+}

@@ -1414,3 +1414,12 @@ div.messages ul {
 .view-county.view-display-id-panel_pane_1 .views-field:nth-child(odd) {
   background-color: #e1e1e1;
 }
+.view-county.view-display-id-panel_pane_1 .field-total {
+  background-color: #F8FFF0;
+  margin-top: .3em;
+  border: 1px solid #BE7;
+}
+
+#footer {
+  padding: 35px;
+}

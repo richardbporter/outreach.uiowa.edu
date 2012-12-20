@@ -11,3 +11,10 @@
  *
  * - Read the _README file in this directory, it contains useful help and other information.
  */
+
+//
+// Footer Columns
+//
+#block-outreach-maps-outreach-maps-county-list .block-content {
+  @include columns(6);
+}

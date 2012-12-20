@@ -2140,8 +2140,6 @@ tr.error {
     margin-right: 1em;
   }
 
-
-
   .views-field {
     padding: .5em;
 
@@ -2149,8 +2147,20 @@ tr.error {
       background-color: #e1e1e1;
     }
   }
+
+  .field-total {
+    background-color: #F8FFF0;
+    margin-top: .3em;
+    border: 1px solid #BE7;
+  }
 }
 
+//
+// Footer Columns
+//
+#footer {
+  padding: $region_inner_padding;
+}
 
 
 

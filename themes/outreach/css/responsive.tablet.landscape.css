@@ -7,8 +7,10 @@
  *
  * - Read the _README file in this directory, it contains useful help and other information.
  */
-#footer-wrapper a.county-list {
-  width: 10%;
-  font-size: 90%;
-  float: left;
+#block-outreach-maps-outreach-maps-county-list .block-content {
+  -webkit-columns: 4;
+  -moz-columns: 4;
+  -ms-columns: 4;
+  -o-columns: 4;
+  columns: 4;
 }
