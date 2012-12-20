@@ -1,0 +1,24 @@
+/**
+ * @file
+ * OA Moscone panel layout
+**/
+
+.moscone-sidebar {
+  width: 30%;
+  float: left;
+}
+
+
+.moscone-content {
+  width: 70%;
+  float: left;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .moscone-content,
+  .moscone-sidebar {
+    width: 100%;
+    float: none;
+  }
+}

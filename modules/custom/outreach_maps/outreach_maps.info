@@ -1,0 +1,5 @@
+name = Outreach Maps
+description = Handles application logic fo the Outreach maps.
+core = 7.x
+package = UIowa
+files[] = outreach_maps.module

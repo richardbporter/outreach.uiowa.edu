@@ -1,0 +1,19 @@
+/**
+ * @file
+ * OA Geary panel layout
+**/
+
+
+.geary-column-content-region {
+  width: 33.33333%;
+  float: left;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .geary-column-content-region,
+  .geary-column3 {
+    width: 100%;
+    float: none;
+  }
+}

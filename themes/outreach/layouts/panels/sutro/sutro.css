@@ -1,0 +1,18 @@
+/**
+ * @file
+ * OA Sutro panel layout
+**/
+
+.sutro-column {
+  width: 50%;
+  float: left;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .sutro-column,
+  .sutro-column2 {
+    width: 100%;
+    float: none;
+  }
+}

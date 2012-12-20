@@ -1,0 +1,36 @@
+/**
+ * @file
+ * OA Sanderson panel layout
+**/
+
+.its-front-container {}
+
+.its-front-column-content-region {
+  width: 70%;
+  float: left;
+}
+
+  .its-front-column2 {
+    width: 30%;
+  }
+
+.its-front-secondary-column-content-region {
+  width: 25%;
+  float: left;
+}
+
+  .its-front-secondary-column4 {
+    width: 25%;
+  }
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .its-front-column-content-region,
+  .its-front-secondary-column-content-region,
+  .its-front-column2,
+  .its-front-secondary-column4  {
+    width: 100%;
+    float: none;
+  }
+}

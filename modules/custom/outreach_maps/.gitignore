@@ -1,0 +1,5 @@
+# Ignore SASS cache.
+.sass-cache
+
+# Ignore Mac metadata.
+.DS_Store

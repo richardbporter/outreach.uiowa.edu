@@ -1,0 +1,25 @@
+/**
+ * @file
+ * OA Whelan panel layout
+**/
+
+
+.whelan-column-content-region {
+  width: 25%;
+  float: left;
+}
+
+
+  .whelan-content {
+    width: 50%;
+  }
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .whelan-column-content-region,
+  .whelan-column2,
+  .whelan-content {
+    width: 100%;
+    float: none;
+  }
+}

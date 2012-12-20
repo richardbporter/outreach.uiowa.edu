@@ -1,0 +1,19 @@
+/**
+ * @file
+ * OA Phelan panel layout
+**/
+
+
+.phelan-column {
+  width: 50%;
+  float: left;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .phelan-column,
+  .phelan-column2 {
+    width: 100%;
+    float: none;
+  }
+}

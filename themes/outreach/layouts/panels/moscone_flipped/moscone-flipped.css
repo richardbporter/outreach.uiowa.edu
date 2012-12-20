@@ -1,0 +1,23 @@
+/**
+ * @file
+ * OA Moscone Flipped panel layout
+**/
+
+.moscone-flipped-content {
+  width: 70%;
+  float: left;
+}
+
+.moscone-flipped-sidebar {
+  width: 30%;
+  float: left;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .moscone-flipped-sidebar,
+  .moscone-flipped-content {
+    width: 100%;
+    float: none;
+  }
+}

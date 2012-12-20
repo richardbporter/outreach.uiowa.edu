@@ -1,0 +1,35 @@
+/**
+ * @file
+ * OA Melon panel layout
+**/
+
+
+.melon-column {
+  width: 30%;
+  float: left;
+}
+
+.melon-content-container { /* This is floated to the left of the sidebar,
+  which is styled by the generic "melon-column" class */
+  float: left;
+  width: 70%;
+}
+
+  .melon-content-column1 {
+    width: 50%;
+  }
+
+  .melon-content-column2 {
+    width: 50%;
+  }
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .melon-column,
+  .melon-content-container,
+  .melon-content-column1,
+  .melon-content-column2 {
+    width: 100%;
+    float: none;
+  }
+}

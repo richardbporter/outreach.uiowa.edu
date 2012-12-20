@@ -1,0 +1,40 @@
+/**
+ * @file
+ * OA Bartlett Flipped panel layout
+**/
+
+
+.bartlett-flipped-column {
+  width: 35%;
+  float: left;
+}
+
+.bartlett-flipped .bartlett-flipped-sidebar {
+  width: 30%;
+}
+
+.bartlett-flipped-content-container { /* This is floated to the left of the sidebar,
+  which is styled by the generic "bartlett-flipped-column" class */
+  float: left;
+  width: 70%;
+}
+
+  .bartlett-flipped-content-container .bartlett-flipped-content-column1 {
+    width: 50%;
+  }
+
+  .bartlett-flipped-content-container .bartlett-flipped-content-column2 {
+    width: 50%;
+  }
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .bartlett-flipped-column,
+  .bartlett-flipped-content-container,
+  .bartlett-flipped .bartlett-flipped-sidebar,
+  .bartlett-flipped-content-container .bartlett-flipped-content-column1,
+  .bartlett-flipped-content-container .bartlett-flipped-content-column2 {
+    width: 100%;
+    float: none;
+  }
+}
