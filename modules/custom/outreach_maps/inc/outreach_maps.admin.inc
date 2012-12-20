@@ -68,7 +68,7 @@ function _outreach_maps_load_county($title) {
       'hometown_hawkeyes_heading' => array(
         '#type' => 'markup',
         '#markup' => t('Hometown Hawkeyes'),
-        '#prefix' => '<h4 class="pane-title">',
+        '#prefix' => '<h4>',
         '#suffix' => '</h4>',
       ),
       'enrollment_total' => array($students),
@@ -76,7 +76,7 @@ function _outreach_maps_load_county($title) {
       'impact_heading' => array(
         '#type' => 'markup',
         '#markup' => t('How the UI impacts your neighborhood.'),
-        '#prefix' => '<h4 class="pane-title">',
+        '#prefix' => '<h4>',
         '#suffix' => '</h4>',
       ),
       'ui_physicians' => array($physicians),
@@ -96,7 +96,7 @@ function _outreach_maps_load_county($title) {
       'healthcare_heading' => array(
         '#type' => 'markup',
         '#markup' => t('Healthcare Connections'),
-        '#prefix' => '<h4 class="pane-title">',
+        '#prefix' => '<h4>',
         '#suffix' => '</h4>',
       ),
       'uihc_vists' => array($uihc_visits),
