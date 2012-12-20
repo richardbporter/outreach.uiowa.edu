@@ -7,7 +7,9 @@
 (function($) {
   // Initialize the county map.
   Drupal.tinyNav = function() {
-    $('#primary-menu-bar ul.menu').tinyNav();
+    $('#primary-menu-bar ul.menu').tinyNav({
+      header: 'Navigation'
+    });
   };
 
   // Attach tinyNav behavior.

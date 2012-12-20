@@ -120,8 +120,7 @@
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
     houseInteraction.formatter(function(f) {
-      var o = '<h2>House District ' + f.properties.text + '</h2>';
-      o += '<hr>';
+      var o = '<h3 class="pane-title">House District ' + f.properties.text + '</h3>';
       o += '<div id="district-' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });

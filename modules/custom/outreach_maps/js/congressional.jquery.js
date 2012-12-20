@@ -112,8 +112,7 @@
      // Set a custom formatter for tooltips.
     // Provide a function that returns html to be used in tooltip.
     congressionalInteraction.formatter(function(f) {
-      var o = '<h2>Congressional District ' + f.properties.text + '</h2>';
-      o += '<hr>';
+      var o = '<h3 class="pane-title">Congressional District ' + f.properties.text + '</h3>';
       o += '<div id="district-' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
