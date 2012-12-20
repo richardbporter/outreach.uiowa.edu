@@ -47,7 +47,13 @@
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
     map.setZoomRange(7, 12);
-    map.zoom(8, true);
+
+    // Zoom in one step closer if the viewport permits.
+    if ($(window).width() > 1290 && $(window).height() > 800) {
+      map.zoom(8, true);
+    } else {
+      map.zoom(7, true);
+    }
 
     // Create an array of house districts that are close together.
     var clustered = [
