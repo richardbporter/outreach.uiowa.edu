@@ -378,9 +378,6 @@ var {
   font-size: 1.2em;
   a {
     &.county-list {
-      display: block;
-      width: 10%;
-      float: left;
       color: #222;
       @include text-shadow(0 1px 1px #4d4d4d);
       @include transition-property(color);
