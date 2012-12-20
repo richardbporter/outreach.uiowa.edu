@@ -12,10 +12,6 @@
  * - Read the _README file in this directory, it contains useful help and other information.
  */
 
-/* Increase the body font size on small devices */
-html {
-  font-size: 112.5%;
-}
 
 .tinynav {
   display: block;
@@ -38,6 +34,10 @@ html {
 #site-slogan {
   display: block;
   margin: 0 0 0 0;
+}
+
+.marker-popup {
+  font-size: 80%;
 }
 
 .countyMap-processed .zoomer {
