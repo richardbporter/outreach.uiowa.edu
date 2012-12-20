@@ -1,0 +1,36 @@
+/**
+ * @file
+ * OA Brown panel layout
+**/
+
+
+.brown-slider {
+  float: left;
+  width: 70%
+}
+
+
+.brown-slider-gutter {
+  float: left;
+  width: 30%;
+}
+
+.brown-middle-region,
+.brown-footer-region {
+  width: 33.33333%;
+  float: left;
+}
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .brown-slider,
+  .brown-slider-gutter,
+  .brown-middle-region,
+  .brown-footer-region,
+  .brown-column3,
+  .brown-footer-column3 {
+    width: 100%;
+    float: none;
+  }
+}

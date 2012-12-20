@@ -1,0 +1,23 @@
+/**
+ * @file
+ * OA bryant panel layout
+**/
+
+.bryant-flipped-sidebar {
+  width: 20%;
+  float: left;
+}
+
+.bryant-flipped-content {
+  float: left;
+  width: 80%;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .bryant-flipped-sidebar,
+  .bryant-flipped-content {
+    width: 100%;
+    float: none;
+  }
+}

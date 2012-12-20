@@ -1,0 +1,32 @@
+/**
+ * @file
+ * OA Hewston panel layout
+**/
+
+
+.hewston-flipped-slider {
+  float: left;
+  width: 70%;
+}
+
+.hewston-flipped-slider-gutter {
+  float: left;
+  width: 30%;
+}
+
+.hewston-flipped-middle-region {
+  width: 33.333333%;
+  float: left;
+}
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .hewston-flipped-slider,
+  .hewston-flipped-slider-gutter,
+  .hewston-flipped-middle-region,
+  .hewston-flipped-column3 {
+    width: 100%;
+    float: none;
+  }
+}

@@ -1,0 +1,35 @@
+/**
+ * @file
+ * OA Selby Flipped panel layout
+**/
+
+.selby-flipped-column {
+  width: 30%;
+  float: left;
+}
+
+.selby-flipped-content-container { /* This is floated to the left of the sidebar,
+  which is styled by the generic "selby-flipped-column" class */
+  float: left;
+  width: 70%;
+}
+
+  .selby-flipped-content-container .selby-flipped-column {
+    width: 50%;
+  }
+
+  .selby-flipped-sidebar {
+    width: 30%;
+  }
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .selby-flipped-column,
+  .selby-flipped-content-container,
+  .selby-flipped-content-container .selby-flipped-column,
+  .selby-flipped-content-container .selby-flipped-content-column2,
+  .selby-flipped-sidebar {
+    width: 100%;
+    float: none;
+  }
+}

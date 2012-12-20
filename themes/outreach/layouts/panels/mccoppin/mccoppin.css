@@ -1,0 +1,19 @@
+/**
+ * @file
+ * OA McCoppin panel layout
+**/
+
+.mccoppin-column-content-region {
+  width: 33.333333%;
+  float: left;
+}
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .mccoppin-column-content-region,
+  .mccoppin-column3 {
+    width: 100%;
+    float: none;
+  }
+}

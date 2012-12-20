@@ -1,0 +1,86 @@
+<?php
+
+/**
+ * @file
+ *
+ * This module holds the callback functions for computed fields.
+ */
+
+/**
+ * Callback function for enrollment_total field on County Instance node.
+ *
+ * @param $entity_field
+ * @param $entity_type
+ * @param $entity
+ * @param $field
+ * @param $instance
+ * @param $langcode
+ * @param $items
+ */
+function computed_field_field_enrollment_total_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+  // Add all enrollment fields to an array.
+  $enrollment_fields = array(
+    'field_business',
+    'field_management',
+    'field_dentistry',
+    'field_education',
+    'field_engineering',
+    'field_graduate',
+    'field_law',
+    'field_liberal_arts',
+    'field_medicine',
+    'field_nursing',
+    'field_pharmacy',
+    'field_public_health',
+    'field_university_college',
+  );
+
+  // Calculate the total enrollment.
+  $enrollment_total = _field_compute_sum($entity_type, $entity, $enrollment_fields);
+
+  // Assign the total to the field.
+  $entity_field[0]['value'] = $enrollment_total;
+}
+
+/**
+ * Helper function to sum an array of fields of integer type.
+ *
+ * @param $entity_type
+ * @param $entity
+ * @param $fields
+ */
+function _field_compute_sum($entity_type, $entity, $fields) {
+  $total = 0;
+  foreach ($fields as $field) {
+    if (!isset($entity->{$field}['und'][0]['value'])) {
+      $value = 0;
+    } else {
+      $value = array_pop(array_pop(field_get_items($entity_type, $entity, $field)));
+    }
+
+    $total += $value;
+  }
+
+  return $total;
+}
+
+/**
+ * Helper function to compute a percentage of two fields.
+ *
+ * @param $entity_type
+ * @param $entity
+ * @param $sum
+ * @param $total
+ */
+function _field_compute_calculate_percentage($sum, $total) {
+  // Divide the sum by total.
+  if ($total['value'] == 0) {
+    return 0;
+  }
+  else {
+    $percentage = round(($sum['value'] / $total['value']) * 100);
+  }
+
+  // Return the percentage.
+  return $percentage;
+}

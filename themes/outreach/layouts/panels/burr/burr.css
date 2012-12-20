@@ -1,0 +1,24 @@
+/**
+ * @file
+ * OA Burr panel layout
+**/
+
+
+.burr-sidebar {
+  width: 30%;
+  float: left;
+}
+
+.burr-content {
+  float: left;
+  width: 70%;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .burr-content,
+  .burr-sidebar {
+    width: 100%;
+    float: none;
+  }
+}

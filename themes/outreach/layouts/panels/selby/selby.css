@@ -1,0 +1,36 @@
+/**
+ * @file
+ * OA Selby panel layout
+**/
+
+
+.selby-column {
+  width: 30%;
+  float: left;
+}
+
+.selby-content-container { /* This is floated to the left of the sidebar,
+  which is styled by the generic "selby-column" class */
+  float: left;
+  width: 70%;
+}
+
+  .selby-content-container .selby-column {
+    width: 50%;
+  }
+
+  .selby-sidebar {
+    width: 30%;
+  }
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .selby-column,
+  .selby-content-container,
+  .selby-content-container .selby-column,
+  .selby-content-container .selby-content-column2 {
+    width: 100%;
+    float: none;
+  }
+}

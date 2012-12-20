@@ -1,0 +1,34 @@
+/**
+ * @file
+ * OA Webb Flipped panel layout
+**/
+
+
+.webb-flipped-column {
+  width: 30%;
+  float: left;
+}
+
+
+.webb-flipped-content-container { /* This is floated to the left of the sidebar,
+  which is styled by the generic "webb-flipped-column" class */
+  float: left;
+  width: 70%;
+}
+
+
+  .webb-flipped-content-column1 {
+    width: 50%;
+  }
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .webb-flipped-column,
+  .webb-flipped-content-container,
+  .webb-flipped-content-column1,
+  .webb-flipped-content-column2 {
+    width: 100%;
+    float: none;
+  }
+}

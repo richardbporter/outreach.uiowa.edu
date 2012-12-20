@@ -1,0 +1,24 @@
+/**
+ * @file
+ * OA Harris panel layout
+**/
+
+
+.harris-column-content-region {
+  width: 25%;
+  float: left;
+}
+
+.harris-content {
+  width: 50%;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .harris-column-content-region,
+  .harris-column2,
+  .harris-content {
+    width: 100%;
+    float: none;
+  }
+}
