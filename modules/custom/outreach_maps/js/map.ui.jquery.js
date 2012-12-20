@@ -49,7 +49,7 @@
     $('#help-button').click(function(e) {
       e.preventDefault();
       if(open === false) {
-          $('#footer-wrapper').animate({ height: '300px' });
+          $('#footer-wrapper').animate({ height: '600px' });
           $(this).css('backgroundPosition', 'bottom left');
           $(this).text('Hide');
           $('#tooltip').css('visibility', 'hidden');
