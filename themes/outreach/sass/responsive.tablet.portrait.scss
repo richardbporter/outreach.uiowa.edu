@@ -29,9 +29,10 @@ html {
   margin-top: 20px;
 }
 
-#footer-wrapper a.county-list {
-  width: 10%;
-  font-size: 80%;
-  padding: 4px 0 4px 0;
-  float: left;
+
+//
+// Footer Columns
+//
+#block-outreach-maps-outreach-maps-county-list .block-content {
+  @include columns(2);
 }
