@@ -64,51 +64,67 @@ function _outreach_maps_load_county($title) {
     $sum = drupal_render(field_view_value('node', $node, 'field_sum_of_payments', $sum_items[0], array('type' => 'outreach_maps_money_formatter')));
 
     // Create a render array to store the fields.
-    $data = array(
-      'hometown_hawkeyes_heading' => array(
-        '#type' => 'markup',
-        '#markup' => t('Hometown Hawkeyes'),
-        '#prefix' => '<h4>',
-        '#suffix' => '</h4>',
-      ),
-      'enrollment_total' => array($students),
-      'alumni' => array($alumni),
-      'impact_heading' => array(
-        '#type' => 'markup',
-        '#markup' => t('How the UI impacts your neighborhood.'),
-        '#prefix' => '<h4>',
-        '#suffix' => '</h4>',
-      ),
-      'ui_physicians' => array($physicians),
-      'ui_assistants' => array($assitants),
-      'ui_dentists' => array($dentists),
-      'ui_nurses' => array($nurses),
-      'break' => array(
-        '#type' => 'markup',
-        '#markup' => '<br>',
-      ),
-      'vendors' => array(
+    $data = array();
+
+    // HomeTown Hawkeyes
+    $data['hometown_hawkeyes_heading'] = array(
+      '#type' => 'markup',
+      '#markup' => t('Hometown Hawkeyes'),
+      '#prefix' => '<h4>',
+      '#suffix' => '</h4>',
+    );
+
+    $data['enrollment_total'] = array($students);
+    $data['alumni'] = array($alumni);
+
+    // How the UI impacts your neighborhood
+    $data['impact_heading'] = array(
+      '#type' => 'markup',
+      '#markup' => t('How the UI impacts your neighborhood.'),
+      '#prefix' => '<h4>',
+      '#suffix' => '</h4>',
+    );
+
+    $data['ui_physicians'] = array($physicians);
+    $data['ui_assistants'] = array($assitants);
+    $data['ui_dentists'] = array($dentists);
+    $data['ui_nurses'] = array($nurses);
+
+    // Check to see if there are any vendors.
+    if ($vendors != 0 || !empty($vendors)) {
+      // Space it out a little.
+        $data['break'] = array(
+          '#type' => 'markup',
+          '#markup' => '<br>',
+        );
+
+       $data['vendors'] = array(
         '#type' => 'markup',
         '#markup' => t('Last year, the UI supported @vendors local companies with purchases of @sum.', array('@vendors' => $vendors, '@sum' => $sum)),
         '#prefix' => '<p>',
         '#suffix' => '</p>',
-      ),
-      'healthcare_heading' => array(
-        '#type' => 'markup',
-        '#markup' => t('Healthcare Connections'),
-        '#prefix' => '<h4>',
-        '#suffix' => '</h4>',
-      ),
-      'uihc_vists' => array($uihc_visits),
-      'outreach_visits' => array($outreach_visits),
-      'more_link' => array(
-        '#type' => 'link',
-        '#title' => t('See More »'),
-        '#href' => 'county/' . $title,
-        '#options' => array(
-          'attributes' => array(
-            'class' => 'see-more',
-          ),
+      );
+    }
+
+    // Healthcare Connections
+    $data['healthcare_heading'] = array(
+      '#type' => 'markup',
+      '#markup' => t('Healthcare Connections'),
+      '#prefix' => '<h4>',
+      '#suffix' => '</h4>',
+    );
+
+    $data['uihc_vists'] = array($uihc_visits);
+    $data['outreach_visits'] = array($outreach_visits);
+
+    // More link
+    $data['more_link'] = array(
+      '#type' => 'link',
+      '#title' => t('See More »'),
+      '#href' => 'county/' . $title,
+      '#options' => array(
+        'attributes' => array(
+          'class' => 'see-more',
         ),
       ),
     );
