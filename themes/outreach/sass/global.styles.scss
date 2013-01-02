@@ -2154,3 +2154,7 @@ tr.error {
     border: 1px solid #BE7;
   }
 }
+
+.no-vendors .views-field-field-sum-of-payments, .no-vendors .vendors-heading {
+  display: none;
+}

@@ -90,6 +90,17 @@ function outreach_maps_preprocess_page(&$variables) {
         drupal_add_js($path . '/js/congressional.jquery.js', array('weight' => '91'));
       }
     }
+    elseif ($variables['node']->type == 'county') {
+      // @TODO: This is a workaround for a views no results issue.
+      if (!empty($variables['node']->field_vendors_paid)) {
+        if ($variables['node']->field_vendors_paid[LANGUAGE_NONE][0]['value'] == 0) {
+          $variables['classes_array'][] = 'no-vendors';
+        }
+      }
+      else {
+        $variables['classes_array'][] = 'no-vendors';
+      }
+    }
   }
 }
 
