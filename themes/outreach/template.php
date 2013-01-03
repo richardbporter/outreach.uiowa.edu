@@ -55,6 +55,19 @@ function outreach_process_html(&$vars) {
  */
 function outreach_preprocess_page(&$vars) {
   $vars['site_name'] = '<a href="http://www.uiowa.edu" title="The University of Iowa homepage.">The University of Iowa</a>';
+
+  // Create render array for select list of counties in footer.
+  $select = array(
+    '#type' => 'select',
+    '#options' => array('Adair', 'Adams'),
+    '#attributes' => array(
+      'options' => array(
+        'class' => 'county-list',
+      ),
+    ),
+  );
+
+  $vars['county_list'] = $select;
 }
 
 function outreach_process_page(&$vars) {
