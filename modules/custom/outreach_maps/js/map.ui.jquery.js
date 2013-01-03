@@ -22,6 +22,7 @@
       });
     });
 
+    // Social networking popup.
     $('#share-button').click(function(e) {
       e.preventDefault();
       $('#share-dialog').dialog({
@@ -35,6 +36,20 @@
           }
         }
       });
+    });
+
+    // Set the default value.
+    $('#county-list').val('default');
+
+    // Redirect to the county page on change.
+    $('#county-list').change(function(e) {
+      var county = $(this, ':selected').val();
+      if (county === 'default') {
+        return;
+      }
+      else {
+        window.location = Drupal.settings.basePath + 'county/' + county;
+      }
     });
   };
 
