@@ -3,4 +3,7 @@ settings.php
 
 # Ignore .sass-cache files.
 /themes/outreach/.sass-cache
-/modules/outreach_maps/.sass-cache
+/modules/custom/outreach_maps/.sass-cache
+
+/modules/custom/outreach_maps/.sass-cache/ac3e25abc32d428a0688b33d815b1569a307db33/_base.scssc
+/modules/custom/outreach_maps/.sass-cache/ac3e25abc32d428a0688b33d815b1569a307db33/outreach.maps.scssc
