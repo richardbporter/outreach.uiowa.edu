@@ -3,3 +3,4 @@ settings.php
 
 # Ignore .sass-cache files.
 /themes/outreach/.sass-cache
+/modules/outreach_maps/.sass-cache
