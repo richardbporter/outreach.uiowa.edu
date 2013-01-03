@@ -272,7 +272,7 @@
     <?php if ($page['footer']): ?>
       <div id="footer-wrapper">
         <div class="container clearfix">
-          <a href="#" id="help-button" title="Having trouble with the map? Click 'Help' for a list of counties.">Help</a>
+          <?php print render($county_list); ?>
           <footer<?php print $footer_attributes; ?>>
             <?php print render($page['footer']); ?>
           </footer>
