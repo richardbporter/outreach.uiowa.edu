@@ -5,6 +5,9 @@
 // Import base partial.
 @import "base";
 
+// Import sprites.
+@import "sprites/*.png";
+
 /* =============================================================================
  *   AT3 Overrides
  * ========================================================================== */
@@ -129,7 +132,7 @@
   @include ir;
   width: 77px;
   height: 20px;
-  background: url('images/facebook_normal.png') center no-repeat;
+  @include sprites-sprite(facebook_normal, $dimensions:true);
   margin-bottom: 20px;
 }
 
@@ -137,7 +140,7 @@
   @include ir;
   width: 77px;
   height: 20px;
-  background: url('images/twitter_normal.png') center no-repeat;
+  @include sprites-sprite(twitter_normal, $dimensions:true);
   margin-bottom: 20px;
 }
 
@@ -145,7 +148,7 @@
   @include ir;
   width: 77px;
   height: 20px;
-  background: url('images/googleplus_normal.png') center no-repeat;
+  @include sprites-sprite(googleplus_normal, $dimensions:true);
 }
 
 .county-marker, .house-marker, .senate-marker, .congressional-marker, .cluster-marker {
