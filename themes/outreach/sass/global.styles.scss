@@ -374,22 +374,9 @@ var {
  * Footer wrapper
  */
 #footer-wrapper {
-  overflow-y: scroll;
   @include box-shadow(0 -2px 2px rgba($black, 0.2));
   @include noise(lighten($black,27%), 0.01);
   font-size: 1.2em;
-  a {
-    &.county-list {
-      display: block;
-      color: #222;
-      @include text-shadow(0 1px 1px #4d4d4d);
-      @include transition-property(color);
-      @include transition-duration(0.2s);
-      &:hover {
-      color: $light;
-    }
-    }
-  }
   .container {
     .block {
       margin-bottom: 10px;
