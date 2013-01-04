@@ -80,7 +80,7 @@
       });
 
       // Add function that calls ajax and centers marker on touch.
-      MM.addEvent(countyLink, 'touchstart', function(e) {
+      MM.addEvent(countyLink, 'touchend', function(e) {
         // Define a custom ajax action not associated with an element.
         var custom_settings = {};
         custom_settings.url = Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
