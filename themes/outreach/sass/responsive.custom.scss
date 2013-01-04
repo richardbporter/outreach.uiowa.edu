@@ -63,6 +63,24 @@
     float: none;
     width: 100%;
   }
+
+  #site-slogan {
+    display: none;
+  }
+
+  .node-type-map #footer-wrapper {
+    height: 30px;
+  }
+
+  #footer {
+    .block {
+      display: none;
+    }
+  }
+
+  #county-list {
+    float: left;
+  }
 }
 
 /*
