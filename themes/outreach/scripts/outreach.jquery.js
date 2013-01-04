@@ -10,6 +10,20 @@
     $('#primary-menu-bar ul.menu').tinyNav({
       header: 'Navigation'
     });
+
+    // Set the default value.
+    $('#county-list').val('default');
+
+    // Redirect to the county page on change.
+    $('#county-list').change(function(e) {
+      var county = $(this, ':selected').val();
+      if (county === 'default') {
+        return;
+      }
+      else {
+        window.location = Drupal.settings.basePath + 'county/' + county;
+      }
+    });
   };
 
   // Attach tinyNav behavior.
