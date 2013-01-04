@@ -92,11 +92,11 @@
         // Trigger the response.
         Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
 
-        // // Center map.
-        // map.ease.location({
-        //   lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
-        //   lon: f.geometry.coordinates[0]
-        // }).zoom(map.zoom()).optimal();
+        // Center map.
+        map.ease.location({
+          lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
+          lon: f.geometry.coordinates[0]
+        }).zoom(map.zoom()).optimal();
       });
 
       return countyLink;
