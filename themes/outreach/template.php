@@ -61,9 +61,7 @@ function outreach_preprocess_page(&$vars) {
     '#type' => 'select',
     '#options' => array('Adair', 'Adams'),
     '#attributes' => array(
-      'options' => array(
-        'class' => 'county-list',
-      ),
+      'id' => 'county-list',
     ),
   );
 
