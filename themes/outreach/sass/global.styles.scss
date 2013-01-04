@@ -378,9 +378,12 @@ var {
   @include noise(lighten($black,27%), 0.01);
   font-size: 1.2em;
   .container {
+    .form-item {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
     .block {
       margin-bottom: 10px;
-      @include box-shadow(0px 1px 0px rgba($black, 0.2) inset);
       p {
         color: darken($light, 20%);
         margin-bottom: 0;
@@ -2144,4 +2147,8 @@ tr.error {
 
 .no-vendors .views-field-field-sum-of-payments, .no-vendors .vendors-heading {
   display: none;
+}
+
+#county-list {
+  float: right;
 }
