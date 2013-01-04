@@ -200,13 +200,13 @@
             </div>
 
             <div id='map-ui'>
-              <ul>
+              <ul id="share-about">
                 <li><a id="share-button" href="#">Share +</a></li>
                 <li><a id="about-button" href="#">About</a></li>
               </ul>
 
               <?php if ($map == 'house'): ?>
-                <ul>
+                <ul class="easing-menu">
                   <li><a class="wide" href='#' id='black-hawk'>Black Hawk County</a></li>
                   <li><a class="wide" href='#' id='dubuque'>Dubuque County</a></li>
                   <li><a class="wide" href='#' id='johnson'>Johnson County</a></li>
@@ -218,7 +218,7 @@
                   <li><a class="wide" href='#' id='woodbury'>Woodbury County</a></li>
                 </ul>
               <?php elseif ($map == 'senate'): ?>
-                <ul>
+                <ul class="easing-menu">
                   <li><a class="wide" href='#' id='black-hawk'>Black Hawk County</a></li>
                   <li><a class="wide" href='#' id='johnson'>Johnson County</a></li>
                   <li><a class="wide" href='#' id='linn'>Linn County</a></li>
