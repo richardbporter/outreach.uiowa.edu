@@ -377,10 +377,6 @@ var {
   @include box-shadow(0 -2px 2px rgba($black, 0.2));
   font-size: 1.2em;
   .container {
-    .form-item {
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
     .block {
       margin-bottom: 10px;
       p {
@@ -2081,7 +2077,13 @@ tr.error {
   @include box-shadow(-1px -1px 0px rgba(255, 255, 255, .4) inset, 1px 1px 0px rgba(0, 0, 0, .05) inset);
   padding: .3em;
 
-  figure { float: none; }
+  figure {
+    float: none;
+    text-align: center;
+    img {
+      margin-top: 10px;
+    }
+  }
 }
 
 #county_intro {
@@ -2147,9 +2149,15 @@ tr.error {
   display: none;
 }
 
-.not-front .county-list {
-  float: right;
+.not-front #block-outreach-maps-outreach-maps-county-list {
+
 }
+
+.front article {
+  margin-bottom: 0;
+}
+
+
 
 #facebook {
   @include ir;
