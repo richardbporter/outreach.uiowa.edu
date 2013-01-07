@@ -234,7 +234,7 @@ function _outreach_maps_county_list() {
     '#type' => 'select',
     '#options' => $options,
     '#attributes' => array(
-      'class' => 'county-list',
+      'class' => array('county-list'),
     ),
   );
 
