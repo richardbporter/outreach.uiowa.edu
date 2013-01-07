@@ -311,9 +311,13 @@ var {
 /**
  * Tiny nav
  */
-.tinynav {
-  display: none;
-  margin: 20px 10px 0 0;
+#primary-menu-bar {
+  .tinynav {
+    display: none;
+  }
+  .selector {
+    display: none;
+  }
 }
 
 /*
