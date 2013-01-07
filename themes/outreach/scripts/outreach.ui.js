@@ -7,7 +7,7 @@
 (function($) {
   // Initialize the county map.
   Drupal.outreachUI = function() {
-    $('#primary-menu-bar ul.menu').outreachUI({
+    $('#primary-menu-bar ul.menu').tinyNav({
       header: 'Navigation'
     });
 
