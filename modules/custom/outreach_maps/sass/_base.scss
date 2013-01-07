@@ -48,3 +48,16 @@ $gold:          #F6C72F;
   background-color: transparent; // Hide the default background color on elements like <button>
 }
 
+//
+// Noise mixin
+//
+@mixin noise($color:#fff, $intensity: 0.02, $color2:"false") {
+        background: $color;
+        $color: transparentize($color, $intensity);
+        @if $color2 == "false" {
+                $color2: $color;
+        } @else {
+                $color2: transparentize($color2, $intensity);
+        }
+        @include background(linear-gradient(top, $color, $color2), inline-image("noise.jpg"));
+}
