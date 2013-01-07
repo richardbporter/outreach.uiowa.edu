@@ -119,33 +119,6 @@
   @include opacity(0.5);
 }
 
-#share-dialog, #about-dialog {
-  display: none;
-}
-
-#facebook {
-  @include ir;
-  width: 77px;
-  height: 20px;
-  @include sprites-sprite(facebook_normal, $dimensions:true);
-  margin-bottom: 20px;
-}
-
-#twitter {
-  @include ir;
-  width: 77px;
-  height: 20px;
-  @include sprites-sprite(twitter_normal, $dimensions:true);
-  margin-bottom: 20px;
-}
-
-#plusone {
-  @include ir;
-  width: 77px;
-  height: 20px;
-  @include sprites-sprite(googleplus_normal, $dimensions:true);
-}
-
 .county-marker, .house-marker, .senate-marker, .congressional-marker, .cluster-marker {
   position: absolute;  // Markers have to be positioned absolutely.
   pointer-events: all;  // Allows for interactive markers.
