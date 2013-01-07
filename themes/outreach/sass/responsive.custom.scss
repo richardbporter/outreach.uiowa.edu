@@ -33,15 +33,44 @@
  * Mid-tablet sizes and down
  */
 @media only screen and (max-width: 1024px) {
-  #primary-menu-bar ul.menu a {
-    font-size: 80%;
+ // tinyNav
+#primary-menu-bar {
+  ul.menu {
+    display: none;
   }
+  .tinynav {
+    display: block;
+  }
+  .selector {
+    display: block;
+    margin: 15px 5px 0 0;
+  }
+}
 
+  // Hide the county jump links on small screens.
   .easing-menu {
     display: none;
   }
 }
 
+/*
+ * Whatever and down
+ */
+@media only screen and (max-width: 790px) {
+  #site-slogan {
+    font-size: 100%;
+    margin-top: 18px;
+  }
+}
+
+/*
+ * Whatever and down
+ */
+@media only screen and (max-width: 720px) {
+  #site-slogan {
+    display: none;
+  }
+}
 
 /*
  * Smartphone sizes and down
@@ -62,21 +91,6 @@
   .region[class*="float-blocks"] .block {
     float: none;
     width: 100%;
-  }
-
-  #site-slogan {
-    display: none;
-  }
-
-  #footer {
-    .block {
-      display: none;
-    }
-  }
-
-  #county-list {
-    float: left;
-    font-size: 80%;
   }
 }
 
