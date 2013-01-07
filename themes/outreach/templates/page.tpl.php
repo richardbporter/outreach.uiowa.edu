@@ -254,7 +254,6 @@
     <?php if ($page['footer']): ?>
       <div id="footer-wrapper">
         <div class="container clearfix">
-          <?php if (!$is_front) { print render($county_list); } ?>
           <footer<?php print $footer_attributes; ?>>
             <?php print render($page['footer']); ?>
           </footer>

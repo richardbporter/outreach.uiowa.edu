@@ -55,44 +55,6 @@ function outreach_process_html(&$vars) {
  */
 function outreach_preprocess_page(&$vars) {
   $vars['site_name'] = '<a href="http://www.uiowa.edu" title="The University of Iowa homepage.">The University of Iowa</a>';
-
-  $options = array();
-
-  $options['default'] = 'Select a county';
-
-   // Create an EFQ to get all counties.
-  $county_query = new EntityFieldQuery();
-
-  // Set some conditions.
-  $county_query->entityCondition('entity_type', 'node')
-  ->entityCondition('bundle', 'county')
-  ->propertyCondition('status', 1);
-
-  // Execute the query.
-  $county_result = $county_query->execute();
-
-  // Check for a result.
-  if (isset($county_result['node'])) {
-    $keys = array_keys($county_result['node']);
-
-    // Load all nodes.
-    $county_nodes = node_load_multiple($keys);
-
-    foreach ($county_nodes as $county) {
-      $options[strtolower(str_replace(' ', '-', str_replace("'", '', $county->title)))] = $county->title;
-    }
-  }
-
-  // Create render array for select list of counties in footer.
-  $select = array(
-    '#type' => 'select',
-    '#options' => $options,
-    '#attributes' => array(
-      'id' => 'county-list',
-    ),
-  );
-
-  $vars['county_list'] = $select;
 }
 
 function outreach_process_page(&$vars) {
