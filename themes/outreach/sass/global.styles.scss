@@ -317,6 +317,13 @@ var {
   }
   .selector {
     display: none;
+    margin: 15px -60px 0 0; // *
+    span {
+      width: 100px;
+    }
+  }
+  nav {
+    overflow: hidden; // *Hack to hide horizontal scroll caused by negative margin above.
   }
 }
 
@@ -383,10 +390,9 @@ var {
   .container {
     #block-block-2 {
       float: left;
-      margin-bottom: 10px;
       p {
         color: darken($light, 20%);
-        margin-bottom: 0;
+        padding: 5px 5px 5px 15px;
       }
     }
   }
@@ -405,6 +411,7 @@ var {
  */
 #branding {
   float: left;
+  margin-right: 0;
 }
 
 
