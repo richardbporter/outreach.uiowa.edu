@@ -33,11 +33,57 @@
  * Mid-tablet sizes and down
  */
 @media only screen and (max-width: 1024px) {
-  #primary-menu-bar ul.menu a {
-    font-size: 80%;
+ // tinyNav
+#primary-menu-bar {
+  ul.menu {
+    display: none;
+  }
+  .tinynav {
+    display: block;
+  }
+  .selector {
+    display: block;
   }
 }
 
+  // Hide the county jump links on small screens.
+  .easing-menu {
+    display: none;
+  }
+}
+
+/*
+ * Tablet portrait and down
+ */
+@media only screen and (max-width: 768px) {
+  #site-slogan {
+    font-size: 100%;
+    margin-top: 18px;
+  }
+
+  .panel-panel {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*
+ * Whatever and down
+ */
+@media only screen and (max-width: 720px) {
+  #site-name {
+    a {
+      &:link,
+      &:visited {
+        @include ir();
+        margin-top: 1px;
+        width: 23px;
+        height: 38px;
+        background: url("images/dome.png") center no-repeat;
+      }
+    }
+  }
+}
 
 /*
  * Smartphone sizes and down

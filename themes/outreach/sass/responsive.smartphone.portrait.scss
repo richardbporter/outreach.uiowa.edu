@@ -11,20 +11,3 @@
  *
  * - Read the _README file in this directory, it contains useful help and other information.
  */
-
-
-.tinynav {
-  display: block;
-}
-
-#primary-menu-bar ul.menu {
-  display: none;
-}
-
-//
-// Footer Columns
-//
-#block-outreach-maps-outreach-maps-county-list .block-content {
-  @include columns(3);
-}
-

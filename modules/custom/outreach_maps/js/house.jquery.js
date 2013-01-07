@@ -92,11 +92,11 @@
       });
 
       // Add function that calls ajax and centers marker on touch.
-      MM.addEvent(houseLink, 'touchstart', function(e) {
+      MM.addEvent(houseLink, 'touchend', function(e) {
         // Define a custom ajax action not associated with an element.
         var custom_settings = {};
         custom_settings.url = Drupal.settings.basePath + 'outreach-maps/house/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
-        custom_settings.event = 'touchstart';
+        custom_settings.event = 'touchend';
         custom_settings.keypress = false;
         custom_settings.prevent = false;
         Drupal.ajax['outreach_maps_house_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
