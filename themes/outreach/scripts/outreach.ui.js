@@ -11,6 +11,9 @@
       header: 'Navigation'
     });
 
+    // Uniform the tinynav.
+    $('.tinynav').uniform();
+
     // Set the default value.
     $('.county-list').val('default');
 
@@ -25,13 +28,14 @@
       }
     });
 
+    // Uniform the county list.
     $('.county-list').uniform();
   };
 
   // Attach outreachUI behavior.
   Drupal.behaviors.outreachUI = {
     attach: function(context, settings) {
-      $('#primary-menu-bar', context).once('outreachUI', function() {
+      $('#page', context).once('outreachUI', function() {
         Drupal.outreachUI();
       });
     }
