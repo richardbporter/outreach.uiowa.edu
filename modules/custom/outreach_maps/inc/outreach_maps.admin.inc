@@ -201,6 +201,46 @@ function _outreach_maps_load_district($district_type, $district_number) {
   }
 }
 
+function _outreach_maps_county_list() {
+  $options = array();
+
+  $options['default'] = 'Select a county';
+
+   // Create an EFQ to get all counties.
+  $county_query = new EntityFieldQuery();
+
+  // Set some conditions.
+  $county_query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'county')
+  ->propertyCondition('status', 1);
+
+  // Execute the query.
+  $county_result = $county_query->execute();
+
+  // Check for a result.
+  if (isset($county_result['node'])) {
+    $keys = array_keys($county_result['node']);
+
+    // Load all nodes.
+    $county_nodes = node_load_multiple($keys);
+
+    foreach ($county_nodes as $county) {
+      $options[strtolower(str_replace(' ', '-', str_replace("'", '', $county->title)))] = $county->title;
+    }
+  }
+
+  // Create render array for select list of counties in footer.
+  $select = array(
+    '#type' => 'select',
+    '#options' => $options,
+    '#attributes' => array(
+      'id' => 'frontpage-county-list',
+    ),
+  );
+
+  return $select;
+}
+
 /**
  * Helper function to return node title given an nid.
  *
