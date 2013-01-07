@@ -58,7 +58,7 @@
   left: 0;
   height: 40px;
   width: 100%;
-  @include noise(lighten($black,27%), 0.01);
+  @include noise(lighten($black, 27%), 0.01);
   .container {}
 }
 
