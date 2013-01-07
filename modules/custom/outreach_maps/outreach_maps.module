@@ -163,9 +163,7 @@ function outreach_maps_menu() {
 function outreach_maps_block_info() {
   $blocks['outreach_maps_county_list'] = array(
     'info' => t('County list'),
-    'region' => 'footer',
     'status' => 1,
-    'weight' => '99',
   );
 
   return $blocks;
