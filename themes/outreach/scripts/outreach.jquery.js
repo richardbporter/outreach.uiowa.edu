@@ -6,8 +6,8 @@
 // Namespace jQuery to avoid conflicts.
 (function($) {
   // Initialize the county map.
-  Drupal.tinyNav = function() {
-    $('#primary-menu-bar ul.menu').tinyNav({
+  Drupal.outreachUI = function() {
+    $('#primary-menu-bar ul.menu').outreachUI({
       header: 'Navigation'
     });
 
@@ -24,13 +24,15 @@
         window.location = Drupal.settings.basePath + 'county/' + county;
       }
     });
+
+    $('.county-list').uniform();
   };
 
-  // Attach tinyNav behavior.
-  Drupal.behaviors.tinyNav = {
+  // Attach outreachUI behavior.
+  Drupal.behaviors.outreachUI = {
     attach: function(context, settings) {
-      $('#primary-menu-bar', context).once('tinyNav', function() {
-        Drupal.tinyNav();
+      $('#primary-menu-bar', context).once('outreachUI', function() {
+        Drupal.outreachUI();
       });
     }
   };
