@@ -377,7 +377,8 @@ var {
   @include box-shadow(0 -2px 2px rgba($black, 0.2));
   font-size: 1.2em;
   .container {
-    .block {
+    #block-block-2 {
+      float: left;
       margin-bottom: 10px;
       p {
         color: darken($light, 20%);
@@ -385,6 +386,10 @@ var {
       }
     }
   }
+}
+
+.not-front #block-outreach-maps-outreach-maps-county-list {
+  float: right;
 }
 
 /* =============================================================================
@@ -446,7 +451,7 @@ var {
  */
 #site-slogan {
   float: left;
-  margin: 16px 0 0 10px;
+  margin: 14px 0 0 10px;
   color: darken($white, 40%);
   font-size: 1.3em;
   font-weight: normal;
@@ -2149,15 +2154,9 @@ tr.error {
   display: none;
 }
 
-.not-front #block-outreach-maps-outreach-maps-county-list {
-
-}
-
 .front article {
   margin-bottom: 0;
 }
-
-
 
 #facebook {
   @include ir;
