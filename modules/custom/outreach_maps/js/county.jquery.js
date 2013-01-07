@@ -97,8 +97,6 @@
           lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
-
-        console.log('touch end');
       });
 
       return countyLink;
