@@ -43,7 +43,6 @@
   }
   .selector {
     display: block;
-    margin: 15px 5px 0 0;
   }
 }
 
@@ -54,12 +53,17 @@
 }
 
 /*
- * Whatever and down
+ * Tablet portrait and down
  */
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 768px) {
   #site-slogan {
     font-size: 100%;
     margin-top: 18px;
+  }
+
+  .panel-panel {
+    float: none;
+    width: 100%;
   }
 }
 
@@ -67,8 +71,17 @@
  * Whatever and down
  */
 @media only screen and (max-width: 720px) {
-  #site-slogan {
-    display: none;
+  #site-name {
+    a {
+      &:link,
+      &:visited {
+        @include ir();
+        margin-top: 1px;
+        width: 23px;
+        height: 38px;
+        background: url("images/dome.png") center no-repeat;
+      }
+    }
   }
 }
 
