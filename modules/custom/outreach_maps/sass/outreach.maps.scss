@@ -56,15 +56,12 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 25px;
+  height: 40px;
   width: 100%;
+  @include noise(lighten($black, 27%), 0.01);
   .container {}
 }
 
-#help-button {
-  float: right;
-  color: $light;
-}
 
 /* =============================================================================
  *   MapBox
@@ -75,9 +72,14 @@
   height: 100%;
 }
 
+.zoomer {
+  top: 40px;
+  @include opacity(0.5);
+}
+
 #map-ui {
   position: absolute;
-  top: 150px;
+  top: 130px;
   left: 10px;
   z-index: 100;
   ul {
@@ -117,37 +119,6 @@
   color: $grey;
 }
 
-.zoomer {
-  @include opacity(0.5);
-}
-
-#share-dialog, #about-dialog {
-  display: none;
-}
-
-#facebook {
-  @include ir;
-  width: 77px;
-  height: 20px;
-  background: url('images/facebook_normal.png') center no-repeat;
-  margin-bottom: 20px;
-}
-
-#twitter {
-  @include ir;
-  width: 77px;
-  height: 20px;
-  background: url('images/twitter_normal.png') center no-repeat;
-  margin-bottom: 20px;
-}
-
-#plusone {
-  @include ir;
-  width: 77px;
-  height: 20px;
-  background: url('images/googleplus_normal.png') center no-repeat;
-}
-
 .county-marker, .house-marker, .senate-marker, .congressional-marker, .cluster-marker {
   position: absolute;  // Markers have to be positioned absolutely.
   pointer-events: all;  // Allows for interactive markers.
@@ -181,10 +152,6 @@
       }
     }
   }
-}
-
-.zoomer {
-  top: 80px;
 }
 
 .ajax-progress-throbber {

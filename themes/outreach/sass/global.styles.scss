@@ -311,9 +311,20 @@ var {
 /**
  * Tiny nav
  */
-.tinynav {
-  display: none;
-  margin: 20px 10px 0 0;
+#primary-menu-bar {
+  .tinynav {
+    display: none;
+  }
+  .selector {
+    display: none;
+    margin: 15px -60px 0 0; // *
+    span {
+      width: 100px;
+    }
+  }
+  nav {
+    overflow: hidden; // *Hack to hide horizontal scroll caused by negative margin above.
+  }
 }
 
 /*
@@ -374,34 +385,22 @@ var {
  * Footer wrapper
  */
 #footer-wrapper {
-  overflow-y: scroll;
   @include box-shadow(0 -2px 2px rgba($black, 0.2));
-  @include noise(lighten($black,27%), 0.01);
   font-size: 1.2em;
-  a {
-    &.county-list {
-      display: block;
-      color: #222;
-      @include text-shadow(0 1px 1px #4d4d4d);
-      @include transition-property(color);
-      @include transition-duration(0.2s);
-      &:hover {
-      color: $light;
-    }
-    }
-  }
   .container {
-    .block {
-      margin-bottom: 10px;
-      @include box-shadow(0px 1px 0px rgba($black, 0.2) inset);
+    #block-block-2 {
+      float: left;
       p {
         color: darken($light, 20%);
-        margin-bottom: 0;
+        padding: 5px 5px 5px 15px;
       }
     }
   }
 }
 
+.not-front #block-outreach-maps-outreach-maps-county-list {
+  float: right;
+}
 
 /* =============================================================================
  *   Branding
@@ -412,6 +411,7 @@ var {
  */
 #branding {
   float: left;
+  margin-right: 0;
 }
 
 
@@ -462,7 +462,7 @@ var {
  */
 #site-slogan {
   float: left;
-  margin: 16px 0 0 10px;
+  margin: 14px 0 0 10px;
   color: darken($white, 40%);
   font-size: 1.3em;
   font-weight: normal;
@@ -2093,7 +2093,13 @@ tr.error {
   @include box-shadow(-1px -1px 0px rgba(255, 255, 255, .4) inset, 1px 1px 0px rgba(0, 0, 0, .05) inset);
   padding: .3em;
 
-  figure { float: none; }
+  figure {
+    float: none;
+    text-align: center;
+    img {
+      margin-top: 10px;
+    }
+  }
 }
 
 #county_intro {
@@ -2157,4 +2163,35 @@ tr.error {
 
 .no-vendors .views-field-field-sum-of-payments, .no-vendors .vendors-heading {
   display: none;
+}
+
+.front article {
+  margin-bottom: 0;
+}
+
+#facebook {
+  @include ir;
+  width: 77px;
+  height: 20px;
+  @include sprites-sprite(facebook_normal, $dimensions:true);
+  margin-right: 10px;
+  float: left;
+}
+
+#twitter {
+  @include ir;
+  width: 77px;
+  height: 20px;
+  @include sprites-sprite(twitter_normal, $dimensions:true);
+  margin-right: 10px;
+  float: left;
+}
+
+#plusone {
+  @include ir;
+  width: 77px;
+  height: 20px;
+  @include sprites-sprite(googleplus_normal, $dimensions:true);
+  margin-right: 10px;
+  float: left;
 }

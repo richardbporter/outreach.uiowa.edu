@@ -201,13 +201,10 @@ function _outreach_maps_load_district($district_type, $district_number) {
   }
 }
 
-/**
- * Helper function to return a list of linked county titles.
- * @return array county list
- */
 function _outreach_maps_county_list() {
-  // List to return.
-  $list = array();
+  $options = array();
+
+  $options['default'] = 'Select a county';
 
    // Create an EFQ to get all counties.
   $county_query = new EntityFieldQuery();
@@ -228,18 +225,20 @@ function _outreach_maps_county_list() {
     $county_nodes = node_load_multiple($keys);
 
     foreach ($county_nodes as $county) {
-      $list[] = array(
-        '#type' => 'link',
-        '#title' => $county->title,
-        '#href' => 'county/' . lcfirst($county->title),
-        '#options' => array(
-          'attributes' => array('class' => 'county-list'),
-        ),
-      );
+      $options[strtolower(str_replace(' ', '-', str_replace("'", '', $county->title)))] = $county->title;
     }
   }
 
-  return $list;
+  // Create render array for select list of counties in footer.
+  $select = array(
+    '#type' => 'select',
+    '#options' => $options,
+    '#attributes' => array(
+      'class' => array('county-list'),
+    ),
+  );
+
+  return $select;
 }
 
 /**
