@@ -47,7 +47,7 @@
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
     map.setZoomRange(7, 9);
-    map.zoom(8, true);
+    map.zoom(8);
 
     // Add the county layer.
     map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
