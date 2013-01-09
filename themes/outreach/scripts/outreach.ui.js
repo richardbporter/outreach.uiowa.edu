@@ -30,12 +30,6 @@
 
     // Uniform the county list.
     $('.county-list').uniform();
-
-    if (window.navigator.standalone) {
-      // fullscreen mode
-      $('.node-type-map #footer-wrapper').height();
-      alert('full screen');
-    }
   };
 
   // Attach outreachUI behavior.
