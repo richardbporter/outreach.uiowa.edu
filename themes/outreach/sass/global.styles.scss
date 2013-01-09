@@ -216,9 +216,7 @@ var {
  * Wraps the main-content-header, the content region and feed-icons. Use this
  * wrapper to style the entire main content column
  */
-.not-front #main-content {
-  padding-top: 20px;
-}
+#main-content {}
 
 /*
  * Wraps the content region, avoid applying styles to this wrapper, its used
