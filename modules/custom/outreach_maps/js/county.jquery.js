@@ -44,9 +44,18 @@
     // Add the UI components.
     map.ui.zoomer.add();
 
-    // Basic map configuration.
+    // Set zoom range.
     map.setZoomRange(8, 10);
-    map.centerzoom({ lat: 41.9842807, lon: -93.5697204 }, 8);
+
+    console.log($(window).height());
+
+    // Zoom to top-left of Iowa if viewport is small.
+    if ($(window).height() <= 400) {
+      map.centerzoom({ lat: 43.3835795, lon: -96.207201 }, 8);
+    }
+    else {
+      map.centerzoom({ lat: 41.9642807, lon: -93.5697204 }, 8);
+    }
 
     // Add the county layer.
     map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
