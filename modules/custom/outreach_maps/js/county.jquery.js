@@ -74,7 +74,7 @@
       // Add function that centers marker on click.
       MM.addEvent(countyLink, 'click', function(e) {
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + 0.2, // Adjust for smaller viewport.
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
@@ -94,7 +94,7 @@
 
         // Center map.
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + 0.2, // Adjust for smaller viewport.
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
