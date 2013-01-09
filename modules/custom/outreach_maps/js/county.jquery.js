@@ -116,10 +116,10 @@
     map.addCallback("zoomed", function(map, zoomOffset) {
     var z = Math.round(map.zoom());
       if (z <= 7) {
-        $('.county-marker').hide();
+        $('#map .lyon').hide();
       }
       else {
-        $('.county-marker').show();
+        $('#map .lyon').show();
       }
     });
   };
