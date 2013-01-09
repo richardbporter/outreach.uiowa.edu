@@ -24,10 +24,17 @@
 /**
  * Implements hook_html_head_alter().
  *
- * Disable zooming on mobile devices only on map pages.
+ * Disable zooming on mobile devices only on map pages. Zooming in makes the
+ * map pages look terrible and presents a usability problem.
  */
 function outreach_html_head_alter(&$head_elements) {
-  $head_elements['adaptivetheme_meta_viewport']['#attributes']['content'] = 'width=device-width,initial=1,maximum-scale=1,user-scalable=no';
+  $path = current_path();
+
+  // Map nids.
+  if ($path == 'node/2117' || $path == 'node/2116' || $path == 'node/2115' || $path == 'ndoe/2114') {
+   $head_elements['adaptivetheme_meta_viewport']['#attributes']['content'] = 'width=device-width,initial=1,maximum-scale=1,user-scalable=no';
+  }
+
 }
 
 /**
