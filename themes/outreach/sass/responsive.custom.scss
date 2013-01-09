@@ -89,6 +89,9 @@
  * Smartphone sizes and down
  */
 @media only screen and (max-width: 480px) {
+  #site-slogan {
+    display: none;
+  }
 
   /*
    * Float Region blocks example:
