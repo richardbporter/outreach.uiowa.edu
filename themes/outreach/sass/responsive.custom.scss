@@ -93,6 +93,14 @@
     display: none;
   }
 
+  #facebook, #twitter, #plusone {
+    float: none;
+  }
+
+  .node-type-map #footer p {
+    display: none;
+  }
+
   /*
    * Float Region blocks example:
    * In smaller screen sizes we can remove the float and widths so all blocks
