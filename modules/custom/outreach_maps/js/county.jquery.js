@@ -48,6 +48,7 @@
     map.setZoomRange(8, 10);
 
     console.log($(window).height());
+    alert($(window).height());
 
     // Zoom to top-left of Iowa if viewport is small.
     if ($(window).height() <= 400) {
