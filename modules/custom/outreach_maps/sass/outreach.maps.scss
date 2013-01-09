@@ -77,6 +77,10 @@
   @include opacity(0.5);
 }
 
+.marker-popup {
+  font-size: 80%;
+}
+
 #map-ui {
   position: absolute;
   top: 130px;
