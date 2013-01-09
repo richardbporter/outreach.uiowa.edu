@@ -247,11 +247,7 @@
       </div>
     <?php endif; ?>
 
-  </div>
-  <div class="push"></div>
-</div>
-
-<?php if ($page['footer']): ?>
+    <?php if ($page['footer']): ?>
       <div id="footer-wrapper">
         <div class="container clearfix">
           <footer<?php print $footer_attributes; ?>>
@@ -260,3 +256,6 @@
         </div>
       </div>
     <?php endif; ?>
+
+  </div>
+</div>
