@@ -56,7 +56,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 40px;
+  height: 30px;
   width: 100%;
   @include noise(lighten($black, 27%), 0.01);
   .container {}
@@ -75,11 +75,6 @@
 .zoomer {
   top: 50px;
   @include opacity(0.5);
-}
-
-.marker-popup {
-  max-width: 300px;
-  font-size: 80%;
 }
 
 #map-ui {
@@ -140,7 +135,10 @@
 
 .marker-popup {
   color: $grey;
+  max-width: 300px;
+  font-size: 80%;
   h3 {
+    text-transform: none;
     margin: 0 0 0 0;
   }
   h4, h5, h6 {
