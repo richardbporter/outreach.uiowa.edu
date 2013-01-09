@@ -244,6 +244,7 @@
         <div class="container clearfix">
           <?php print render($page['tertiary_content']); ?>
         </div>
+        <div class="push"></div>
       </div>
     <?php endif; ?>
 

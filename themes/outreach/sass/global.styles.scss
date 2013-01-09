@@ -43,6 +43,7 @@
 html {
   background: $page;
   font-size: 62.5%;
+  height: 100%; // Sticky footer
 }
 
 body {
@@ -53,6 +54,7 @@ body {
   position: relative;
   z-index: 1;
   background-color: #333;
+  height: 100%; // Sticky footer
 }
 
 

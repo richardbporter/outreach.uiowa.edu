@@ -10,6 +10,25 @@
  * ========================================================================== */
 
 /*
+ * Full Width Wrappers
+ * These are used in the optional page--full-width-wrappers.tpl.php template.
+ * All have internal .container classes. In the full width wrapper template the
+ * .container classes set the width or max-width of the contained element - you
+ * can style this but never add any width/margin/padding/borders etc to .container
+ */
+
+/*
+ * Wraps #page
+ */
+#page-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -40px;
+  .container {}
+}
+
+/*
  * Wraps the main-content-header, the content region and feed-icons. Use this
  * wrapper to style the entire main content column
  */
@@ -60,6 +79,10 @@
   width: 100%;
   @include noise(lighten($black, 27%), 0.01);
   .container {}
+}
+
+.push {
+  height: 40px;
 }
 
 
