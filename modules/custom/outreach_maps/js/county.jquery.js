@@ -46,7 +46,7 @@
 
     // Basic map configuration.
     map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 10);
+    map.setZoomRange(7, 9);
     map.zoom(8, true);
 
     // Add the county layer.
