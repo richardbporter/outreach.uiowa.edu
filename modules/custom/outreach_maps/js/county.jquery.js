@@ -112,6 +112,17 @@
       o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
       return o;
     });
+
+    // Toggle markers depending on zoom level.
+    map.addCallback("zoomed", function(map, zoomOffset) {
+    var z = Math.round(map.zoom());
+      if (z <= 7) {
+        $('.county-marker').hide();
+      }
+      else {
+        $('.county-marker').show();
+      }
+    });
   };
 
   // Attach outreachMapsCounty behavior.
