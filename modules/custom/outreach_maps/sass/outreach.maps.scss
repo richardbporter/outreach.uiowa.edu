@@ -78,6 +78,7 @@
 }
 
 .marker-popup {
+  max-width: 300px;
   font-size: 80%;
 }
 
@@ -139,7 +140,10 @@
 
 .marker-popup {
   color: $grey;
-  h3, h4, h5, h6 {
+  h3 {
+    margin: 0 0 0 0;
+  }
+  h4, h5, h6 {
     margin: 10px 0 0 0;
   }
   .see-more {
