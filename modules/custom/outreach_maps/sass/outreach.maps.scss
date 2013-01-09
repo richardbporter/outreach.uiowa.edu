@@ -135,7 +135,6 @@
 
 .marker-popup {
   color: $grey;
-  max-width: 300px;
   font-size: 80%;
   h3 {
     text-transform: none;
@@ -270,8 +269,13 @@
 }
 
  /* =============================================================================
- *   jQuery UI Overrides
+ *   Media Queries
  * ========================================================================== */
-.ui-widget {
-  font-family: Arial, Helvetica, sans-serif;
+@media only screen and (max-width: 400px) {
+  .marker-popup {
+    max-width: 200px;
+    p {
+      display: none;
+    }
+  }
 }
