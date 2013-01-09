@@ -32,7 +32,7 @@ function outreach_html_head_alter(&$head_elements) {
 
   // Map nids.
   if ($path == 'node/2117' || $path == 'node/2116' || $path == 'node/2115' || $path == 'ndoe/2114') {
-   $head_elements['adaptivetheme_meta_viewport']['#attributes']['content'] = 'width=device-width,initial=1,maximum-scale=1,user-scalable=no';
+   $head_elements['adaptivetheme_meta_viewport']['#attributes']['content'] = 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no';
   }
 
 }
