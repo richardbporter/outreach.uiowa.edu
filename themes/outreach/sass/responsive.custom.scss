@@ -17,13 +17,6 @@
  * look under the "CSS" settings tab.
  */
 
-
-/*
- * Really small screens and up
- */
-/* @media only screen and (min-width: 220px) {} */
-
-
 /*
  * Smartphone sizes and up
  */
@@ -34,7 +27,6 @@
     float: none;
   }
 }
-
 
 /*
  * Mid-tablet sizes and down
@@ -129,7 +121,14 @@
   }
 }
 
-/*
- * Desktops/laptops and up
- */
-/* @media only screen and (min-width: 1025px) {} */
+// iOS fullscreen
+@media only screen and (height : 320px) and (orientation : landscape) {
+  /*
+   * Footer wrapper
+   */
+  .node-type-map #footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
