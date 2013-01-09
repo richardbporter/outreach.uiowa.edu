@@ -21,6 +21,14 @@
  * 2. Uncomment the required function to use.
  */
 
+/**
+ * Implements hook_html_head_alter().
+ *
+ * Disable zooming on mobile devices only on map pages.
+ */
+function outreach_html_head_alter(&$head_elements) {
+  $head_elements['adaptivetheme_meta_viewport']['#attributes']['content'] = 'width=device-width,initial=1,maximum-scale=1,user-scalable=no';
+}
 
 /**
  * Preprocess variables for the html template.
