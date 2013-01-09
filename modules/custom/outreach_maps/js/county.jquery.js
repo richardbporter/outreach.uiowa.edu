@@ -52,7 +52,7 @@
       map.centerzoom({ lat: 43.3835795, lon: -96.207201 }, 8);
     }
     else {
-      map.centerzoom({ lat: 41.9642807, lon: -93.5697204 }, 8);
+      map.centerzoom({ lat: 41.9742807, lon: -93.5697204 }, 8);
     }
 
     // Add the county layer.
