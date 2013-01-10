@@ -28,6 +28,27 @@
       return false;
     };
 
+    // Helper function to return the center-scroll offset on click and touch. This
+    // is only useful on iPads and other large tablets. On phones and small tablets,
+    // there just isn't enough real estate.
+    Drupal.outreachMapsCounty.getOffset = function() {
+      var offset = 0.2;
+      var height = $(window).height();
+      if (height <= 875 && height >= 600) {
+        if (map.zoom() === 8) {
+          offset = 0.8;
+        }
+        else if (map.zoom() === 9) {
+          offset = 0.4;
+        }
+        else {
+          offset = 0.2;
+        }
+      }
+
+      return offset;
+    };
+
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
@@ -74,7 +95,7 @@
       // Add function that centers marker on click.
       MM.addEvent(countyLink, 'click', function(e) {
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.2, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + Drupal.outreachMapsCounty.getOffset(), // Adjust for smaller viewport.
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
@@ -94,7 +115,7 @@
 
         // Center map.
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.2, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + Drupal.outreachMapsCounty.getOffset(), // Adjust for smaller viewport.
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
