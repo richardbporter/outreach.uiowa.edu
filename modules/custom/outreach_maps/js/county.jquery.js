@@ -21,7 +21,7 @@
         $.ajax(ajax.options);
       }
       catch (err) {
-        alert('An error occurred while attempting to process ' + ajax.options.url);
+        //alert('An error occurred while attempting to process ' + ajax.options.url);
         return false;
       }
 
