@@ -5,6 +5,9 @@
 
 // Namespace jQuery to avoid conflicts.
 (function($) {
+  // Fix to hide AJAX error alert messages.
+  window.alert = function(arg) { if (window.console && console.log) { console.log(arg);}};
+
   // Initialize the county map.
   Drupal.outreachUI = function() {
     $('#primary-menu-bar ul.menu').tinyNav({
