@@ -6,7 +6,7 @@
 // Namespace jQuery to avoid conflicts.
 (function($) {
   // Initialize the house map.
-  Drupal.houseMap = function() {
+  Drupal.outreachMapsHouse = function() {
     // Add an extra function to the Drupal ajax object which allows us to trigger
     // an ajax response without an element that triggers it.
     Drupal.ajax.prototype.specifiedResponse = function() {
@@ -30,7 +30,7 @@
 
     // Helper function to return the center-scroll offset on click and touch.
     // @TODO: Refactor this because it seems horribly inefficient.
-    Drupal.outreachMapsCounty.getOffset = function() {
+    Drupal.outreachMapsHouse.getOffset = function() {
       var offset = 0, height = $(window).height(), z = map.zoom();
 
       if (height >= 500 && height <= 900) {
@@ -83,16 +83,17 @@
     // Add the UI components.
     map.ui.zoomer.add();
 
-    // Basic map configuration.
-    map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 12);
+    // Set the zoom range.
+    map.setZoomRange(8, 12);
 
-    // Zoom in one step closer if the viewport permits.
-    if ($(window).width() > 1290 && $(window).height() > 800) {
-      map.zoom(8, true);
-    } else {
-      map.zoom(7, true);
+    // Zoom to top-left of Iowa if viewport is small.
+    if ($(window).height() <= 500) {
+      map.centerzoom({ lat: 43.3835795, lon: -96.207201 }, 8);
     }
+    else {
+      map.centerzoom({ lat: 41.9742807, lon: -93.5697204 }, 8);
+    }
+
 
     // Create an array of house districts that are close together.
     var clustered = [
@@ -259,7 +260,7 @@
       // Get the target zoom level.
       var z = Math.round(map.zoom());
 
-      // @TODO: Currently not using cluster markers. Add back in if client wants.
+      // Show/hide clustered markers at certain zoom levels.
       if (z >= 10) {
         $('.cluster-marker').fadeOut();
         $('.cluster').fadeIn();
@@ -269,15 +270,13 @@
       }
     });
 
-    // Add attribution.
-    // map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  // Attach houseMap behavior.
-  Drupal.behaviors.houseMap = {
+  // Attach outreachMapsHouse behavior.
+  Drupal.behaviors.outreachMapsHouse = {
     attach: function(context, settings) {
-      $('#map', context).once('houseMap', function() {
-        Drupal.houseMap();
+      $('#map', context).once('outreachMapsHouse', function() {
+        Drupal.outreachMapsHouse();
       });
     }
   };
