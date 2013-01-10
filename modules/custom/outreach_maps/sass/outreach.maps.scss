@@ -280,3 +280,19 @@
     }
   }
 }
+
+@media only screen and (max-height: 600px) {
+  .marker-popup {
+    .healthcare, .field-name-field-uihc-clinic-visits, .field-name-field-outreach-clinic-visits, p, br {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .marker-popup {
+    .impact, .field-name-field-ui-educated-physicians, .field-name-field-ui-educated-assistants, .field-name-field-ui-educated-dentists, .field-name-field-ui-educated-nurses {
+      display: none;
+    }
+  }
+}
