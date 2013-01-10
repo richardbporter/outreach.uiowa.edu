@@ -32,7 +32,7 @@
     // is only useful on iPads and other large tablets. On phones and small tablets,
     // there just isn't enough real estate.
     Drupal.outreachMapsCounty.getOffset = function() {
-      var offset = 0.1;
+      var offset = 0;
       var height = $(window).height();
       if (height <= 875 && height >= 600) {
         if (map.zoom() === 8) {
