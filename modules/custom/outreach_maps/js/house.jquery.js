@@ -35,32 +35,39 @@
 
       if (height >= 500 && height <= 900) {
         if (z === 8) {
-          offset = 0.8;
+          offset = 0.1;
         }
         else if (z === 9) {
-          offset = 0.4;
-        }
-        else {
-          offset = 0.2;
+          offset = 0.1;
         }
       }
       else if (height >= 380 && height <= 499)  {
         if (z === 8) {
-          offset = 0.2;
+          offset = 0.3;
         }
-        else {
+        else if (z === 9) {
           offset = 0.1;
         }
+        else if (z === 10) {
+          offset = 0.1;
+        }
+        else {
+          offset = 0.01;
+        }
+
       }
       else if (height <= 379) {
         if (z === 8) {
-          offset = 0.4;
+          offset = 0.3;
         }
         else if (z === 9) {
-          offset = 0.2;
+          offset = 0.1;
+        }
+        else if (z === 10) {
+          offset = 0.06;
         }
         else {
-          offset = 0.1;
+          offset = 0.02;
         }
       }
 
@@ -126,7 +133,7 @@
       // Add function that centers marker on click.
       MM.addEvent(houseLink, 'click', function(e) {
           map.ease.location({
-            lat: f.geometry.coordinates[1] + 0.1,
+            lat: f.geometry.coordinates[1] + Drupal.outreachMapsHouse.getOffset(),
             lon: f.geometry.coordinates[0]
           }).zoom(map.zoom()).optimal();
       });
@@ -146,7 +153,7 @@
 
         // Center map.
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.1,
+          lat: f.geometry.coordinates[1] + Drupal.outreachMapsHouse.getOffset(),
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
@@ -262,11 +269,11 @@
 
       // Show/hide clustered markers at certain zoom levels.
       if (z >= 10) {
-        $('.cluster-marker').fadeOut();
-        $('.cluster').fadeIn();
+        $('#map a.cluster-marker').fadeOut();
+        $('#map a.cluster').fadeIn();
       } else {
-        $('.cluster').fadeOut();
-        $('.cluster-marker').fadeIn();
+        $('#map a.cluster').fadeOut();
+        $('#map a.cluster-marker').fadeIn();
       }
     });
 
