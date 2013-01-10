@@ -134,6 +134,7 @@
 }
 
 .marker-popup {
+  padding: 15px;
   color: $grey;
   font-size: 80%;
   h3 {
@@ -274,7 +275,7 @@
 @media only screen and (max-width: 400px) {
   .marker-popup {
     max-width: 200px;
-    p {
+    p, br {
       display: none;
     }
   }
