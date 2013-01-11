@@ -32,12 +32,18 @@
     // @TODO: Refactor this because it seems horribly inefficient.
     Drupal.outreachMapsCounty.getOffset = function() {
       var offset = 0, height = $(window).height(), z = map.zoom();
-      if (height >900) {
+      if (height > 900) {
         if (z === 8) {
           offset = 0.9;
         }
+        if (z === 9) {
+          offset = 0.7;
+        }
+        else {
+          offset = 0.5;
+        }
       }
-      if (height >= 500 && height <= 900) {
+      else if (height >= 500 && height <= 900) {
         if (z === 8) {
           offset = 0.8;
         }
