@@ -37,10 +37,10 @@
           offset = 0.9;
         }
         if (z === 9) {
-          offset = 0.7;
+          offset = 0.5;
         }
         else {
-          offset = 0.5;
+          offset = 0.3;
         }
       }
       else if (height >= 500 && height <= 900) {
