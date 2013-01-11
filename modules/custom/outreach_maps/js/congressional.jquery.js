@@ -6,7 +6,7 @@
 // Namespace jQuery to avoid conflicts.
 (function($) {
   // Initialize the congressional map.
-  Drupal.congressionalMap = function() {
+  Drupal.outreachMapsCongressional = function() {
     // Add an extra function to the Drupal ajax object which allows us to trigger
     // an ajax response without an element that triggers it.
     Drupal.ajax.prototype.specifiedResponse = function() {
@@ -26,6 +26,45 @@
       }
 
       return false;
+    };
+
+    // Helper function to return the center-scroll offset on click and touch.
+    // @TODO: Refactor this because it seems horribly inefficient.
+    Drupal.outreachMapsCongressional.getOffset = function() {
+      var offset = 0, height = $(window).height(), z = map.zoom();
+
+      if (height >= 500 && height <= 900) {
+        if (z === 8) {
+          offset = 0.8;
+        }
+        else if (z === 9) {
+          offset = 0.4;
+        }
+        else {
+          offset = 0.2;
+        }
+      }
+      else if (height >= 380 && height <= 499)  {
+        if (z === 8) {
+          offset = 0.2;
+        }
+        else {
+          offset = 0.1;
+        }
+      }
+      else if (height <= 379) {
+        if (z === 8) {
+          offset = 0.4;
+        }
+        else if (z === 9) {
+          offset = 0.2;
+        }
+        else {
+          offset = 0.1;
+        }
+      }
+
+      return offset;
     };
 
     // Create a base layer object.
@@ -78,7 +117,7 @@
       // Add function that centers marker on click.
       MM.addEvent(congressionalLink, 'click', function(e) {
           map.ease.location({
-            lat: f.geometry.coordinates[1] + 0.1,
+            lat: f.geometry.coordinates[1] + Drupal.outreachMapsCongressional.getOffset(),
             lon: f.geometry.coordinates[0]
           }).zoom(map.zoom()).optimal();
       });
@@ -98,7 +137,7 @@
 
         // Center map.
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + Drupal.outreachMapsCongressional.getOffset(),
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
@@ -137,11 +176,11 @@
     // map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  // Attach congressionalMap behavior.
-  Drupal.behaviors.congressionalMap = {
+  // Attach outreachMapsCongressional behavior.
+  Drupal.behaviors.outreachMapsCongressional = {
     attach: function(context, settings) {
-      $('#map', context).once('congressionalMap', function() {
-        Drupal.congressionalMap();
+      $('#map', context).once('outreachMapsCongressional', function() {
+        Drupal.outreachMapsCongressional();
       });
     }
   };
