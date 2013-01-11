@@ -58,7 +58,7 @@
       }
       else if (height <= 379) {
         if (z === 8) {
-          offset = 0.2;
+          offset = 0.4;
         }
         else if (z === 9) {
           offset = 0.1;
