@@ -28,6 +28,55 @@
       return false;
     };
 
+    // Helper function to return the center-scroll offset on click and touch.
+    // @TODO: Refactor this because it seems horribly inefficient.
+    Drupal.outreachMapsCounty.getOffset = function() {
+      var offset = 0, height = $(window).height(), z = map.zoom();
+      if (height > 900) {
+        if (z === 8) {
+          offset = 0.9;
+        }
+        if (z === 9) {
+          offset = 0.3;
+        }
+        else {
+          offset = 0.1;
+        }
+      }
+      else if (height >= 500 && height <= 900) {
+        if (z === 8) {
+          offset = 0.8;
+        }
+        else if (z === 9) {
+          offset = 0.4;
+        }
+        else {
+          offset = 0.2;
+        }
+      }
+      else if (height >= 380 && height <= 499)  {
+        if (z === 8) {
+          offset = 0.2;
+        }
+        else {
+          offset = 0.1;
+        }
+      }
+      else if (height <= 379) {
+        if (z === 8) {
+          offset = 0.4;
+        }
+        else if (z === 9) {
+          offset = 0.2;
+        }
+        else {
+          offset = 0.1;
+        }
+      }
+
+      return offset;
+    };
+
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
@@ -44,15 +93,15 @@
     // Add the UI components.
     map.ui.zoomer.add();
 
-    // Basic map configuration.
-    map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 10);
+    // Set zoom range.
+    map.setZoomRange(8, 10);
 
-    // Zoom in one step closer if the viewport permits.
-    if ($(window).width() > 1290 && $(window).height() > 800) {
-      map.zoom(8, true);
-    } else {
-      map.zoom(7, true);
+    // Zoom to top-left of Iowa if viewport is small.
+    if ($(window).height() <= 500) {
+      map.centerzoom({ lat: 43.3835795, lon: -96.207201 }, 8);
+    }
+    else {
+      map.centerzoom({ lat: 41.9742807, lon: -93.5697204 }, 8);
     }
 
     // Add the county layer.
@@ -74,7 +123,7 @@
       // Add function that centers marker on click.
       MM.addEvent(countyLink, 'click', function(e) {
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.4,
+          lat: f.geometry.coordinates[1] + Drupal.outreachMapsCounty.getOffset(), // Adjust for smaller viewport.
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
@@ -94,7 +143,7 @@
 
         // Center map.
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + Drupal.outreachMapsCounty.getOffset(), // Adjust for smaller viewport.
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });

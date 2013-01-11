@@ -17,38 +17,32 @@
  * look under the "CSS" settings tab.
  */
 
-
-/*
- * Really small screens and up
- */
-/* @media only screen and (min-width: 220px) {} */
-
-
 /*
  * Smartphone sizes and up
  */
 /* @media only screen and (min-width: 320px) {} */
 
+@media only screen and (max-width: 1040px) {
+  #facebook, #twitter, #plusone {
+    float: none;
+  }
+}
+
 /*
  * Mid-tablet sizes and down
  */
 @media only screen and (max-width: 1024px) {
- // tinyNav
-#primary-menu-bar {
-  ul.menu {
-    display: none;
-  }
-  .tinynav {
-    display: block;
-  }
-  .selector {
-    display: block;
-  }
-}
-
-  // Hide the county jump links on small screens.
-  .easing-menu {
-    display: none;
+  // tinyNav
+  #primary-menu-bar {
+    ul.menu {
+      display: none;
+    }
+    .tinynav {
+      display: block;
+    }
+    .selector {
+      display: block;
+    }
   }
 }
 
@@ -64,6 +58,10 @@
   .panel-panel {
     float: none;
     width: 100%;
+  }
+
+  #facebook, #twitter, #plusone {
+    float: left;
   }
 }
 
@@ -89,6 +87,17 @@
  * Smartphone sizes and down
  */
 @media only screen and (max-width: 480px) {
+  #site-slogan {
+    display: none;
+  }
+
+  #facebook, #twitter, #plusone {
+    float: none;
+  }
+
+  .not-front #footer p {
+    display: none;
+  }
 
   /*
    * Float Region blocks example:
@@ -107,7 +116,3 @@
   }
 }
 
-/*
- * Desktops/laptops and up
- */
-/* @media only screen and (min-width: 1025px) {} */

@@ -216,9 +216,7 @@ var {
  * Wraps the main-content-header, the content region and feed-icons. Use this
  * wrapper to style the entire main content column
  */
-.not-front #main-content {
-  padding-top: 20px;
-}
+#main-content {}
 
 /*
  * Wraps the content region, avoid applying styles to this wrapper, its used
@@ -386,13 +384,17 @@ var {
  */
 #footer-wrapper {
   @include box-shadow(0 -2px 2px rgba($black, 0.2));
-  font-size: 1.2em;
+  font-size: 1.0em;
   .container {
+    .block {
+      margin-bottom: 0;
+    }
     #block-block-2 {
       float: left;
       p {
         color: darken($light, 20%);
         padding: 5px 5px 5px 15px;
+        margin: 0 0 0 0;
       }
     }
   }
