@@ -6,7 +6,7 @@
 // Namespace jQuery to avoid conflicts.
 (function($) {
   // Initialize the senate map.
-  Drupal.senateMap = function() {
+  Drupal.outreachMapsSenate = function() {
     // Add an extra function to the Drupal ajax object which allows us to trigger
     // an ajax response without an element that triggers it.
     Drupal.ajax.prototype.specifiedResponse = function() {
@@ -26,6 +26,52 @@
       }
 
       return false;
+    };
+
+    // Helper function to return the center-scroll offset on click and touch.
+    // @TODO: Refactor this because it seems horribly inefficient.
+    Drupal.outreachMapsSenate.getOffset = function() {
+      var offset = 0, height = $(window).height(), z = map.zoom();
+
+      if (height >= 500 && height <= 900) {
+        if (z === 8) {
+          offset = 0.1;
+        }
+        else if (z === 9) {
+          offset = 0.1;
+        }
+      }
+      else if (height >= 380 && height <= 499)  {
+        if (z === 8) {
+          offset = 0.3;
+        }
+        else if (z === 9) {
+          offset = 0.1;
+        }
+        else if (z === 10) {
+          offset = 0.1;
+        }
+        else {
+          offset = 0.01;
+        }
+
+      }
+      else if (height <= 379) {
+        if (z === 8) {
+          offset = 0.3;
+        }
+        else if (z === 9) {
+          offset = 0.1;
+        }
+        else if (z === 10) {
+          offset = 0.06;
+        }
+        else {
+          offset = 0.02;
+        }
+      }
+
+      return offset;
     };
 
     // Create a base layer object.
@@ -87,7 +133,7 @@
       // Add function that centers marker on click.
       MM.addEvent(senateLink, 'click', function(e) {
           map.ease.location({
-            lat: f.geometry.coordinates[1] + 0.1,
+            lat: f.geometry.coordinates[1] + Drupal.outreachMapsSenate.getOffset(),
             lon: f.geometry.coordinates[0]
           }).zoom(map.zoom()).optimal();
       });
@@ -107,7 +153,7 @@
 
         // Center map.
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + Drupal.outreachMapsSenate.getOffset(),
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
@@ -203,11 +249,11 @@
     // map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  // Attach senateMap behavior.
-  Drupal.behaviors.senateMap = {
+  // Attach outreachMapsSenate behavior.
+  Drupal.behaviors.outreachMapsSenate = {
     attach: function(context, settings) {
-      $('#map', context).once('senateMap', function() {
-        Drupal.senateMap();
+      $('#map', context).once('outreachMapsSenate', function() {
+        Drupal.outreachMapsSenate();
       });
     }
   };
