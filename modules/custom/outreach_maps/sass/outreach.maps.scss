@@ -279,6 +279,11 @@
       display: none;
     }
   }
+  #district-1-content, #district-2-content, #district-3-content, #district-4-content {
+    h3 {
+      font-size: 90%;
+    }
+  }
 }
 
 @media only screen and (max-height: 600px) {
