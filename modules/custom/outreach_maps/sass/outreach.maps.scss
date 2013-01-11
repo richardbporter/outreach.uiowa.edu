@@ -262,6 +262,13 @@
  /* =============================================================================
  *   Media Queries
  * ========================================================================== */
+ // Hide the county jump links on small screens.
+@media only screen and (max-width: 768px) {
+  .easing-menu {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .marker-popup {
     max-width: 200px;

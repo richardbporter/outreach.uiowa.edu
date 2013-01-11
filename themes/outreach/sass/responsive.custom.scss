@@ -32,22 +32,17 @@
  * Mid-tablet sizes and down
  */
 @media only screen and (max-width: 1024px) {
- // tinyNav
-#primary-menu-bar {
-  ul.menu {
-    display: none;
-  }
-  .tinynav {
-    display: block;
-  }
-  .selector {
-    display: block;
-  }
-}
-
-  // Hide the county jump links on small screens.
-  .easing-menu {
-    display: none;
+  // tinyNav
+  #primary-menu-bar {
+    ul.menu {
+      display: none;
+    }
+    .tinynav {
+      display: block;
+    }
+    .selector {
+      display: block;
+    }
   }
 }
 
