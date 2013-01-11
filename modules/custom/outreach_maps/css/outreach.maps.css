@@ -335,4 +335,10 @@
   .marker-popup .impact, .marker-popup .field-name-field-ui-educated-physicians, .marker-popup .field-name-field-ui-educated-assistants, .marker-popup .field-name-field-ui-educated-dentists, .marker-popup .field-name-field-ui-educated-nurses {
     display: none;
   }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003298}}
+  .congressionalMap-processed .marker-popup {
+    max-height: 200px;
+    overflow: scroll;
+  }
 }
