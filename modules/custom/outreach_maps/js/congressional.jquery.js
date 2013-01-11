@@ -83,15 +83,15 @@
     // Add the UI components.
     map.ui.zoomer.add();
 
-    // Basic map configuration.
-    map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 10);
+    // Set the zoom range.
+    map.setZoomRange(8, 12);
 
-    // Zoom in one step closer if the viewport permits.
-    if ($(window).width() > 1290 && $(window).height() > 800) {
-      map.zoom(8, true);
-    } else {
-      map.zoom(7, true);
+    // Zoom to top-left of Iowa if viewport is small.
+    if ($(window).height() <= 500) {
+      map.centerzoom({ lat: 43.3835795, lon: -96.207201 }, 8);
+    }
+    else {
+      map.centerzoom({ lat: 41.9742807, lon: -93.5697204 }, 8);
     }
 
     // Add the congressional layer.
