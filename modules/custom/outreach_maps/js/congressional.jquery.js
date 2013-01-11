@@ -84,7 +84,7 @@
     map.ui.zoomer.add();
 
     // Set the zoom range.
-    map.setZoomRange(8, 12);
+    map.setZoomRange(8, 10);
 
     // Zoom to top-left of Iowa if viewport is small.
     if ($(window).height() <= 500) {
