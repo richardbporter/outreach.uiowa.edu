@@ -57,7 +57,7 @@
           offset = 0.3;
         }
         else if (z === 9) {
-          offset = 0.1;
+          offset = 0.2;
         }
         else {
           offset = 0.1;
