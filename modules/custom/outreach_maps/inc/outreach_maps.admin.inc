@@ -81,7 +81,7 @@ function _outreach_maps_load_county($title) {
     $data['impact_heading'] = array(
       '#type' => 'markup',
       '#markup' => t('How the UI impacts your neighborhood.'),
-      '#prefix' => '<h4>',
+      '#prefix' => '<h4 class="impact">',
       '#suffix' => '</h4>',
     );
 
@@ -110,7 +110,7 @@ function _outreach_maps_load_county($title) {
     $data['healthcare_heading'] = array(
       '#type' => 'markup',
       '#markup' => t('Healthcare Connections'),
-      '#prefix' => '<h4>',
+      '#prefix' => '<h4 class="healthcare">',
       '#suffix' => '</h4>',
     );
 

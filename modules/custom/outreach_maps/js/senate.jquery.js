@@ -6,7 +6,7 @@
 // Namespace jQuery to avoid conflicts.
 (function($) {
   // Initialize the senate map.
-  Drupal.senateMap = function() {
+  Drupal.outreachMapsSenate = function() {
     // Add an extra function to the Drupal ajax object which allows us to trigger
     // an ajax response without an element that triggers it.
     Drupal.ajax.prototype.specifiedResponse = function() {
@@ -28,6 +28,52 @@
       return false;
     };
 
+    // Helper function to return the center-scroll offset on click and touch.
+    // @TODO: Refactor this because it seems horribly inefficient.
+    Drupal.outreachMapsSenate.getOffset = function() {
+      var offset = 0, height = $(window).height(), z = map.zoom();
+
+      if (height >= 500 && height <= 900) {
+        if (z === 8) {
+          offset = 0.1;
+        }
+        else if (z === 9) {
+          offset = 0.1;
+        }
+      }
+      else if (height >= 380 && height <= 499)  {
+        if (z === 8) {
+          offset = 0.4;
+        }
+        else if (z === 9) {
+          offset = 0.1;
+        }
+        else if (z === 10) {
+          offset = 0.1;
+        }
+        else {
+          offset = 0.01;
+        }
+
+      }
+      else if (height <= 379) {
+        if (z === 8) {
+          offset = 0.4;
+        }
+        else if (z === 9) {
+          offset = 0.2;
+        }
+        else if (z === 10) {
+          offset = 0.06;
+        }
+        else {
+          offset = 0.02;
+        }
+      }
+
+      return offset;
+    };
+
     // Create a base layer object.
     var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
@@ -44,15 +90,15 @@
     // Add the UI components.
     map.ui.zoomer.add();
 
-    // Basic map configuration.
-    map.center({ lat: 41.9842807, lon: -93.5697204 });
-    map.setZoomRange(7, 12);
+    // Set the zoom range.
+    map.setZoomRange(8, 12);
 
-    // Zoom in one step closer if the viewport permits.
-    if ($(window).width() > 1290 && $(window).height() > 800) {
-      map.zoom(8, true);
-    } else {
-      map.zoom(7, true);
+    // Zoom to top-left of Iowa if viewport is small.
+    if ($(window).height() <= 500) {
+      map.centerzoom({ lat: 43.3835795, lon: -96.207201 }, 8);
+    }
+    else {
+      map.centerzoom({ lat: 41.9742807, lon: -93.5697204 }, 8);
     }
 
     // Create an array of senate districts that are close together.
@@ -87,7 +133,7 @@
       // Add function that centers marker on click.
       MM.addEvent(senateLink, 'click', function(e) {
           map.ease.location({
-            lat: f.geometry.coordinates[1] + 0.1,
+            lat: f.geometry.coordinates[1] + Drupal.outreachMapsSenate.getOffset(),
             lon: f.geometry.coordinates[0]
           }).zoom(map.zoom()).optimal();
       });
@@ -107,7 +153,7 @@
 
         // Center map.
         map.ease.location({
-          lat: f.geometry.coordinates[1] + 0.4, // Adjust for smaller viewport.
+          lat: f.geometry.coordinates[1] + Drupal.outreachMapsSenate.getOffset(),
           lon: f.geometry.coordinates[0]
         }).zoom(map.zoom()).optimal();
       });
@@ -203,11 +249,11 @@
     // map.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
   };
 
-  // Attach senateMap behavior.
-  Drupal.behaviors.senateMap = {
+  // Attach outreachMapsSenate behavior.
+  Drupal.behaviors.outreachMapsSenate = {
     attach: function(context, settings) {
-      $('#map', context).once('senateMap', function() {
-        Drupal.senateMap();
+      $('#map', context).once('outreachMapsSenate', function() {
+        Drupal.outreachMapsSenate();
       });
     }
   };
