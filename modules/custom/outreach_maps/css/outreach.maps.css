@@ -316,7 +316,7 @@
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003272}}
   .outreachMapsCongressional-processed .marker-popup {
-    max-width: 210px;
+    max-width: 220px;
   }
 }
 @media only screen and (min-width: 420px) {
