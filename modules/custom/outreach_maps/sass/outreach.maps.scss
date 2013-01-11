@@ -287,6 +287,10 @@
       display: none;
     }
   }
+  #district-1-content, #district-2-content, #district-3-content, #district-4-content {
+    max-height: 200px;
+    overflow: scroll;
+  }
 }
 
 @media only screen and (max-height: 480px) {
@@ -295,8 +299,8 @@
       display: none;
     }
   }
-  .congressionalMap-processed .marker-popup {
-    max-height: 200px;
+  #district-1-content, #district-2-content, #district-3-content, #district-4-content {
+    max-height: 100px;
     overflow: scroll;
   }
 }
