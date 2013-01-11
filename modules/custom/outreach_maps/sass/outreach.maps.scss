@@ -259,29 +259,29 @@
   font-size: 1.2em;
 }
 
-.congressionalMap-processed #district-4-content {
-  .field-name-field-county .field-item {
-    width: 25%;
-    float: left;
-    .odd {
-      text-align: right;
-    }
-  }
-}
-
  /* =============================================================================
  *   Media Queries
  * ========================================================================== */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   .marker-popup {
     max-width: 200px;
     p, br {
       display: none;
     }
   }
-  #district-1-content, #district-2-content, #district-3-content, #district-4-content {
-    h3 {
-      font-size: 90%;
+  .outreachMapsCongressional-processed .marker-popup {
+    max-width: 210px;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .outreachMapsCongressional-processed #district-4-content {
+    .field-name-field-county .field-item {
+      width: 25%;
+      float: left;
+      .odd {
+        text-align: right;
+      }
     }
   }
 }
@@ -294,7 +294,7 @@
   }
   #district-1-content, #district-2-content, #district-3-content, #district-4-content {
     max-height: 200px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
 
@@ -306,6 +306,5 @@
   }
   #district-1-content, #district-2-content, #district-3-content, #district-4-content {
     max-height: 100px;
-    overflow: scroll;
   }
 }

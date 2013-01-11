@@ -301,32 +301,33 @@
   font-size: 1.2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003263}}
-.congressionalMap-processed #district-4-content .field-name-field-county .field-item {
-  width: 25%;
-  float: left;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003266}}
-.congressionalMap-processed #district-4-content .field-name-field-county .field-item .odd {
-  text-align: right;
-}
-
 /* =============================================================================
 *   Media Queries
 * ========================================================================== */
-@media only screen and (max-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003276}}
+@media only screen and (max-width: 420px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003266}}
   .marker-popup {
     max-width: 200px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003268}}
   .marker-popup p, .marker-popup br {
     display: none;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003283}}
-  #district-1-content h3, #district-2-content h3, #district-3-content h3, #district-4-content h3 {
-    font-size: 90%;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003272}}
+  .outreachMapsCongressional-processed .marker-popup {
+    max-width: 210px;
+  }
+}
+@media only screen and (min-width: 420px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003279}}
+  .outreachMapsCongressional-processed #district-4-content .field-name-field-county .field-item {
+    width: 25%;
+    float: left;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003282}}
+  .outreachMapsCongressional-processed #district-4-content .field-name-field-county .field-item .odd {
+    text-align: right;
   }
 }
 @media only screen and (max-height: 600px) {
@@ -338,7 +339,7 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003295}}
   #district-1-content, #district-2-content, #district-3-content, #district-4-content {
     max-height: 200px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
 @media only screen and (max-height: 480px) {
@@ -350,6 +351,5 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rbporter\/drupal\/sites\/custom\/sites\/outreach\.uiowa\.edu\/modules\/custom\/outreach_maps\/sass\/outreach\.maps\.scss}line{font-family:\00003307}}
   #district-1-content, #district-2-content, #district-3-content, #district-4-content {
     max-height: 100px;
-    overflow: scroll;
   }
 }
