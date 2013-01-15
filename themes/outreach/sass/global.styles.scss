@@ -2108,7 +2108,7 @@ tr.error {
   @include font-size(1.8);
 }
 
-.view-county.view-display-id-panel_pane_4 .views-field {
+.view-county.view-display-id-panel_pane_4 .views-field, .view-county.view-display-id-panel_pane_5 .views-field {
   border-bottom: 1px solid #dedede;
   @include box-shadow(0px 1px 0px rgba(255,255,255,.6));
   margin: .5em 0;
@@ -2117,6 +2117,7 @@ tr.error {
 
 
 .views-field-field-alumni,
+.views-field-field-educators,
 .views-field-field-ui-educated-physicians,
 .views-field-field-ui-educated-dentists,
 .views-field-field-ui-educated-pharmacists {
@@ -2136,6 +2137,7 @@ tr.error {
 
 
 .views-field-field-alumni:after { @include sprites-sprite(alumni, $dimensions:true); }
+.views-field-field-educators:after { @include sprites-sprite(educator, $dimensions:true); }
 .views-field-field-ui-educated-physicians:after { @include sprites-sprite(doctors, $dimensions:true); }
 .views-field-field-ui-educated-dentists:after { @include sprites-sprite(dentists, $dimensions:true); }
 .views-field-field-ui-educated-pharmacists:after { @include sprites-sprite(pharmacists, $dimensions:true); }
