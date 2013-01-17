@@ -46,23 +46,19 @@ function county_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'contentmain';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_image';
+    $pane->type = 'node';
+    $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => 'large',
-        'image_link' => '',
-      ),
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
+      'nid' => '2673',
+      'links' => 1,
+      'leave_node_title' => 0,
+      'identifier' => '',
+      'build_mode' => 'full',
+      'link_node_title' => 0,
+      'override_title' => 1,
+      'override_title_text' => 'About',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -273,19 +269,23 @@ function county_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-10';
     $pane->panel = 'sidebar';
-    $pane->type = 'node';
-    $pane->subtype = 'node';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_image';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'nid' => '2673',
-      'links' => 1,
-      'leave_node_title' => 0,
-      'identifier' => '',
-      'build_mode' => 'full',
-      'link_node_title' => 0,
-      'override_title' => 1,
-      'override_title_text' => 'About',
+      'label' => 'hidden',
+      'formatter' => 'image',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'image_style' => 'large',
+        'image_link' => '',
+      ),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
