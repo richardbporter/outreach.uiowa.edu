@@ -54,88 +54,88 @@ function outreach_feed_feeds_importer_default() {
             'unique' => FALSE,
           ),
           3 => array(
+            'source' => 'Educators',
+            'target' => 'field_educators',
+            'unique' => FALSE,
+          ),
+          4 => array(
             'source' => 'UI Ed Physicians',
             'target' => 'field_ui_educated_physicians',
             'unique' => FALSE,
           ),
-          4 => array(
+          5 => array(
             'source' => 'Total Physicians',
             'target' => 'field_total_physicians',
             'unique' => FALSE,
           ),
-          5 => array(
+          6 => array(
             'source' => 'UI Ed Assistants',
             'target' => 'field_ui_educated_assistants',
             'unique' => FALSE,
           ),
-          6 => array(
+          7 => array(
             'source' => 'Total Assistants',
             'target' => 'field_total_assistants',
             'unique' => FALSE,
           ),
-          7 => array(
+          8 => array(
             'source' => 'UI Ed Dentists',
             'target' => 'field_ui_educated_dentists',
             'unique' => FALSE,
           ),
-          8 => array(
+          9 => array(
             'source' => 'Total Dentists',
             'target' => 'field_total_dentists',
             'unique' => FALSE,
           ),
-          9 => array(
+          10 => array(
             'source' => 'UI Ed Nurses',
             'target' => 'field_ui_educated_nurses',
             'unique' => FALSE,
           ),
-          10 => array(
+          11 => array(
             'source' => 'Total Nurses',
             'target' => 'field_total_nurses',
             'unique' => FALSE,
           ),
-          11 => array(
+          12 => array(
             'source' => 'UI Ed Pharmacists',
             'target' => 'field_ui_educated_pharmacists',
             'unique' => FALSE,
           ),
-          12 => array(
+          13 => array(
             'source' => 'Total Pharmacists',
             'target' => 'field_total_pharmacists',
             'unique' => FALSE,
           ),
-          13 => array(
-            'source' => 'VENDORS PAID',
-            'target' => 'field_vendors_paid',
-            'unique' => FALSE,
-          ),
           14 => array(
-            'source' => 'SUM OF PAYMENTS',
-            'target' => 'field_sum_of_payments',
-            'unique' => FALSE,
-          ),
-          15 => array(
             'source' => 'Business',
             'target' => 'field_business',
             'unique' => FALSE,
           ),
-          16 => array(
-            'source' => 'Management',
-            'target' => 'field_management',
-            'unique' => FALSE,
-          ),
-          17 => array(
-            'source' => 'Dentistry',
-            'target' => 'field_dentistry',
-            'unique' => FALSE,
-          ),
-          18 => array(
+          15 => array(
             'source' => 'Education',
             'target' => 'field_education',
             'unique' => FALSE,
           ),
-          19 => array(
+          16 => array(
             'source' => 'Engineering',
             'target' => 'field_engineering',
+            'unique' => FALSE,
+          ),
+          17 => array(
+            'source' => 'CLAS',
+            'target' => 'field_liberal_arts',
+            'unique' => FALSE,
+          ),
+          18 => array(
+            'source' => 'Medicine',
+            'target' => 'field_medicine',
+            'unique' => FALSE,
+          ),
+          19 => array(
+            'source' => 'Nursing',
+            'target' => 'field_nursing',
             'unique' => FALSE,
           ),
           20 => array(
@@ -144,53 +144,58 @@ function outreach_feed_feeds_importer_default() {
             'unique' => FALSE,
           ),
           21 => array(
-            'source' => 'Law',
-            'target' => 'field_law',
+            'source' => 'Graduate Medicine',
+            'target' => 'field_graduate_medicine',
             'unique' => FALSE,
           ),
           22 => array(
-            'source' => 'CLAS',
-            'target' => 'field_liberal_arts',
-            'unique' => FALSE,
-          ),
-          23 => array(
-            'source' => 'Medicine',
-            'target' => 'field_medicine',
-            'unique' => FALSE,
-          ),
-          24 => array(
-            'source' => 'Nursing',
-            'target' => 'field_nursing',
-            'unique' => FALSE,
-          ),
-          25 => array(
-            'source' => 'Pharmacy',
-            'target' => 'field_pharmacy',
-            'unique' => FALSE,
-          ),
-          26 => array(
             'source' => 'Public Health',
             'target' => 'field_public_health',
             'unique' => FALSE,
           ),
+          23 => array(
+            'source' => 'Management',
+            'target' => 'field_management',
+            'unique' => FALSE,
+          ),
+          24 => array(
+            'source' => 'Dentistry',
+            'target' => 'field_dentistry',
+            'unique' => FALSE,
+          ),
+          25 => array(
+            'source' => 'Law',
+            'target' => 'field_law',
+            'unique' => FALSE,
+          ),
+          26 => array(
+            'source' => 'Professional Medicine',
+            'target' => 'field_professional_medicine',
+            'unique' => FALSE,
+          ),
           27 => array(
-            'source' => 'uihc_visits',
-            'target' => 'field_uihc_clinic_visits',
+            'source' => 'Pharmacy',
+            'target' => 'field_pharmacy',
             'unique' => FALSE,
           ),
           28 => array(
-            'source' => 'outreach_visits',
-            'target' => 'field_outreach_clinic_visits',
+            'source' => 'Vendors Paid',
+            'target' => 'field_vendors_paid',
             'unique' => FALSE,
           ),
           29 => array(
-            'source' => 'graduate_medicine',
-            'target' => 'field_graduate_medicine',
+            'source' => 'Sum of Payments',
+            'target' => 'field_sum_of_payments',
             'unique' => FALSE,
           ),
           30 => array(
-            'source' => 'professional_medicine',
-            'target' => 'field_professional_medicine',
+            'source' => 'UIHC Visits',
+            'target' => 'field_uihc_clinic_visits',
+            'unique' => FALSE,
+          ),
+          31 => array(
+            'source' => 'Outreach Visits',
+            'target' => 'field_outreach_clinic_visits',
             'unique' => FALSE,
           ),
         ),
