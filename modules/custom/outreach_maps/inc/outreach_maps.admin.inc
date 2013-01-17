@@ -49,6 +49,7 @@ function _outreach_maps_load_county($title) {
     // Load the fields that will be used in the marker popup.
     $students = field_view_field('node', $node, 'field_enrollment_total', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
     $alumni = field_view_field('node', $node, 'field_alumni', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
+    $educators = field_view_field('node', $node, 'field_educators', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
     $uihc_visits = field_view_field('node', $node, 'field_uihc_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
     $outreach_visits = field_view_field('node', $node, 'field_outreach_clinic_visits', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
     $physicians = field_view_field('node', $node, 'field_ui_educated_physicians', array('label' => 'inline', 'type' => 'outreach_maps_number_formatter'));
@@ -76,6 +77,7 @@ function _outreach_maps_load_county($title) {
 
     $data['enrollment_total'] = array($students);
     $data['alumni'] = array($alumni);
+    $data['educators'] = array($educators);
 
     // How the UI impacts your neighborhood
     $data['impact_heading'] = array(
