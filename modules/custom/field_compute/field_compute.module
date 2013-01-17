@@ -127,6 +127,63 @@ function computed_field_field_enrollment_total_compute(&$entity_field, $entity_t
 }
 
 /**
+ * Callback function for enrollment total display.
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_enrollment_total_display($field, $entity_field_item, $entity_lang, $langcode) {
+   $display_output = _field_compute_number_formatter($entity_field_item['value']);
+   return $display_output;
+}
+
+/**
+ * Callback function for undergraduate_total display.
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_undergraduate_total_display($field, $entity_field_item, $entity_lang, $langcode) {
+   $display_output = _field_compute_number_formatter($entity_field_item['value']);
+   return $display_output;
+}
+
+/**
+ * Callback function for graduate_total display.
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_graduate_total_display($field, $entity_field_item, $entity_lang, $langcode) {
+   $display_output = _field_compute_number_formatter($entity_field_item['value']);
+   return $display_output;
+}
+
+/**
+ * Callback function for professional_total display.
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_professional_total_display($field, $entity_field_item, $entity_lang, $langcode) {
+   $display_output = _field_compute_number_formatter($entity_field_item['value']);
+   return $display_output;
+}
+
+/**
+ * Helper function to return a basic formatted number.
+ * @param  int $number
+ * @return formatted number
+ */
+function _field_compute_number_formatter($number) {
+  return number_format($number);
+}
+
+/**
  * Helper function to sum an array of fields of integer type.
  *
  * @param $entity_type
