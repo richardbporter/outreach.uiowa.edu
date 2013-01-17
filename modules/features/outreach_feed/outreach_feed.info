@@ -2,6 +2,7 @@ name = Outreach Feed
 description = Outreach feed and tamper configuration.
 core = 7.x
 package = Outreach
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper

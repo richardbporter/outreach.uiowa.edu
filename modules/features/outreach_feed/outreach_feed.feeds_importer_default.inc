@@ -174,26 +174,21 @@ function outreach_feed_feeds_importer_default() {
             'unique' => FALSE,
           ),
           27 => array(
-            'source' => 'University College',
-            'target' => 'field_university_college',
-            'unique' => FALSE,
-          ),
-          28 => array(
             'source' => 'uihc_visits',
             'target' => 'field_uihc_clinic_visits',
             'unique' => FALSE,
           ),
-          29 => array(
+          28 => array(
             'source' => 'outreach_visits',
             'target' => 'field_outreach_clinic_visits',
             'unique' => FALSE,
           ),
-          30 => array(
+          29 => array(
             'source' => 'graduate_medicine',
             'target' => 'field_graduate_medicine',
             'unique' => FALSE,
           ),
-          31 => array(
+          30 => array(
             'source' => 'professional_medicine',
             'target' => 'field_professional_medicine',
             'unique' => FALSE,
