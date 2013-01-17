@@ -65,7 +65,6 @@ features[field][] = node-county-field_ui_educated_pharmacists
 features[field][] = node-county-field_ui_educated_physicians
 features[field][] = node-county-field_uihc_clinic_visits
 features[field][] = node-county-field_undergraduate_total
-features[field][] = node-county-field_university_college
 features[field][] = node-county-field_vendors_paid
 features[field][] = node-county-field_year
 features[field_group][] = group_general|node|county|form

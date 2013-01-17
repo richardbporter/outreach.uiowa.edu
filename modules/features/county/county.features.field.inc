@@ -3222,80 +3222,6 @@ function county_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-county-field_university_college'.
-  $fields['node-county-field_university_college'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_university_college',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'number',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'number_integer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'county',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => 1,
-            'scale' => 0,
-            'thousand_separator' => ',',
-          ),
-          'type' => 'number_integer',
-          'weight' => '36',
-        ),
-        'full' => array(
-          'label' => 'inline',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => 1,
-            'scale' => 0,
-            'thousand_separator' => ',',
-          ),
-          'type' => 'number_integer',
-          'weight' => '36',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '10',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_university_college',
-      'label' => 'University College',
-      'required' => 0,
-      'settings' => array(
-        'max' => '',
-        'min' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'number',
-        'settings' => array(),
-        'type' => 'number',
-        'weight' => '22',
-      ),
-    ),
-  );
-
   // Exported field: 'node-county-field_vendors_paid'.
   $fields['node-county-field_vendors_paid'] = array(
     'field_config' => array(
@@ -3513,7 +3439,6 @@ function county_field_default_fields() {
   t('UI Educated Physician Assistants');
   t('UI Educated Physicians');
   t('Undergraduate Total');
-  t('University College');
   t('Vendors Paid');
   t('Year');
 

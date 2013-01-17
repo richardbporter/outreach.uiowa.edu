@@ -252,7 +252,7 @@ function county_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: University College */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_university_college']['id'] = 'field_university_college';
   $handler->display->display_options['fields']['field_university_college']['table'] = 'field_data_field_university_college';
   $handler->display->display_options['fields']['field_university_college']['field'] = 'field_university_college';
@@ -261,10 +261,6 @@ function county_views_default_views() {
   $handler->display->display_options['fields']['field_university_college']['alter']['text'] = '<a href="http://www.registrar.uiowa.edu/registrar/catalog/universitycollege/">University College</a>: [field_university_college]';
   $handler->display->display_options['fields']['field_university_college']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_university_college']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_university_college']['settings'] = array(
-    'thousand_separator' => ' ',
-    'prefix_suffix' => 1,
-  );
   /* Field: Content: Students */
   $handler->display->display_options['fields']['field_enrollment_total']['id'] = 'field_enrollment_total';
   $handler->display->display_options['fields']['field_enrollment_total']['table'] = 'field_data_field_enrollment_total';
