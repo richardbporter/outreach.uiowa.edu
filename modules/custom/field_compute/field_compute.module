@@ -34,7 +34,6 @@ function computed_field_field_enrollment_total_compute(&$entity_field, $entity_t
     'field_nursing',
     'field_pharmacy',
     'field_public_health',
-    'field_university_college',
   );
 
   // Calculate the total enrollment.
