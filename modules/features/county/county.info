@@ -1,7 +1,7 @@
 name = County
 description = County content type, panelizer and views configuration.
 core = 7.x
-package = Features
+package = Outreach
 dependencies[] = computed_field
 dependencies[] = ctools
 dependencies[] = date
