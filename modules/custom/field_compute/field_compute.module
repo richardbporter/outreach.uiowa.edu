@@ -7,7 +7,7 @@
  */
 
 /**
- * Callback function for enrollment_total field on County Instance node.
+ * Callback function for enrollment_total field on County node.
  *
  * @param $entity_field
  * @param $entity_type
@@ -29,10 +29,11 @@ function computed_field_field_enrollment_total_compute(&$entity_field, $entity_t
     'field_law',
     'field_liberal_arts',
     'field_medicine',
+    'field_graduate_medicine',
+    'field_professional_medicine',
     'field_nursing',
     'field_pharmacy',
     'field_public_health',
-    'field_university_college',
   );
 
   // Calculate the total enrollment.
@@ -40,6 +41,146 @@ function computed_field_field_enrollment_total_compute(&$entity_field, $entity_t
 
   // Assign the total to the field.
   $entity_field[0]['value'] = $enrollment_total;
+}
+
+/**
+ * Callback function for undergraduate_total field on County node.
+ *
+ * @param  $entity_field
+ * @param  $entity_type
+ * @param  $entity
+ * @param  $field
+ * @param  $instance
+ * @param  $langcode
+ * @param  $items
+ */
+  function computed_field_field_undergraduate_total_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+    // Add all undergraduate fields to an array.
+    $undergraduate_fields = array(
+      'field_business',
+      'field_education',
+      'field_engineering',
+      'field_liberal_arts',
+      'field_medicine',
+      'field_nursing',
+    );
+
+  // Calculate the total undergraduate enrollment.
+  $undergraduate_total = _field_compute_sum($entity_type, $entity, $undergraduate_fields);
+
+  // Assign the total to the field.
+  $entity_field[0]['value'] = $undergraduate_total;
+}
+
+/**
+ * Callback function for graduate_total field on County node.
+ *
+ * @param  $entity_field
+ * @param  $entity_type
+ * @param  $entity
+ * @param  $field
+ * @param  $instance
+ * @param  $langcode
+ * @param  $items
+ */
+  function computed_field_field_graduate_total_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+    // Add all graduate fields to an array.
+    $graduate_fields = array(
+      'field_graduate',
+      'field_graduate_medicine',
+      'field_public_health',
+    );
+
+  // Calculate the total graduate enrollment.
+  $graduate_total = _field_compute_sum($entity_type, $entity, $graduate_fields);
+
+  // Assign the total to the field.
+  $entity_field[0]['value'] = $graduate_total;
+}
+
+/**
+ * Callback function for professional_total field on County node.
+ *
+ * @param  $entity_field
+ * @param  $entity_type
+ * @param  $entity
+ * @param  $field
+ * @param  $instance
+ * @param  $langcode
+ * @param  $items
+ */
+  function computed_field_field_professional_total_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+    // Add all professional fields to an array.
+    $professional_fields = array(
+      'field_management',
+      'field_dentistry',
+      'field_law',
+      'field_professional_medicine',
+      'field_pharmacy',
+    );
+
+  // Calculate the total professional enrollment.
+  $professional_total = _field_compute_sum($entity_type, $entity, $professional_fields);
+
+  // Assign the total to the field.
+  $entity_field[0]['value'] = $professional_total;
+}
+
+/**
+ * Callback function for enrollment total display.
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_enrollment_total_display($field, $entity_field_item, $entity_lang, $langcode) {
+   $display_output = _field_compute_number_formatter($entity_field_item['value']);
+   return $display_output;
+}
+
+/**
+ * Callback function for undergraduate_total display.
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_undergraduate_total_display($field, $entity_field_item, $entity_lang, $langcode) {
+   $display_output = _field_compute_number_formatter($entity_field_item['value']);
+   return $display_output;
+}
+
+/**
+ * Callback function for graduate_total display.
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_graduate_total_display($field, $entity_field_item, $entity_lang, $langcode) {
+   $display_output = _field_compute_number_formatter($entity_field_item['value']);
+   return $display_output;
+}
+
+/**
+ * Callback function for professional_total display.
+ * @param  $field
+ * @param  $entity_field_item
+ * @param  $entity_lang
+ * @param  $langcode
+ */
+function computed_field_field_professional_total_display($field, $entity_field_item, $entity_lang, $langcode) {
+   $display_output = _field_compute_number_formatter($entity_field_item['value']);
+   return $display_output;
+}
+
+/**
+ * Helper function to return a basic formatted number.
+ * @param  int $number
+ * @return formatted number
+ */
+function _field_compute_number_formatter($number) {
+  return number_format($number);
 }
 
 /**
