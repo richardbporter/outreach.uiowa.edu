@@ -2089,7 +2089,7 @@ tr.error {
 /* =============================================================================
  *   Local Styles
  * ========================================================================== */
-.field-name-field-image {
+.field-name-field-image, .field-name-body img {
   background: #EFEFEF;
   border: 3px solid #EAEAEA;
   @include box-shadow(-1px -1px 0px rgba(255, 255, 255, .4) inset, 1px 1px 0px rgba(0, 0, 0, .05) inset);
