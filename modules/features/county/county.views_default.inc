@@ -323,6 +323,7 @@ function county_views_default_views() {
   $handler->display->display_options['fields']['field_alumni']['alter']['text'] = '<p>[field_alumni] University of Iowa alumni live in [title] County.</p>';
   $handler->display->display_options['fields']['field_alumni']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_alumni']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_alumni']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_alumni']['settings'] = array(
     'thousand_separator' => ',',
     'prefix_suffix' => 1,
@@ -349,6 +350,8 @@ function county_views_default_views() {
   $handler->display->display_options['fields']['field_ui_educated_physicians']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_ui_educated_physicians']['alter']['text'] = ' <p>50% of Iowa physicians are UI educated, including [field_ui_educated_physicians] in [title] County.</p>';
   $handler->display->display_options['fields']['field_ui_educated_physicians']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ui_educated_physicians']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ui_educated_physicians']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ui_educated_physicians']['settings'] = array(
     'thousand_separator' => ',',
     'prefix_suffix' => 1,
@@ -361,6 +364,8 @@ function county_views_default_views() {
   $handler->display->display_options['fields']['field_ui_educated_dentists']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_ui_educated_dentists']['alter']['text'] = '<p>80% of all Iowa dentists are UI educated, including [field_ui_educated_dentists] in [title] County.</p>';
   $handler->display->display_options['fields']['field_ui_educated_dentists']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ui_educated_dentists']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ui_educated_dentists']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ui_educated_dentists']['settings'] = array(
     'thousand_separator' => ',',
     'prefix_suffix' => 1,
@@ -373,10 +378,21 @@ function county_views_default_views() {
   $handler->display->display_options['fields']['field_ui_educated_pharmacists']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_ui_educated_pharmacists']['alter']['text'] = '<p>47% of all Iowa pharmacists are UI educated, including [field_ui_educated_pharmacists] in [title] County.</p>';
   $handler->display->display_options['fields']['field_ui_educated_pharmacists']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ui_educated_pharmacists']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ui_educated_pharmacists']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ui_educated_pharmacists']['settings'] = array(
     'thousand_separator' => ',',
     'prefix_suffix' => 1,
   );
+  /* Field: Content: I-Club Link */
+  $handler->display->display_options['fields']['field_i_club_link']['id'] = 'field_i_club_link';
+  $handler->display->display_options['fields']['field_i_club_link']['table'] = 'field_data_field_i_club_link';
+  $handler->display->display_options['fields']['field_i_club_link']['field'] = 'field_i_club_link';
+  $handler->display->display_options['fields']['field_i_club_link']['label'] = '';
+  $handler->display->display_options['fields']['field_i_club_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_i_club_link']['alter']['text'] = 'Connect with fellow Hometown Hawkeyes through your area I-Club and welcome Hawkeyes into your hometown.  Connect with your local chapter by following this link: [field_i_club_link]';
+  $handler->display->display_options['fields']['field_i_club_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_i_club_link']['hide_empty'] = TRUE;
   $handler->display->display_options['pane_title'] = 'Hometown Hawkeyes';
   $handler->display->display_options['pane_description'] = 'General stats related to this county.';
   $handler->display->display_options['pane_category']['name'] = 'County';
@@ -916,8 +932,83 @@ function county_views_default_views() {
     'thousand_separator' => ',',
     'prefix_suffix' => 1,
   );
+  /* Field: Content: Lab Tests */
+  $handler->display->display_options['fields']['field_lab_tests']['id'] = 'field_lab_tests';
+  $handler->display->display_options['fields']['field_lab_tests']['table'] = 'field_data_field_lab_tests';
+  $handler->display->display_options['fields']['field_lab_tests']['field'] = 'field_lab_tests';
+  $handler->display->display_options['fields']['field_lab_tests']['label'] = '';
+  $handler->display->display_options['fields']['field_lab_tests']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_lab_tests']['alter']['text'] = '</br>As the state’s public health and environmental laboratory, the State Hygienic Laboratory at the University of Iowa serves all of Iowa’s 99 counties through disease detection, environmental monitoring, and newborn and maternal screening.  During the previous year, the lab performed [field_lab_tests] tests in [title] County.';
+  $handler->display->display_options['fields']['field_lab_tests']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_lab_tests']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_lab_tests']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 0,
+  );
   $handler->display->display_options['pane_title'] = 'Healthcare Connections';
   $handler->display->display_options['pane_description'] = 'Stats related to this county\'s healthcare information.';
+  $handler->display->display_options['pane_category']['name'] = 'County';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Nid',
+    ),
+  );
+
+  /* Display: Other Outreach */
+  $handler = $view->new_display('panel_pane', 'Other Outreach', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Other Outreach';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['hide_empty'] = TRUE;
+  /* Field: Content: Hometown Hawkeye Stories */
+  $handler->display->display_options['fields']['field_hometown_hawkeye_stories']['id'] = 'field_hometown_hawkeye_stories';
+  $handler->display->display_options['fields']['field_hometown_hawkeye_stories']['table'] = 'field_data_field_hometown_hawkeye_stories';
+  $handler->display->display_options['fields']['field_hometown_hawkeye_stories']['field'] = 'field_hometown_hawkeye_stories';
+  $handler->display->display_options['fields']['field_hometown_hawkeye_stories']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hometown_hawkeye_stories']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'How the UI impacts your neighborhood.';
+  $handler->display->display_options['pane_description'] = 'Stats relating to this county\'s vendors.';
   $handler->display->display_options['pane_category']['name'] = 'County';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;

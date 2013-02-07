@@ -49,7 +49,7 @@ function county_field_group_info() {
   $field_group->parent_name = 'group_hometown_hawkeyes';
   $field_group->data = array(
     'label' => 'Graduate Enrollment',
-    'weight' => '17',
+    'weight' => '18',
     'children' => array(
       0 => 'field_graduate',
       1 => 'field_public_health',
@@ -79,10 +79,11 @@ function county_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Healthcare Connections',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_uihc_clinic_visits',
       1 => 'field_outreach_clinic_visits',
+      2 => 'field_lab_tests',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -120,12 +121,12 @@ function county_field_group_info() {
       8 => 'field_total_nurses',
       9 => 'field_ui_educated_pharmacists',
       10 => 'field_total_pharmacists',
-      11 => 'field_university_college',
-      12 => 'field_enrollment_total',
-      13 => 'field_educators',
-      14 => 'group_undergraduate_enrollment',
-      15 => 'group_graduate_enrolllment',
-      16 => 'group_professional_enrollment',
+      11 => 'field_enrollment_total',
+      12 => 'field_educators',
+      13 => 'field_i_club_link',
+      14 => 'group_graduate_enrolllment',
+      15 => 'group_professional_enrollment',
+      16 => 'group_undergraduate_enrollment',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -213,7 +214,7 @@ function county_field_group_info() {
   $field_group->parent_name = 'group_hometown_hawkeyes';
   $field_group->data = array(
     'label' => 'Professional Enrollment',
-    'weight' => '18',
+    'weight' => '19',
     'children' => array(
       0 => 'field_management',
       1 => 'field_dentistry',
@@ -245,7 +246,7 @@ function county_field_group_info() {
   $field_group->parent_name = 'group_hometown_hawkeyes';
   $field_group->data = array(
     'label' => 'Undergraduate Enrollment',
-    'weight' => '16',
+    'weight' => '17',
     'children' => array(
       0 => 'field_business',
       1 => 'field_education',
