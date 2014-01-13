@@ -2144,6 +2144,16 @@ tr.error {
 .views-field-field-ui-educated-dentists:after { @include sprites-sprite(dentists, $dimensions:true); }
 .views-field-field-ui-educated-pharmacists:after { @include sprites-sprite(pharmacists, $dimensions:true); }
 
+.view-display-id-hometown_hawkeyes_secondary{
+  h5{
+    margin: 1.67em 0 .5em 0;
+  }
+
+  p{
+    margin: 0 0 .25em 1.5em;
+  }
+}
+
 .view-display-id-undergraduate_enrollment, .view-display-id-graduate_enrollment, .view-display-id-professional_enrollment, .view-display-id-total_enrollment {
   .field-label {
     min-width: 175px;
