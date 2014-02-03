@@ -273,7 +273,8 @@ var {
  * Wraps the header
  */
 #header-wrapper {
-  @include background-image(linear-gradient(lighten($black, 27%), lighten($black, 16%)));
+  /*@include background-image(linear-gradient(lighten($black, 27%), lighten($black, 16%))); */
+  background: $black;
   @include box-shadow(0 2px 2px rgba($black, 0.2));
   .container {
     margin: 0 auto;
@@ -286,7 +287,8 @@ var {
         ul {
           li {
             a {
-              color: $light;
+              /*color: $light; */
+              color: #ffe100;
               border-right: 1px solid $black;
               font-weight: 100;
               height: 45px;
@@ -384,6 +386,7 @@ var {
  */
 #footer-wrapper {
   @include box-shadow(0 -2px 2px rgba($black, 0.2));
+  background-color: $black;
   font-size: 1.0em;
   .container {
     .block {
@@ -392,7 +395,8 @@ var {
     #block-block-2 {
       float: left;
       p {
-        color: darken($light, 20%);
+        /*color: darken($light, 20%); */
+        color: #FFE100;
         padding: 5px 5px 5px 15px;
         margin: 0 0 0 0;
       }
@@ -449,7 +453,7 @@ var {
       @include ir();
       width: 265px;
       height: 40px;
-      background: url("images/wordmark.png") center no-repeat;
+      background: url("images/custom-dome.png") center no-repeat;
     }
     &:hover,
     &:focus {
@@ -465,7 +469,8 @@ var {
 #site-slogan {
   float: left;
   margin: 14px 0 0 10px;
-  color: darken($white, 40%);
+  /*color: darken($white, 40%); */
+  color: #FFE100;
   font-size: 1.3em;
   font-weight: normal;
   font-style: italic;
