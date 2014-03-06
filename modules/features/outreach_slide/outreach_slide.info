@@ -1,7 +1,7 @@
 name = Outreach slide
 description = Slide entity type and dependencies.
 core = 7.x
-package = Features
+package = Outreach
 dependencies[] = county
 dependencies[] = ctools
 dependencies[] = features
