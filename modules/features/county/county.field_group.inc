@@ -31,7 +31,7 @@ function county_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-general field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -49,7 +49,7 @@ function county_field_group_info() {
   $field_group->parent_name = 'group_hometown_hawkeyes';
   $field_group->data = array(
     'label' => 'Graduate Enrollment',
-    'weight' => '18',
+    'weight' => '19',
     'children' => array(
       0 => 'field_graduate',
       1 => 'field_public_health',
@@ -61,7 +61,7 @@ function county_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-graduate-enrolllment field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -90,7 +90,7 @@ function county_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-healthcare-connections field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -124,16 +124,17 @@ function county_field_group_info() {
       11 => 'field_enrollment_total',
       12 => 'field_educators',
       13 => 'field_i_club_link',
-      14 => 'group_graduate_enrolllment',
-      15 => 'group_professional_enrollment',
-      16 => 'group_undergraduate_enrollment',
+      14 => 'field_ui_educated_engineers',
+      15 => 'group_graduate_enrolllment',
+      16 => 'group_professional_enrollment',
+      17 => 'group_undergraduate_enrollment',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-hometown-hawkeyes field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -152,23 +153,13 @@ function county_field_group_info() {
   $field_group->data = array(
     'label' => 'Hygienic Lab',
     'weight' => '8',
-    'children' => array(
-      0 => 'field_clinical',
-      1 => 'field_elis',
-      2 => 'field_inmsp',
-      3 => 'field_hygienic_lab_total',
-      4 => 'field_dist',
-      5 => 'field_dist_1',
-      6 => 'field_dist_2',
-      7 => 'field_dist_3',
-      8 => 'field_dist_4',
-    ),
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-hygienic-lab field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -196,7 +187,7 @@ function county_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-impact field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -214,7 +205,7 @@ function county_field_group_info() {
   $field_group->parent_name = 'group_hometown_hawkeyes';
   $field_group->data = array(
     'label' => 'Professional Enrollment',
-    'weight' => '19',
+    'weight' => '20',
     'children' => array(
       0 => 'field_management',
       1 => 'field_dentistry',
@@ -228,7 +219,7 @@ function county_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-professional-enrollment field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -246,7 +237,7 @@ function county_field_group_info() {
   $field_group->parent_name = 'group_hometown_hawkeyes';
   $field_group->data = array(
     'label' => 'Undergraduate Enrollment',
-    'weight' => '17',
+    'weight' => '18',
     'children' => array(
       0 => 'field_business',
       1 => 'field_education',
@@ -261,7 +252,7 @@ function county_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-undergraduate-enrollment field-group-fieldset',
         'required_fields' => 1,
       ),
     ),

@@ -22,6 +22,10 @@ function outreach_feed_feeds_importer_default() {
       'config' => array(
         'allowed_extensions' => 'txt csv tsv xml opml',
         'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
       ),
     ),
     'parser' => array(
@@ -34,7 +38,6 @@ function outreach_feed_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'content_type' => 'county',
         'expire' => '-1',
         'author' => '1',
         'mappings' => array(
@@ -109,93 +112,108 @@ function outreach_feed_feeds_importer_default() {
             'unique' => FALSE,
           ),
           14 => array(
+            'source' => 'UI Ed Engineers',
+            'target' => 'field_ui_educated_engineers',
+            'unique' => FALSE,
+          ),
+          15 => array(
             'source' => 'Business',
             'target' => 'field_business',
             'unique' => FALSE,
           ),
-          15 => array(
+          16 => array(
             'source' => 'Education',
             'target' => 'field_education',
             'unique' => FALSE,
           ),
-          16 => array(
+          17 => array(
             'source' => 'Engineering',
             'target' => 'field_engineering',
             'unique' => FALSE,
           ),
-          17 => array(
+          18 => array(
             'source' => 'CLAS',
             'target' => 'field_liberal_arts',
             'unique' => FALSE,
           ),
-          18 => array(
+          19 => array(
             'source' => 'Medicine',
             'target' => 'field_medicine',
             'unique' => FALSE,
           ),
-          19 => array(
+          20 => array(
             'source' => 'Nursing',
             'target' => 'field_nursing',
             'unique' => FALSE,
           ),
-          20 => array(
+          21 => array(
             'source' => 'Graduate College',
             'target' => 'field_graduate',
             'unique' => FALSE,
           ),
-          21 => array(
+          22 => array(
             'source' => 'Graduate Medicine',
             'target' => 'field_graduate_medicine',
             'unique' => FALSE,
           ),
-          22 => array(
+          23 => array(
             'source' => 'Public Health',
             'target' => 'field_public_health',
             'unique' => FALSE,
           ),
-          23 => array(
+          24 => array(
             'source' => 'Management',
             'target' => 'field_management',
             'unique' => FALSE,
           ),
-          24 => array(
+          25 => array(
             'source' => 'Dentistry',
             'target' => 'field_dentistry',
             'unique' => FALSE,
           ),
-          25 => array(
+          26 => array(
             'source' => 'Law',
             'target' => 'field_law',
             'unique' => FALSE,
           ),
-          26 => array(
+          27 => array(
             'source' => 'Professional Medicine',
             'target' => 'field_professional_medicine',
             'unique' => FALSE,
           ),
-          27 => array(
+          28 => array(
             'source' => 'Pharmacy',
             'target' => 'field_pharmacy',
             'unique' => FALSE,
           ),
-          28 => array(
+          29 => array(
             'source' => 'Vendors Paid',
             'target' => 'field_vendors_paid',
             'unique' => FALSE,
           ),
-          29 => array(
+          30 => array(
             'source' => 'Sum of Payments',
             'target' => 'field_sum_of_payments',
             'unique' => FALSE,
           ),
-          30 => array(
+          31 => array(
             'source' => 'UIHC Visits',
             'target' => 'field_uihc_clinic_visits',
             'unique' => FALSE,
           ),
-          31 => array(
+          32 => array(
             'source' => 'Outreach Visits',
             'target' => 'field_outreach_clinic_visits',
+            'unique' => FALSE,
+          ),
+          33 => array(
+            'source' => 'Lab Tests',
+            'target' => 'field_lab_tests',
+            'unique' => FALSE,
+          ),
+          34 => array(
+            'source' => 'I Club Webpage',
+            'target' => 'field_i_club_link',
             'unique' => FALSE,
           ),
         ),
@@ -203,6 +221,7 @@ function outreach_feed_feeds_importer_default() {
         'input_format' => 'plain_text',
         'authorize' => 1,
         'skip_hash_check' => 0,
+        'bundle' => 'county',
       ),
     ),
     'content_type' => '',
