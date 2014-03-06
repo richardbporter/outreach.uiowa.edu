@@ -254,7 +254,6 @@ var {
   -webkit-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
-  background-color: black;
   font-size: 1.0em;
 }
 #footer-wrapper .container .block {
