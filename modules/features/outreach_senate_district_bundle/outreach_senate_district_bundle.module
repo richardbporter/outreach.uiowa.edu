@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Outreach senate district bundle feature.
+ */
+
+include_once 'outreach_senate_district_bundle.features.inc';
