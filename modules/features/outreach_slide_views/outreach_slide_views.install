@@ -5,9 +5,25 @@
  */
 
 /**
+ * Implements hook_install().
+ *
+ * Disable modules on install.
+ */
+function outreach_slide_views_install() {
+  _disable_modules();
+}
+
+/**
  * Disable and uninstall flexslider_views_slideshow and views_slideshow.
  */
 function outreach_slide_views_update_7101(&$sandbox) {
+  _disable_modules();
+}
+
+/**
+ * Helper function to disable modules.
+ */
+function _disabile_modules() {
   $modules = array(
     'flexslider_views_slideshow',
     'views_slideshow'
