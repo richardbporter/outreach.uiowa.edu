@@ -1,17 +1,14 @@
 <?php
 /**
  * @file
- * county.features.inc
+ * outreach_county_bundle.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function county_ctools_plugin_api($module = NULL, $api = NULL) {
+function outreach_county_bundle_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
-    return array("version" => "1");
-  }
-  if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
@@ -20,16 +17,9 @@ function county_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_views_api().
- */
-function county_views_api($module = NULL, $api = NULL) {
-  return array("api" => "3.0");
-}
-
-/**
  * Implements hook_node_info().
  */
-function county_node_info() {
+function outreach_county_bundle_node_info() {
   $items = array(
     'county' => array(
       'name' => t('County'),

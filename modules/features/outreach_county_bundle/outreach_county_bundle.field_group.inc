@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * county.field_group.inc
+ * outreach_county_bundle.field_group.inc
  */
 
 /**
  * Implements hook_field_group_info().
  */
-function county_field_group_info() {
+function outreach_county_bundle_field_group_info() {
   $export = array();
 
   $field_group = new stdClass();
@@ -140,31 +140,6 @@ function county_field_group_info() {
     ),
   );
   $export['group_hometown_hawkeyes|node|county|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_hygienic_lab|node|county|form';
-  $field_group->group_name = 'group_hygienic_lab';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'county';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Hygienic Lab',
-    'weight' => '8',
-    'children' => array(),
-    'format_type' => 'fieldset',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => ' group-hygienic-lab field-group-fieldset',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_hygienic_lab|node|county|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

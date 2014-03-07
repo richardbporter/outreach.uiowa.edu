@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * county.features.field_instance.inc
+ * outreach_county_bundle.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function county_field_default_field_instances() {
+function outreach_county_bundle_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-county-body'
