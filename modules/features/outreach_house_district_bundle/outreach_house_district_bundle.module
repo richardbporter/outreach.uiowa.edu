@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Outreach house district bundle feature.
+ */
+
+include_once 'outreach_house_district_bundle.features.inc';
