@@ -21,6 +21,7 @@ features[field_group][] = group_general|node|county|form
 features[field_group][] = group_graduate_enrolllment|node|county|form
 features[field_group][] = group_healthcare_connections|node|county|form
 features[field_group][] = group_hometown_hawkeyes|node|county|form
+features[field_group][] = group_hygienic_lab|node|county|form
 features[field_group][] = group_impact|node|county|form
 features[field_group][] = group_professional_enrollment|node|county|form
 features[field_group][] = group_undergraduate_enrollment|node|county|form
