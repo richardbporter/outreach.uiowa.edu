@@ -1,0 +1,13 @@
+name = Outreach county views
+description = County views configuration.
+core = 7.x
+package = Outreach
+version = 7.x-1.0
+project = outreach_county_views
+dependencies[] = views
+dependencies[] = views_content
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = county
+features_exclude[dependencies][ctools] = ctools
+project path = sites/outreach.uiowa.edu/modules/features
