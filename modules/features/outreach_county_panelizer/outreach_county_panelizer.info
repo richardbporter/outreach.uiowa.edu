@@ -1,0 +1,15 @@
+name = Outreach county panelizer
+description = County panelizer configuration.
+core = 7.x
+package = Outreach
+version = 7.x-1.0
+project = outreach_county_panelizer
+dependencies[] = ctools
+dependencies[] = panelizer
+dependencies[] = strongarm
+features[ctools][] = panelizer:panelizer:1
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[panelizer_defaults][] = node:county:default
+features[variable][] = panelizer_defaults_node_county
+project path = sites/outreach.uiowa.edu/modules/features

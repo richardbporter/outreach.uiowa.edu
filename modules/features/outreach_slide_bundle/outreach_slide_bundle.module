@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Outreach slide bundle feature.
+ */
+
+include_once 'outreach_slide_bundle.features.inc';

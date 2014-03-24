@@ -405,6 +405,34 @@ var {
 }
 
 /* =============================================================================
+ *   Flexslider
+ * ========================================================================== */
+
+.flexslider:hover .flex-direction-nav a {
+
+  &:before {
+    font-size: 30px;
+    color: $white;
+  }
+}
+
+#flexslider_views_slideshow_slides-county_slideshow {
+  padding: 0;
+}
+
+.flexslider {
+
+  .slides {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+
+  .flex-control-nav li {
+    margin: 2px;
+  }
+}
+
+/* =============================================================================
  *   Branding
  * ========================================================================== */
 

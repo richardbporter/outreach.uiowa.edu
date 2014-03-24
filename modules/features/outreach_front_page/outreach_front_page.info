@@ -1,0 +1,12 @@
+name = Outreach front page
+description = Front page panel configuration
+core = 7.x
+package = Outreach
+version = 7.x-1.0
+project = outreach_front_page
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_pages][] = front_page
+project path = sites/outreach.uiowa.edu/modules/features

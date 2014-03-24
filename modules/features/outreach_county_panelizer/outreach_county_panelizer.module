@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Outreach county panelizer feature.
+ */
+
+include_once 'outreach_county_panelizer.features.inc';
