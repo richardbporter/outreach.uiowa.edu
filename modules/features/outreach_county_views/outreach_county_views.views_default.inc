@@ -320,7 +320,7 @@ function outreach_county_views_views_default_views() {
   $handler->display->display_options['fields']['field_year']['field'] = 'field_year';
   $handler->display->display_options['fields']['field_year']['label'] = '';
   $handler->display->display_options['fields']['field_year']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_year']['alter']['text'] = '<h5>As of Fall 2013...</h5>';
+  $handler->display->display_options['fields']['field_year']['alter']['text'] = '<h5>As of Fall [field_year]...</h5>';
   $handler->display->display_options['fields']['field_year']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_year']['settings'] = array(
     'format_type' => 'year',
