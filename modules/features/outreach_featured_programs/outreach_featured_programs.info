@@ -33,7 +33,6 @@ features[field_instance][] = node-featured_program-field_featuerd_program_logo
 features[field_instance][] = node-featured_program-field_featured_prog_people_title
 features[field_instance][] = node-featured_program-field_featured_program_people
 features[field_instance][] = node-featured_program-field_featured_program_photo
-features[field_instance][] = node-featured_program-field_featured_program_video
 features[node][] = featured_program
 features[panelizer_defaults][] = node:featured_program:default:full
 features[variable][] = field_bundle_settings_node__featured_program
