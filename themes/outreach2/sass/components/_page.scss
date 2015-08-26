@@ -124,6 +124,9 @@
 				line-height: 1.6em;
 			}
 		}
+		.enewsletter{
+			@include inverse-button-style();
+		}
 		.nav-links-first{
 			@include grid-span(2,5);
 		}
