@@ -205,7 +205,7 @@ function outreach_counties_panelizer_defaults() {
     $pane->configuration = array(
       'label' => 'title',
       'formatter' => 'field_collection_view',
-      'delta_limit' => '0',
+      'delta_limit' => '1',
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
@@ -231,6 +231,32 @@ function outreach_counties_panelizer_defaults() {
     $pane->uuid = '83f7a009-01cc-4f61-9e64-fc7e56ef2b92';
     $display->content['new-83f7a009-01cc-4f61-9e64-fc7e56ef2b92'] = $pane;
     $display->panels['right'][0] = 'new-83f7a009-01cc-4f61-9e64-fc7e56ef2b92';
+    $pane = new stdClass();
+    $pane->pid = 'new-7780f66b-46b1-4876-b2d0-de52994a1a65';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p><a href="http://hawkeyecaucus.com/#hawkeyes">View All</a></p>
+',
+      'format' => 'filtered_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '7780f66b-46b1-4876-b2d0-de52994a1a65';
+    $display->content['new-7780f66b-46b1-4876-b2d0-de52994a1a65'] = $pane;
+    $display->panels['right'][1] = 'new-7780f66b-46b1-4876-b2d0-de52994a1a65';
     $pane = new stdClass();
     $pane->pid = 'new-3ef93448-b8fd-4330-a998-4f8f5c5de877';
     $pane->panel = 'top';

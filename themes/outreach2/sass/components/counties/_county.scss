@@ -24,6 +24,14 @@
 			border-top: 3px solid $accent-color;
 			margin-top: 20px;
 		}
+
+		.pane-3{
+			margin-top: 0;
+			border-top: none;
+			a{
+				@include button-style();
+			}
+		}
 	}
 
 	.pane-county-data-county-professionals-pane {
@@ -144,4 +152,6 @@
 			line-height: 1.3em;
 		}
 	}
+
+
 }
