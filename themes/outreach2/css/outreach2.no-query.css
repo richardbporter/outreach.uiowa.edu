@@ -929,7 +929,7 @@ a {
       line-height: 1.3em; }
 
 /* line 3, ../sass/components/events/_events_page.scss */
-.page-events .view-display-id-page .view-content {
+.page-events .view-display-id-page .view-content, .page-events .view-display-id-page .view-footer {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
@@ -970,6 +970,29 @@ a {
     padding: 0 10px;
     font-size: 0.9em;
     line-height: 1.3em; }
+/* line 43, ../sass/components/events/_events_page.scss */
+.page-events .view-footer p a {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #999;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #000; }
+  /* line 9, ../sass/abstractions/_button.scss */
+  .page-events .view-footer p a:hover {
+    background-color: #222;
+    color: #EEE;
+    text-decoration: none; }
+    /* line 13, ../sass/abstractions/_button.scss */
+    .page-events .view-footer p a:hover:after {
+      color: #FFE100; }
+  /* line 17, ../sass/abstractions/_button.scss */
+  .page-events .view-footer p a:after {
+    content: "\25b6";
+    padding-left: 4px; }
 
 /* line 4, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .panel-col-top {

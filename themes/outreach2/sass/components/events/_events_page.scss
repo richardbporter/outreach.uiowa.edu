@@ -1,6 +1,6 @@
 .page-events{
   .view-display-id-page{
-    .view-content{
+    .view-content, .view-footer{
 			@include display-flex(flex);
 			@include flex-flow(row wrap);
 			@include justify-content(space-around);
@@ -35,6 +35,13 @@
         padding: 0 10px;
         font-size: 0.9em;
         line-height: 1.3em;
+      }
+    }
+  }
+  .view-footer{
+    p{
+      a{
+        @include button-style();
       }
     }
   }

@@ -110,6 +110,13 @@ function outreach_events_views_default_views() {
 
   /* Display: Events Page */
   $handler = $view->new_display('page', 'Events Page', 'page');
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://events.uiowa.edu/calendar/month?event_types%5B%5D=43014">View All Outreach & Engagement Events</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   $handler->display->display_options['path'] = 'events';
 
   /* Display: Home Page Events Pane */
