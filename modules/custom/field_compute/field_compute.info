@@ -1,5 +1,0 @@
-name = Field Compute
-description = This module holds the custom functions that compute some fields for the County node.
-core = 7.x
-files[] = field_compute.module
-package = UIowa

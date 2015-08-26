@@ -1,0 +1,57 @@
+.node-type-profile,
+.node--profile--full{
+	.l-page{
+		.clearfix{
+			&:after{
+				content: none;
+			}
+		}
+	}
+	
+	.field--name-field-profile-photo{
+		float: left;
+		margin: 0 40px 40px 0;
+	}
+
+	.field-collection-container{
+		border-bottom: 0;
+		margin-bottom: 0;
+		.field--name-field-profile-attribute-title,
+		.field--name-field-profile-attribute-value{
+			display: inline;
+			div{
+				display: inline;
+			}
+		}
+		.field--name-field-profile-attribute-title{
+			font-weight: 600;
+			&:after{
+				content:': ';
+			}
+		}
+		
+	}
+	.field-collection-view{
+		border-bottom: 0;
+		padding: 0;
+		margin: 0;
+		font-weight: 400;
+		font-size: 0.8em;
+		line-height: 1.3em;
+	}
+
+	.field--name-field-county-reference{
+		display: inline;
+		div{
+			display: inline;
+		}
+	}
+}
+
+.node--profile--full{
+	.clearfix{
+		&:after{
+			content: none;
+		}
+	}
+}

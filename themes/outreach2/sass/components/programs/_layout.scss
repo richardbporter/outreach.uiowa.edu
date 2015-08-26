@@ -1,0 +1,17 @@
+.node-type-program{
+	.l-main{
+		@include clearfix();
+		.l-content{
+			@include grid-span(9,1);
+			border-right: 1px solid $border-color;
+			padding-right: 40px;
+			article{
+				padding-bottom: 40px;
+			}
+		}
+		.l-region--sidebar-first{
+			@include sidebar();
+		}
+	}
+}
+

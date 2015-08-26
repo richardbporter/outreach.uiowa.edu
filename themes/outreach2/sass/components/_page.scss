@@ -1,0 +1,172 @@
+.l-header{
+	background: #000 url(../images/outreach_background.jpg) top center no-repeat;
+	background-size: 1400px 565px;
+	min-height: 565px;
+	border-bottom: 3px solid $accent-color;
+
+	.header-collection{
+		max-width: 1024px;
+		margin: 0 auto;
+		@include clearfix();
+	}
+
+	h1.site-name{
+		font-size: 3em;
+		font-weight: 600;
+		margin: 0;
+		padding-top: 0.75em;
+		a{
+			color: $accent-color;
+		}
+	}
+	h2.site-slogan{
+		font-size: 2em;
+		font-weight: 400;
+		margin-top: 10px;
+		color: $border-color;
+	}
+
+	.l-branding{
+		float: left;
+	}
+
+	.l-region--header{
+		float: right;
+		#nav{
+			li{
+				width: auto;
+				display: inline-block;
+			}
+		}
+		ul.responsive-navigation {
+			margin: 0;
+			li{
+				display: inline-block;
+				height: 100%;
+				font-size: 1.6em;
+				padding: 43px 14px;
+				text-align: center;
+				&.active-trail{
+					background-color: rgba(0,0,0,0.2);
+					border-top: 3px solid $accent-color;
+				}
+				a{
+					color: $border-color;
+				}
+			}
+		}
+	}
+
+}
+
+.l-main{
+	@include add-grid(12);
+	max-width: 1024px;
+	margin: -455px auto 0;
+	padding: 0 40px;
+	background-color: #FFF;
+	font-size: 1.8em;
+	font-weight: 300;
+	line-height: 1.6em;
+	color: $body-color;
+	h1{
+		font-size: 2.5em;
+		margin-top: 0;
+		padding-top: 40px;
+	}
+	h2{
+		font-size: 1.83em;
+	}
+	h3{
+		font-size: 1.44em;
+	}
+	h4{
+		font-size: 1.11em;
+	}
+	h5, h6{
+		font-size: 1em;
+	}
+}
+
+.l-footer{
+	background-color: #212121;
+	color: #FFF;
+	.l-region--footer{
+		@include clearfix();
+		@include add-grid(12);
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 40px;
+		font-weight: 300;
+		ul{
+			margin: 0;
+			padding: 0;
+			font-size: 1.4em;
+			line-height: 1.6em;
+			list-style: none;
+			li{
+				border-bottom: 1px solid $border-color;
+				padding-bottom: 12px;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+				max-width: 65%;
+			}
+		}
+		.contact-info{
+			@include grid-span(4,1);
+			h3{
+				margin: 0;
+				color: $accent-color;
+				font-size: 2em;
+			}
+			p{
+				font-size: 1.4em;
+				line-height: 1.6em;
+			}
+		}
+		.nav-links-first{
+			@include grid-span(2,5);
+		}
+		.nav-links-second{
+			@include grid-span(2,7);
+		}
+		.logo{
+			@include grid-span(4,9);
+		}
+	}
+}
+
+#ui-global-footer{
+	.l-container{
+		@include add-grid(12);
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 0 40px;
+		font-family: $sans-serif;
+		font-weight: 300;
+		#ui-global-links{
+			ul{
+				padding: 0;
+				li{
+					margin: 0 10px 0 0;
+					padding-right: 10px;
+					border-right: 1px solid $border-color;
+					&:last-child{
+						border-right: none;
+					}
+
+					&:after{
+						content:"";
+						margin: 0;
+					}
+					a{
+						color: $border-color;
+						strong{
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+	}
+}

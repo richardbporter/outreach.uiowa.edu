@@ -10,9 +10,11 @@
  * @param array $variables
  */
 function outreach_maps_preprocess_page(&$variables) {
+
   // If node type is set and it is a map page.
   if (isset($variables['node']->type)) {
     if ($variables['node']->type == 'map') {
+
       // Add map page template suggestion hook.
       $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
 
@@ -23,9 +25,9 @@ function outreach_maps_preprocess_page(&$variables) {
       $path = drupal_get_path('module', 'outreach_maps');
 
       // Include the necessary scripts and styles.
-      drupal_add_js('http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '90'));
-      drupal_add_css('http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css', array('type' => 'external'));
-      drupal_add_css($path . '/css/outreach.maps.css');
+      drupal_add_js('http://maps.google.com/maps/api/js?sensor=false', array('type' => 'external', 'group' => JS_LIBRARY, 'weight' => '90'));
+
+      drupal_add_js($path.'/js/maplabel-compiled.js', array('weight' => '90'));
 
       // Adding drupal.ajax manually because it needs to run after the map scripts.
       drupal_add_js('misc/ajax.js', array('weight' => '92'));
@@ -33,81 +35,15 @@ function outreach_maps_preprocess_page(&$variables) {
       // County map.
       if ($variables['map'] == 'county') {
         // Include the county GeoJSON file.
-        module_load_include('inc', 'outreach_maps', 'inc/geo/county.geo');
-
-        // Get the county GeoJSON from the include file.
-        $county_geo_json = _outreach_maps_return_county_geo_json();
-
-        // Create Drupal.setting of county GeoJSON.
-        drupal_add_js(array('countyGeoJSON' => $county_geo_json), 'setting');
+        drupal_add_js($path . '/inc/shapefiles/counties.json', array('weight' => '91'));
 
         // Add the script to build the county map.
         drupal_add_js($path . '/js/county.jquery.js', array('weight' => '91'));
-      }
-      // House map.
-      elseif ($variables['map'] == 'house') {
-        // Include the house GeoJSON file.
-        module_load_include('inc', 'outreach_maps', 'inc/geo/house.geo');
-
-        // Get the house GeoJSON from the include file.
-        $house_geo_json = _outreach_maps_return_house_geo_json();
-
-        // Create Drupal.setting of house GeoJSON.
-        drupal_add_js(array('houseGeoJSON' => $house_geo_json), 'setting');
-
-        // Add the script to build the house map.
-        drupal_add_js($path . '/js/house.jquery.js', array('weight' => '91'));
-      }
-      // Senate map.
-      elseif ($variables['map'] == 'senate') {
-        // Include the senate GeoJSON file.
-        module_load_include('inc', 'outreach_maps', 'inc/geo/senate.geo');
-
-        // Get the senate GeoJSON from the include file.
-        $senate_geo_json = _outreach_maps_return_senate_geo_json();
-
-        // Create Drupal.setting of county GeoJSON.
-        drupal_add_js(array('senateGeoJSON' => $senate_geo_json), 'setting');
-
-        // Add the script to build the senate map.
-        drupal_add_js($path . '/js/senate.jquery.js', array('weight' => '91'));
-      }
-      // Congressional map.
-      elseif ($variables['map'] == 'congressional') {
-        // Include the congressional GeoJSON file.
-        module_load_include('inc', 'outreach_maps', 'inc/geo/congressional.geo');
-
-        // Get the congressional GeoJSON from the include file.
-        $congressional_geo_json = _outreach_maps_return_congressional_geo_json();
-
-        // Create Drupal.setting of county GeoJSON.
-        drupal_add_js(array('congressionalGeoJSON' => $congressional_geo_json), 'setting');
-
-        // Add the script to build the congressional map.
-        drupal_add_js($path . '/js/congressional.jquery.js', array('weight' => '91'));
-      }
-    }
-    elseif ($variables['node']->type == 'county') {
-      // @TODO: This is a workaround for a views no results issue.
-      if (!empty($variables['node']->field_vendors_paid)) {
-        if ($variables['node']->field_vendors_paid[LANGUAGE_NONE][0]['value'] == 0) {
-          $variables['classes_array'][] = 'no-vendors';
-        }
-      }
-      else {
-        $variables['classes_array'][] = 'no-vendors';
       }
     }
   }
 }
 
-/**
- * Implements hook_menu().
- *
- * A menu callback is required when using ajax outside of the Form API.
- *
- * @return array items
- */
 function outreach_maps_menu() {
    $items = array();
 
@@ -121,39 +57,8 @@ function outreach_maps_menu() {
     'file' => 'inc/outreach_maps.admin.inc',
   );
 
-  // House map callback.
-  $items['outreach-maps/house/%'] = array(
-    'page callback' => '_outreach_maps_load_district',
-    'page arguments' => array(1, 2),
-    'access callback' => 'user_access',
-    'access arguments' => array('access content'),
-    'type' => MENU_CALLBACK,
-    'file' => 'inc/outreach_maps.admin.inc',
-  );
-
-  // Senate map callback.
-  $items['outreach-maps/senate/%'] = array(
-    'page callback' => '_outreach_maps_load_district',
-    'page arguments' => array(1, 2),
-    'access callback' => 'user_access',
-    'access arguments' => array('access content'),
-    'type' => MENU_CALLBACK,
-    'file' => 'inc/outreach_maps.admin.inc',
-  );
-
-  // Congressional map callback.
-  $items['outreach-maps/congressional/%'] = array(
-    'page callback' => '_outreach_maps_load_district',
-    'page arguments' => array(1, 2),
-    'access callback' => 'user_access',
-    'access arguments' => array('access content'),
-    'type' => MENU_CALLBACK,
-    'file' => 'inc/outreach_maps.admin.inc',
-  );
-
   return $items;
 }
-
 /**
  * Implements hook_block_info().
  *
@@ -179,86 +84,16 @@ function outreach_maps_block_view($delta = '') {
     case 'outreach_maps_county_list':
       module_load_include('inc', 'outreach_maps', 'inc/outreach_maps.admin');
       $block['subject'] = NULL;
-      $block['content'] = _outreach_maps_county_list();
+      $block['content']['container'] = array(
+        '#attributes' => array('class' => array('container', 'l-container')),
+        '#type' => 'container',
+      );
+      $block['content']['container']['text'] = array(
+        '#markup' => '<h2>Statewide Impact</h2><p>The University of Iowa impacts the lives of Iowans from border to border and river to river. We invite you to learn more about our connections in your community. View a map of Iowa by county, house, senate or congressional district. Or select a county from the dropdown list below.',
+      );
+      $block['content']['container']['drop-down'] = _outreach_maps_county_list();
       break;
   }
 
   return $block;
-}
-
-/**
- * Implements hook_field_formatter_info().
- *
- * @return array field formatter
- */
-function outreach_maps_field_formatter_info() {
-  return array(
-    'outreach_maps_number_formatter' => array(
-      'label' => t('Number'),
-      'description' => t('Formats a number.'),
-      'field types' => array('text, integer, float'),
-    ),
-    'outreach_maps_money_formatter' => array(
-      'label' => t('Money'),
-      'description' => t('Formats a monetary value.'),
-      'field types' => array('text', 'integer', 'float'),
-    ),
-    'outreach_maps_county_link_formatter' => array(
-      'label' => t('Link to county'),
-      'description' => t('Formats county name as a link to a county node.'),
-      'field types' => array('text'),
-    ),
-  );
-}
-
-/**
- * Implements hook_field_formatter_view().
- *
- * Returns a formatted number.
- *
- * @param  $entity_type
- * @param  $entity
- * @param  $field
- * @param  $instance
- * @param  $langcode
- * @param  $items
- * @param  $display
- * @return
- */
-function outreach_maps_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
-  $element = array();
-  $settings = $display['settings'];
-
-  switch ($display['type']) {
-    case 'outreach_maps_number_formatter':
-      foreach ($items as $delta => $item) {
-        $element[$delta] = array('#markup' => number_format($item['value']));
-      }
-      break;
-
-    case 'outreach_maps_money_formatter':
-      foreach ($items as $delta => $item) {
-        $element[$delta] = array('#markup' => '$' . number_format($item['value']));
-      }
-      break;
-
-    case 'outreach_maps_county_link_formatter':
-      module_load_include('inc', 'outreach_maps', 'inc/outreach_maps.admin');
-      foreach ($items as $delta => $item) {
-        $element[$delta] = array(
-          '#type' => 'link',
-          '#title' => _outreach_maps_county_title($item['target_id']),
-          '#href' => 'node/' . $item['target_id'],
-        );
-      }
-      break;
-
-    default:
-      foreach ($items as $delta => $item) {
-        $element[$delta] = array('#markup' => $item['value']);
-      }
-      break;
-  }
-
-  return $element;
 }

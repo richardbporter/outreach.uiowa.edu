@@ -1,0 +1,41 @@
+.page-events{
+  .view-display-id-page{
+    .view-content{
+			@include display-flex(flex);
+			@include flex-flow(row wrap);
+			@include justify-content(space-around);
+      background-color: transparent;
+		}
+		.views-row{
+			width: 30%;
+      height: 169px;
+			margin-right: 2%;
+			margin-bottom: 30px;
+      position: relative;
+      border: 1px solid $border-color;
+      background-color: transparent;
+      @include border-radius(5px);
+      .views-field-field-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.1;
+        z-index: 0;
+      }
+      .views-field-title{
+        font-weight: 600;
+        padding: 10px 10px 0px;
+        position: relative;
+        z-index: 2;
+        line-height: 1.3em;
+        margin-bottom: 10px;
+      }
+      .views-field-field-event-date,
+      .views-field-field-event-location{
+        padding: 0 10px;
+        font-size: 0.9em;
+        line-height: 1.3em;
+      }
+    }
+  }
+}

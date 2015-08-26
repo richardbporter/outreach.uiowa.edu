@@ -1,0 +1,159 @@
+@import "compass/css3";
+
+.node-type-featured-program{
+	.panel-col-top{
+		padding-bottom: 20px;
+		border-bottom: 1px solid $border-color;
+	}
+
+	.center-wrapper{
+		@include clearfix();
+		.panel-col-first{
+			@include grid-span(9,1);
+			padding-right: 40px;
+		}
+		.panel-col-last{
+			@include sidebar();
+			padding-left: 0;
+			width: 196px;
+		}
+	}
+
+	.panel-col-last{
+		.panel-pane{
+			border-top: 3px solid $accent-color;
+			margin-top: 20px;
+		}
+	}
+
+	.pane-hometown-hawkeyes-featured-program-hometown-hawkeye-pane{
+		.field-collection-container{
+			border-bottom: 0;
+		}
+		.field-collection-item-field-county-hometown-hawkeye{
+			padding: 0;
+			margin: 0;
+			font-weight: 400;
+			font-size: 0.8em;
+			line-height: 1.3em;
+		}
+	}
+
+	.pane-node-field-featured-program-people,
+	.pane-news-items-featured-program-news-pane,
+	.pane-events-featured-program-events-pane{
+		border-top: 1px solid $border-color;
+		padding-top: 40px;
+		h2{
+			margin-top: 0;
+		}
+	}
+
+	.pane-node-field-featuerd-program-logo{
+		float: right;
+		padding: 20px 0 20px 20px;
+	}
+
+	.pane-node-field-featured-program-people{
+		.field-collection-container{
+			border-bottom: none;
+		}
+		.field--name-field-featured-program-people{
+			.field__items{
+				@include display-flex(flex);
+				@include flex-flow(row wrap);
+				@include justify-content(space-around);
+			}
+
+		}
+		.field__item{
+			width: 45%;
+			@include flex-grow(1);
+			margin-bottom: 25px;
+		}
+		.field-collection-item-field-featured-program-people{
+			font-size: 0.9em;
+			line-height: 1.4em;
+			.field__item{
+				margin-bottom: 0px;
+			}
+			.field--name-field-fp-people-photo{
+				float: left;
+				padding-right: 10px;
+			}
+			.field--name-field-fp-people-name{
+				font-weight: 600;
+				font-size: 1.2em;
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.pane-staff-about-us-staff-pane{
+		.view-content{
+			@include display-flex(flex);
+			@include flex-flow(row wrap);
+			@include justify-content(space-around);
+		}
+
+		.views-row{
+			width: 45%;
+			@include flex-grow(1);
+			margin-bottom: 25px;
+			font-size: 0.9em;
+			line-height: 1.4em;
+			.views-field-field-fp-people-photo{
+				float: left;
+				padding-right: 10px;
+			}
+			.views-field-field-staff-first-name{
+				font-weight: 600;
+				font-size: 1.2em;
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.pane-news-items-featured-program-news-pane{
+		.view-content{
+			@include display-flex(flex);
+			@include flex-flow(row wrap);
+			@include justify-content(space-around);
+		}
+		.views-row{
+			width: 30%;
+			margin-right: 2%;
+			@include flex-grow(1);
+			margin-bottom: 30px;
+			.views-field-created{
+				font-size: 0.85em;
+				text-transform: uppercase;
+				font-weight: 400;
+			}
+
+			.views-field-body{
+				p{
+					margin-top: 0;
+					font-size: 0.85em;
+					line-height: 1.5em;
+				}
+			}
+		}
+	}
+	.pane-events-featured-program-events-pane{
+		.view-content{
+			@include display-flex(flex);
+			@include flex-flow(row wrap);
+			@include justify-content(space-around);
+		}
+		.views-row{
+			width: 30%;
+			margin-right: 2%;
+			@include flex-grow(1);
+			margin-bottom: 30px;
+			.views-field-title{
+				font-weight: 400;
+			}
+		}
+	}
+}

@@ -7,6 +7,7 @@
 (function($) {
   // Initialize the county map.
   Drupal.outreachMapsCounty = function() {
+
     // Add an extra function to the Drupal ajax object which allows us to trigger
     // an ajax response without an element that triggers it.
     Drupal.ajax.prototype.specifiedResponse = function() {
@@ -28,146 +29,307 @@
       return false;
     };
 
-    // Helper function to return the center-scroll offset on click and touch.
-    // @TODO: Refactor this because it seems horribly inefficient.
-    Drupal.outreachMapsCounty.getOffset = function() {
-      var offset = 0, height = $(window).height(), z = map.zoom();
-      if (height > 900) {
-        if (z === 8) {
-          offset = 0.9;
-        }
-        if (z === 9) {
-          offset = 0.3;
-        }
-        else {
-          offset = 0.1;
-        }
-      }
-      else if (height >= 500 && height <= 900) {
-        if (z === 8) {
-          offset = 0.8;
-        }
-        else if (z === 9) {
-          offset = 0.4;
-        }
-        else {
-          offset = 0.2;
-        }
-      }
-      else if (height >= 380 && height <= 499)  {
-        if (z === 8) {
-          offset = 0.2;
-        }
-        else {
-          offset = 0.1;
-        }
-      }
-      else if (height <= 379) {
-        if (z === 8) {
-          offset = 0.4;
-        }
-        else if (z === 9) {
-          offset = 0.2;
-        }
-        else {
-          offset = 0.1;
-        }
-      }
 
-      return offset;
-    };
+    var infowindow = null;
+    map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: {lat: 42, lng: -93.5},
+      disableDefaultUI: true
+    });
 
-    // Create a base layer object.
-    var baseLayer = mapbox.layer().id('uiowa-its.map-ljseri7h');
 
-    // Create array of event handlers.
-    var eventHandlers = [
-      easey_handlers.DragHandler(),
-      easey_handlers.DoubleClickHandler(),
-      easey_handlers.TouchHandler()
+    var styles = [
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#333333"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural.terrain",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dedede"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#e9e9e9"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    }
     ];
+    map.setOptions({styles:styles});
+    map.data.addGeoJson(countiesJSON);
+    map.data.setStyle({
+      fillColor: '#ffd400',
+      fillOpacity: 0.7,
+      strokeWeight: 0.5
+    });
+    map.data.forEach(function(feature){
+        var points = feature.getGeometry().getArray();
+        var ring = points[0].getArray();
+        var bounds = new google.maps.LatLngBounds();
+        for (j = 0; j < ring.length; j++) {
+          bounds.extend(ring[j]);
+        }
+        var mapLabel = new MapLabel({
+            text: feature.getProperty('name'),
+            position: bounds.getCenter(),
+            map: map,
+            fontSize: 12,
+            align: 'center'
+        });
 
-   // Create the map object.
-    var map = mapbox.map('map', baseLayer, null, eventHandlers);
-
-    // Add the UI components.
-    map.ui.zoomer.add();
-
-    // Set zoom range.
-    map.setZoomRange(8, 10);
-
-    // Zoom to top-left of Iowa if viewport is small.
-    if ($(window).height() <= 500) {
-      map.centerzoom({ lat: 43.3835795, lon: -96.207201 }, 8);
-    }
-    else {
-      map.centerzoom({ lat: 41.9742807, lon: -93.5697204 }, 8);
-    }
-
-    // Add the county layer.
-    map.addLayer(mapbox.layer().id('uiowa-its.iowa-counties'));
-
-    // Initalize the features variable and parse the county GeoJSON object into it.
-    var features = $.parseJSON(Drupal.settings.countyGeoJSON);
-
-    // Create the county markers layer with custom factory function.
-    var countyMarkers = mapbox.markers.layer().features(features).factory(function(f) {
-      // Define a new factory function. This takes a GeoJSON object
-      // as its input and returns an element that represents the point.
-      var countyLink = document.createElement('a');
-      $(countyLink).addClass('county-marker use-ajax');
-      $(countyLink).addClass(f.properties.text.toLowerCase().replace(' ', '-'));
-      $(countyLink).text(f.properties.text);
-      $(countyLink).attr('href', Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", ""));
-
-      // Add function that centers marker on click.
-      MM.addEvent(countyLink, 'click', function(e) {
-        map.ease.location({
-          lat: f.geometry.coordinates[1] + Drupal.outreachMapsCounty.getOffset(), // Adjust for smaller viewport.
-          lon: f.geometry.coordinates[0]
-        }).zoom(map.zoom()).optimal();
-      });
-
-      // Add function that calls ajax and centers marker on touch.
-      MM.addEvent(countyLink, 'touchend', function(e) {
-        // Define a custom ajax action not associated with an element.
-        var custom_settings = {};
-        custom_settings.url = Drupal.settings.basePath + 'outreach-maps/county/' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "");
-        custom_settings.event = 'touchend';
-        custom_settings.keypress = false;
-        custom_settings.prevent = false;
-        Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings);
-
-        // Trigger the response.
-        Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
-
-        // Center map.
-        map.ease.location({
-          lat: f.geometry.coordinates[1] + Drupal.outreachMapsCounty.getOffset(), // Adjust for smaller viewport.
-          lon: f.geometry.coordinates[0]
-        }).zoom(map.zoom()).optimal();
-      });
-
-      return countyLink;
     });
 
-     // Create county interaction.
-    var countyInteraction = mapbox.markers.interaction(countyMarkers);
+    map.data.addListener('click', function(event) {
+      var countyTitle = event.feature.G.name.toLowerCase().replace(' ', '-').replace("'", "");
+      if(infowindow){
+        infowindow.close();
+      }
+      var custom_settings = {};
+      custom_settings.url = Drupal.settings.basePath + 'outreach-maps/county/' + countyTitle;
+      custom_settings.event = 'click';
+      custom_settings.keypress = false;
+      custom_settings.prevent = false;
 
-    // Turn off hover tooltips.
-    countyInteraction.showOnHover(false);
+      console.log(Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings));
 
-    // Add the couny markers layer to the map.
-    map.addLayer(countyMarkers);
+      // Trigger the response.
+      console.log(Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse());
 
-     // Set a custom formatter for tooltips.
-    // Provide a function that returns html to be used in tooltip.
-    countyInteraction.formatter(function(f) {
-      var o = '<h3 class="pane-title">' + f.properties.text + ' County</h3>';
-      o += '<div id="' + f.properties.text.toLowerCase().replace(' ', '-').replace("'", "") + '-content"></div>';
-      return o;
+      console.log(Drupal.ajax['outreach_maps_county_ajax_action']);
+
+      var infoWindowText = "<h3>"+event.feature.G.name+" County Impact</h3> \
+      <hr><div id=\""+countyTitle+"-data\"></div> ";
+
+      infowindow = new google.maps.InfoWindow({
+        content:infoWindowText,
+        position:event.latLng
+      });
+      infowindow.open(map);
     });
-  };
+
+    map.data.addListener('mouseover', function(event){
+      map.data.overrideStyle(event.feature, {fillColor: '#222222'});
+    });
+    map.data.addListener('mouseout', function(event){
+      map.data.revertStyle();
+    });
+};
 
   // Attach outreachMapsCounty behavior.
   Drupal.behaviors.outreachMapsCounty = {
@@ -177,5 +339,4 @@
       });
     }
   };
-
 })(jQuery);
