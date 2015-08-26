@@ -690,15 +690,15 @@ a {
     background-color: #333;
     color: #FFF;
     text-align: center;
-    padding: 50px 40px;
-    border: 2px double #333; }
-    /* line 138, ../sass/components/custom-pages/_home.scss */
+    padding: 50px 40px; }
+    /* line 137, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-outreach-maps-outreach-maps-county-list .l-container h2 {
       color: #FFF;
       margin-top: 0; }
-    /* line 142, ../sass/components/custom-pages/_home.scss */
+    /* line 141, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-outreach-maps-outreach-maps-county-list .l-container .form-item {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      color: #000; }
 /* line 148, ../sass/components/custom-pages/_home.scss */
 .front .l-main .pane-stats-home-page-stats-pane {
   border: 5px double #DDD;
@@ -760,7 +760,30 @@ a {
     margin-top: 0;
     font-size: 0.85em;
     line-height: 1.5em; }
-/* line 214, ../sass/components/custom-pages/_home.scss */
+  /* line 212, ../sass/components/custom-pages/_home.scss */
+  .front .l-main .pane-news-items-home-page-latest-news .more-link a {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #999;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #000; }
+    /* line 9, ../sass/abstractions/_button.scss */
+    .front .l-main .pane-news-items-home-page-latest-news .more-link a:hover {
+      background-color: #222;
+      color: #EEE;
+      text-decoration: none; }
+      /* line 13, ../sass/abstractions/_button.scss */
+      .front .l-main .pane-news-items-home-page-latest-news .more-link a:hover:after {
+        color: #FFE100; }
+    /* line 17, ../sass/abstractions/_button.scss */
+    .front .l-main .pane-news-items-home-page-latest-news .more-link a:after {
+      content: "\25b6";
+      padding-left: 4px; }
+/* line 219, ../sass/components/custom-pages/_home.scss */
 .front .l-main .pane-events-home-page-events-pane .view-content {
   display: -webkit-flex;
   display: flex;
@@ -768,24 +791,50 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 219, ../sass/components/custom-pages/_home.scss */
+/* line 224, ../sass/components/custom-pages/_home.scss */
 .front .l-main .pane-events-home-page-events-pane .views-row {
   margin-right: 2%;
   width: 23%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 224, ../sass/components/custom-pages/_home.scss */
+  /* line 229, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-events-home-page-events-pane .views-row.views-row-last {
     margin-right: 0; }
-  /* line 227, ../sass/components/custom-pages/_home.scss */
+  /* line 232, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-events-home-page-events-pane .views-row .views-field-field-event-date {
     font-size: 0.8em;
     text-transform: uppercase;
     font-weight: 400; }
-  /* line 232, ../sass/components/custom-pages/_home.scss */
+  /* line 237, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-events-home-page-events-pane .views-row .views-field-title {
     font-weight: 400; }
+/* line 241, ../sass/components/custom-pages/_home.scss */
+.front .l-main .pane-events-home-page-events-pane .more-link {
+  margin-bottom: 20px; }
+  /* line 243, ../sass/components/custom-pages/_home.scss */
+  .front .l-main .pane-events-home-page-events-pane .more-link a {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #999;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #000; }
+    /* line 9, ../sass/abstractions/_button.scss */
+    .front .l-main .pane-events-home-page-events-pane .more-link a:hover {
+      background-color: #222;
+      color: #EEE;
+      text-decoration: none; }
+      /* line 13, ../sass/abstractions/_button.scss */
+      .front .l-main .pane-events-home-page-events-pane .more-link a:hover:after {
+        color: #FFE100; }
+    /* line 17, ../sass/abstractions/_button.scss */
+    .front .l-main .pane-events-home-page-events-pane .more-link a:after {
+      content: "\25b6";
+      padding-left: 4px; }
 
 /* line 3, ../sass/components/events/_events_page.scss */
 .page-events .view-display-id-page .view-content {

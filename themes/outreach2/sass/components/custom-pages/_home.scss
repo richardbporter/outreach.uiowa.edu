@@ -140,6 +140,7 @@
 				}
 				.form-item{
 					margin-bottom: 0;
+					color: #000;
 				}
 			}
 		}
@@ -207,6 +208,11 @@
 					line-height: 1.5em;
 				}
 			}
+			.more-link{
+				a{
+					@include button-style();
+				}
+			}
 		}
 
 		.pane-events-home-page-events-pane{
@@ -230,6 +236,12 @@
 				}
 				.views-field-title{
 					font-weight: 400;
+				}
+			}
+			.more-link{
+				margin-bottom: 20px;
+				a{
+					@include button-style();
 				}
 			}
 		}
