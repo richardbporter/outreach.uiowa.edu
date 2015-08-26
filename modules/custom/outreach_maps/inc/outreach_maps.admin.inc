@@ -99,6 +99,7 @@ function _outreach_maps_county_list() {
   // Set some conditions.
   $county_query->entityCondition('entity_type', 'node')
   ->entityCondition('bundle', 'county')
+  ->propertyOrderBy('title', 'ASC')
   ->propertyCondition('status', 1);
 
   // Execute the query.
