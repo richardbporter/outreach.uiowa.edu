@@ -58,7 +58,7 @@ function outreach_front_page_features_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Link */
+  /* Field: Content: External Link */
   $handler->display->display_options['fields']['field_external_link']['id'] = 'field_external_link';
   $handler->display->display_options['fields']['field_external_link']['table'] = 'field_data_field_external_link';
   $handler->display->display_options['fields']['field_external_link']['field'] = 'field_external_link';

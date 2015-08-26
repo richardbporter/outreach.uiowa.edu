@@ -94,7 +94,7 @@ function outreach_front_page_features_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'value',
+      'title' => 'required',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => 'Info',
