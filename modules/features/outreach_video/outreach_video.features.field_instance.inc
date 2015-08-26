@@ -149,7 +149,7 @@ function outreach_video_field_default_field_instances() {
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
-          'media_internet' => 'media_internet',
+          'media_internet' => 0,
           'upload' => 0,
           'youtube' => 'youtube',
         ),

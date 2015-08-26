@@ -156,4 +156,34 @@
 			}
 		}
 	}
+
+	.pane-videos-featured-program-video-pane{
+		background-color: #F9F9F9;
+		padding: 20px 0;
+		.views-field-field-video{
+			margin: 0 20px;
+			.media-youtube-player{
+				width: 620px;
+				height: 330px;
+			}
+		}
+
+		.views-field-body{
+			margin: 20px;
+			padding: 0 20px;
+			background-color: #FFF;
+			border: 1px solid $border-color;
+			h4{
+				font-size: 0.9em;
+				text-transform: uppercase;
+			}
+			h3{
+				font-size: 1.3em;
+			}
+			p{
+				font-size: 0.9em;
+				line-height: 1.3em;
+			}
+		}
+	}
 }

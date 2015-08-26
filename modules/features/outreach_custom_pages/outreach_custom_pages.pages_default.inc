@@ -193,6 +193,25 @@ function outreach_custom_pages_default_page_manager_pages() {
     $pane->uuid = 'ac6a851f-73eb-4a1f-a39e-9e25fa958c65';
     $display->content['new-ac6a851f-73eb-4a1f-a39e-9e25fa958c65'] = $pane;
     $display->panels['middle'][6] = 'new-ac6a851f-73eb-4a1f-a39e-9e25fa958c65';
+    $pane = new stdClass();
+    $pane->pid = 'new-4777ebd2-8ba2-4b73-90b9-1a3b0e600900';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'videos-home_page_video_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 7;
+    $pane->locks = array();
+    $pane->uuid = '4777ebd2-8ba2-4b73-90b9-1a3b0e600900';
+    $display->content['new-4777ebd2-8ba2-4b73-90b9-1a3b0e600900'] = $pane;
+    $display->panels['middle'][7] = 'new-4777ebd2-8ba2-4b73-90b9-1a3b0e600900';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

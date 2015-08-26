@@ -216,6 +216,7 @@
 		}
 
 		.pane-events-home-page-events-pane{
+			@include background-image(linear-gradient(#F9F9F9, #FFFFFF 50%));
 			.view-content{
 				@include display-flex(flex);
 				@include flex-flow(row wrap);
@@ -242,6 +243,37 @@
 				margin-bottom: 20px;
 				a{
 					@include button-style();
+				}
+			}
+		}
+
+		.pane-videos-home-page-video-pane{
+			background-color: #F9F9F9;
+			padding: 50px 0;
+			.views-field-field-video{
+				float: left;
+				margin-left: 20px;
+				.media-youtube-player{
+					width: 540px;
+					height: 300px;
+				}
+			}
+
+			.views-field-body{
+				margin: 0 20px 0 580px;
+				padding: 0 20px;
+				background-color: #FFF;
+				border: 1px solid $border-color;
+				h4{
+					font-size: 0.9em;
+					text-transform: uppercase;
+				}
+				h3{
+					font-size: 1.3em;
+				}
+				p{
+					font-size: 0.9em;
+					line-height: 1.3em;
 				}
 			}
 		}
