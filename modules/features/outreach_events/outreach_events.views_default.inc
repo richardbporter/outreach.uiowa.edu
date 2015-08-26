@@ -22,7 +22,7 @@ function outreach_events_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Upcoming Events';
+  $handler->display->display_options['title'] = 'Outreach & Engagement Events';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -71,7 +71,7 @@ function outreach_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'outreach_site',
+    'format_type' => 'event_dates',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
