@@ -207,6 +207,55 @@ function outreach_counties_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-county-field_addthis'
+  $field_instances['node-county-field_addthis'] = array(
+    'bundle' => 'county',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'addthis',
+        'settings' => array(),
+        'type' => 'addthis_disabled',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_addthis',
+    'label' => 'AddThis',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'addthis',
+      'settings' => array(),
+      'type' => 'addthis_button_widget',
+      'weight' => 35,
+    ),
+  );
+
   // Exported field_instance: 'node-county-field_county_alumni'
   $field_instances['node-county-field_county_alumni'] = array(
     'bundle' => 'county',
@@ -2308,6 +2357,7 @@ function outreach_counties_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('AddThis');
   t('Alumni');
   t('Business');
   t('CLAS');

@@ -24,8 +24,8 @@ function outreach_counties_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_county_alumni',
-      1 => 'field_county_image',
-      2 => 'field_county_i_club',
+      1 => 'field_county_i_club',
+      2 => 'field_county_image',
       3 => 'title',
     ),
     'format_type' => 'tab',

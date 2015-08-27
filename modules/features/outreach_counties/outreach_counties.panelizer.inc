@@ -196,6 +196,42 @@ function outreach_counties_panelizer_defaults() {
     $display->content['new-af050371-0aa6-41f1-8613-fe59f93ff4d5'] = $pane;
     $display->panels['left'][5] = 'new-af050371-0aa6-41f1-8613-fe59f93ff4d5';
     $pane = new stdClass();
+    $pane->pid = 'new-6a8e0cb3-aff4-4ef1-86bc-5aa9e2f5f058';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_addthis';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'addthis_basic_toolbox',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'extra_css' => '',
+        'button_size' => 'small',
+        'share_services' => 'facebook,twitter,email,compact',
+        'buttons_size' => 'addthis_32x32_style',
+        'counter_orientation' => 'horizontal',
+      ),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6a8e0cb3-aff4-4ef1-86bc-5aa9e2f5f058';
+    $display->content['new-6a8e0cb3-aff4-4ef1-86bc-5aa9e2f5f058'] = $pane;
+    $display->panels['right'][0] = 'new-6a8e0cb3-aff4-4ef1-86bc-5aa9e2f5f058';
+    $pane = new stdClass();
     $pane->pid = 'new-83f7a009-01cc-4f61-9e64-fc7e56ef2b92';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
@@ -226,37 +262,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '83f7a009-01cc-4f61-9e64-fc7e56ef2b92';
     $display->content['new-83f7a009-01cc-4f61-9e64-fc7e56ef2b92'] = $pane;
-    $display->panels['right'][0] = 'new-83f7a009-01cc-4f61-9e64-fc7e56ef2b92';
-    $pane = new stdClass();
-    $pane->pid = 'new-7780f66b-46b1-4876-b2d0-de52994a1a65';
-    $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '<p><a href="http://hawkeyecaucus.com/#hawkeyes">View All</a></p>
-',
-      'format' => 'filtered_html',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '7780f66b-46b1-4876-b2d0-de52994a1a65';
-    $display->content['new-7780f66b-46b1-4876-b2d0-de52994a1a65'] = $pane;
-    $display->panels['right'][1] = 'new-7780f66b-46b1-4876-b2d0-de52994a1a65';
+    $display->panels['right'][1] = 'new-83f7a009-01cc-4f61-9e64-fc7e56ef2b92';
     $pane = new stdClass();
     $pane->pid = 'new-3ef93448-b8fd-4330-a998-4f8f5c5de877';
     $pane->panel = 'top';
@@ -284,6 +294,38 @@ function outreach_counties_panelizer_defaults() {
     $pane->uuid = '3ef93448-b8fd-4330-a998-4f8f5c5de877';
     $display->content['new-3ef93448-b8fd-4330-a998-4f8f5c5de877'] = $pane;
     $display->panels['top'][0] = 'new-3ef93448-b8fd-4330-a998-4f8f5c5de877';
+    $pane = new stdClass();
+    $pane->pid = 'new-101e86f2-e2e2-4e3c-875f-746f40a25bee';
+    $pane->panel = 'top';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_county_image';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'file_rendered',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'file_view_mode' => 'default',
+      ),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '101e86f2-e2e2-4e3c-875f-746f40a25bee';
+    $display->content['new-101e86f2-e2e2-4e3c-875f-746f40a25bee'] = $pane;
+    $display->panels['top'][1] = 'new-101e86f2-e2e2-4e3c-875f-746f40a25bee';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
