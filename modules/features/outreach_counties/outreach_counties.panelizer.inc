@@ -119,6 +119,29 @@ function outreach_counties_panelizer_defaults() {
     $display->content['new-8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6'] = $pane;
     $display->panels['left'][2] = 'new-8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6';
     $pane = new stdClass();
+    $pane->pid = 'new-6df8da01-40a8-4f7d-b2c7-705017bb2081';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'county_data-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'nid' => '%node:nid',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '6df8da01-40a8-4f7d-b2c7-705017bb2081';
+    $display->content['new-6df8da01-40a8-4f7d-b2c7-705017bb2081'] = $pane;
+    $display->panels['left'][3] = 'new-6df8da01-40a8-4f7d-b2c7-705017bb2081';
+    $pane = new stdClass();
     $pane->pid = 'new-c14fedad-052c-4066-87f2-832d9e46b50e';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
@@ -136,11 +159,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = 'c14fedad-052c-4066-87f2-832d9e46b50e';
     $display->content['new-c14fedad-052c-4066-87f2-832d9e46b50e'] = $pane;
-    $display->panels['left'][3] = 'new-c14fedad-052c-4066-87f2-832d9e46b50e';
+    $display->panels['left'][4] = 'new-c14fedad-052c-4066-87f2-832d9e46b50e';
     $pane = new stdClass();
     $pane->pid = 'new-73b31948-9d85-4157-a67f-5e6cafc217b0';
     $pane->panel = 'left';
@@ -162,11 +185,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = '73b31948-9d85-4157-a67f-5e6cafc217b0';
     $display->content['new-73b31948-9d85-4157-a67f-5e6cafc217b0'] = $pane;
-    $display->panels['left'][4] = 'new-73b31948-9d85-4157-a67f-5e6cafc217b0';
+    $display->panels['left'][5] = 'new-73b31948-9d85-4157-a67f-5e6cafc217b0';
     $pane = new stdClass();
     $pane->pid = 'new-af050371-0aa6-41f1-8613-fe59f93ff4d5';
     $pane->panel = 'left';
@@ -190,11 +213,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
     $pane->uuid = 'af050371-0aa6-41f1-8613-fe59f93ff4d5';
     $display->content['new-af050371-0aa6-41f1-8613-fe59f93ff4d5'] = $pane;
-    $display->panels['left'][5] = 'new-af050371-0aa6-41f1-8613-fe59f93ff4d5';
+    $display->panels['left'][6] = 'new-af050371-0aa6-41f1-8613-fe59f93ff4d5';
     $pane = new stdClass();
     $pane->pid = 'new-6a8e0cb3-aff4-4ef1-86bc-5aa9e2f5f058';
     $pane->panel = 'right';

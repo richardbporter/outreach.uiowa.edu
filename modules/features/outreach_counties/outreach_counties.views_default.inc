@@ -360,6 +360,69 @@ function outreach_counties_views_default_views() {
       'label' => 'Content: Nid',
     ),
   );
+
+  /* Display: Professional Students */
+  $handler = $view->new_display('panel_pane', 'Professional Students', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Professional Students';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Management */
+  $handler->display->display_options['fields']['field_county_prof_management']['id'] = 'field_county_prof_management';
+  $handler->display->display_options['fields']['field_county_prof_management']['table'] = 'field_data_field_county_prof_management';
+  $handler->display->display_options['fields']['field_county_prof_management']['field'] = 'field_county_prof_management';
+  $handler->display->display_options['fields']['field_county_prof_management']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 0,
+  );
+  /* Field: Content: Dentistry */
+  $handler->display->display_options['fields']['field_county_prof_dentistry']['id'] = 'field_county_prof_dentistry';
+  $handler->display->display_options['fields']['field_county_prof_dentistry']['table'] = 'field_data_field_county_prof_dentistry';
+  $handler->display->display_options['fields']['field_county_prof_dentistry']['field'] = 'field_county_prof_dentistry';
+  $handler->display->display_options['fields']['field_county_prof_dentistry']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 0,
+  );
+  /* Field: Content: Law */
+  $handler->display->display_options['fields']['field_county_prof_law']['id'] = 'field_county_prof_law';
+  $handler->display->display_options['fields']['field_county_prof_law']['table'] = 'field_data_field_county_prof_law';
+  $handler->display->display_options['fields']['field_county_prof_law']['field'] = 'field_county_prof_law';
+  $handler->display->display_options['fields']['field_county_prof_law']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 0,
+  );
+  /* Field: Content: Medicine */
+  $handler->display->display_options['fields']['field_county_prof_medicine']['id'] = 'field_county_prof_medicine';
+  $handler->display->display_options['fields']['field_county_prof_medicine']['table'] = 'field_data_field_county_prof_medicine';
+  $handler->display->display_options['fields']['field_county_prof_medicine']['field'] = 'field_county_prof_medicine';
+  $handler->display->display_options['fields']['field_county_prof_medicine']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 0,
+  );
+  /* Field: Content: Pharmacy */
+  $handler->display->display_options['fields']['field_county_prof_pharmacy']['id'] = 'field_county_prof_pharmacy';
+  $handler->display->display_options['fields']['field_county_prof_pharmacy']['table'] = 'field_data_field_county_prof_pharmacy';
+  $handler->display->display_options['fields']['field_county_prof_pharmacy']['field'] = 'field_county_prof_pharmacy';
+  $handler->display->display_options['fields']['field_county_prof_pharmacy']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 0,
+  );
+  /* Field: Global: Math expression */
+  $handler->display->display_options['fields']['expression']['id'] = 'expression';
+  $handler->display->display_options['fields']['expression']['table'] = 'views';
+  $handler->display->display_options['fields']['expression']['field'] = 'expression';
+  $handler->display->display_options['fields']['expression']['label'] = 'Professional Total';
+  $handler->display->display_options['fields']['expression']['precision'] = '0';
+  $handler->display->display_options['fields']['expression']['expression'] = '[field_county_prof_management] + [field_county_prof_dentistry] + [field_county_prof_law] + [field_county_prof_medicine] +[field_county_prof_pharmacy]';
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'user',
+      'context' => 'entity:file.field_file_image_alt_text',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Nid',
+    ),
+  );
   $export['county_data'] = $view;
 
   $view = new view();
