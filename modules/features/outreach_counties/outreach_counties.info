@@ -58,7 +58,6 @@ features[field_instance][] = node-county-field_county_medicine
 features[field_instance][] = node-county-field_county_nurses
 features[field_instance][] = node-county-field_county_nursing
 features[field_instance][] = node-county-field_county_outreach_visits
-features[field_instance][] = node-county-field_county_payments
 features[field_instance][] = node-county-field_county_pharmacists
 features[field_instance][] = node-county-field_county_physician_assistant
 features[field_instance][] = node-county-field_county_physicians

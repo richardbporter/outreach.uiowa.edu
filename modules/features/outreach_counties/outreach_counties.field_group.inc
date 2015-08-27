@@ -144,11 +144,11 @@ function outreach_counties_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Healthcare',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_county_uihc_visits',
+      0 => 'field_county_lab_tests',
       1 => 'field_county_outreach_visits',
-      2 => 'field_county_lab_tests',
+      2 => 'field_county_uihc_visits',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -173,7 +173,7 @@ function outreach_counties_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Hometown Hawkeyes',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_county_hometown_hawkeye',
     ),
@@ -202,9 +202,9 @@ function outreach_counties_field_group_info() {
     'label' => 'Professional Students',
     'weight' => '4',
     'children' => array(
-      0 => 'field_county_prof_management',
-      1 => 'field_county_prof_dentistry',
-      2 => 'field_county_prof_law',
+      0 => 'field_county_prof_dentistry',
+      1 => 'field_county_prof_law',
+      2 => 'field_county_prof_management',
       3 => 'field_county_prof_medicine',
       4 => 'field_county_prof_pharmacy',
     ),
@@ -271,13 +271,13 @@ function outreach_counties_field_group_info() {
     'label' => 'Professionals',
     'weight' => '1',
     'children' => array(
-      0 => 'field_county_educators',
-      1 => 'field_county_physicians',
-      2 => 'field_county_physician_assistant',
-      3 => 'field_county_dentists',
-      4 => 'field_county_nurses',
-      5 => 'field_county_pharmacists',
-      6 => 'field_county_engineers',
+      0 => 'field_county_dentists',
+      1 => 'field_county_educators',
+      2 => 'field_county_engineers',
+      3 => 'field_county_nurses',
+      4 => 'field_county_pharmacists',
+      5 => 'field_county_physician_assistant',
+      6 => 'field_county_physicians',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -376,11 +376,11 @@ function outreach_counties_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_county_business',
-      1 => 'field_county_education',
-      2 => 'field_county_clas',
-      3 => 'field_county_medicine',
-      4 => 'field_county_nursing',
-      5 => 'field_county_engineering',
+      1 => 'field_county_clas',
+      2 => 'field_county_education',
+      3 => 'field_county_engineering',
+      4 => 'field_county_medicine',
+      5 => 'field_county_nursing',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
