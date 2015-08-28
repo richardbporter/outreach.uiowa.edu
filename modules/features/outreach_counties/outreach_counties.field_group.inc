@@ -26,7 +26,8 @@ function outreach_counties_field_group_info() {
       0 => 'field_county_alumni',
       1 => 'field_county_i_club',
       2 => 'field_county_image',
-      3 => 'title',
+      3 => 'field_county_total_students',
+      4 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -55,7 +56,6 @@ function outreach_counties_field_group_info() {
     'children' => array(
       0 => 'field_county_grad_college',
       1 => 'field_county_grad_medicine',
-      2 => 'field_county_grad_public_health',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -379,10 +379,9 @@ function outreach_counties_field_group_info() {
     'children' => array(
       0 => 'field_county_business',
       1 => 'field_county_clas',
-      2 => 'field_county_education',
-      3 => 'field_county_engineering',
-      4 => 'field_county_medicine',
-      5 => 'field_county_nursing',
+      2 => 'field_county_engineering',
+      3 => 'field_county_medicine',
+      4 => 'field_county_nursing',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

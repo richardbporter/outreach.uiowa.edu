@@ -73,6 +73,32 @@ function outreach_counties_panelizer_defaults() {
     $display->content['new-98630852-f33c-405e-98f4-b5059222eb93'] = $pane;
     $display->panels['left'][0] = 'new-98630852-f33c-405e-98f4-b5059222eb93';
     $pane = new stdClass();
+    $pane->pid = 'new-083ca2f8-1333-4165-a009-f03ae7abaa78';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'UI Students from %node:title County',
+      'body' => '<p>There are&nbsp;%node:field_county_total_students students from %node:title County currently enrolled at The University of Iowa</p>
+',
+      'format' => 'filtered_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '083ca2f8-1333-4165-a009-f03ae7abaa78';
+    $display->content['new-083ca2f8-1333-4165-a009-f03ae7abaa78'] = $pane;
+    $display->panels['left'][1] = 'new-083ca2f8-1333-4165-a009-f03ae7abaa78';
+    $pane = new stdClass();
     $pane->pid = 'new-ff931d86-8116-4a8e-8b96-e6419ef92ffc';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
@@ -90,11 +116,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'ff931d86-8116-4a8e-8b96-e6419ef92ffc';
     $display->content['new-ff931d86-8116-4a8e-8b96-e6419ef92ffc'] = $pane;
-    $display->panels['left'][1] = 'new-ff931d86-8116-4a8e-8b96-e6419ef92ffc';
+    $display->panels['left'][2] = 'new-ff931d86-8116-4a8e-8b96-e6419ef92ffc';
     $pane = new stdClass();
     $pane->pid = 'new-8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6';
     $pane->panel = 'left';
@@ -113,11 +139,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6';
     $display->content['new-8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6'] = $pane;
-    $display->panels['left'][2] = 'new-8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6';
+    $display->panels['left'][3] = 'new-8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6';
     $pane = new stdClass();
     $pane->pid = 'new-acff55ee-eebf-4884-a023-6de4e480c36a';
     $pane->panel = 'left';
@@ -136,11 +162,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = 'acff55ee-eebf-4884-a023-6de4e480c36a';
     $display->content['new-acff55ee-eebf-4884-a023-6de4e480c36a'] = $pane;
-    $display->panels['left'][3] = 'new-acff55ee-eebf-4884-a023-6de4e480c36a';
+    $display->panels['left'][4] = 'new-acff55ee-eebf-4884-a023-6de4e480c36a';
     $pane = new stdClass();
     $pane->pid = 'new-c14fedad-052c-4066-87f2-832d9e46b50e';
     $pane->panel = 'left';
@@ -159,11 +185,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = 'c14fedad-052c-4066-87f2-832d9e46b50e';
     $display->content['new-c14fedad-052c-4066-87f2-832d9e46b50e'] = $pane;
-    $display->panels['left'][4] = 'new-c14fedad-052c-4066-87f2-832d9e46b50e';
+    $display->panels['left'][5] = 'new-c14fedad-052c-4066-87f2-832d9e46b50e';
     $pane = new stdClass();
     $pane->pid = 'new-73b31948-9d85-4157-a67f-5e6cafc217b0';
     $pane->panel = 'left';
@@ -174,7 +200,7 @@ function outreach_counties_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => 'How the UI Impacts Your Neighborhood',
-      'body' => '<p>%node:field_county_vendors - Vendors</p>
+      'body' => '<p>Last year, the UI supported %node:field_county_vendors local companies with purchases of $%node:field_county_payments.</p>
 ',
       'format' => 'filtered_html',
       'substitute' => 1,
@@ -185,11 +211,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
     $pane->uuid = '73b31948-9d85-4157-a67f-5e6cafc217b0';
     $display->content['new-73b31948-9d85-4157-a67f-5e6cafc217b0'] = $pane;
-    $display->panels['left'][5] = 'new-73b31948-9d85-4157-a67f-5e6cafc217b0';
+    $display->panels['left'][6] = 'new-73b31948-9d85-4157-a67f-5e6cafc217b0';
     $pane = new stdClass();
     $pane->pid = 'new-af050371-0aa6-41f1-8613-fe59f93ff4d5';
     $pane->panel = 'left';
@@ -213,11 +239,11 @@ function outreach_counties_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 7;
     $pane->locks = array();
     $pane->uuid = 'af050371-0aa6-41f1-8613-fe59f93ff4d5';
     $display->content['new-af050371-0aa6-41f1-8613-fe59f93ff4d5'] = $pane;
-    $display->panels['left'][6] = 'new-af050371-0aa6-41f1-8613-fe59f93ff4d5';
+    $display->panels['left'][7] = 'new-af050371-0aa6-41f1-8613-fe59f93ff4d5';
     $pane = new stdClass();
     $pane->pid = 'new-6a8e0cb3-aff4-4ef1-86bc-5aa9e2f5f058';
     $pane->panel = 'right';

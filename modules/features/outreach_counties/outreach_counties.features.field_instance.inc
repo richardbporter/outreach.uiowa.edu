@@ -237,7 +237,7 @@ function outreach_counties_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 31,
       ),
     ),
     'entity_type' => 'node',
@@ -373,7 +373,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 3,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -443,7 +443,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 6,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -462,7 +462,7 @@ function outreach_counties_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 17,
+      'weight' => 15,
     ),
   );
 
@@ -513,7 +513,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 6,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'node',
@@ -533,76 +533,6 @@ function outreach_counties_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-county-field_county_education'
-  $field_instances['node-county-field_county_education'] = array(
-    'bundle' => 'county',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => 0,
-          'scale' => 0,
-          'thousand_separator' => ',',
-        ),
-        'type' => 'number_integer',
-        'weight' => 4,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => 0,
-          'scale' => 0,
-          'thousand_separator' => ',',
-        ),
-        'type' => 'number_integer',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => 0,
-          'scale' => 0,
-          'thousand_separator' => ',',
-        ),
-        'type' => 'number_integer',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_county_education',
-    'label' => 'Education',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 15,
     ),
   );
 
@@ -653,7 +583,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -723,7 +653,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 5,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -742,7 +672,7 @@ function outreach_counties_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 16,
+      'weight' => 14,
     ),
   );
 
@@ -793,7 +723,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 9,
+        'weight' => 23,
       ),
     ),
     'entity_type' => 'node',
@@ -933,7 +863,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 5,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -953,76 +883,6 @@ function outreach_counties_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 20,
-    ),
-  );
-
-  // Exported field_instance: 'node-county-field_county_grad_public_health'
-  $field_instances['node-county-field_county_grad_public_health'] = array(
-    'bundle' => 'county',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => 0,
-          'scale' => 0,
-          'thousand_separator' => ',',
-        ),
-        'type' => 'number_integer',
-        'weight' => 6,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => 0,
-          'scale' => 0,
-          'thousand_separator' => ',',
-        ),
-        'type' => 'number_integer',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => 0,
-          'scale' => 0,
-          'thousand_separator' => ',',
-        ),
-        'type' => 'number_integer',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_county_grad_public_health',
-    'label' => 'Grad Public Health',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 21,
     ),
   );
 
@@ -1069,7 +929,7 @@ function outreach_counties_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 10,
+        'weight' => 26,
       ),
     ),
     'entity_type' => 'node',
@@ -1116,9 +976,10 @@ function outreach_counties_field_default_field_instances() {
       ),
       'token' => array(
         'label' => 'above',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'link_default',
+        'weight' => 29,
       ),
     ),
     'entity_type' => 'node',
@@ -1187,9 +1048,12 @@ function outreach_counties_field_default_field_instances() {
       ),
       'token' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 30,
       ),
     ),
     'entity_type' => 'node',
@@ -1294,7 +1158,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 9,
+        'weight' => 24,
       ),
     ),
     'entity_type' => 'node',
@@ -1364,7 +1228,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 7,
+        'weight' => 17,
       ),
     ),
     'entity_type' => 'node',
@@ -1383,7 +1247,7 @@ function outreach_counties_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 18,
+      'weight' => 17,
     ),
   );
 
@@ -1434,7 +1298,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 7,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'node',
@@ -1504,7 +1368,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 8,
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
@@ -1523,7 +1387,7 @@ function outreach_counties_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 19,
+      'weight' => 18,
     ),
   );
 
@@ -1574,7 +1438,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 8,
+        'weight' => 22,
       ),
     ),
     'entity_type' => 'node',
@@ -1630,9 +1494,15 @@ function outreach_counties_field_default_field_instances() {
       ),
       'token' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => ',',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 27,
       ),
     ),
     'entity_type' => 'node',
@@ -1651,7 +1521,7 @@ function outreach_counties_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 29,
+      'weight' => 28,
     ),
   );
 
@@ -1702,7 +1572,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 8,
+        'weight' => 19,
       ),
     ),
     'entity_type' => 'node',
@@ -1772,7 +1642,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 5,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -1842,7 +1712,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 4,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -1912,7 +1782,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 6,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -1982,7 +1852,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 7,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'node',
@@ -2001,7 +1871,7 @@ function outreach_counties_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 30,
+      'weight' => 31,
     ),
   );
 
@@ -2052,7 +1922,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -2122,7 +1992,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 8,
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -2141,7 +2011,7 @@ function outreach_counties_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 31,
+      'weight' => 32,
     ),
   );
 
@@ -2192,7 +2062,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 9,
+        'weight' => 25,
       ),
     ),
     'entity_type' => 'node',
@@ -2211,7 +2081,70 @@ function outreach_counties_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 32,
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-county-field_county_total_students'
+  $field_instances['node-county-field_county_total_students'] = array(
+    'bundle' => 'county',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 15,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 28,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_county_total_students',
+    'label' => 'Total Students',
+    'required' => 0,
+    'settings' => array(
+      'prefix' => '',
+      'read-only' => FALSE,
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'mathfield',
+      'settings' => array(),
+      'type' => 'mathfield_markup',
+      'weight' => 5,
     ),
   );
 
@@ -2262,7 +2195,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 7,
+        'weight' => 15,
       ),
     ),
     'entity_type' => 'node',
@@ -2332,7 +2265,7 @@ function outreach_counties_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 6,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'node',
@@ -2365,13 +2298,11 @@ function outreach_counties_field_default_field_instances() {
   t('Dentistry');
   t('Dentists');
   t('Description');
-  t('Education');
   t('Educators');
   t('Engineering');
   t('Engineers');
   t('Grad College');
   t('Grad Medicine');
-  t('Grad Public Health');
   t('Hometown Hawkeye');
   t('I-Club');
   t('Lab Tests');
@@ -2389,6 +2320,7 @@ function outreach_counties_field_default_field_instances() {
   t('Photo');
   t('Physician Assistants');
   t('Physicians');
+  t('Total Students');
   t('UIHC Visits');
   t('Vendors');
 

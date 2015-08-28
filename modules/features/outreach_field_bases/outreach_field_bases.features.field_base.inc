@@ -108,21 +108,6 @@ function outreach_field_bases_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_county_education'
-  $field_bases['field_county_education'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_county_education',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'number',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'number_integer',
-  );
-
   // Exported field_base: 'field_county_educators'
   $field_bases['field_county_educators'] = array(
     'active' => 1,
@@ -190,21 +175,6 @@ function outreach_field_bases_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_county_grad_medicine',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'number',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'number_integer',
-  );
-
-  // Exported field_base: 'field_county_grad_public_health'
-  $field_bases['field_county_grad_public_health'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_county_grad_public_health',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -533,6 +503,41 @@ function outreach_field_bases_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_county_total_students'
+  $field_bases['field_county_total_students'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_county_total_students',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'mathfield',
+    'settings' => array(
+      'decimal_separator' => '.',
+      'expression' => '[field_county_business] + [field_county_engineering] + [field_county_clas] + [field_county_medicine]+ [field_county_nursing] + [field_county_grad_college] + [field_county_grad_medicine] + [field_county_grad_public_health] + [field_county_prof_management] + [field_county_prof_dentistry] + [field_county_prof_law] + [field_county_prof_medicine] + [field_county_prof_pharmacy]',
+      'field_dependencies' => array(
+        0 => 'field_county_business',
+        1 => 'field_county_engineering',
+        2 => 'field_county_clas',
+        3 => 'field_county_medicine',
+        4 => 'field_county_nursing',
+        5 => 'field_county_grad_college',
+        6 => 'field_county_grad_medicine',
+        7 => 'field_county_grad_public_health',
+        8 => 'field_county_prof_management',
+        9 => 'field_county_prof_dentistry',
+        10 => 'field_county_prof_law',
+        11 => 'field_county_prof_medicine',
+        12 => 'field_county_prof_pharmacy',
+      ),
+      'precision' => 10,
+      'scale' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'mathfield',
   );
 
   // Exported field_base: 'field_county_uihc_visits'
