@@ -4,6 +4,20 @@
 	.panel-col-top{
 		padding-bottom: 20px;
 		border-bottom: 1px solid $border-color;
+
+		@include clearfix();
+		.pane-3{
+			@include grid-span(9,1);
+			padding-right: 40px;
+			p{
+				margin-top: 0;
+			}
+		}
+		.pane-node-field-county-image{
+			@include sidebar();
+			padding-left: 0;
+			width: 196px;
+		}
 	}
 
 	.center-wrapper{
