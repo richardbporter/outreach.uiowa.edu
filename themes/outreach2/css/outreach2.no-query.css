@@ -1501,6 +1501,11 @@ a {
         content: "\25b6";
         padding-left: 4px; }
 
+/* line 2, ../sass/components/programs/_programs_page.scss */
+.page-programs .views-label-field-program-unit {
+  float: left;
+  margin-right: 5px; }
+
 /* line 13, ../../../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p547@omega.outreach2/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
 .node-type-staff .l-main:after {
   content: "";

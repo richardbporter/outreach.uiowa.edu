@@ -18,27 +18,21 @@ function outreach_programs_feeds_importer_default() {
     'name' => 'Programs',
     'description' => '',
     'fetcher' => array(
-      'plugin_key' => 'FeedsHTTPFetcher',
+      'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
-        'auto_detect_feeds' => FALSE,
-        'use_pubsubhubbub' => FALSE,
-        'designated_hub' => '',
-        'request_timeout' => NULL,
+        'allowed_extensions' => 'txt csv tsv xml opml',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
       ),
     ),
     'parser' => array(
-      'plugin_key' => 'FeedsXPathParserXML',
+      'plugin_key' => 'FeedsCSVParser',
       'config' => array(
-        'sources' => array(),
-        'rawXML' => array(),
-        'context' => '',
-        'exp' => array(
-          'errors' => FALSE,
-          'tidy' => FALSE,
-          'debug' => array(),
-          'tidy_encoding' => 'UTF8',
-        ),
-        'allow_override' => TRUE,
+        'delimiter' => ',',
+        'no_headers' => 0,
       ),
     ),
     'processor' => array(
@@ -49,23 +43,28 @@ function outreach_programs_feeds_importer_default() {
         'authorize' => 1,
         'mappings' => array(
           0 => array(
-            'source' => 'xpathparser:0',
-            'target' => 'nid',
-            'unique' => 1,
-          ),
-          1 => array(
-            'source' => 'xpathparser:1',
+            'source' => 'Program Title',
             'target' => 'title',
             'unique' => FALSE,
           ),
+          1 => array(
+            'source' => 'Brought to you by',
+            'target' => 'field_program_unit:label',
+            'unique' => FALSE,
+          ),
           2 => array(
-            'source' => 'xpathparser:2',
+            'source' => 'Description',
             'target' => 'body',
             'unique' => FALSE,
           ),
           3 => array(
-            'source' => 'xpathparser:3',
+            'source' => 'External Link',
             'target' => 'field_external_link:url',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'STEM',
+            'target' => 'field_program_stem',
             'unique' => FALSE,
           ),
         ),

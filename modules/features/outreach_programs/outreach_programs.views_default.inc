@@ -118,7 +118,7 @@ We are working with the university community to collect and verify additional ou
   $handler->display->display_options['fields']['field_program_unit']['id'] = 'field_program_unit';
   $handler->display->display_options['fields']['field_program_unit']['table'] = 'field_data_field_program_unit';
   $handler->display->display_options['fields']['field_program_unit']['field'] = 'field_program_unit';
-  $handler->display->display_options['fields']['field_program_unit']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_program_unit']['label'] = 'Brought to you By';
   $handler->display->display_options['fields']['field_program_unit']['settings'] = array(
     'link' => 0,
   );
