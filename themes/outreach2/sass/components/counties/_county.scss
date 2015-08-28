@@ -64,11 +64,9 @@
 	}
 
 	.pane-county-data-county-undergrad-pane,
-	.pane-county-data-county-grad-students-pane{
-		width: 40%;
-		margin-right: 10%;
+	.pane-county-data-county-grad-students-pane,
+	.pane-county-data-county-prof-students-pane{
 		margin-bottom: 40px;
-		float: left;
 		.pane-title{
 			font-size: 1.3em;
 		}
@@ -83,6 +81,9 @@
 				&.views-field-expression{
 					font-weight: 600;
 				}
+			}
+			th{
+				width: 70%;
 			}
 		}
 	}

@@ -362,9 +362,66 @@ function outreach_counties_views_default_views() {
   );
 
   /* Display: Professional Students */
-  $handler = $view->new_display('panel_pane', 'Professional Students', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Professional Students', 'county_prof_students_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Professional Students';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'flipped';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_county_prof_management' => 'field_county_prof_management',
+    'field_county_prof_dentistry' => 'field_county_prof_dentistry',
+    'field_county_prof_law' => 'field_county_prof_law',
+    'field_county_prof_medicine' => 'field_county_prof_medicine',
+    'field_county_prof_pharmacy' => 'field_county_prof_pharmacy',
+    'expression' => 'expression',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_county_prof_management' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_county_prof_dentistry' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_county_prof_law' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_county_prof_medicine' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_county_prof_pharmacy' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'expression' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['flipped_table_header_first_field'] = 1;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Management */
   $handler->display->display_options['fields']['field_county_prof_management']['id'] = 'field_county_prof_management';

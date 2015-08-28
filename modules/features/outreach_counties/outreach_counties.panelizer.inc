@@ -119,10 +119,10 @@ function outreach_counties_panelizer_defaults() {
     $display->content['new-8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6'] = $pane;
     $display->panels['left'][2] = 'new-8a20cb7e-70b7-4d39-83ca-7fde5e4d5ee6';
     $pane = new stdClass();
-    $pane->pid = 'new-6df8da01-40a8-4f7d-b2c7-705017bb2081';
+    $pane->pid = 'new-acff55ee-eebf-4884-a023-6de4e480c36a';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
-    $pane->subtype = 'county_data-panel_pane_1';
+    $pane->subtype = 'county_data-county_prof_students_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -138,9 +138,9 @@ function outreach_counties_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $pane->uuid = '6df8da01-40a8-4f7d-b2c7-705017bb2081';
-    $display->content['new-6df8da01-40a8-4f7d-b2c7-705017bb2081'] = $pane;
-    $display->panels['left'][3] = 'new-6df8da01-40a8-4f7d-b2c7-705017bb2081';
+    $pane->uuid = 'acff55ee-eebf-4884-a023-6de4e480c36a';
+    $display->content['new-acff55ee-eebf-4884-a023-6de4e480c36a'] = $pane;
+    $display->panels['left'][3] = 'new-acff55ee-eebf-4884-a023-6de4e480c36a';
     $pane = new stdClass();
     $pane->pid = 'new-c14fedad-052c-4066-87f2-832d9e46b50e';
     $pane->panel = 'left';
@@ -174,7 +174,7 @@ function outreach_counties_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => 'How the UI Impacts Your Neighborhood',
-      'body' => '<p>Last year, the UI supported&nbsp;%node:field_county_vendors local companies with purchases of $%node:field_county_payments.</p>
+      'body' => '<p>%node:field_county_vendors - Vendors</p>
 ',
       'format' => 'filtered_html',
       'substitute' => 1,
