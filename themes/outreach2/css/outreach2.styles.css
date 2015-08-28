@@ -242,37 +242,38 @@ a {
       clear: none; }
       /* line 139, ../sass/components/_page.scss */
       .l-footer .l-region--footer .logo .social-icons {
-        text-align: center; }
-        /* line 141, ../sass/components/_page.scss */
+        text-align: center;
+        margin-top: 10px; }
+        /* line 142, ../sass/components/_page.scss */
         .l-footer .l-region--footer .logo .social-icons img {
           width: 32px; }
 
-/* line 150, ../sass/components/_page.scss */
+/* line 151, ../sass/components/_page.scss */
 #ui-global-footer .l-container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 40px;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 300; }
-  /* line 158, ../sass/components/_page.scss */
+  /* line 159, ../sass/components/_page.scss */
   #ui-global-footer .l-container #ui-global-links ul {
     padding: 0; }
-    /* line 160, ../sass/components/_page.scss */
+    /* line 161, ../sass/components/_page.scss */
     #ui-global-footer .l-container #ui-global-links ul li {
       margin: 0 10px 0 0;
       padding-right: 10px;
       border-right: 1px solid #DDD; }
-      /* line 164, ../sass/components/_page.scss */
+      /* line 165, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li:last-child {
         border-right: none; }
-      /* line 168, ../sass/components/_page.scss */
+      /* line 169, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li:after {
         content: "";
         margin: 0; }
-      /* line 172, ../sass/components/_page.scss */
+      /* line 173, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li a {
         color: #DDD; }
-        /* line 174, ../sass/components/_page.scss */
+        /* line 175, ../sass/components/_page.scss */
         #ui-global-footer .l-container #ui-global-links ul li a strong {
           font-weight: 300; }
 
@@ -646,7 +647,7 @@ a {
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-county-reference .views-label {
       font-weight: 600; }
 /* line 156, ../sass/components/counties/_county.scss */
-.node-type-county .pane-1 {
+.node-type-county .pane-custom {
   clear: both; }
 /* line 161, ../sass/components/counties/_county.scss */
 .node-type-county .pane-node-field-county-hometown-hawkeye .field-collection-container {

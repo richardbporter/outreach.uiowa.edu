@@ -364,7 +364,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -434,7 +434,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -474,7 +474,7 @@ function outreach_counties_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -504,7 +504,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -544,7 +544,7 @@ function outreach_counties_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -574,7 +574,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -644,7 +644,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -714,7 +714,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -784,7 +784,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -854,7 +854,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -919,7 +919,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'add' => 'Add',
@@ -975,7 +975,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -1047,7 +1047,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
           'file_view_mode' => 'default',
@@ -1149,7 +1149,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1219,7 +1219,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1289,7 +1289,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1359,7 +1359,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1429,7 +1429,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1493,7 +1493,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => ',',
@@ -1533,7 +1533,7 @@ function outreach_counties_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1563,7 +1563,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1633,7 +1633,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1673,7 +1673,7 @@ function outreach_counties_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1703,7 +1703,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1773,7 +1773,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1843,7 +1843,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1913,7 +1913,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -1983,7 +1983,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2053,7 +2053,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2117,7 +2117,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2186,7 +2186,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2256,7 +2256,7 @@ function outreach_counties_field_default_field_instances() {
         'weight' => 0,
       ),
       'token' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',

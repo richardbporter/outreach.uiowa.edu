@@ -58,7 +58,7 @@ function outreach_counties_panelizer_defaults() {
         'nid' => '%node:nid',
       ),
       'override_title' => 1,
-      'override_title_text' => 'Did You Know %node:title County Has:',
+      'override_title_text' => 'Did You Know UI alumni in %node:title County Has:',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -82,7 +82,7 @@ function outreach_counties_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => 'UI Students from %node:title County',
-      'body' => '<p>There are&nbsp;%node:field_county_total_students students from %node:title County currently enrolled at The University of Iowa</p>
+      'body' => '<p>There are&nbsp;<strong>%node:field_county_total_students</strong> students from %node:title County currently enrolled at The University of Iowa</p>
 ',
       'format' => 'filtered_html',
       'substitute' => 1,
@@ -199,7 +199,7 @@ function outreach_counties_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'How the UI Impacts Your Neighborhood',
+      'title' => 'How the UI Impacts Your Neighborhood in %node:title County',
       'body' => '<p>Last year, the UI supported %node:field_county_vendors local companies with purchases of $%node:field_county_payments.</p>
 ',
       'format' => 'filtered_html',
@@ -225,10 +225,10 @@ function outreach_counties_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'Healthcare Connections',
-      'body' => '<p>Patient Visits:&nbsp;<strong>%node:field_county_uihc_visits</strong><br />
-	​Outreach Clinic Visits:&nbsp;<strong>%node:field_county_outreach_visits</strong><br />
-	Lab Tests:&nbsp;<strong>%node:field_county_lab_tests</strong></p>
+      'title' => 'Healthcare Connections in %node:title County',
+      'body' => '<p>Patient Visits to The University of Iowa Hospitals and Clinics:&nbsp;<strong>%node:field_county_uihc_visits</strong><br />
+	Residents served by UI Outreach Specialty Clinics and UI Home Care:&nbsp;<strong>%node:field_county_outreach_visits</strong><br />
+	Number of tests performed by the State Hygienic Lab:&nbsp;<strong>%node:field_county_lab_tests</strong></p>
 ',
       'format' => 'filtered_html',
       'substitute' => 1,

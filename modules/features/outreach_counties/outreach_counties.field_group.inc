@@ -84,7 +84,6 @@ function outreach_counties_field_group_info() {
     'children' => array(
       0 => 'field_county_grad_college',
       1 => 'field_county_grad_medicine',
-      2 => 'field_county_grad_public_health',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -343,10 +342,9 @@ function outreach_counties_field_group_info() {
     'children' => array(
       0 => 'field_county_business',
       1 => 'field_county_clas',
-      2 => 'field_county_education',
-      3 => 'field_county_engineering',
-      4 => 'field_county_medicine',
-      5 => 'field_county_nursing',
+      2 => 'field_county_engineering',
+      3 => 'field_county_medicine',
+      4 => 'field_county_nursing',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -408,8 +406,8 @@ function outreach_counties_field_group_info() {
     'label' => 'Vendors',
     'weight' => '5',
     'children' => array(
-      0 => 'field_county_payments',
-      1 => 'field_county_vendors',
+      0 => 'field_county_vendors',
+      1 => 'field_county_payments',
     ),
     'format_type' => 'div',
     'format_settings' => array(
