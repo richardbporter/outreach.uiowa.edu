@@ -368,7 +368,7 @@ a {
     display: table;
     clear: both; }
   /* line 9, ../sass/components/counties/_county.scss */
-  .node-type-county .panel-col-top .pane-3 {
+  .node-type-county .panel-col-top .pane-custom {
     width: 74.57627%;
     float: left;
     margin-right: -100%;
@@ -376,7 +376,7 @@ a {
     clear: none;
     padding-right: 40px; }
     /* line 12, ../sass/components/counties/_county.scss */
-    .node-type-county .panel-col-top .pane-3 p {
+    .node-type-county .panel-col-top .pane-custom p {
       margin-top: 0; }
   /* line 16, ../sass/components/counties/_county.scss */
   .node-type-county .panel-col-top .pane-node-field-county-image {

@@ -6,7 +6,7 @@
 		border-bottom: 1px solid $border-color;
 
 		@include clearfix();
-		.pane-3{
+		.pane-custom{
 			@include grid-span(9,1);
 			padding-right: 40px;
 			p{
