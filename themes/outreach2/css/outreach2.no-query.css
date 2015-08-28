@@ -497,11 +497,14 @@ a {
 .node-type-county .panel-col-last .panel-pane {
   border-top: 3px solid #FFE100;
   margin-top: 20px; }
-/* line 42, ../sass/components/counties/_county.scss */
+/* line 41, ../sass/components/counties/_county.scss */
+.node-type-county .panel-col-last .pane-node-field-addthis {
+  border-top: none; }
+/* line 44, ../sass/components/counties/_county.scss */
 .node-type-county .panel-col-last .pane-3 {
   margin-top: 0;
   border-top: none; }
-  /* line 45, ../sass/components/counties/_county.scss */
+  /* line 47, ../sass/components/counties/_county.scss */
   .node-type-county .panel-col-last .pane-3 a {
     font-size: 0.8em;
     text-transform: uppercase;
@@ -529,11 +532,11 @@ a {
   content: "";
   display: table;
   clear: both; }
-/* line 53, ../sass/components/counties/_county.scss */
+/* line 55, ../sass/components/counties/_county.scss */
 .node-type-county .pane-county-data-county-professionals-pane h2.pane-title {
   margin: 20px 0;
   font-size: 1.4em; }
-/* line 57, ../sass/components/counties/_county.scss */
+/* line 59, ../sass/components/counties/_county.scss */
 .node-type-county .pane-county-data-county-professionals-pane .views-row {
   display: -webkit-flex;
   display: flex;
@@ -541,38 +544,38 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 63, ../sass/components/counties/_county.scss */
+/* line 65, ../sass/components/counties/_county.scss */
 .node-type-county .pane-county-data-county-professionals-pane .views-field {
   text-align: center;
   width: 30%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 68, ../sass/components/counties/_county.scss */
+  /* line 70, ../sass/components/counties/_county.scss */
   .node-type-county .pane-county-data-county-professionals-pane .views-field p {
     margin: 0; }
-    /* line 70, ../sass/components/counties/_county.scss */
+    /* line 72, ../sass/components/counties/_county.scss */
     .node-type-county .pane-county-data-county-professionals-pane .views-field p.number {
       font-size: 3.4em;
       font-weight: 600;
       line-height: 1.2em; }
-/* line 80, ../sass/components/counties/_county.scss */
+/* line 82, ../sass/components/counties/_county.scss */
 .node-type-county .pane-county-data-county-undergrad-pane,
 .node-type-county .pane-county-data-county-grad-students-pane,
 .node-type-county .pane-county-data-county-prof-students-pane {
   margin-bottom: 40px; }
-  /* line 84, ../sass/components/counties/_county.scss */
+  /* line 86, ../sass/components/counties/_county.scss */
   .node-type-county .pane-county-data-county-undergrad-pane .pane-title,
   .node-type-county .pane-county-data-county-grad-students-pane .pane-title,
   .node-type-county .pane-county-data-county-prof-students-pane .pane-title {
     font-size: 1.3em; }
-  /* line 87, ../sass/components/counties/_county.scss */
+  /* line 89, ../sass/components/counties/_county.scss */
   .node-type-county .pane-county-data-county-undergrad-pane .views-table,
   .node-type-county .pane-county-data-county-grad-students-pane .views-table,
   .node-type-county .pane-county-data-county-prof-students-pane .views-table {
     width: 100%;
     border-top: 1px solid #DDD; }
-    /* line 90, ../sass/components/counties/_county.scss */
+    /* line 92, ../sass/components/counties/_county.scss */
     .node-type-county .pane-county-data-county-undergrad-pane .views-table th, .node-type-county .pane-county-data-county-undergrad-pane .views-table td,
     .node-type-county .pane-county-data-county-grad-students-pane .views-table th,
     .node-type-county .pane-county-data-county-grad-students-pane .views-table td,
@@ -582,66 +585,66 @@ a {
       font-weight: 300;
       padding: 5px 0;
       border-bottom: 1px solid #DDD; }
-      /* line 95, ../sass/components/counties/_county.scss */
+      /* line 97, ../sass/components/counties/_county.scss */
       .node-type-county .pane-county-data-county-undergrad-pane .views-table th.views-field-expression, .node-type-county .pane-county-data-county-undergrad-pane .views-table td.views-field-expression,
       .node-type-county .pane-county-data-county-grad-students-pane .views-table th.views-field-expression,
       .node-type-county .pane-county-data-county-grad-students-pane .views-table td.views-field-expression,
       .node-type-county .pane-county-data-county-prof-students-pane .views-table th.views-field-expression,
       .node-type-county .pane-county-data-county-prof-students-pane .views-table td.views-field-expression {
         font-weight: 600; }
-    /* line 99, ../sass/components/counties/_county.scss */
+    /* line 101, ../sass/components/counties/_county.scss */
     .node-type-county .pane-county-data-county-undergrad-pane .views-table th,
     .node-type-county .pane-county-data-county-grad-students-pane .views-table th,
     .node-type-county .pane-county-data-county-prof-students-pane .views-table th {
       width: 70%; }
-/* line 106, ../sass/components/counties/_county.scss */
+/* line 108, ../sass/components/counties/_county.scss */
 .node-type-county .pane-profiles-profile-for-county-pane {
   clear: both; }
-  /* line 108, ../sass/components/counties/_county.scss */
+  /* line 110, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-photo {
     float: left;
     margin: 0 40px 20px 0; }
-  /* line 113, ../sass/components/counties/_county.scss */
+  /* line 115, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-title {
     font-size: 1.4em;
     font-weight: 600; }
-  /* line 120, ../sass/components/counties/_county.scss */
+  /* line 122, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .clearfix:after {
     content: none; }
-  /* line 124, ../sass/components/counties/_county.scss */
+  /* line 126, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes ul {
     list-style-type: none;
     margin-bottom: 0; }
-  /* line 128, ../sass/components/counties/_county.scss */
+  /* line 130, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-title,
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-value {
     display: inline; }
-    /* line 131, ../sass/components/counties/_county.scss */
+    /* line 133, ../sass/components/counties/_county.scss */
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-title div,
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-value div {
       display: inline; }
-  /* line 135, ../sass/components/counties/_county.scss */
+  /* line 137, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-title {
     font-weight: 600; }
-    /* line 137, ../sass/components/counties/_county.scss */
+    /* line 139, ../sass/components/counties/_county.scss */
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-title:after {
       content: ': '; }
-  /* line 143, ../sass/components/counties/_county.scss */
+  /* line 145, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-county-reference {
     display: inline; }
-    /* line 145, ../sass/components/counties/_county.scss */
+    /* line 147, ../sass/components/counties/_county.scss */
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-county-reference div {
       display: inline; }
-    /* line 148, ../sass/components/counties/_county.scss */
+    /* line 150, ../sass/components/counties/_county.scss */
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-county-reference .views-label {
       font-weight: 600; }
-/* line 154, ../sass/components/counties/_county.scss */
+/* line 156, ../sass/components/counties/_county.scss */
 .node-type-county .pane-1 {
   clear: both; }
-/* line 159, ../sass/components/counties/_county.scss */
+/* line 161, ../sass/components/counties/_county.scss */
 .node-type-county .pane-node-field-county-hometown-hawkeye .field-collection-container {
   border-bottom: 0; }
-/* line 162, ../sass/components/counties/_county.scss */
+/* line 164, ../sass/components/counties/_county.scss */
 .node-type-county .pane-node-field-county-hometown-hawkeye .field-collection-item-field-county-hometown-hawkeye {
   padding: 0;
   margin: 0;
