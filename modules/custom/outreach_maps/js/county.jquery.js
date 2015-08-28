@@ -293,12 +293,10 @@
             align: 'center',
             minZoom: 7
         });
-
     });
 
     map.data.addListener('click', function(event) {
       var countyTitle = event.feature.G.name.toLowerCase().replace(' ', '-').replace("'", "");
-      console.log("evented");
       if(infowindow){
         infowindow.close();
       }

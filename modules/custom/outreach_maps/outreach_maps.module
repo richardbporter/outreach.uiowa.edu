@@ -40,6 +40,33 @@ function outreach_maps_preprocess_page(&$variables) {
         // Add the script to build the county map.
         drupal_add_js($path . '/js/county.jquery.js', array('weight' => '91'));
       }
+
+      // House map.
+      if ($variables['map'] == 'house') {
+        // Include the county GeoJSON file.
+        drupal_add_js($path . '/inc/shapefiles/iowa-house.json', array('weight' => '91'));
+
+        // Add the script to build the county map.
+        drupal_add_js($path . '/js/house.jquery.js', array('weight' => '91'));
+      }
+
+      // House map.
+      if ($variables['map'] == 'senate') {
+        // Include the county GeoJSON file.
+        drupal_add_js($path . '/inc/shapefiles/iowa-senate.json', array('weight' => '91'));
+
+        // Add the script to build the county map.
+        drupal_add_js($path . '/js/senate.jquery.js', array('weight' => '91'));
+      }
+
+      // House map.
+      if ($variables['map'] == 'congressional') {
+        // Include the county GeoJSON file.
+        drupal_add_js($path . '/inc/shapefiles/congress.json', array('weight' => '91'));
+
+        // Add the script to build the county map.
+        drupal_add_js($path . '/js/congressional.jquery.js', array('weight' => '91'));
+      }
     }
   }
 }
