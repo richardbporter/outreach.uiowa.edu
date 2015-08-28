@@ -121,6 +121,8 @@ function outreach_events_views_default_views() {
 
   /* Display: Home Page Events Pane */
   $handler = $view->new_display('panel_pane', 'Home Page Events Pane', 'home_page_events_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -183,6 +185,8 @@ function outreach_events_views_default_views() {
 
   /* Display: Featured Program Events Pane */
   $handler = $view->new_display('panel_pane', 'Featured Program Events Pane', 'featured_program_events_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
