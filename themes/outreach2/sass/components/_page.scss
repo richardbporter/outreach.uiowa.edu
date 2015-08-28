@@ -136,6 +136,12 @@
 		}
 		.logo{
 			@include grid-span(4,9);
+			.social-icons{
+				text-align: center;
+				img{
+					width: 32px;
+				}
+			}
 		}
 	}
 }
