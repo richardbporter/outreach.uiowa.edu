@@ -1,4 +1,7 @@
 .node-type-staff{
+  .l-main{
+    @include clearfix();
+  }
   .field--type-image{
     float: left;
     margin-right: 20px;
