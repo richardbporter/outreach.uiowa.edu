@@ -317,7 +317,7 @@
           controlText.style.fontSize = '16px';
           controlText.style.paddingLeft = '5px';
           controlText.style.paddingRight = '5px';
-          controlText.innerHTML = '<a href="'+Drupal.settings.basePath+'/map/county">County</a>';
+          controlText.innerHTML = '<a href="'+Drupal.settings.basePath+'map/county">County</a>';
           controlUI.appendChild(controlText);
 
           // Set CSS for the control interior
@@ -327,7 +327,7 @@
           controlText.style.fontSize = '16px';
           controlText.style.paddingLeft = '5px';
           controlText.style.paddingRight = '5px';
-          controlText.innerHTML = '<a href="'+Drupal.settings.basePath+'/map/house">House</a>';
+          controlText.innerHTML = '<a href="'+Drupal.settings.basePath+'map/house">House</a>';
           controlUI.appendChild(controlText);
 
           // Set CSS for the control interior
@@ -337,7 +337,7 @@
           controlText.style.fontSize = '16px';
           controlText.style.paddingLeft = '5px';
           controlText.style.paddingRight = '5px';
-          controlText.innerHTML = '<a href="'+Drupal.settings.basePath+'/map/senate">Senate</a>';
+          controlText.innerHTML = '<a href="'+Drupal.settings.basePath+'map/senate">Senate</a>';
           controlUI.appendChild(controlText);
 
           // Set CSS for the control interior
@@ -347,7 +347,7 @@
           controlText.style.fontSize = '16px';
           controlText.style.paddingLeft = '5px';
           controlText.style.paddingRight = '5px';
-          controlText.innerHTML = '<a href="'+Drupal.settings.basePath+'/map/congressional">Congressional</a>';
+          controlText.innerHTML = '<a href="'+Drupal.settings.basePath+'map/congressional">Congressional</a>';
           controlUI.appendChild(controlText);
 
         }
