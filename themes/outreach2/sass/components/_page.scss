@@ -91,6 +91,7 @@
 .l-footer{
 	background-color: #212121;
 	color: #FFF;
+	clear: both;
 	.l-region--footer{
 		@include clearfix();
 		@include add-grid(12);
