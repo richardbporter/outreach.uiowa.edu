@@ -290,7 +290,8 @@
             position: bounds.getCenter(),
             map: map,
             fontSize: 12,
-            align: 'center'
+            align: 'center',
+            minZoom: 7
         });
 
     });
