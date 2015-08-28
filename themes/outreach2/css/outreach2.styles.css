@@ -1469,4 +1469,12 @@ a {
         content: "\25b6";
         padding-left: 4px; }
 
+/* line 2, ../sass/components/staff/_staff.scss */
+.node-type-staff .field--type-image {
+  float: left;
+  margin-right: 20px; }
+/* line 6, ../sass/components/staff/_staff.scss */
+.node-type-staff .field--name-body {
+  clear: left; }
+
 /*# sourceMappingURL=outreach2.styles.css.map */

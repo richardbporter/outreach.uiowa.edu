@@ -19,5 +19,8 @@ function outreach2_preprocess_page(&$variables) {
     if($variables['node']->type == 'county'){
       $variables['title'] = "Iowa Impact: ".$variables['node']->title. " County";
     }
+    if($variables['node']->type == 'staff'){
+      $variables['title'] = $variables['node']->field_staff_first_name['und'][0]['value']. " " .$variables['node']->title;
+    }
   }
 }

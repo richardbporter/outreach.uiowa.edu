@@ -97,6 +97,7 @@ function outreach_staff_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'staff_page');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['path'] = 'about-us/staff';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Staff';
@@ -141,6 +142,8 @@ function outreach_staff_views_default_views() {
   $handler->display->display_options['fields']['field_staff_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_staff_first_name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_staff_first_name']['alter']['text'] = '[field_staff_first_name] [title]';
+  $handler->display->display_options['fields']['field_staff_first_name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_first_name']['alter']['path'] = '[title]';
   $handler->display->display_options['fields']['field_staff_first_name']['element_label_colon'] = FALSE;
   /* Field: Field: Job Title */
   $handler->display->display_options['fields']['field_fp_people_job_title']['id'] = 'field_fp_people_job_title';
