@@ -55,13 +55,28 @@ function _outreach_maps_load_county($title) {
 §  47% of all Iowa pharmacists are UI educated, including 260 in Johnson County. */
     $alumni = field_view_field('node', $node, 'field_county_alumni','default');
     $data['alumni'] = array(
-      '#markup' => '<p><strong>'.strip_tags(render($alumni)).'</strong> University of Iowa alumni live in '.ucwords($title).' County</p>',
+      '#markup' => '<strong>'.strip_tags(render($alumni)).'</strong> University of Iowa alumni live in '.ucwords($title).' County <br />',
     );
- /*
+
     $educators = field_view_field('node', $node, 'field_county_educators','default');
     $data['educators'] = array(
-      '#markup' => '<p>80% of all Iowa’s K-12 school districts have UI educated teachers and administrators, including <strong>'.strip_tags(render($educators)).'</strong> in '.ucwords($title).' County.</p>',
-    );*/
+      '#markup' => '80% of all Iowa’s K-12 school districts have UI educated teachers and administrators, including <strong>'.strip_tags(render($educators)).'</strong> in '.ucwords($title).' County.<br />',
+    );
+
+    $physicians = field_view_field('node', $node, 'field_county_physicians','default');
+    $data['physicians'] = array(
+      '#markup' => '50% of all Iowa physicians are UI educated, including <strong>'.strip_tags(render($physicians)).'</strong> in '.ucwords($title).' County.<br />',
+    );
+
+    $dentists = field_view_field('node', $node, 'field_county_dentists','default');
+    $data['dentists'] = array(
+      '#markup' => '80% of all Iowa dentists are UI educated, including <strong>'.strip_tags(render($dentists)).'</strong> in '.ucwords($title).' County.<br />',
+    );
+
+    $pharmacists = field_view_field('node', $node, 'field_county_pharmacists','default');
+    $data['pharmacists'] = array(
+      '#markup' => '47% of all Iowa pharmacists are UI educated, including <strong>'.strip_tags(render($pharmacists)).'</strong> in '.ucwords($title).' County.<br />',
+    );
 
     // More link
     $data['more_link'] = array(
@@ -74,6 +89,7 @@ function _outreach_maps_load_county($title) {
         ),
       ),
     );
+
 
     // Convert the render array to markup to pass to ajax_command_html().
     $html = drupal_render($data);

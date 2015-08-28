@@ -297,6 +297,7 @@
 
     map.data.addListener('click', function(event) {
       var countyTitle = event.feature.G.name.toLowerCase().replace(' ', '-').replace("'", "");
+      console.log("evented");
       if(infowindow){
         infowindow.close();
       }
@@ -306,20 +307,21 @@
       custom_settings.keypress = false;
       custom_settings.prevent = false;
 
-      console.log(Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $(document.body), custom_settings));
+      Drupal.ajax['outreach_maps_county_ajax_action'] = new Drupal.ajax(null, $('#footer'), custom_settings);
 
       // Trigger the response.
-      console.log(Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse());
+      Drupal.ajax['outreach_maps_county_ajax_action'].specifiedResponse();
 
-      console.log(Drupal.ajax['outreach_maps_county_ajax_action']);
 
       var infoWindowText = "<h3>"+event.feature.G.name+" County Impact</h3> \
       <hr><div id=\""+countyTitle+"-data\"></div> ";
 
       infowindow = new google.maps.InfoWindow({
         content:infoWindowText,
-        position:event.latLng
+        position:event.latLng,
+        maxWidth: 500
       });
+      map.setCenter(event.latLng);
       infowindow.open(map);
     });
 
