@@ -360,18 +360,60 @@ a {
     display: table;
     clear: both; }
   /* line 9, ../sass/components/counties/_county.scss */
-  .node-type-county .panel-col-top .pane-custom {
+  .node-type-county .panel-col-top .pane-node-field-county-image {
+    display: none; }
+  @media all and (min-width: 600px) {
+    /* line 13, ../sass/components/counties/_county.scss */
+    .node-type-county .panel-col-top .pane-custom {
+      width: 74.57627%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0;
+      clear: none;
+      padding-right: 40px; }
+      /* line 16, ../sass/components/counties/_county.scss */
+      .node-type-county .panel-col-top .pane-custom p {
+        margin-top: 0; }
+    /* line 20, ../sass/components/counties/_county.scss */
+    .node-type-county .panel-col-top .pane-node-field-county-image {
+      width: 23.72881%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none;
+      padding-left: 25px;
+      display: block;
+      padding-left: 0;
+      width: 196px; }
+      /* line 5, ../sass/abstractions/_sidebar.scss */
+      .node-type-county .panel-col-top .pane-node-field-county-image h2, .node-type-county .panel-col-top .pane-node-field-county-image h3, .node-type-county .panel-col-top .pane-node-field-county-image h4, .node-type-county .panel-col-top .pane-node-field-county-image h5, .node-type-county .panel-col-top .pane-node-field-county-image h6 {
+        text-transform: uppercase;
+        font-size: 1em; }
+      /* line 9, ../sass/abstractions/_sidebar.scss */
+      .node-type-county .panel-col-top .pane-node-field-county-image .block {
+        border-top: 3px solid #FFE100;
+        margin-top: 40px; } }
+/* line 13, ../../../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p547@omega.outreach2/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
+.node-type-county .center-wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+/* line 31, ../sass/components/counties/_county.scss */
+.node-type-county .center-wrapper .panel-col-first,
+.node-type-county .center-wrapper .panel-col-last {
+  width: 100%;
+  float: none; }
+@media all and (min-width: 767px) {
+  /* line 37, ../sass/components/counties/_county.scss */
+  .node-type-county .center-wrapper .panel-col-first {
     width: 74.57627%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
     clear: none;
     padding-right: 40px; }
-    /* line 12, ../sass/components/counties/_county.scss */
-    .node-type-county .panel-col-top .pane-custom p {
-      margin-top: 0; }
-  /* line 16, ../sass/components/counties/_county.scss */
-  .node-type-county .panel-col-top .pane-node-field-county-image {
+  /* line 41, ../sass/components/counties/_county.scss */
+  .node-type-county .center-wrapper .panel-col-last {
     width: 23.72881%;
     float: right;
     margin-left: 0;
@@ -381,56 +423,25 @@ a {
     padding-left: 0;
     width: 196px; }
     /* line 5, ../sass/abstractions/_sidebar.scss */
-    .node-type-county .panel-col-top .pane-node-field-county-image h2, .node-type-county .panel-col-top .pane-node-field-county-image h3, .node-type-county .panel-col-top .pane-node-field-county-image h4, .node-type-county .panel-col-top .pane-node-field-county-image h5, .node-type-county .panel-col-top .pane-node-field-county-image h6 {
+    .node-type-county .center-wrapper .panel-col-last h2, .node-type-county .center-wrapper .panel-col-last h3, .node-type-county .center-wrapper .panel-col-last h4, .node-type-county .center-wrapper .panel-col-last h5, .node-type-county .center-wrapper .panel-col-last h6 {
       text-transform: uppercase;
       font-size: 1em; }
     /* line 9, ../sass/abstractions/_sidebar.scss */
-    .node-type-county .panel-col-top .pane-node-field-county-image .block {
+    .node-type-county .center-wrapper .panel-col-last .block {
       border-top: 3px solid #FFE100;
-      margin-top: 40px; }
-/* line 13, ../../../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p547@omega.outreach2/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
-.node-type-county .center-wrapper:after {
-  content: "";
-  display: table;
-  clear: both; }
-/* line 25, ../sass/components/counties/_county.scss */
-.node-type-county .center-wrapper .panel-col-first {
-  width: 74.57627%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
-  padding-right: 40px; }
-/* line 29, ../sass/components/counties/_county.scss */
-.node-type-county .center-wrapper .panel-col-last {
-  width: 23.72881%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding-left: 25px;
-  padding-left: 0;
-  width: 196px; }
-  /* line 5, ../sass/abstractions/_sidebar.scss */
-  .node-type-county .center-wrapper .panel-col-last h2, .node-type-county .center-wrapper .panel-col-last h3, .node-type-county .center-wrapper .panel-col-last h4, .node-type-county .center-wrapper .panel-col-last h5, .node-type-county .center-wrapper .panel-col-last h6 {
-    text-transform: uppercase;
-    font-size: 1em; }
-  /* line 9, ../sass/abstractions/_sidebar.scss */
-  .node-type-county .center-wrapper .panel-col-last .block {
-    border-top: 3px solid #FFE100;
-    margin-top: 40px; }
-/* line 37, ../sass/components/counties/_county.scss */
+      margin-top: 40px; } }
+/* line 50, ../sass/components/counties/_county.scss */
 .node-type-county .panel-col-last .panel-pane {
   border-top: 3px solid #FFE100;
   margin-top: 20px; }
-/* line 41, ../sass/components/counties/_county.scss */
+/* line 54, ../sass/components/counties/_county.scss */
 .node-type-county .panel-col-last .pane-node-field-addthis {
   border-top: none; }
-/* line 44, ../sass/components/counties/_county.scss */
+/* line 57, ../sass/components/counties/_county.scss */
 .node-type-county .panel-col-last .pane-3 {
   margin-top: 0;
   border-top: none; }
-  /* line 47, ../sass/components/counties/_county.scss */
+  /* line 60, ../sass/components/counties/_county.scss */
   .node-type-county .panel-col-last .pane-3 a {
     font-size: 0.8em;
     text-transform: uppercase;
@@ -458,11 +469,11 @@ a {
   content: "";
   display: table;
   clear: both; }
-/* line 55, ../sass/components/counties/_county.scss */
+/* line 68, ../sass/components/counties/_county.scss */
 .node-type-county .pane-county-data-county-professionals-pane h2.pane-title {
   margin: 20px 0;
   font-size: 1.4em; }
-/* line 59, ../sass/components/counties/_county.scss */
+/* line 72, ../sass/components/counties/_county.scss */
 .node-type-county .pane-county-data-county-professionals-pane .views-row {
   display: -webkit-flex;
   display: flex;
@@ -470,38 +481,38 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 65, ../sass/components/counties/_county.scss */
+/* line 78, ../sass/components/counties/_county.scss */
 .node-type-county .pane-county-data-county-professionals-pane .views-field {
   text-align: center;
   width: 30%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 70, ../sass/components/counties/_county.scss */
+  /* line 83, ../sass/components/counties/_county.scss */
   .node-type-county .pane-county-data-county-professionals-pane .views-field p {
     margin: 0; }
-    /* line 72, ../sass/components/counties/_county.scss */
+    /* line 85, ../sass/components/counties/_county.scss */
     .node-type-county .pane-county-data-county-professionals-pane .views-field p.number {
       font-size: 3.4em;
       font-weight: 600;
       line-height: 1.2em; }
-/* line 82, ../sass/components/counties/_county.scss */
+/* line 95, ../sass/components/counties/_county.scss */
 .node-type-county .pane-county-data-county-undergrad-pane,
 .node-type-county .pane-county-data-county-grad-students-pane,
 .node-type-county .pane-county-data-county-prof-students-pane {
   margin-bottom: 40px; }
-  /* line 86, ../sass/components/counties/_county.scss */
+  /* line 99, ../sass/components/counties/_county.scss */
   .node-type-county .pane-county-data-county-undergrad-pane .pane-title,
   .node-type-county .pane-county-data-county-grad-students-pane .pane-title,
   .node-type-county .pane-county-data-county-prof-students-pane .pane-title {
     font-size: 1.3em; }
-  /* line 89, ../sass/components/counties/_county.scss */
+  /* line 102, ../sass/components/counties/_county.scss */
   .node-type-county .pane-county-data-county-undergrad-pane .views-table,
   .node-type-county .pane-county-data-county-grad-students-pane .views-table,
   .node-type-county .pane-county-data-county-prof-students-pane .views-table {
     width: 100%;
     border-top: 1px solid #DDD; }
-    /* line 92, ../sass/components/counties/_county.scss */
+    /* line 105, ../sass/components/counties/_county.scss */
     .node-type-county .pane-county-data-county-undergrad-pane .views-table th, .node-type-county .pane-county-data-county-undergrad-pane .views-table td,
     .node-type-county .pane-county-data-county-grad-students-pane .views-table th,
     .node-type-county .pane-county-data-county-grad-students-pane .views-table td,
@@ -511,66 +522,66 @@ a {
       font-weight: 300;
       padding: 5px 0;
       border-bottom: 1px solid #DDD; }
-      /* line 97, ../sass/components/counties/_county.scss */
+      /* line 110, ../sass/components/counties/_county.scss */
       .node-type-county .pane-county-data-county-undergrad-pane .views-table th.views-field-expression, .node-type-county .pane-county-data-county-undergrad-pane .views-table td.views-field-expression,
       .node-type-county .pane-county-data-county-grad-students-pane .views-table th.views-field-expression,
       .node-type-county .pane-county-data-county-grad-students-pane .views-table td.views-field-expression,
       .node-type-county .pane-county-data-county-prof-students-pane .views-table th.views-field-expression,
       .node-type-county .pane-county-data-county-prof-students-pane .views-table td.views-field-expression {
         font-weight: 600; }
-    /* line 101, ../sass/components/counties/_county.scss */
+    /* line 114, ../sass/components/counties/_county.scss */
     .node-type-county .pane-county-data-county-undergrad-pane .views-table th,
     .node-type-county .pane-county-data-county-grad-students-pane .views-table th,
     .node-type-county .pane-county-data-county-prof-students-pane .views-table th {
       width: 70%; }
-/* line 108, ../sass/components/counties/_county.scss */
+/* line 121, ../sass/components/counties/_county.scss */
 .node-type-county .pane-profiles-profile-for-county-pane {
   clear: both; }
-  /* line 110, ../sass/components/counties/_county.scss */
+  /* line 123, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-photo {
     float: left;
     margin: 0 40px 20px 0; }
-  /* line 115, ../sass/components/counties/_county.scss */
+  /* line 128, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-title {
     font-size: 1.4em;
     font-weight: 600; }
-  /* line 122, ../sass/components/counties/_county.scss */
+  /* line 135, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .clearfix:after {
     content: none; }
-  /* line 126, ../sass/components/counties/_county.scss */
+  /* line 139, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes ul {
     list-style-type: none;
     margin-bottom: 0; }
-  /* line 130, ../sass/components/counties/_county.scss */
+  /* line 143, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-title,
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-value {
     display: inline; }
-    /* line 133, ../sass/components/counties/_county.scss */
+    /* line 146, ../sass/components/counties/_county.scss */
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-title div,
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-value div {
       display: inline; }
-  /* line 137, ../sass/components/counties/_county.scss */
+  /* line 150, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-title {
     font-weight: 600; }
-    /* line 139, ../sass/components/counties/_county.scss */
+    /* line 152, ../sass/components/counties/_county.scss */
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-profile-attributes .field--name-field-profile-attribute-title:after {
       content: ': '; }
-  /* line 145, ../sass/components/counties/_county.scss */
+  /* line 158, ../sass/components/counties/_county.scss */
   .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-county-reference {
     display: inline; }
-    /* line 147, ../sass/components/counties/_county.scss */
+    /* line 160, ../sass/components/counties/_county.scss */
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-county-reference div {
       display: inline; }
-    /* line 150, ../sass/components/counties/_county.scss */
+    /* line 163, ../sass/components/counties/_county.scss */
     .node-type-county .pane-profiles-profile-for-county-pane .views-field-field-county-reference .views-label {
       font-weight: 600; }
-/* line 156, ../sass/components/counties/_county.scss */
+/* line 169, ../sass/components/counties/_county.scss */
 .node-type-county .pane-custom {
   clear: both; }
-/* line 161, ../sass/components/counties/_county.scss */
+/* line 174, ../sass/components/counties/_county.scss */
 .node-type-county .pane-node-field-county-hometown-hawkeye .field-collection-container {
   border-bottom: 0; }
-/* line 164, ../sass/components/counties/_county.scss */
+/* line 177, ../sass/components/counties/_county.scss */
 .node-type-county .pane-node-field-county-hometown-hawkeye .field-collection-item-field-county-hometown-hawkeye {
   padding: 0;
   margin: 0;
@@ -664,19 +675,61 @@ a {
     position: absolute; }
 /* line 19, ../sass/components/custom-pages/_home.scss */
 .front .l-main .view-display-id-front_page_feature {
-  margin: 0 -40px;
   background-color: #333;
   color: #DDD;
-  height: 460px; }
-  /* line 24, ../sass/components/custom-pages/_home.scss */
+  margin: 0 -40px; }
+  /* line 23, ../sass/components/custom-pages/_home.scss */
   .front .l-main .view-display-id-front_page_feature .views-field-field-feature-photo {
-    float: left;
-    margin-right: 40px; }
-  /* line 28, ../sass/components/custom-pages/_home.scss */
+    margin: 0 auto; }
+    /* line 25, ../sass/components/custom-pages/_home.scss */
+    .front .l-main .view-display-id-front_page_feature .views-field-field-feature-photo img {
+      width: 100%; }
+  /* line 29, ../sass/components/custom-pages/_home.scss */
   .front .l-main .view-display-id-front_page_feature .views-field-title,
-  .front .l-main .view-display-id-front_page_feature .views-field-body {
-    margin-right: 40px; }
-  /* line 32, ../sass/components/custom-pages/_home.scss */
+  .front .l-main .view-display-id-front_page_feature .views-field-body,
+  .front .l-main .view-display-id-front_page_feature .views-field-field-external-link {
+    margin: 0 40px; }
+  /* line 35, ../sass/components/custom-pages/_home.scss */
+  .front .l-main .view-display-id-front_page_feature .views-field-field-external-link {
+    padding-bottom: 40px; }
+    /* line 37, ../sass/components/custom-pages/_home.scss */
+    .front .l-main .view-display-id-front_page_feature .views-field-field-external-link a {
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 1px solid #999;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      padding: 5px 10px;
+      color: #000;
+      color: #FFF;
+      background-color: #000; }
+      /* line 9, ../sass/abstractions/_button.scss */
+      .front .l-main .view-display-id-front_page_feature .views-field-field-external-link a:hover {
+        background-color: #222;
+        color: #EEE;
+        text-decoration: none; }
+        /* line 13, ../sass/abstractions/_button.scss */
+        .front .l-main .view-display-id-front_page_feature .views-field-field-external-link a:hover:after {
+          color: #FFE100; }
+      /* line 17, ../sass/abstractions/_button.scss */
+      .front .l-main .view-display-id-front_page_feature .views-field-field-external-link a:after {
+        content: "\25b6";
+        padding-left: 4px; }
+  @media all and (min-width: 900px) {
+    /* line 19, ../sass/components/custom-pages/_home.scss */
+    .front .l-main .view-display-id-front_page_feature {
+      height: 460px; }
+      /* line 45, ../sass/components/custom-pages/_home.scss */
+      .front .l-main .view-display-id-front_page_feature .views-field-field-feature-photo {
+        float: left;
+        margin-right: 40px; }
+      /* line 49, ../sass/components/custom-pages/_home.scss */
+      .front .l-main .view-display-id-front_page_feature .views-field-title,
+      .front .l-main .view-display-id-front_page_feature .views-field-body {
+        margin-right: 40px; } }
+  /* line 56, ../sass/components/custom-pages/_home.scss */
   .front .l-main .view-display-id-front_page_feature .views-field-title {
     padding-top: 40px;
     color: white;
@@ -684,11 +737,11 @@ a {
     font-size: 1.4em;
     font-weight: 400;
     padding-bottom: 20px; }
-    /* line 39, ../sass/components/custom-pages/_home.scss */
+    /* line 63, ../sass/components/custom-pages/_home.scss */
     .front .l-main .view-display-id-front_page_feature .views-field-title .field-content {
       position: relative;
       padding-bottom: 20px; }
-      /* line 42, ../sass/components/custom-pages/_home.scss */
+      /* line 66, ../sass/components/custom-pages/_home.scss */
       .front .l-main .view-display-id-front_page_feature .views-field-title .field-content:before {
         content: "";
         height: 3px;
@@ -697,71 +750,41 @@ a {
         position: absolute;
         left: 0;
         bottom: -2px; }
-  /* line 55, ../sass/components/custom-pages/_home.scss */
-  .front .l-main .view-display-id-front_page_feature .views-field-field-external-link a {
-    font-size: 0.8em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid #999;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    padding: 5px 10px;
-    color: #000;
-    color: #FFF;
-    background-color: #000; }
-    /* line 9, ../sass/abstractions/_button.scss */
-    .front .l-main .view-display-id-front_page_feature .views-field-field-external-link a:hover {
-      background-color: #222;
-      color: #EEE;
-      text-decoration: none; }
-      /* line 13, ../sass/abstractions/_button.scss */
-      .front .l-main .view-display-id-front_page_feature .views-field-field-external-link a:hover:after {
-        color: #FFE100; }
-    /* line 17, ../sass/abstractions/_button.scss */
-    .front .l-main .view-display-id-front_page_feature .views-field-field-external-link a:after {
-      content: "\25b6";
-      padding-left: 4px; }
-/* line 61, ../sass/components/custom-pages/_home.scss */
+/* line 81, ../sass/components/custom-pages/_home.scss */
 .front .l-main .view-display-id-home_page_featuerd_programs_pane,
 .front .l-main .view-display-id-home_page_programs_pane,
 .front .l-main .view-display-id-home_page_latest_news,
 .front .l-main .view-display-id-home_page_stats_pane {
   margin-top: 20px; }
-  /* line 13, ../../../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p547@omega.outreach2/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
-  .front .l-main .view-display-id-home_page_featuerd_programs_pane:after,
-  .front .l-main .view-display-id-home_page_programs_pane:after,
-  .front .l-main .view-display-id-home_page_latest_news:after,
-  .front .l-main .view-display-id-home_page_stats_pane:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 70, ../sass/components/custom-pages/_home.scss */
-  .front .l-main .view-display-id-home_page_featuerd_programs_pane .views-row,
-  .front .l-main .view-display-id-home_page_programs_pane .views-row,
-  .front .l-main .view-display-id-home_page_latest_news .views-row,
-  .front .l-main .view-display-id-home_page_stats_pane .views-row {
-    width: 33.33333%;
-    clear: right;
-    float: left;
-    padding-right: 10px; }
-    /* line 72, ../sass/components/custom-pages/_home.scss */
-    .front .l-main .view-display-id-home_page_featuerd_programs_pane .views-row:nth-child(3n+1),
-    .front .l-main .view-display-id-home_page_programs_pane .views-row:nth-child(3n+1),
-    .front .l-main .view-display-id-home_page_latest_news .views-row:nth-child(3n+1),
-    .front .l-main .view-display-id-home_page_stats_pane .views-row:nth-child(3n+1) {
-      clear: left; }
-/* line 79, ../sass/components/custom-pages/_home.scss */
+  @media all and (min-width: 640px) {
+    /* line 87, ../sass/components/custom-pages/_home.scss */
+    .front .l-main .view-display-id-home_page_featuerd_programs_pane .view-content,
+    .front .l-main .view-display-id-home_page_programs_pane .view-content,
+    .front .l-main .view-display-id-home_page_latest_news .view-content,
+    .front .l-main .view-display-id-home_page_stats_pane .view-content {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -webkit-justify-content: space-around;
+      justify-content: space-around; }
+    /* line 93, ../sass/components/custom-pages/_home.scss */
+    .front .l-main .view-display-id-home_page_featuerd_programs_pane .views-row,
+    .front .l-main .view-display-id-home_page_programs_pane .views-row,
+    .front .l-main .view-display-id-home_page_latest_news .views-row,
+    .front .l-main .view-display-id-home_page_stats_pane .views-row {
+      width: 30%; } }
+/* line 100, ../sass/components/custom-pages/_home.scss */
 .front .l-main .view-display-id-home_page_featuerd_programs_pane .view-header {
   width: 80%;
   margin: 10px auto;
   font-size: 0.9em;
   text-align: center; }
-/* line 86, ../sass/components/custom-pages/_home.scss */
+/* line 107, ../sass/components/custom-pages/_home.scss */
 .front .l-main .view-display-id-home_page_featuerd_programs_pane .views-row .views-field-title {
   margin-top: -46px;
   height: 50px; }
-  /* line 89, ../sass/components/custom-pages/_home.scss */
+  /* line 110, ../sass/components/custom-pages/_home.scss */
   .front .l-main .view-display-id-home_page_featuerd_programs_pane .views-row .views-field-title a {
     color: #FFF;
     background-color: rgba(0, 0, 0, 0.8);
@@ -769,12 +792,12 @@ a {
     font-size: 1.3em;
     padding: 10px;
     border-bottom: 3px solid #FFE100; }
-/* line 99, ../sass/components/custom-pages/_home.scss */
+/* line 120, ../sass/components/custom-pages/_home.scss */
 .front .l-main .view-display-id-home_page_featuerd_programs_pane .views-row .views-field-body p {
   margin-top: 0;
   font-size: 0.85em;
   line-height: 1.5em; }
-/* line 106, ../sass/components/custom-pages/_home.scss */
+/* line 127, ../sass/components/custom-pages/_home.scss */
 .front .l-main .view-display-id-home_page_featuerd_programs_pane .views-row .views-field-view-node a {
   font-size: 0.8em;
   text-transform: uppercase;
@@ -797,20 +820,20 @@ a {
   .front .l-main .view-display-id-home_page_featuerd_programs_pane .views-row .views-field-view-node a:after {
     content: "\25b6";
     padding-left: 4px; }
-/* line 114, ../sass/components/custom-pages/_home.scss */
+/* line 135, ../sass/components/custom-pages/_home.scss */
 .front .l-main .view-display-id-home_page_programs_pane .views-field-title {
   font-weight: 600;
   padding: 3px 0; }
-/* line 119, ../sass/components/custom-pages/_home.scss */
+/* line 140, ../sass/components/custom-pages/_home.scss */
 .front .l-main .view-display-id-home_page_programs_pane .views-field-body p {
   margin-top: 0;
   font-size: 0.85em;
   line-height: 1.5em; }
-/* line 127, ../sass/components/custom-pages/_home.scss */
+/* line 148, ../sass/components/custom-pages/_home.scss */
 .front .l-main .pane-outreach-maps-outreach-maps-county-list {
   background: #FFE100 url(../images/map_background.jpg) top center no-repeat;
   padding: 40px 0; }
-  /* line 130, ../sass/components/custom-pages/_home.scss */
+  /* line 151, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-outreach-maps-outreach-maps-county-list .l-container {
     width: 500px;
     margin: 0 auto;
@@ -818,19 +841,19 @@ a {
     color: #FFF;
     text-align: center;
     padding: 50px 40px; }
-    /* line 137, ../sass/components/custom-pages/_home.scss */
+    /* line 158, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-outreach-maps-outreach-maps-county-list .l-container h2 {
       color: #FFF;
       margin-top: 0; }
-    /* line 141, ../sass/components/custom-pages/_home.scss */
+    /* line 162, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-outreach-maps-outreach-maps-county-list .l-container .form-item {
       margin-bottom: 0;
       color: #000; }
-/* line 148, ../sass/components/custom-pages/_home.scss */
+/* line 169, ../sass/components/custom-pages/_home.scss */
 .front .l-main .pane-stats-home-page-stats-pane {
   border: 5px double #DDD;
   margin: 40px 0; }
-  /* line 151, ../sass/components/custom-pages/_home.scss */
+  /* line 172, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-stats-home-page-stats-pane h2.pane-title {
     font-size: 0.8em;
     background-color: #FFF;
@@ -838,34 +861,34 @@ a {
     width: 80px;
     margin: -21px auto 0;
     letter-spacing: 0.1em; }
-    /* line 158, ../sass/components/custom-pages/_home.scss */
+    /* line 179, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-stats-home-page-stats-pane h2.pane-title:after {
       border-bottom: none; }
-  /* line 162, ../sass/components/custom-pages/_home.scss */
+  /* line 183, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-stats-home-page-stats-pane .views-row {
     text-align: center; }
-    /* line 164, ../sass/components/custom-pages/_home.scss */
+    /* line 185, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-stats-home-page-stats-pane .views-row .views-field-title {
       font-size: 3.6em;
       font-weight: 600;
       padding: 20px 0; }
-    /* line 169, ../sass/components/custom-pages/_home.scss */
+    /* line 190, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-stats-home-page-stats-pane .views-row .views-field-body {
       font-size: 0.8em;
       font-weight: 400;
       text-transform: uppercase;
       margin: 0 30px;
       border-bottom: 1px solid #DDD; }
-    /* line 176, ../sass/components/custom-pages/_home.scss */
+    /* line 197, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-stats-home-page-stats-pane .views-row .views-field-field-stats-link {
       margin-top: 10px;
       font-size: 0.9em;
       margin-bottom: 30px;
       font-style: italic; }
-      /* line 182, ../sass/components/custom-pages/_home.scss */
+      /* line 203, ../sass/components/custom-pages/_home.scss */
       .front .l-main .pane-stats-home-page-stats-pane .views-row .views-field-field-stats-link a.active {
         color: #0088CC; }
-/* line 190, ../sass/components/custom-pages/_home.scss */
+/* line 211, ../sass/components/custom-pages/_home.scss */
 .front .l-main .pane-news-items-home-page-latest-news {
   border-top: 1px solid #DDD;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
@@ -874,23 +897,23 @@ a {
   background-image: -moz-linear-gradient(#f9f9f9, #ffffff 50%);
   background-image: -webkit-linear-gradient(#f9f9f9, #ffffff 50%);
   background-image: linear-gradient(#f9f9f9, #ffffff 50%); }
-  /* line 194, ../sass/components/custom-pages/_home.scss */
+  /* line 215, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-news-items-home-page-latest-news .views-field-created {
     font-size: 0.85em;
     text-transform: uppercase;
     font-weight: 400; }
-  /* line 200, ../sass/components/custom-pages/_home.scss */
+  /* line 221, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-news-items-home-page-latest-news .views-field-title {
     font-weight: 400; }
-  /* line 205, ../sass/components/custom-pages/_home.scss */
+  /* line 226, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-news-items-home-page-latest-news .views-field-body p {
     margin-top: 0;
     font-size: 0.85em;
     line-height: 1.5em; }
-  /* line 211, ../sass/components/custom-pages/_home.scss */
+  /* line 232, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-news-items-home-page-latest-news .more-link {
     margin-bottom: 20px; }
-    /* line 213, ../sass/components/custom-pages/_home.scss */
+    /* line 234, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-news-items-home-page-latest-news .more-link a {
       font-size: 0.8em;
       text-transform: uppercase;
@@ -913,7 +936,7 @@ a {
       .front .l-main .pane-news-items-home-page-latest-news .more-link a:after {
         content: "\25b6";
         padding-left: 4px; }
-/* line 219, ../sass/components/custom-pages/_home.scss */
+/* line 240, ../sass/components/custom-pages/_home.scss */
 .front .l-main .pane-events-home-page-events-pane {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
@@ -921,36 +944,39 @@ a {
   background-image: -moz-linear-gradient(#f9f9f9, #ffffff 50%);
   background-image: -webkit-linear-gradient(#f9f9f9, #ffffff 50%);
   background-image: linear-gradient(#f9f9f9, #ffffff 50%); }
-  /* line 221, ../sass/components/custom-pages/_home.scss */
-  .front .l-main .pane-events-home-page-events-pane .view-content {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-justify-content: space-around;
-    justify-content: space-around; }
-  /* line 226, ../sass/components/custom-pages/_home.scss */
+  @media all and (min-width: 640px) {
+    /* line 244, ../sass/components/custom-pages/_home.scss */
+    .front .l-main .pane-events-home-page-events-pane .view-content {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -webkit-justify-content: space-around;
+      justify-content: space-around; }
+    /* line 249, ../sass/components/custom-pages/_home.scss */
+    .front .l-main .pane-events-home-page-events-pane .views-row {
+      margin-right: 2%;
+      width: 23%;
+      -webkit-flex-grow: 1;
+      flex-grow: 1; } }
+  /* line 255, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-events-home-page-events-pane .views-row {
-    margin-right: 2%;
-    width: 23%;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
     margin-bottom: 30px; }
-    /* line 231, ../sass/components/custom-pages/_home.scss */
+    /* line 257, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-events-home-page-events-pane .views-row.views-row-last {
       margin-right: 0; }
-    /* line 234, ../sass/components/custom-pages/_home.scss */
+    /* line 260, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-events-home-page-events-pane .views-row .views-field-field-event-date {
       font-size: 0.8em;
       text-transform: uppercase;
       font-weight: 400; }
-    /* line 239, ../sass/components/custom-pages/_home.scss */
+    /* line 265, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-events-home-page-events-pane .views-row .views-field-title {
       font-weight: 400; }
-  /* line 243, ../sass/components/custom-pages/_home.scss */
+  /* line 269, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-events-home-page-events-pane .more-link {
     margin-bottom: 20px; }
-    /* line 245, ../sass/components/custom-pages/_home.scss */
+    /* line 271, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-events-home-page-events-pane .more-link a {
       font-size: 0.8em;
       text-transform: uppercase;
@@ -973,32 +999,32 @@ a {
       .front .l-main .pane-events-home-page-events-pane .more-link a:after {
         content: "\25b6";
         padding-left: 4px; }
-/* line 251, ../sass/components/custom-pages/_home.scss */
+/* line 277, ../sass/components/custom-pages/_home.scss */
 .front .l-main .pane-videos-home-page-video-pane {
   background-color: #F9F9F9;
   padding: 50px 0; }
-  /* line 254, ../sass/components/custom-pages/_home.scss */
+  /* line 280, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-videos-home-page-video-pane .views-field-field-video {
     float: left;
     margin-left: 20px; }
-    /* line 257, ../sass/components/custom-pages/_home.scss */
+    /* line 283, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-videos-home-page-video-pane .views-field-field-video .media-youtube-player {
       width: 540px;
       height: 300px; }
-  /* line 263, ../sass/components/custom-pages/_home.scss */
+  /* line 289, ../sass/components/custom-pages/_home.scss */
   .front .l-main .pane-videos-home-page-video-pane .views-field-body {
     margin: 0 20px 0 580px;
     padding: 0 20px;
     background-color: #FFF;
     border: 1px solid #DDD; }
-    /* line 268, ../sass/components/custom-pages/_home.scss */
+    /* line 294, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-videos-home-page-video-pane .views-field-body h4 {
       font-size: 0.9em;
       text-transform: uppercase; }
-    /* line 272, ../sass/components/custom-pages/_home.scss */
+    /* line 298, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-videos-home-page-video-pane .views-field-body h3 {
       font-size: 1.3em; }
-    /* line 275, ../sass/components/custom-pages/_home.scss */
+    /* line 301, ../sass/components/custom-pages/_home.scss */
     .front .l-main .pane-videos-home-page-video-pane .views-field-body p {
       font-size: 0.9em;
       line-height: 1.3em; }
@@ -1118,17 +1144,19 @@ a {
 @media all and (min-width: 865px) {
   /* line 17, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .center-wrapper .panel-col-first {
-    width: 75%;
-    clear: right;
+    width: 74.57627%;
     float: left;
-    padding-right: 10px;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
     padding-right: 40px; }
   /* line 21, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .center-wrapper .panel-col-last {
-    width: 25%;
-    clear: right;
+    width: 23.72881%;
     float: right;
-    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
     padding-left: 25px;
     padding-left: 0;
     width: 196px; }
@@ -1181,30 +1209,30 @@ a {
     flex-flow: row wrap;
     -webkit-justify-content: space-around;
     justify-content: space-around; }
-  /* line 77, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 76, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field__item {
     width: 45%;
     -webkit-flex-grow: 1;
     flex-grow: 1;
     margin-bottom: 25px; } }
-/* line 84, ../sass/components/featured_programs/_featured_program.scss */
+/* line 83, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people {
   font-size: 0.9em;
   line-height: 1.4em; }
-  /* line 87, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 86, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field__item {
     margin-bottom: 0px; }
-  /* line 90, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 89, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field--name-field-fp-people-photo {
     float: left;
     padding-right: 10px; }
-  /* line 94, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 93, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field--name-field-fp-people-name {
     font-weight: 600;
     font-size: 1.2em;
     margin-bottom: 5px; }
 @media all and (min-width: 640px) {
-  /* line 104, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 103, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-staff-about-us-staff-pane .view-content {
     display: -webkit-flex;
     display: flex;
@@ -1212,26 +1240,26 @@ a {
     flex-flow: row wrap;
     -webkit-justify-content: space-around;
     justify-content: space-around; }
-  /* line 110, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 109, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-staff-about-us-staff-pane .views-row {
     width: 45%;
     -webkit-flex-grow: 1;
     flex-grow: 1; } }
-/* line 115, ../sass/components/featured_programs/_featured_program.scss */
+/* line 114, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-staff-about-us-staff-pane .views-row {
   margin-bottom: 25px;
   font-size: 0.9em;
   line-height: 1.4em; }
-  /* line 119, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 118, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-staff-about-us-staff-pane .views-row .views-field-field-fp-people-photo {
     float: left;
     padding-right: 10px; }
-  /* line 123, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 122, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-staff-about-us-staff-pane .views-row .views-field-field-staff-first-name {
     font-weight: 600;
     font-size: 1.2em;
     margin-bottom: 5px; }
-/* line 132, ../sass/components/featured_programs/_featured_program.scss */
+/* line 131, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-news-items-featured-program-news-pane .view-content {
   display: -webkit-flex;
   display: flex;
@@ -1239,24 +1267,24 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 137, ../sass/components/featured_programs/_featured_program.scss */
+/* line 136, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row {
   width: 30%;
   margin-right: 2%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 142, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 141, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row .views-field-created {
     font-size: 0.85em;
     text-transform: uppercase;
     font-weight: 400; }
-  /* line 149, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 148, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row .views-field-body p {
     margin-top: 0;
     font-size: 0.85em;
     line-height: 1.5em; }
-/* line 158, ../sass/components/featured_programs/_featured_program.scss */
+/* line 157, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-events-featured-program-events-pane .view-content {
   display: -webkit-flex;
   display: flex;
@@ -1264,41 +1292,41 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 163, ../sass/components/featured_programs/_featured_program.scss */
+/* line 162, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-events-featured-program-events-pane .views-row {
   width: 30%;
   margin-right: 2%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 168, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 167, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-events-featured-program-events-pane .views-row .views-field-title {
     font-weight: 400; }
-/* line 174, ../sass/components/featured_programs/_featured_program.scss */
+/* line 173, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-videos-featured-program-video-pane {
   background-color: #F9F9F9;
   padding: 20px 0; }
-  /* line 177, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 176, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-field-video {
     margin: 0 20px; }
-    /* line 179, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 178, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-field-video .media-youtube-player {
       width: 620px;
       height: 330px; }
-  /* line 185, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 184, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body {
     margin: 20px;
     padding: 0 20px;
     background-color: #FFF;
     border: 1px solid #DDD; }
-    /* line 190, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 189, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body h4 {
       font-size: 0.9em;
       text-transform: uppercase; }
-    /* line 194, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 193, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body h3 {
       font-size: 1.3em; }
-    /* line 197, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 196, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body p {
       font-size: 0.9em;
       line-height: 1.3em; }
@@ -1455,10 +1483,11 @@ a {
 @media all and (min-width: 767px) {
   /* line 5, ../sass/components/programs/_layout.scss */
   .node-type-program .l-main .l-content {
-    width: 75%;
-    clear: right;
+    width: 74.57627%;
     float: left;
-    padding-right: 10px;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
     border-right: 1px solid #DDD;
     padding-right: 40px; }
     /* line 9, ../sass/components/programs/_layout.scss */
@@ -1466,10 +1495,11 @@ a {
       padding-bottom: 40px; }
   /* line 13, ../sass/components/programs/_layout.scss */
   .node-type-program .l-main .l-region--sidebar-first {
-    width: 25%;
-    clear: right;
+    width: 23.72881%;
     float: right;
-    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
     padding-left: 25px; }
     /* line 5, ../sass/abstractions/_sidebar.scss */
     .node-type-program .l-main .l-region--sidebar-first h2, .node-type-program .l-main .l-region--sidebar-first h3, .node-type-program .l-main .l-region--sidebar-first h4, .node-type-program .l-main .l-region--sidebar-first h5, .node-type-program .l-main .l-region--sidebar-first h6 {

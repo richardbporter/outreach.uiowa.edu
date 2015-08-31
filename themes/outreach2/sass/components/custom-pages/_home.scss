@@ -17,18 +17,42 @@
 		}
 
 		.view-display-id-front_page_feature{
-			margin: 0 -40px;
 			background-color: $heading-color;
 			color: $border-color;
-			height: 460px;
+			margin: 0 -40px;
 			.views-field-field-feature-photo{
-				float: left;
-				margin-right: 40px;
+				margin: 0 auto;
+				img{
+					width: 100%;
+				}
 			}
 			.views-field-title,
-			.views-field-body{
-				margin-right: 40px;
+			.views-field-body,
+			.views-field-field-external-link{
+				margin: 0 40px;
 			}
+
+			.views-field-field-external-link{
+				padding-bottom: 40px;
+				a{
+					@include inverse-button-style();
+				}
+
+			}
+			@media all and (min-width: 900px){
+
+				height: 460px;
+				.views-field-field-feature-photo{
+					float: left;
+					margin-right: 40px;
+				}
+				.views-field-title,
+				.views-field-body{
+					margin-right: 40px;
+				}
+			}
+
+
 			.views-field-title{
 				padding-top: 40px;
 				color: white;
@@ -51,11 +75,7 @@
 				}
 
 			}
-			.views-field-field-external-link{
-				a{
-					@include inverse-button-style();
-				}
-			}
+
 		}
 
 		.view-display-id-home_page_featuerd_programs_pane,
@@ -63,15 +83,16 @@
 		.view-display-id-home_page_latest_news,
 		.view-display-id-home_page_stats_pane{
 			margin-top: 20px;
-			@include clearfix();
-			@include add-grid(12);
-			@include add-gutter(10px);
-			@include sgs-change('output', 'float');
-			.views-row{
-				@include grid-span(4);
-				&:nth-child(3n+1){
-					clear: left;
-				}
+			@media all and (min-width: 640px){
+				.view-content{
+		      @include display-flex(flex);
+		      @include flex-flow(row wrap);
+		      @include justify-content(space-around);
+		    }
+
+		    .views-row{
+		      width: 30%;
+		    }
 			}
 		}
 
@@ -218,15 +239,20 @@
 
 		.pane-events-home-page-events-pane{
 			@include background-image(linear-gradient(#F9F9F9, #FFFFFF 50%));
-			.view-content{
-				@include display-flex(flex);
-				@include flex-flow(row wrap);
-				@include justify-content(space-around);
+
+			@media all and (min-width: 640px){
+				.view-content{
+					@include display-flex(flex);
+					@include flex-flow(row wrap);
+					@include justify-content(space-around);
+				}
+				.views-row{
+					margin-right: 2%;
+					width: 23%;
+					@include flex-grow(1);
+				}
 			}
 			.views-row{
-				margin-right: 2%;
-				width: 23%;
-				@include flex-grow(1);
 				margin-bottom: 30px;
 				&.views-row-last{
 					margin-right: 0;
