@@ -13,14 +13,3 @@ function outreach2_field_collection_view($variables) {
 /**
  * Implements hook_preprocess_page().
  */
-
-function outreach2_preprocess_page(&$variables) {
-  if(isset($variables['node'])){
-    if($variables['node']->type == 'county'){
-      $variables['title'] = "Iowa Impact: ".$variables['node']->title. " County";
-    }
-    if($variables['node']->type == 'staff'){
-      $variables['title'] = $variables['node']->field_staff_first_name['und'][0]['value']. " " .$variables['node']->title;
-    }
-  }
-}
