@@ -1,28 +1,31 @@
 @mixin sidebar(){
-	@include grid-span(3,10);
-	padding-left: 25px;
-	h2, h3, h4, h5, h6{
-		text-transform: uppercase;
-		font-size: 1em;
-	}
-	.block{
-		border-top: 3px solid $accent-color;
-		margin-top: 40px;
-	}
 
-	.view-display-id-latest_news_block{
-		.views-row{
-			font-weight: 400;
-			font-size: 0.9em;
-			padding-bottom: 5px;
+		@include grid-span(3,10);
+		padding-left: 25px;
+		h2, h3, h4, h5, h6{
+			text-transform: uppercase;
+			font-size: 1em;
 		}
-		.more-link{
-			font-size: 0.9em;
-			text-align: left;
-			margin-top: 10px;
-			a{
-				@include button-style();
+		.block{
+			border-top: 3px solid $accent-color;
+			margin-top: 40px;
+		}
+
+		.view-display-id-latest_news_block{
+			.views-row{
+				font-weight: 400;
+				font-size: 0.9em;
+				padding-bottom: 5px;
+			}
+			.more-link{
+				font-size: 0.9em;
+				text-align: left;
+				margin-top: 10px;
+				a{
+					@include button-style();
+				}
 			}
 		}
-	}
+	
+
 }

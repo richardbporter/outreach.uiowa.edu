@@ -8,14 +8,21 @@
 
 	.center-wrapper{
 		@include clearfix();
-		.panel-col-first{
-			@include grid-span(9,1);
-			padding-right: 40px;
-		}
+		.panel-col-first,
 		.panel-col-last{
-			@include sidebar();
-			padding-left: 0;
-			width: 196px;
+			width: 100%;
+			float: none;
+		}
+		@media all and (min-width: 767px){
+			.panel-col-first{
+				@include grid-span(9,1);
+				padding-right: 40px;
+			}
+			.panel-col-last{
+				@include sidebar();
+				padding-left: 0;
+				width: 196px;
+			}
 		}
 	}
 

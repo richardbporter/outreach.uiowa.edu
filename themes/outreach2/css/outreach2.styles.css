@@ -63,97 +63,124 @@ a {
     text-decoration: underline; }
 
 /* line 1, ../sass/components/_page.scss */
-.l-header {
+.l-page {
   background: #000 url(../images/outreach_background.jpg) top center no-repeat;
-  background-size: 1400px 565px;
-  min-height: 565px;
-  border-bottom: 3px solid #FFE100; }
-  /* line 7, ../sass/components/_page.scss */
-  .l-header .header-collection {
-    max-width: 1024px;
+  background-size: 1400px 565px; }
+
+/* line 8, ../sass/components/_page.scss */
+.l-header .header-collection {
+  max-width: 1024px;
+  margin: 0 auto; }
+  /* line 13, ../../../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p547@omega.outreach2/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
+  .l-header .header-collection:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 14, ../sass/components/_page.scss */
+.l-header h1.site-name {
+  font-size: 3em;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 0.75em;
+  padding-left: 14px; }
+  /* line 20, ../sass/components/_page.scss */
+  .l-header h1.site-name a {
+    color: #FFE100; }
+/* line 24, ../sass/components/_page.scss */
+.l-header h2.site-slogan {
+  font-size: 2em;
+  font-weight: 400;
+  margin-top: 10px;
+  padding-left: 14px;
+  color: #DDD; }
+/* line 33, ../sass/components/_page.scss */
+.l-header .block--responsive-navigation a {
+  background-color: #444;
+  padding: 14px;
+  color: #FFF;
+  display: block;
+  font-size: 1.4em;
+  border-bottom: 1px solid #DDD; }
+/* line 42, ../sass/components/_page.scss */
+.l-header .block--responsive-navigation li.active-trail a {
+  color: #FFE100; }
+@media all and (min-width: 640px) {
+  /* line 50, ../sass/components/_page.scss */
+  .l-header #nav li {
+    width: auto;
+    display: inline-block; }
+  /* line 55, ../sass/components/_page.scss */
+  .l-header ul.responsive-navigation {
     margin: 0 auto; }
-    /* line 13, ../../../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p547@omega.outreach2/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
-    .l-header .header-collection:after {
-      content: "";
-      display: table;
-      clear: both; }
-  /* line 13, ../sass/components/_page.scss */
-  .l-header h1.site-name {
-    font-size: 3em;
-    font-weight: 600;
-    margin: 0;
-    padding-top: 0.75em; }
-    /* line 18, ../sass/components/_page.scss */
-    .l-header h1.site-name a {
-      color: #FFE100; }
-  /* line 22, ../sass/components/_page.scss */
-  .l-header h2.site-slogan {
-    font-size: 2em;
-    font-weight: 400;
-    margin-top: 10px;
-    color: #DDD; }
-  /* line 29, ../sass/components/_page.scss */
+    /* line 57, ../sass/components/_page.scss */
+    .l-header ul.responsive-navigation li {
+      display: inline-block;
+      height: 100%;
+      font-size: 1.6em;
+      padding: 15px 14px;
+      text-align: center; }
+      /* line 63, ../sass/components/_page.scss */
+      .l-header ul.responsive-navigation li.active-trail {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-top: 3px solid #FFE100;
+        color: #DDD; }
+      /* line 68, ../sass/components/_page.scss */
+      .l-header ul.responsive-navigation li a {
+        color: #DDD;
+        background-color: inherit;
+        padding: 0;
+        display: inline;
+        font-size: 1em;
+        border-bottom: none; } }
+@media all and (min-width: 900px) {
+  /* line 81, ../sass/components/_page.scss */
   .l-header .l-branding {
     float: left; }
-  /* line 33, ../sass/components/_page.scss */
+    /* line 83, ../sass/components/_page.scss */
+    .l-header .l-branding h1.site-name,
+    .l-header .l-branding h2.site-slogan {
+      padding-left: 0; }
+  /* line 89, ../sass/components/_page.scss */
   .l-header .l-region--header {
     float: right; }
-    /* line 36, ../sass/components/_page.scss */
-    .l-header .l-region--header #nav li {
-      width: auto;
-      display: inline-block; }
-    /* line 41, ../sass/components/_page.scss */
-    .l-header .l-region--header ul.responsive-navigation {
-      margin: 0; }
-      /* line 43, ../sass/components/_page.scss */
-      .l-header .l-region--header ul.responsive-navigation li {
-        display: inline-block;
-        height: 100%;
-        font-size: 1.6em;
-        padding: 43px 14px;
-        text-align: center; }
-        /* line 49, ../sass/components/_page.scss */
-        .l-header .l-region--header ul.responsive-navigation li.active-trail {
-          background-color: rgba(0, 0, 0, 0.2);
-          border-top: 3px solid #FFE100; }
-        /* line 53, ../sass/components/_page.scss */
-        .l-header .l-region--header ul.responsive-navigation li a {
-          color: #DDD; }
+    /* line 92, ../sass/components/_page.scss */
+    .l-header .l-region--header ul.responsive-navigation li {
+      padding: 43px 14px; } }
 
-/* line 62, ../sass/components/_page.scss */
+/* line 103, ../sass/components/_page.scss */
 .l-main {
   max-width: 1024px;
-  margin: -455px auto 0;
+  margin: 0 auto;
   padding: 0 40px;
   background-color: #FFF;
   font-size: 1.8em;
   font-weight: 300;
   line-height: 1.6em;
   color: #444; }
-  /* line 72, ../sass/components/_page.scss */
+  /* line 113, ../sass/components/_page.scss */
   .l-main h1 {
     font-size: 2.5em;
     margin-top: 0;
     padding-top: 40px; }
-  /* line 77, ../sass/components/_page.scss */
+  /* line 118, ../sass/components/_page.scss */
   .l-main h2 {
     font-size: 1.83em; }
-  /* line 80, ../sass/components/_page.scss */
+  /* line 121, ../sass/components/_page.scss */
   .l-main h3 {
     font-size: 1.44em; }
-  /* line 83, ../sass/components/_page.scss */
+  /* line 124, ../sass/components/_page.scss */
   .l-main h4 {
     font-size: 1.11em; }
-  /* line 86, ../sass/components/_page.scss */
+  /* line 127, ../sass/components/_page.scss */
   .l-main h5, .l-main h6 {
     font-size: 1em; }
 
-/* line 91, ../sass/components/_page.scss */
+/* line 132, ../sass/components/_page.scss */
 .l-footer {
   background-color: #212121;
   color: #FFF;
   clear: both; }
-  /* line 95, ../sass/components/_page.scss */
+  /* line 136, ../sass/components/_page.scss */
   .l-footer .l-region--footer {
     max-width: 1024px;
     margin: 0 auto;
@@ -164,37 +191,37 @@ a {
       content: "";
       display: table;
       clear: both; }
-    /* line 102, ../sass/components/_page.scss */
+    /* line 143, ../sass/components/_page.scss */
     .l-footer .l-region--footer ul {
       margin: 0;
       padding: 0;
       font-size: 1.4em;
       line-height: 1.6em;
       list-style: none; }
-      /* line 108, ../sass/components/_page.scss */
+      /* line 149, ../sass/components/_page.scss */
       .l-footer .l-region--footer ul li {
         border-bottom: 1px solid #DDD;
         padding-bottom: 12px;
         margin-bottom: 12px;
         text-transform: uppercase;
         max-width: 65%; }
-    /* line 116, ../sass/components/_page.scss */
+    /* line 157, ../sass/components/_page.scss */
     .l-footer .l-region--footer .contact-info {
       width: 32.20339%;
       float: left;
       margin-right: -100%;
       margin-left: 0;
       clear: none; }
-      /* line 118, ../sass/components/_page.scss */
+      /* line 159, ../sass/components/_page.scss */
       .l-footer .l-region--footer .contact-info h3 {
         margin: 0;
         color: #FFE100;
         font-size: 2em; }
-      /* line 123, ../sass/components/_page.scss */
+      /* line 164, ../sass/components/_page.scss */
       .l-footer .l-region--footer .contact-info p {
         font-size: 1.4em;
         line-height: 1.6em; }
-    /* line 128, ../sass/components/_page.scss */
+    /* line 169, ../sass/components/_page.scss */
     .l-footer .l-region--footer .enewsletter {
       font-size: 0.8em;
       text-transform: uppercase;
@@ -219,61 +246,61 @@ a {
       .l-footer .l-region--footer .enewsletter:after {
         content: "\25b6";
         padding-left: 4px; }
-    /* line 131, ../sass/components/_page.scss */
+    /* line 172, ../sass/components/_page.scss */
     .l-footer .l-region--footer .nav-links-first {
       width: 15.25424%;
       float: left;
       margin-right: -100%;
       margin-left: 33.89831%;
       clear: none; }
-    /* line 134, ../sass/components/_page.scss */
+    /* line 175, ../sass/components/_page.scss */
     .l-footer .l-region--footer .nav-links-second {
       width: 15.25424%;
       float: left;
       margin-right: -100%;
       margin-left: 50.84746%;
       clear: none; }
-    /* line 137, ../sass/components/_page.scss */
+    /* line 178, ../sass/components/_page.scss */
     .l-footer .l-region--footer .logo {
       width: 32.20339%;
       float: right;
       margin-left: 0;
       margin-right: 0;
       clear: none; }
-      /* line 139, ../sass/components/_page.scss */
+      /* line 180, ../sass/components/_page.scss */
       .l-footer .l-region--footer .logo .social-icons {
         text-align: center;
         margin-top: 10px; }
-        /* line 142, ../sass/components/_page.scss */
+        /* line 183, ../sass/components/_page.scss */
         .l-footer .l-region--footer .logo .social-icons img {
           width: 32px; }
 
-/* line 151, ../sass/components/_page.scss */
+/* line 192, ../sass/components/_page.scss */
 #ui-global-footer .l-container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 40px;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 300; }
-  /* line 159, ../sass/components/_page.scss */
+  /* line 200, ../sass/components/_page.scss */
   #ui-global-footer .l-container #ui-global-links ul {
     padding: 0; }
-    /* line 161, ../sass/components/_page.scss */
+    /* line 202, ../sass/components/_page.scss */
     #ui-global-footer .l-container #ui-global-links ul li {
       margin: 0 10px 0 0;
       padding-right: 10px;
       border-right: 1px solid #DDD; }
-      /* line 165, ../sass/components/_page.scss */
+      /* line 206, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li:last-child {
         border-right: none; }
-      /* line 169, ../sass/components/_page.scss */
+      /* line 210, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li:after {
         content: "";
         margin: 0; }
-      /* line 173, ../sass/components/_page.scss */
+      /* line 214, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li a {
         color: #DDD; }
-        /* line 175, ../sass/components/_page.scss */
+        /* line 216, ../sass/components/_page.scss */
         #ui-global-footer .l-container #ui-global-links ul li a strong {
           font-weight: 300; }
 
@@ -299,25 +326,25 @@ a {
   margin-right: 0;
   clear: none;
   padding-left: 25px; }
-  /* line 4, ../sass/abstractions/_sidebar.scss */
+  /* line 5, ../sass/abstractions/_sidebar.scss */
   .node-type-page .l-main .l-region--sidebar-first h2, .node-type-page .l-main .l-region--sidebar-first h3, .node-type-page .l-main .l-region--sidebar-first h4, .node-type-page .l-main .l-region--sidebar-first h5, .node-type-page .l-main .l-region--sidebar-first h6 {
     text-transform: uppercase;
     font-size: 1em; }
-  /* line 8, ../sass/abstractions/_sidebar.scss */
+  /* line 9, ../sass/abstractions/_sidebar.scss */
   .node-type-page .l-main .l-region--sidebar-first .block {
     border-top: 3px solid #FFE100;
     margin-top: 40px; }
-  /* line 14, ../sass/abstractions/_sidebar.scss */
+  /* line 15, ../sass/abstractions/_sidebar.scss */
   .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .views-row {
     font-weight: 400;
     font-size: 0.9em;
     padding-bottom: 5px; }
-  /* line 19, ../sass/abstractions/_sidebar.scss */
+  /* line 20, ../sass/abstractions/_sidebar.scss */
   .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link {
     font-size: 0.9em;
     text-align: left;
     margin-top: 10px; }
-    /* line 23, ../sass/abstractions/_sidebar.scss */
+    /* line 24, ../sass/abstractions/_sidebar.scss */
     .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a {
       font-size: 0.8em;
       text-transform: uppercase;
@@ -396,25 +423,25 @@ a {
     padding-left: 25px;
     padding-left: 0;
     width: 196px; }
-    /* line 4, ../sass/abstractions/_sidebar.scss */
+    /* line 5, ../sass/abstractions/_sidebar.scss */
     .node-type-county .panel-col-top .pane-node-field-county-image h2, .node-type-county .panel-col-top .pane-node-field-county-image h3, .node-type-county .panel-col-top .pane-node-field-county-image h4, .node-type-county .panel-col-top .pane-node-field-county-image h5, .node-type-county .panel-col-top .pane-node-field-county-image h6 {
       text-transform: uppercase;
       font-size: 1em; }
-    /* line 8, ../sass/abstractions/_sidebar.scss */
+    /* line 9, ../sass/abstractions/_sidebar.scss */
     .node-type-county .panel-col-top .pane-node-field-county-image .block {
       border-top: 3px solid #FFE100;
       margin-top: 40px; }
-    /* line 14, ../sass/abstractions/_sidebar.scss */
+    /* line 15, ../sass/abstractions/_sidebar.scss */
     .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .views-row {
       font-weight: 400;
       font-size: 0.9em;
       padding-bottom: 5px; }
-    /* line 19, ../sass/abstractions/_sidebar.scss */
+    /* line 20, ../sass/abstractions/_sidebar.scss */
     .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .more-link {
       font-size: 0.9em;
       text-align: left;
       margin-top: 10px; }
-      /* line 23, ../sass/abstractions/_sidebar.scss */
+      /* line 24, ../sass/abstractions/_sidebar.scss */
       .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .more-link a {
         font-size: 0.8em;
         text-transform: uppercase;
@@ -460,25 +487,25 @@ a {
   padding-left: 25px;
   padding-left: 0;
   width: 196px; }
-  /* line 4, ../sass/abstractions/_sidebar.scss */
+  /* line 5, ../sass/abstractions/_sidebar.scss */
   .node-type-county .center-wrapper .panel-col-last h2, .node-type-county .center-wrapper .panel-col-last h3, .node-type-county .center-wrapper .panel-col-last h4, .node-type-county .center-wrapper .panel-col-last h5, .node-type-county .center-wrapper .panel-col-last h6 {
     text-transform: uppercase;
     font-size: 1em; }
-  /* line 8, ../sass/abstractions/_sidebar.scss */
+  /* line 9, ../sass/abstractions/_sidebar.scss */
   .node-type-county .center-wrapper .panel-col-last .block {
     border-top: 3px solid #FFE100;
     margin-top: 40px; }
-  /* line 14, ../sass/abstractions/_sidebar.scss */
+  /* line 15, ../sass/abstractions/_sidebar.scss */
   .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .views-row {
     font-weight: 400;
     font-size: 0.9em;
     padding-bottom: 5px; }
-  /* line 19, ../sass/abstractions/_sidebar.scss */
+  /* line 20, ../sass/abstractions/_sidebar.scss */
   .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link {
     font-size: 0.9em;
     text-align: left;
     margin-top: 10px; }
-    /* line 23, ../sass/abstractions/_sidebar.scss */
+    /* line 24, ../sass/abstractions/_sidebar.scss */
     .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a {
       font-size: 0.8em;
       text-transform: uppercase;
@@ -1122,95 +1149,101 @@ a {
   display: table;
   clear: both; }
 /* line 11, ../sass/components/featured_programs/_featured_program.scss */
-.node-type-featured-program .center-wrapper .panel-col-first {
-  width: 75%;
-  clear: right;
-  float: left;
-  padding-right: 10px;
-  padding-right: 40px; }
-/* line 15, ../sass/components/featured_programs/_featured_program.scss */
+.node-type-featured-program .center-wrapper .panel-col-first,
 .node-type-featured-program .center-wrapper .panel-col-last {
-  width: 25%;
-  clear: right;
-  float: right;
-  padding-right: 0;
-  padding-left: 25px;
-  padding-left: 0;
-  width: 196px; }
-  /* line 4, ../sass/abstractions/_sidebar.scss */
-  .node-type-featured-program .center-wrapper .panel-col-last h2, .node-type-featured-program .center-wrapper .panel-col-last h3, .node-type-featured-program .center-wrapper .panel-col-last h4, .node-type-featured-program .center-wrapper .panel-col-last h5, .node-type-featured-program .center-wrapper .panel-col-last h6 {
-    text-transform: uppercase;
-    font-size: 1em; }
-  /* line 8, ../sass/abstractions/_sidebar.scss */
-  .node-type-featured-program .center-wrapper .panel-col-last .block {
-    border-top: 3px solid #FFE100;
-    margin-top: 40px; }
-  /* line 14, ../sass/abstractions/_sidebar.scss */
-  .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .views-row {
-    font-weight: 400;
-    font-size: 0.9em;
-    padding-bottom: 5px; }
-  /* line 19, ../sass/abstractions/_sidebar.scss */
-  .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link {
-    font-size: 0.9em;
-    text-align: left;
-    margin-top: 10px; }
-    /* line 23, ../sass/abstractions/_sidebar.scss */
-    .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a {
-      font-size: 0.8em;
+  width: 100%;
+  float: none; }
+@media all and (min-width: 767px) {
+  /* line 17, ../sass/components/featured_programs/_featured_program.scss */
+  .node-type-featured-program .center-wrapper .panel-col-first {
+    width: 75%;
+    clear: right;
+    float: left;
+    padding-right: 10px;
+    padding-right: 40px; }
+  /* line 21, ../sass/components/featured_programs/_featured_program.scss */
+  .node-type-featured-program .center-wrapper .panel-col-last {
+    width: 25%;
+    clear: right;
+    float: right;
+    padding-right: 0;
+    padding-left: 25px;
+    padding-left: 0;
+    width: 196px; }
+    /* line 5, ../sass/abstractions/_sidebar.scss */
+    .node-type-featured-program .center-wrapper .panel-col-last h2, .node-type-featured-program .center-wrapper .panel-col-last h3, .node-type-featured-program .center-wrapper .panel-col-last h4, .node-type-featured-program .center-wrapper .panel-col-last h5, .node-type-featured-program .center-wrapper .panel-col-last h6 {
       text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid #999;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      padding: 5px 10px;
-      color: #000; }
-      /* line 9, ../sass/abstractions/_button.scss */
-      .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:hover {
-        background-color: #222;
-        color: #EEE;
-        text-decoration: none; }
-        /* line 13, ../sass/abstractions/_button.scss */
-        .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:hover:after {
-          color: #FFE100; }
-      /* line 17, ../sass/abstractions/_button.scss */
-      .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:after {
-        content: "\25b6";
-        padding-left: 4px; }
-/* line 23, ../sass/components/featured_programs/_featured_program.scss */
+      font-size: 1em; }
+    /* line 9, ../sass/abstractions/_sidebar.scss */
+    .node-type-featured-program .center-wrapper .panel-col-last .block {
+      border-top: 3px solid #FFE100;
+      margin-top: 40px; }
+    /* line 15, ../sass/abstractions/_sidebar.scss */
+    .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .views-row {
+      font-weight: 400;
+      font-size: 0.9em;
+      padding-bottom: 5px; }
+    /* line 20, ../sass/abstractions/_sidebar.scss */
+    .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link {
+      font-size: 0.9em;
+      text-align: left;
+      margin-top: 10px; }
+      /* line 24, ../sass/abstractions/_sidebar.scss */
+      .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid #999;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        padding: 5px 10px;
+        color: #000; }
+        /* line 9, ../sass/abstractions/_button.scss */
+        .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:hover {
+          background-color: #222;
+          color: #EEE;
+          text-decoration: none; }
+          /* line 13, ../sass/abstractions/_button.scss */
+          .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:hover:after {
+            color: #FFE100; }
+        /* line 17, ../sass/abstractions/_button.scss */
+        .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:after {
+          content: "\25b6";
+          padding-left: 4px; } }
+/* line 30, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .panel-col-last .panel-pane {
   border-top: 3px solid #FFE100;
   margin-top: 20px; }
-/* line 30, ../sass/components/featured_programs/_featured_program.scss */
+/* line 37, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-hometown-hawkeyes-featured-program-hometown-hawkeye-pane .field-collection-container {
   border-bottom: 0; }
-/* line 33, ../sass/components/featured_programs/_featured_program.scss */
+/* line 40, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-hometown-hawkeyes-featured-program-hometown-hawkeye-pane .field-collection-item-field-county-hometown-hawkeye {
   padding: 0;
   margin: 0;
   font-weight: 400;
   font-size: 0.8em;
   line-height: 1.3em; }
-/* line 42, ../sass/components/featured_programs/_featured_program.scss */
+/* line 49, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featured-program-people,
 .node-type-featured-program .pane-news-items-featured-program-news-pane,
 .node-type-featured-program .pane-events-featured-program-events-pane {
   border-top: 1px solid #DDD;
   padding-top: 40px; }
-  /* line 47, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 54, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people h2,
   .node-type-featured-program .pane-news-items-featured-program-news-pane h2,
   .node-type-featured-program .pane-events-featured-program-events-pane h2 {
     margin-top: 0; }
-/* line 52, ../sass/components/featured_programs/_featured_program.scss */
+/* line 59, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featuerd-program-logo {
   float: right;
   padding: 20px 0 20px 20px; }
-/* line 58, ../sass/components/featured_programs/_featured_program.scss */
+/* line 65, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featured-program-people .field-collection-container {
   border-bottom: none; }
-/* line 62, ../sass/components/featured_programs/_featured_program.scss */
+/* line 69, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featured-program-people .field--name-field-featured-program-people .field__items {
   display: -webkit-flex;
   display: flex;
@@ -1218,29 +1251,29 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 69, ../sass/components/featured_programs/_featured_program.scss */
+/* line 76, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featured-program-people .field__item {
   width: 45%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 25px; }
-/* line 74, ../sass/components/featured_programs/_featured_program.scss */
+/* line 81, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people {
   font-size: 0.9em;
   line-height: 1.4em; }
-  /* line 77, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 84, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field__item {
     margin-bottom: 0px; }
-  /* line 80, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 87, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field--name-field-fp-people-photo {
     float: left;
     padding-right: 10px; }
-  /* line 84, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 91, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field--name-field-fp-people-name {
     font-weight: 600;
     font-size: 1.2em;
     margin-bottom: 5px; }
-/* line 93, ../sass/components/featured_programs/_featured_program.scss */
+/* line 100, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-staff-about-us-staff-pane .view-content {
   display: -webkit-flex;
   display: flex;
@@ -1248,7 +1281,7 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 99, ../sass/components/featured_programs/_featured_program.scss */
+/* line 106, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-staff-about-us-staff-pane .views-row {
   width: 45%;
   -webkit-flex-grow: 1;
@@ -1256,16 +1289,16 @@ a {
   margin-bottom: 25px;
   font-size: 0.9em;
   line-height: 1.4em; }
-  /* line 105, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 112, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-staff-about-us-staff-pane .views-row .views-field-field-fp-people-photo {
     float: left;
     padding-right: 10px; }
-  /* line 109, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 116, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-staff-about-us-staff-pane .views-row .views-field-field-staff-first-name {
     font-weight: 600;
     font-size: 1.2em;
     margin-bottom: 5px; }
-/* line 118, ../sass/components/featured_programs/_featured_program.scss */
+/* line 125, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-news-items-featured-program-news-pane .view-content {
   display: -webkit-flex;
   display: flex;
@@ -1273,24 +1306,24 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 123, ../sass/components/featured_programs/_featured_program.scss */
+/* line 130, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row {
   width: 30%;
   margin-right: 2%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 128, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 135, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row .views-field-created {
     font-size: 0.85em;
     text-transform: uppercase;
     font-weight: 400; }
-  /* line 135, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 142, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row .views-field-body p {
     margin-top: 0;
     font-size: 0.85em;
     line-height: 1.5em; }
-/* line 144, ../sass/components/featured_programs/_featured_program.scss */
+/* line 151, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-events-featured-program-events-pane .view-content {
   display: -webkit-flex;
   display: flex;
@@ -1298,41 +1331,41 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 149, ../sass/components/featured_programs/_featured_program.scss */
+/* line 156, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-events-featured-program-events-pane .views-row {
   width: 30%;
   margin-right: 2%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 154, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 161, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-events-featured-program-events-pane .views-row .views-field-title {
     font-weight: 400; }
-/* line 160, ../sass/components/featured_programs/_featured_program.scss */
+/* line 167, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-videos-featured-program-video-pane {
   background-color: #F9F9F9;
   padding: 20px 0; }
-  /* line 163, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 170, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-field-video {
     margin: 0 20px; }
-    /* line 165, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 172, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-field-video .media-youtube-player {
       width: 620px;
       height: 330px; }
-  /* line 171, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 178, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body {
     margin: 20px;
     padding: 0 20px;
     background-color: #FFF;
     border: 1px solid #DDD; }
-    /* line 176, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 183, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body h4 {
       font-size: 0.9em;
       text-transform: uppercase; }
-    /* line 180, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 187, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body h3 {
       font-size: 1.3em; }
-    /* line 183, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 190, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body p {
       font-size: 0.9em;
       line-height: 1.3em; }
@@ -1448,65 +1481,66 @@ a {
   content: "";
   display: table;
   clear: both; }
-/* line 4, ../sass/components/programs/_layout.scss */
-.node-type-program .l-main .l-content {
-  width: 75%;
-  clear: right;
-  float: left;
-  padding-right: 10px;
-  border-right: 1px solid #DDD;
-  padding-right: 40px; }
-  /* line 8, ../sass/components/programs/_layout.scss */
-  .node-type-program .l-main .l-content article {
-    padding-bottom: 40px; }
-/* line 12, ../sass/components/programs/_layout.scss */
-.node-type-program .l-main .l-region--sidebar-first {
-  width: 25%;
-  clear: right;
-  float: right;
-  padding-right: 0;
-  padding-left: 25px; }
-  /* line 4, ../sass/abstractions/_sidebar.scss */
-  .node-type-program .l-main .l-region--sidebar-first h2, .node-type-program .l-main .l-region--sidebar-first h3, .node-type-program .l-main .l-region--sidebar-first h4, .node-type-program .l-main .l-region--sidebar-first h5, .node-type-program .l-main .l-region--sidebar-first h6 {
-    text-transform: uppercase;
-    font-size: 1em; }
-  /* line 8, ../sass/abstractions/_sidebar.scss */
-  .node-type-program .l-main .l-region--sidebar-first .block {
-    border-top: 3px solid #FFE100;
-    margin-top: 40px; }
-  /* line 14, ../sass/abstractions/_sidebar.scss */
-  .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .views-row {
-    font-weight: 400;
-    font-size: 0.9em;
-    padding-bottom: 5px; }
-  /* line 19, ../sass/abstractions/_sidebar.scss */
-  .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link {
-    font-size: 0.9em;
-    text-align: left;
-    margin-top: 10px; }
-    /* line 23, ../sass/abstractions/_sidebar.scss */
-    .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a {
-      font-size: 0.8em;
+@media all and (min-width: 767px) {
+  /* line 5, ../sass/components/programs/_layout.scss */
+  .node-type-program .l-main .l-content {
+    width: 75%;
+    clear: right;
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #DDD;
+    padding-right: 40px; }
+    /* line 9, ../sass/components/programs/_layout.scss */
+    .node-type-program .l-main .l-content article {
+      padding-bottom: 40px; }
+  /* line 13, ../sass/components/programs/_layout.scss */
+  .node-type-program .l-main .l-region--sidebar-first {
+    width: 25%;
+    clear: right;
+    float: right;
+    padding-right: 0;
+    padding-left: 25px; }
+    /* line 5, ../sass/abstractions/_sidebar.scss */
+    .node-type-program .l-main .l-region--sidebar-first h2, .node-type-program .l-main .l-region--sidebar-first h3, .node-type-program .l-main .l-region--sidebar-first h4, .node-type-program .l-main .l-region--sidebar-first h5, .node-type-program .l-main .l-region--sidebar-first h6 {
       text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid #999;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      padding: 5px 10px;
-      color: #000; }
-      /* line 9, ../sass/abstractions/_button.scss */
-      .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:hover {
-        background-color: #222;
-        color: #EEE;
-        text-decoration: none; }
-        /* line 13, ../sass/abstractions/_button.scss */
-        .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:hover:after {
-          color: #FFE100; }
-      /* line 17, ../sass/abstractions/_button.scss */
-      .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:after {
-        content: "\25b6";
-        padding-left: 4px; }
+      font-size: 1em; }
+    /* line 9, ../sass/abstractions/_sidebar.scss */
+    .node-type-program .l-main .l-region--sidebar-first .block {
+      border-top: 3px solid #FFE100;
+      margin-top: 40px; }
+    /* line 15, ../sass/abstractions/_sidebar.scss */
+    .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .views-row {
+      font-weight: 400;
+      font-size: 0.9em;
+      padding-bottom: 5px; }
+    /* line 20, ../sass/abstractions/_sidebar.scss */
+    .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link {
+      font-size: 0.9em;
+      text-align: left;
+      margin-top: 10px; }
+      /* line 24, ../sass/abstractions/_sidebar.scss */
+      .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid #999;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        padding: 5px 10px;
+        color: #000; }
+        /* line 9, ../sass/abstractions/_button.scss */
+        .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:hover {
+          background-color: #222;
+          color: #EEE;
+          text-decoration: none; }
+          /* line 13, ../sass/abstractions/_button.scss */
+          .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:hover:after {
+            color: #FFE100; }
+        /* line 17, ../sass/abstractions/_button.scss */
+        .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:after {
+          content: "\25b6";
+          padding-left: 4px; } }
 
 /* line 2, ../sass/components/programs/_programs_page.scss */
 .page-programs .views-label-field-program-unit {

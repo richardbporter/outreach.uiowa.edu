@@ -1,8 +1,9 @@
-.l-header{
+.l-page{
 	background: #000 url(../images/outreach_background.jpg) top center no-repeat;
 	background-size: 1400px 565px;
-	min-height: 565px;
-	border-bottom: 3px solid $accent-color;
+}
+
+.l-header{
 
 	.header-collection{
 		max-width: 1024px;
@@ -15,6 +16,7 @@
 		font-weight: 600;
 		margin: 0;
 		padding-top: 0.75em;
+		padding-left: 14px;
 		a{
 			color: $accent-color;
 		}
@@ -23,46 +25,85 @@
 		font-size: 2em;
 		font-weight: 400;
 		margin-top: 10px;
+		padding-left: 14px;
 		color: $border-color;
 	}
 
+	.block--responsive-navigation {
+		a{
+			background-color: $body-color;
+			padding: 14px;
+			color: #FFF;
+			display: block;
+			font-size: 1.4em;
+			border-bottom: 1px solid $border-color;
+		}
+		li.active-trail{
+			a{
+				color: $accent-color;
+			}
+		}
+	}
+
+@media all and (min-width: 640px){
+	#nav{
+		li{
+			width: auto;
+			display: inline-block;
+		}
+	}
+	ul.responsive-navigation {
+		margin: 0 auto;
+		li{
+			display: inline-block;
+			height: 100%;
+			font-size: 1.6em;
+			padding: 15px 14px;
+			text-align: center;
+			&.active-trail{
+				background-color: rgba(0,0,0,0.2);
+				border-top: 3px solid $accent-color;
+				color: $border-color;
+			}
+			a{
+				color: $border-color;
+				background-color: inherit;
+				padding: 0;
+				display: inline;
+				font-size: 1em;
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 900px){
 	.l-branding{
 		float: left;
+		h1.site-name,
+		h2.site-slogan{
+			padding-left: 0;
+		}
 	}
 
 	.l-region--header{
 		float: right;
-		#nav{
-			li{
-				width: auto;
-				display: inline-block;
-			}
-		}
 		ul.responsive-navigation {
-			margin: 0;
 			li{
-				display: inline-block;
-				height: 100%;
-				font-size: 1.6em;
 				padding: 43px 14px;
-				text-align: center;
-				&.active-trail{
-					background-color: rgba(0,0,0,0.2);
-					border-top: 3px solid $accent-color;
-				}
-				a{
-					color: $border-color;
-				}
 			}
 		}
 	}
 
 }
 
+
+}
+
 .l-main{
 	@include add-grid(12);
 	max-width: 1024px;
-	margin: -455px auto 0;
+	margin: 0 auto;
 	padding: 0 40px;
 	background-color: #FFF;
 	font-size: 1.8em;
