@@ -193,24 +193,25 @@ a {
         padding-bottom: 12px;
         margin-bottom: 12px;
         text-transform: uppercase;
-        max-width: 65%; }
-    /* line 157, ../sass/components/_page.scss */
-    .l-footer .l-region--footer .contact-info {
-      width: 32.20339%;
-      float: left;
-      margin-right: -100%;
-      margin-left: 0;
-      clear: none; }
-      /* line 159, ../sass/components/_page.scss */
-      .l-footer .l-region--footer .contact-info h3 {
-        margin: 0;
-        color: #FFE100;
-        font-size: 2em; }
-      /* line 164, ../sass/components/_page.scss */
-      .l-footer .l-region--footer .contact-info p {
-        font-size: 1.4em;
-        line-height: 1.6em; }
-    /* line 169, ../sass/components/_page.scss */
+        max-width: 90%; }
+    @media all and (min-width: 767px) {
+      /* line 157, ../sass/components/_page.scss */
+      .l-footer .l-region--footer .contact-info {
+        width: 32.20339%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 0;
+        clear: none; } }
+    /* line 161, ../sass/components/_page.scss */
+    .l-footer .l-region--footer .contact-info h3 {
+      margin: 0;
+      color: #FFE100;
+      font-size: 2em; }
+    /* line 166, ../sass/components/_page.scss */
+    .l-footer .l-region--footer .contact-info p {
+      font-size: 1.4em;
+      line-height: 1.6em; }
+    /* line 171, ../sass/components/_page.scss */
     .l-footer .l-region--footer .enewsletter {
       font-size: 0.8em;
       text-transform: uppercase;
@@ -235,61 +236,86 @@ a {
       .l-footer .l-region--footer .enewsletter:after {
         content: "\25b6";
         padding-left: 4px; }
-    /* line 172, ../sass/components/_page.scss */
-    .l-footer .l-region--footer .nav-links-first {
-      width: 15.25424%;
-      float: left;
-      margin-right: -100%;
-      margin-left: 33.89831%;
-      clear: none; }
     /* line 175, ../sass/components/_page.scss */
-    .l-footer .l-region--footer .nav-links-second {
-      width: 15.25424%;
+    .l-footer .l-region--footer .nav-links-first {
+      width: 49.15254%;
       float: left;
       margin-right: -100%;
-      margin-left: 50.84746%;
+      margin-left: 0;
       clear: none; }
-    /* line 178, ../sass/components/_page.scss */
-    .l-footer .l-region--footer .logo {
-      width: 32.20339%;
+    /* line 179, ../sass/components/_page.scss */
+    .l-footer .l-region--footer .nav-links-second {
+      width: 49.15254%;
       float: right;
       margin-left: 0;
       margin-right: 0;
       clear: none; }
-      /* line 180, ../sass/components/_page.scss */
+    @media all and (min-width: 767px) {
+      /* line 184, ../sass/components/_page.scss */
+      .l-footer .l-region--footer .nav-links-first {
+        width: 15.25424%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 33.89831%;
+        clear: none; }
+        /* line 186, ../sass/components/_page.scss */
+        .l-footer .l-region--footer .nav-links-first li {
+          max-width: 65%; }
+      /* line 190, ../sass/components/_page.scss */
+      .l-footer .l-region--footer .nav-links-second {
+        width: 15.25424%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 50.84746%;
+        clear: none; }
+        /* line 192, ../sass/components/_page.scss */
+        .l-footer .l-region--footer .nav-links-second li {
+          max-width: 65%; } }
+    /* line 197, ../sass/components/_page.scss */
+    .l-footer .l-region--footer .logo {
+      clear: both; }
+      @media all and (min-width: 767px) {
+        /* line 197, ../sass/components/_page.scss */
+        .l-footer .l-region--footer .logo {
+          width: 32.20339%;
+          float: right;
+          margin-left: 0;
+          margin-right: 0;
+          clear: none; } }
+      /* line 202, ../sass/components/_page.scss */
       .l-footer .l-region--footer .logo .social-icons {
         text-align: center;
         margin-top: 10px; }
-        /* line 183, ../sass/components/_page.scss */
+        /* line 205, ../sass/components/_page.scss */
         .l-footer .l-region--footer .logo .social-icons img {
           width: 32px; }
 
-/* line 192, ../sass/components/_page.scss */
+/* line 214, ../sass/components/_page.scss */
 #ui-global-footer .l-container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 40px;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 300; }
-  /* line 200, ../sass/components/_page.scss */
+  /* line 222, ../sass/components/_page.scss */
   #ui-global-footer .l-container #ui-global-links ul {
     padding: 0; }
-    /* line 202, ../sass/components/_page.scss */
+    /* line 224, ../sass/components/_page.scss */
     #ui-global-footer .l-container #ui-global-links ul li {
       margin: 0 10px 0 0;
       padding-right: 10px;
       border-right: 1px solid #DDD; }
-      /* line 206, ../sass/components/_page.scss */
+      /* line 228, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li:last-child {
         border-right: none; }
-      /* line 210, ../sass/components/_page.scss */
+      /* line 232, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li:after {
         content: "";
         margin: 0; }
-      /* line 214, ../sass/components/_page.scss */
+      /* line 236, ../sass/components/_page.scss */
       #ui-global-footer .l-container #ui-global-links ul li a {
         color: #DDD; }
-        /* line 216, ../sass/components/_page.scss */
+        /* line 238, ../sass/components/_page.scss */
         #ui-global-footer .l-container #ui-global-links ul li a strong {
           font-weight: 300; }
 

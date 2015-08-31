@@ -151,11 +151,13 @@
 				padding-bottom: 12px;
 				margin-bottom: 12px;
 				text-transform: uppercase;
-				max-width: 65%;
+				max-width: 90%;
 			}
 		}
 		.contact-info{
-			@include grid-span(4,1);
+			@media all and (min-width: 767px){
+				@include grid-span(4,1);
+			}
 			h3{
 				margin: 0;
 				color: $accent-color;
@@ -169,14 +171,34 @@
 		.enewsletter{
 			@include inverse-button-style();
 		}
+
 		.nav-links-first{
-			@include grid-span(2,5);
+			@include grid-span(6,1);
+
 		}
 		.nav-links-second{
-			@include grid-span(2,7);
+			@include grid-span(6,7);
+		}
+
+		@media all and (min-width: 767px){
+			.nav-links-first{
+				@include grid-span(2,5);
+				li{
+					max-width: 65%;
+				}
+			}
+			.nav-links-second{
+				@include grid-span(2,7);
+				li{
+					max-width: 65%;
+				}
+			}
 		}
 		.logo{
-			@include grid-span(4,9);
+			clear: both;
+			@media all and (min-width: 767px){
+				@include grid-span(4,9);
+			}
 			.social-icons{
 				text-align: center;
 				margin-top: 10px;
