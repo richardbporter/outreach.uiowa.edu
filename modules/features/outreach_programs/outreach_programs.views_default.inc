@@ -48,6 +48,14 @@ We are working with the university community to collect and verify additional ou
   $handler->display->display_options['empty']['area']['content'] = 'We cannot find programs matching your search. Please try again.
 ';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'unit' => 'unit',
+    'tags' => 0,
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -114,11 +122,22 @@ We are working with the university community to collect and verify additional ou
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
+  /* Field: Taxonomy term: Link */
+  $handler->display->display_options['fields']['field_unit_link']['id'] = 'field_unit_link';
+  $handler->display->display_options['fields']['field_unit_link']['table'] = 'field_data_field_unit_link';
+  $handler->display->display_options['fields']['field_unit_link']['field'] = 'field_unit_link';
+  $handler->display->display_options['fields']['field_unit_link']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['field_unit_link']['label'] = 'Unit Link';
+  $handler->display->display_options['fields']['field_unit_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_unit_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_unit_link']['type'] = 'link_absolute';
   /* Field: Content: Unit */
   $handler->display->display_options['fields']['field_program_unit']['id'] = 'field_program_unit';
   $handler->display->display_options['fields']['field_program_unit']['table'] = 'field_data_field_program_unit';
   $handler->display->display_options['fields']['field_program_unit']['field'] = 'field_program_unit';
   $handler->display->display_options['fields']['field_program_unit']['label'] = 'Brought to you By';
+  $handler->display->display_options['fields']['field_program_unit']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_program_unit']['alter']['path'] = '[field_unit_link]';
   $handler->display->display_options['fields']['field_program_unit']['settings'] = array(
     'link' => 0,
   );

@@ -25,6 +25,7 @@ features[field_instance][] = node-program-field_external_link
 features[field_instance][] = node-program-field_featured_program
 features[field_instance][] = node-program-field_program_stem
 features[field_instance][] = node-program-field_program_unit
+features[field_instance][] = taxonomy_term-unit-field_unit_link
 features[node][] = program
 features[taxonomy][] = unit
 features[variable][] = field_bundle_settings_node__program

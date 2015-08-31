@@ -87,5 +87,6 @@ features[field_base][] = field_program_unit
 features[field_base][] = field_staff_first_name
 features[field_base][] = field_stats_link
 features[field_base][] = field_tags
+features[field_base][] = field_unit_link
 features[field_base][] = field_video
 features[taxonomy][] = tags

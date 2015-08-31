@@ -517,7 +517,7 @@ function outreach_field_bases_field_default_field_bases() {
     'module' => 'mathfield',
     'settings' => array(
       'decimal_separator' => '.',
-      'expression' => '[field_county_business] + [field_county_engineering] + [field_county_clas] + [field_county_medicine]+ [field_county_nursing] + [field_county_grad_college] + [field_county_grad_medicine] + [field_county_grad_public_health] + [field_county_prof_management] + [field_county_prof_dentistry] + [field_county_prof_law] + [field_county_prof_medicine] + [field_county_prof_pharmacy]',
+      'expression' => '[field_county_business] + [field_county_engineering] + [field_county_clas] + [field_county_medicine]+ [field_county_nursing] + [field_county_grad_college] + [field_county_grad_medicine] + [field_county_prof_management] + [field_county_prof_dentistry] + [field_county_prof_law] + [field_county_prof_medicine] + [field_county_prof_pharmacy]',
       'field_dependencies' => array(
         0 => 'field_county_business',
         1 => 'field_county_engineering',
@@ -526,12 +526,11 @@ function outreach_field_bases_field_default_field_bases() {
         4 => 'field_county_nursing',
         5 => 'field_county_grad_college',
         6 => 'field_county_grad_medicine',
-        7 => 'field_county_grad_public_health',
-        8 => 'field_county_prof_management',
-        9 => 'field_county_prof_dentistry',
-        10 => 'field_county_prof_law',
-        11 => 'field_county_prof_medicine',
-        12 => 'field_county_prof_pharmacy',
+        7 => 'field_county_prof_management',
+        8 => 'field_county_prof_dentistry',
+        9 => 'field_county_prof_law',
+        10 => 'field_county_prof_medicine',
+        11 => 'field_county_prof_pharmacy',
       ),
       'precision' => 10,
       'scale' => 0,
@@ -1428,6 +1427,35 @@ function outreach_field_bases_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_unit_link'
+  $field_bases['field_unit_link'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_unit_link',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'link',
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'rel' => '',
+        'target' => 'default',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'link_field',
   );
 
   // Exported field_base: 'field_video'
