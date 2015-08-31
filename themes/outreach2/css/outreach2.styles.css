@@ -1073,49 +1073,50 @@ a {
   .page-events .view-display-id-events_page_slideshow .flexslider .flexslider-views-slideshow-main-frame-row .views-field-field-event-location {
     bottom: 0;
     height: 30px; }
-/* line 38, ../sass/components/events/_events_page.scss */
-.page-events .view-display-id-page .view-content, .page-events .view-display-id-page .view-footer {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-  background-color: transparent; }
-/* line 44, ../sass/components/events/_events_page.scss */
-.page-events .view-display-id-page .views-row {
-  width: 30%;
-  height: 169px;
-  margin-right: 2%;
-  margin-bottom: 30px;
-  position: relative;
-  border: 1px solid #DDD;
-  background-color: transparent;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px; }
-  /* line 53, ../sass/components/events/_events_page.scss */
-  .page-events .view-display-id-page .views-row .views-field-field-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.1;
-    z-index: 0; }
-  /* line 60, ../sass/components/events/_events_page.scss */
-  .page-events .view-display-id-page .views-row .views-field-title {
-    font-weight: 600;
-    padding: 10px 10px 0px;
+@media all and (min-width: 767px) {
+  /* line 39, ../sass/components/events/_events_page.scss */
+  .page-events .view-display-id-page .view-content, .page-events .view-display-id-page .view-footer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    background-color: transparent; }
+  /* line 45, ../sass/components/events/_events_page.scss */
+  .page-events .view-display-id-page .views-row {
+    width: 30%;
+    height: 169px;
+    margin-right: 2%;
+    margin-bottom: 30px;
     position: relative;
-    z-index: 2;
-    line-height: 1.3em;
-    margin-bottom: 10px; }
-  /* line 68, ../sass/components/events/_events_page.scss */
-  .page-events .view-display-id-page .views-row .views-field-field-event-date,
-  .page-events .view-display-id-page .views-row .views-field-field-event-location {
-    padding: 0 10px;
-    font-size: 0.9em;
-    line-height: 1.3em; }
-/* line 78, ../sass/components/events/_events_page.scss */
+    border: 1px solid #DDD;
+    background-color: transparent;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+    /* line 54, ../sass/components/events/_events_page.scss */
+    .page-events .view-display-id-page .views-row .views-field-field-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.1;
+      z-index: 0; }
+    /* line 61, ../sass/components/events/_events_page.scss */
+    .page-events .view-display-id-page .views-row .views-field-title {
+      font-weight: 600;
+      padding: 10px 10px 0px;
+      position: relative;
+      z-index: 2;
+      line-height: 1.3em;
+      margin-bottom: 10px; }
+    /* line 69, ../sass/components/events/_events_page.scss */
+    .page-events .view-display-id-page .views-row .views-field-field-event-date,
+    .page-events .view-display-id-page .views-row .views-field-field-event-location {
+      padding: 0 10px;
+      font-size: 0.9em;
+      line-height: 1.3em; } }
+/* line 80, ../sass/components/events/_events_page.scss */
 .page-events .view-footer p a {
   font-size: 0.8em;
   text-transform: uppercase;

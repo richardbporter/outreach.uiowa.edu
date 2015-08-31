@@ -92,7 +92,7 @@ function outreach_news_items_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'News items in this section come from the Iowa Now Impact section and external news sources. You may submit a news item about University of Iowa outreach and engagement efforts.';
+  $handler->display->display_options['header']['area']['content'] = 'News items in this section come from the Iowa Now Impact section and external news sources. You may <a href="/form/submit-news-item">submit a news item</a> about University of Iowa outreach and engagement efforts.';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Sticky */
