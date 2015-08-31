@@ -1,14 +1,19 @@
 .node-type-page{
 	.l-main{
 		@include clearfix();
-		.l-content{
-			@include grid-span(9,1);
-			border-right: 1px solid $border-color;
-			padding-right: 40px;
-		}
-		.l-region--sidebar-first{
-			@include sidebar();
 
+		@media all and (min-width: 640px){
+			.l-content{
+				@include grid-span(9,1);
+				border-right: 1px solid $border-color;
+				padding-right: 40px;
+			}
+			.l-region--sidebar-first{
+				@include sidebar();
+			}
+		}
+
+		.l-region--sidebar-first{
 			#block-menu-block-1{
 				border-top: none;
 				ul{

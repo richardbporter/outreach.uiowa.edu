@@ -13,7 +13,7 @@
 			width: 100%;
 			float: none;
 		}
-		@media all and (min-width: 767px){
+		@media all and (min-width: 865px){
 			.panel-col-first{
 				@include grid-span(9,1);
 				padding-right: 40px;
@@ -65,19 +65,22 @@
 		.field-collection-container{
 			border-bottom: none;
 		}
-		.field--name-field-featured-program-people{
-			.field__items{
-				@include display-flex(flex);
-				@include flex-flow(row wrap);
-				@include justify-content(space-around);
-			}
+		@media all and (min-width: 640px){
+			.field--name-field-featured-program-people{
+				.field__items{
+					@include display-flex(flex);
+					@include flex-flow(row wrap);
+					@include justify-content(space-around);
+				}
 
+			}
+			.field__item{
+				width: 45%;
+				@include flex-grow(1);
+				margin-bottom: 25px;
+			}
 		}
-		.field__item{
-			width: 45%;
-			@include flex-grow(1);
-			margin-bottom: 25px;
-		}
+
 		.field-collection-item-field-featured-program-people{
 			font-size: 0.9em;
 			line-height: 1.4em;
@@ -97,15 +100,19 @@
 	}
 
 	.pane-staff-about-us-staff-pane{
-		.view-content{
-			@include display-flex(flex);
-			@include flex-flow(row wrap);
-			@include justify-content(space-around);
-		}
+		@media all and (min-width: 640px){
+			.view-content{
+				@include display-flex(flex);
+				@include flex-flow(row wrap);
+				@include justify-content(space-around);
+			}
 
+			.views-row{
+				width: 45%;
+				@include flex-grow(1);
+			}
+		}
 		.views-row{
-			width: 45%;
-			@include flex-grow(1);
 			margin-bottom: 25px;
 			font-size: 0.9em;
 			line-height: 1.4em;

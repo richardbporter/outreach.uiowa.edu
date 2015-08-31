@@ -8,17 +8,6 @@ html {
 img, media {
   max-width: 100%; }
 
-/* line 4, ../sass/components/_about_us_navigation.scss */
-.section-about-us .panel-col-last .menu-block-wrapper ul.menu {
-  padding: 0; }
-  /* line 6, ../sass/components/_about_us_navigation.scss */
-  .section-about-us .panel-col-last .menu-block-wrapper ul.menu .leaf, .section-about-us .panel-col-last .menu-block-wrapper ul.menu .expanded {
-    list-style-type: none;
-    list-style-image: none; }
-  /* line 11, ../sass/components/_about_us_navigation.scss */
-  .section-about-us .panel-col-last .menu-block-wrapper ul.menu .expanded ul {
-    padding-left: 10px; }
-
 /* line 1, ../sass/components/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
@@ -64,7 +53,7 @@ a {
 
 /* line 1, ../sass/components/_page.scss */
 .l-page {
-  background: #000 url(../images/outreach_background.jpg) top center no-repeat;
+  background: #FFF url(../images/outreach_background.jpg) top center no-repeat;
   background-size: 1400px 565px; }
 
 /* line 8, ../sass/components/_page.scss */
@@ -309,89 +298,57 @@ a {
   content: "";
   display: table;
   clear: both; }
-/* line 4, ../sass/components/basic-pages/_layout.scss */
-.node-type-page .l-main .l-content {
-  width: 74.57627%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
-  border-right: 1px solid #DDD;
-  padding-right: 40px; }
-/* line 9, ../sass/components/basic-pages/_layout.scss */
-.node-type-page .l-main .l-region--sidebar-first {
-  width: 23.72881%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding-left: 25px; }
-  /* line 5, ../sass/abstractions/_sidebar.scss */
-  .node-type-page .l-main .l-region--sidebar-first h2, .node-type-page .l-main .l-region--sidebar-first h3, .node-type-page .l-main .l-region--sidebar-first h4, .node-type-page .l-main .l-region--sidebar-first h5, .node-type-page .l-main .l-region--sidebar-first h6 {
-    text-transform: uppercase;
-    font-size: 1em; }
-  /* line 9, ../sass/abstractions/_sidebar.scss */
-  .node-type-page .l-main .l-region--sidebar-first .block {
-    border-top: 3px solid #FFE100;
-    margin-top: 40px; }
-  /* line 15, ../sass/abstractions/_sidebar.scss */
-  .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .views-row {
-    font-weight: 400;
-    font-size: 0.9em;
-    padding-bottom: 5px; }
-  /* line 20, ../sass/abstractions/_sidebar.scss */
-  .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link {
-    font-size: 0.9em;
-    text-align: left;
-    margin-top: 10px; }
-    /* line 24, ../sass/abstractions/_sidebar.scss */
-    .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a {
-      font-size: 0.8em;
+@media all and (min-width: 640px) {
+  /* line 6, ../sass/components/basic-pages/_layout.scss */
+  .node-type-page .l-main .l-content {
+    width: 74.57627%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    border-right: 1px solid #DDD;
+    padding-right: 40px; }
+  /* line 11, ../sass/components/basic-pages/_layout.scss */
+  .node-type-page .l-main .l-region--sidebar-first {
+    width: 23.72881%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    padding-left: 25px; }
+    /* line 5, ../sass/abstractions/_sidebar.scss */
+    .node-type-page .l-main .l-region--sidebar-first h2, .node-type-page .l-main .l-region--sidebar-first h3, .node-type-page .l-main .l-region--sidebar-first h4, .node-type-page .l-main .l-region--sidebar-first h5, .node-type-page .l-main .l-region--sidebar-first h6 {
       text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid #999;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      padding: 5px 10px;
-      color: #000; }
-      /* line 9, ../sass/abstractions/_button.scss */
-      .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:hover {
-        background-color: #222;
-        color: #EEE;
-        text-decoration: none; }
-        /* line 13, ../sass/abstractions/_button.scss */
-        .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:hover:after {
-          color: #FFE100; }
-      /* line 17, ../sass/abstractions/_button.scss */
-      .node-type-page .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:after {
-        content: "\25b6";
-        padding-left: 4px; }
-  /* line 12, ../sass/components/basic-pages/_layout.scss */
-  .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 {
-    border-top: none; }
-    /* line 14, ../sass/components/basic-pages/_layout.scss */
-    .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul {
-      padding: 0; }
-      /* line 16, ../sass/components/basic-pages/_layout.scss */
-      .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul li {
-        list-style-type: none;
-        list-style-image: none; }
-        /* line 20, ../sass/components/basic-pages/_layout.scss */
-        .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul li.active a {
-          padding-left: 5px;
-          margin-left: -5px;
-          border-left: 5px solid #FFE100;
-          border-bottom: 2px solid #DDD;
-          background-color: #f7f7f7;
-          display: block; }
-        /* line 29, ../sass/components/basic-pages/_layout.scss */
-        .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul li.active ul {
-          padding-left: 10px; }
-          /* line 31, ../sass/components/basic-pages/_layout.scss */
-          .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul li.active ul a {
-            background-color: #FFF;
-            border: none; }
+      font-size: 1em; }
+    /* line 9, ../sass/abstractions/_sidebar.scss */
+    .node-type-page .l-main .l-region--sidebar-first .block {
+      border-top: 3px solid #FFE100;
+      margin-top: 40px; } }
+/* line 17, ../sass/components/basic-pages/_layout.scss */
+.node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 {
+  border-top: none; }
+  /* line 19, ../sass/components/basic-pages/_layout.scss */
+  .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul {
+    padding: 0; }
+    /* line 21, ../sass/components/basic-pages/_layout.scss */
+    .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul li {
+      list-style-type: none;
+      list-style-image: none; }
+      /* line 25, ../sass/components/basic-pages/_layout.scss */
+      .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul li.active a {
+        padding-left: 5px;
+        margin-left: -5px;
+        border-left: 5px solid #FFE100;
+        border-bottom: 2px solid #DDD;
+        background-color: #f7f7f7;
+        display: block; }
+      /* line 34, ../sass/components/basic-pages/_layout.scss */
+      .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul li.active ul {
+        padding-left: 10px; }
+        /* line 36, ../sass/components/basic-pages/_layout.scss */
+        .node-type-page .l-main .l-region--sidebar-first #block-menu-block-1 ul li.active ul a {
+          background-color: #FFF;
+          border: none; }
 
 /* line 4, ../sass/components/counties/_county.scss */
 .node-type-county .panel-col-top {
@@ -431,39 +388,6 @@ a {
     .node-type-county .panel-col-top .pane-node-field-county-image .block {
       border-top: 3px solid #FFE100;
       margin-top: 40px; }
-    /* line 15, ../sass/abstractions/_sidebar.scss */
-    .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .views-row {
-      font-weight: 400;
-      font-size: 0.9em;
-      padding-bottom: 5px; }
-    /* line 20, ../sass/abstractions/_sidebar.scss */
-    .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .more-link {
-      font-size: 0.9em;
-      text-align: left;
-      margin-top: 10px; }
-      /* line 24, ../sass/abstractions/_sidebar.scss */
-      .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .more-link a {
-        font-size: 0.8em;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border: 1px solid #999;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        padding: 5px 10px;
-        color: #000; }
-        /* line 9, ../sass/abstractions/_button.scss */
-        .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .more-link a:hover {
-          background-color: #222;
-          color: #EEE;
-          text-decoration: none; }
-          /* line 13, ../sass/abstractions/_button.scss */
-          .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .more-link a:hover:after {
-            color: #FFE100; }
-        /* line 17, ../sass/abstractions/_button.scss */
-        .node-type-county .panel-col-top .pane-node-field-county-image .view-display-id-latest_news_block .more-link a:after {
-          content: "\25b6";
-          padding-left: 4px; }
 /* line 13, ../../../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p547@omega.outreach2/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
 .node-type-county .center-wrapper:after {
   content: "";
@@ -495,39 +419,6 @@ a {
   .node-type-county .center-wrapper .panel-col-last .block {
     border-top: 3px solid #FFE100;
     margin-top: 40px; }
-  /* line 15, ../sass/abstractions/_sidebar.scss */
-  .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .views-row {
-    font-weight: 400;
-    font-size: 0.9em;
-    padding-bottom: 5px; }
-  /* line 20, ../sass/abstractions/_sidebar.scss */
-  .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link {
-    font-size: 0.9em;
-    text-align: left;
-    margin-top: 10px; }
-    /* line 24, ../sass/abstractions/_sidebar.scss */
-    .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a {
-      font-size: 0.8em;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid #999;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      padding: 5px 10px;
-      color: #000; }
-      /* line 9, ../sass/abstractions/_button.scss */
-      .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:hover {
-        background-color: #222;
-        color: #EEE;
-        text-decoration: none; }
-        /* line 13, ../sass/abstractions/_button.scss */
-        .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:hover:after {
-          color: #FFE100; }
-      /* line 17, ../sass/abstractions/_button.scss */
-      .node-type-county .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:after {
-        content: "\25b6";
-        padding-left: 4px; }
 /* line 37, ../sass/components/counties/_county.scss */
 .node-type-county .panel-col-last .panel-pane {
   border-top: 3px solid #FFE100;
@@ -686,6 +577,76 @@ a {
   font-weight: 400;
   font-size: 0.8em;
   line-height: 1.3em; }
+
+/* line 4, ../sass/components/custom-pages/_about_us.scss */
+.section-about-us .panel-col-last .menu-block-wrapper ul.menu {
+  padding: 0; }
+  /* line 6, ../sass/components/custom-pages/_about_us.scss */
+  .section-about-us .panel-col-last .menu-block-wrapper ul.menu .leaf, .section-about-us .panel-col-last .menu-block-wrapper ul.menu .expanded {
+    list-style-type: none;
+    list-style-image: none; }
+  /* line 11, ../sass/components/custom-pages/_about_us.scss */
+  .section-about-us .panel-col-last .menu-block-wrapper ul.menu .expanded ul {
+    padding-left: 10px; }
+
+/* line 21, ../sass/components/custom-pages/_about_us.scss */
+.pane-featured-programs-about-us-featured-programs .views-field-field-featured-program-photo {
+  display: none; }
+@media all and (min-width: 640px) {
+  /* line 25, ../sass/components/custom-pages/_about_us.scss */
+  .pane-featured-programs-about-us-featured-programs .views-field-field-featured-program-photo {
+    display: block; }
+  /* line 29, ../sass/components/custom-pages/_about_us.scss */
+  .pane-featured-programs-about-us-featured-programs .view-content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around; }
+  /* line 35, ../sass/components/custom-pages/_about_us.scss */
+  .pane-featured-programs-about-us-featured-programs .views-row {
+    width: 30%; } }
+/* line 41, ../sass/components/custom-pages/_about_us.scss */
+.pane-featured-programs-about-us-featured-programs .views-row .views-field-title {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 3px solid #FFE100;
+  padding: 10px; }
+  /* line 45, ../sass/components/custom-pages/_about_us.scss */
+  .pane-featured-programs-about-us-featured-programs .views-row .views-field-title a {
+    color: #FFF;
+    width: 100%; }
+/* line 53, ../sass/components/custom-pages/_about_us.scss */
+.pane-featured-programs-about-us-featured-programs .views-row .views-field-body p {
+  margin-top: 0;
+  font-size: 0.85em;
+  line-height: 1.5em; }
+/* line 59, ../sass/components/custom-pages/_about_us.scss */
+.pane-featured-programs-about-us-featured-programs .views-row .views-field-view-node {
+  margin-bottom: 20px; }
+  /* line 61, ../sass/components/custom-pages/_about_us.scss */
+  .pane-featured-programs-about-us-featured-programs .views-row .views-field-view-node a {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #999;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #000; }
+    /* line 9, ../sass/abstractions/_button.scss */
+    .pane-featured-programs-about-us-featured-programs .views-row .views-field-view-node a:hover {
+      background-color: #222;
+      color: #EEE;
+      text-decoration: none; }
+      /* line 13, ../sass/abstractions/_button.scss */
+      .pane-featured-programs-about-us-featured-programs .views-row .views-field-view-node a:hover:after {
+        color: #FFE100; }
+    /* line 17, ../sass/abstractions/_button.scss */
+    .pane-featured-programs-about-us-featured-programs .views-row .views-field-view-node a:after {
+      content: "\25b6";
+      padding-left: 4px; }
 
 /* line 4, ../sass/components/custom-pages/_home.scss */
 .front .l-main h2.pane-title {
@@ -1154,7 +1115,7 @@ a {
 .node-type-featured-program .center-wrapper .panel-col-last {
   width: 100%;
   float: none; }
-@media all and (min-width: 767px) {
+@media all and (min-width: 865px) {
   /* line 17, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .center-wrapper .panel-col-first {
     width: 75%;
@@ -1178,40 +1139,7 @@ a {
     /* line 9, ../sass/abstractions/_sidebar.scss */
     .node-type-featured-program .center-wrapper .panel-col-last .block {
       border-top: 3px solid #FFE100;
-      margin-top: 40px; }
-    /* line 15, ../sass/abstractions/_sidebar.scss */
-    .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .views-row {
-      font-weight: 400;
-      font-size: 0.9em;
-      padding-bottom: 5px; }
-    /* line 20, ../sass/abstractions/_sidebar.scss */
-    .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link {
-      font-size: 0.9em;
-      text-align: left;
-      margin-top: 10px; }
-      /* line 24, ../sass/abstractions/_sidebar.scss */
-      .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a {
-        font-size: 0.8em;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border: 1px solid #999;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        padding: 5px 10px;
-        color: #000; }
-        /* line 9, ../sass/abstractions/_button.scss */
-        .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:hover {
-          background-color: #222;
-          color: #EEE;
-          text-decoration: none; }
-          /* line 13, ../sass/abstractions/_button.scss */
-          .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:hover:after {
-            color: #FFE100; }
-        /* line 17, ../sass/abstractions/_button.scss */
-        .node-type-featured-program .center-wrapper .panel-col-last .view-display-id-latest_news_block .more-link a:after {
-          content: "\25b6";
-          padding-left: 4px; } }
+      margin-top: 40px; } }
 /* line 30, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .panel-col-last .panel-pane {
   border-top: 3px solid #FFE100;
@@ -1244,62 +1172,66 @@ a {
 /* line 65, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featured-program-people .field-collection-container {
   border-bottom: none; }
-/* line 69, ../sass/components/featured_programs/_featured_program.scss */
-.node-type-featured-program .pane-node-field-featured-program-people .field--name-field-featured-program-people .field__items {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-  justify-content: space-around; }
-/* line 76, ../sass/components/featured_programs/_featured_program.scss */
-.node-type-featured-program .pane-node-field-featured-program-people .field__item {
-  width: 45%;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  margin-bottom: 25px; }
-/* line 81, ../sass/components/featured_programs/_featured_program.scss */
+@media all and (min-width: 640px) {
+  /* line 70, ../sass/components/featured_programs/_featured_program.scss */
+  .node-type-featured-program .pane-node-field-featured-program-people .field--name-field-featured-program-people .field__items {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around; }
+  /* line 77, ../sass/components/featured_programs/_featured_program.scss */
+  .node-type-featured-program .pane-node-field-featured-program-people .field__item {
+    width: 45%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    margin-bottom: 25px; } }
+/* line 84, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people {
   font-size: 0.9em;
   line-height: 1.4em; }
-  /* line 84, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 87, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field__item {
     margin-bottom: 0px; }
-  /* line 87, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 90, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field--name-field-fp-people-photo {
     float: left;
     padding-right: 10px; }
-  /* line 91, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 94, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-node-field-featured-program-people .field-collection-item-field-featured-program-people .field--name-field-fp-people-name {
     font-weight: 600;
     font-size: 1.2em;
     margin-bottom: 5px; }
-/* line 100, ../sass/components/featured_programs/_featured_program.scss */
-.node-type-featured-program .pane-staff-about-us-staff-pane .view-content {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-  justify-content: space-around; }
-/* line 106, ../sass/components/featured_programs/_featured_program.scss */
+@media all and (min-width: 640px) {
+  /* line 104, ../sass/components/featured_programs/_featured_program.scss */
+  .node-type-featured-program .pane-staff-about-us-staff-pane .view-content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around; }
+  /* line 110, ../sass/components/featured_programs/_featured_program.scss */
+  .node-type-featured-program .pane-staff-about-us-staff-pane .views-row {
+    width: 45%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1; } }
+/* line 115, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-staff-about-us-staff-pane .views-row {
-  width: 45%;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
   margin-bottom: 25px;
   font-size: 0.9em;
   line-height: 1.4em; }
-  /* line 112, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 119, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-staff-about-us-staff-pane .views-row .views-field-field-fp-people-photo {
     float: left;
     padding-right: 10px; }
-  /* line 116, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 123, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-staff-about-us-staff-pane .views-row .views-field-field-staff-first-name {
     font-weight: 600;
     font-size: 1.2em;
     margin-bottom: 5px; }
-/* line 125, ../sass/components/featured_programs/_featured_program.scss */
+/* line 132, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-news-items-featured-program-news-pane .view-content {
   display: -webkit-flex;
   display: flex;
@@ -1307,24 +1239,24 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 130, ../sass/components/featured_programs/_featured_program.scss */
+/* line 137, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row {
   width: 30%;
   margin-right: 2%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 135, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 142, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row .views-field-created {
     font-size: 0.85em;
     text-transform: uppercase;
     font-weight: 400; }
-  /* line 142, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 149, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-news-items-featured-program-news-pane .views-row .views-field-body p {
     margin-top: 0;
     font-size: 0.85em;
     line-height: 1.5em; }
-/* line 151, ../sass/components/featured_programs/_featured_program.scss */
+/* line 158, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-events-featured-program-events-pane .view-content {
   display: -webkit-flex;
   display: flex;
@@ -1332,41 +1264,41 @@ a {
   flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around; }
-/* line 156, ../sass/components/featured_programs/_featured_program.scss */
+/* line 163, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-events-featured-program-events-pane .views-row {
   width: 30%;
   margin-right: 2%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin-bottom: 30px; }
-  /* line 161, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 168, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-events-featured-program-events-pane .views-row .views-field-title {
     font-weight: 400; }
-/* line 167, ../sass/components/featured_programs/_featured_program.scss */
+/* line 174, ../sass/components/featured_programs/_featured_program.scss */
 .node-type-featured-program .pane-videos-featured-program-video-pane {
   background-color: #F9F9F9;
   padding: 20px 0; }
-  /* line 170, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 177, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-field-video {
     margin: 0 20px; }
-    /* line 172, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 179, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-field-video .media-youtube-player {
       width: 620px;
       height: 330px; }
-  /* line 178, ../sass/components/featured_programs/_featured_program.scss */
+  /* line 185, ../sass/components/featured_programs/_featured_program.scss */
   .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body {
     margin: 20px;
     padding: 0 20px;
     background-color: #FFF;
     border: 1px solid #DDD; }
-    /* line 183, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 190, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body h4 {
       font-size: 0.9em;
       text-transform: uppercase; }
-    /* line 187, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 194, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body h3 {
       font-size: 1.3em; }
-    /* line 190, ../sass/components/featured_programs/_featured_program.scss */
+    /* line 197, ../sass/components/featured_programs/_featured_program.scss */
     .node-type-featured-program .pane-videos-featured-program-video-pane .views-field-body p {
       font-size: 0.9em;
       line-height: 1.3em; }
@@ -1421,6 +1353,40 @@ a {
     .node-type-map .pottawattamie.smaller, .node-type-map .poweshiek.smaller, .node-type-map .black-hawk.smaller, .node-type-map .washington.smaller {
       margin-left: -20px; }
 
+/* line 2, ../sass/components/news/_latest_news_block.scss */
+.view-display-id-latest_news_block .views-row {
+  font-weight: 400;
+  font-size: 0.9em;
+  padding-bottom: 5px; }
+/* line 7, ../sass/components/news/_latest_news_block.scss */
+.view-display-id-latest_news_block .more-link {
+  font-size: 0.9em;
+  text-align: left;
+  margin-top: 10px; }
+  /* line 11, ../sass/components/news/_latest_news_block.scss */
+  .view-display-id-latest_news_block .more-link a {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #999;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #000; }
+    /* line 9, ../sass/abstractions/_button.scss */
+    .view-display-id-latest_news_block .more-link a:hover {
+      background-color: #222;
+      color: #EEE;
+      text-decoration: none; }
+      /* line 13, ../sass/abstractions/_button.scss */
+      .view-display-id-latest_news_block .more-link a:hover:after {
+        color: #FFE100; }
+    /* line 17, ../sass/abstractions/_button.scss */
+    .view-display-id-latest_news_block .more-link a:after {
+      content: "\25b6";
+      padding-left: 4px; }
+
 /* line 5, ../sass/components/profiles/_profile.scss */
 .node-type-profile .l-page .clearfix:after,
 .node--profile--full .l-page .clearfix:after {
@@ -1472,8 +1438,12 @@ a {
   .node-type-profile .field--name-field-county-reference div,
   .node--profile--full .field--name-field-county-reference div {
     display: inline; }
+/* line 50, ../sass/components/profiles/_profile.scss */
+.node-type-profile .field--name-body,
+.node--profile--full .field--name-body {
+  padding-bottom: 40px; }
 
-/* line 53, ../sass/components/profiles/_profile.scss */
+/* line 57, ../sass/components/profiles/_profile.scss */
 .node--profile--full .clearfix:after {
   content: none; }
 
@@ -1508,40 +1478,7 @@ a {
     /* line 9, ../sass/abstractions/_sidebar.scss */
     .node-type-program .l-main .l-region--sidebar-first .block {
       border-top: 3px solid #FFE100;
-      margin-top: 40px; }
-    /* line 15, ../sass/abstractions/_sidebar.scss */
-    .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .views-row {
-      font-weight: 400;
-      font-size: 0.9em;
-      padding-bottom: 5px; }
-    /* line 20, ../sass/abstractions/_sidebar.scss */
-    .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link {
-      font-size: 0.9em;
-      text-align: left;
-      margin-top: 10px; }
-      /* line 24, ../sass/abstractions/_sidebar.scss */
-      .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a {
-        font-size: 0.8em;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border: 1px solid #999;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        padding: 5px 10px;
-        color: #000; }
-        /* line 9, ../sass/abstractions/_button.scss */
-        .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:hover {
-          background-color: #222;
-          color: #EEE;
-          text-decoration: none; }
-          /* line 13, ../sass/abstractions/_button.scss */
-          .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:hover:after {
-            color: #FFE100; }
-        /* line 17, ../sass/abstractions/_button.scss */
-        .node-type-program .l-main .l-region--sidebar-first .view-display-id-latest_news_block .more-link a:after {
-          content: "\25b6";
-          padding-left: 4px; } }
+      margin-top: 40px; } }
 
 /* line 2, ../sass/components/programs/_programs_page.scss */
 .page-programs .views-label-field-program-unit {
