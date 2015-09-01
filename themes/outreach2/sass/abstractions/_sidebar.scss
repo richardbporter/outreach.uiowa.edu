@@ -1,0 +1,13 @@
+@mixin sidebar(){
+
+		@include grid-span(3,10);
+		padding-left: 25px;
+		h2, h3, h4, h5, h6{
+			text-transform: uppercase;
+			font-size: 1em;
+		}
+		.block{
+			border-top: 3px solid $accent-color;
+			margin-top: 40px;
+		}
+}

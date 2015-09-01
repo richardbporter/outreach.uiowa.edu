@@ -1,0 +1,246 @@
+.l-page{
+	background: #FFF url(../images/outreach_background.jpg) top center no-repeat;
+	background-size: 1400px 565px;
+}
+
+.l-header{
+
+	.header-collection{
+		max-width: 1024px;
+		margin: 0 auto;
+		@include clearfix();
+	}
+
+	h1.site-name{
+		font-size: 3em;
+		font-weight: 600;
+		margin: 0;
+		padding-top: 0.75em;
+		padding-left: 14px;
+		a{
+			color: $accent-color;
+		}
+	}
+	h2.site-slogan{
+		font-size: 2em;
+		font-weight: 400;
+		margin-top: 10px;
+		padding-left: 14px;
+		color: $border-color;
+	}
+
+	.block--responsive-navigation {
+		a{
+			background-color: $body-color;
+			padding: 14px;
+			color: #FFF;
+			display: block;
+			font-size: 1.4em;
+			border-bottom: 1px solid $border-color;
+		}
+		li.active-trail{
+			a{
+				color: $accent-color;
+			}
+		}
+	}
+
+@media all and (min-width: 640px){
+	#nav{
+		li{
+			width: auto;
+			display: inline-block;
+		}
+	}
+	ul.responsive-navigation {
+		margin: 0 auto;
+		li{
+			display: inline-block;
+			height: 100%;
+			font-size: 1.6em;
+			padding: 15px 14px;
+			text-align: center;
+			&.active-trail{
+				background-color: rgba(0,0,0,0.2);
+				border-top: 3px solid $accent-color;
+				color: $border-color;
+			}
+			a{
+				color: $border-color;
+				background-color: inherit;
+				padding: 0;
+				display: inline;
+				font-size: 1em;
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 900px){
+	.l-branding{
+		float: left;
+		h1.site-name,
+		h2.site-slogan{
+			padding-left: 0;
+		}
+	}
+
+	.l-region--header{
+		float: right;
+		ul.responsive-navigation {
+			li{
+				padding: 43px 14px;
+			}
+		}
+	}
+
+}
+
+
+}
+
+.l-main{
+	@include add-grid(12);
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 40px;
+	background-color: #FFF;
+	font-size: 1.8em;
+	font-weight: 300;
+	line-height: 1.6em;
+	color: $body-color;
+	h1{
+		font-size: 2.5em;
+		margin-top: 0;
+		padding-top: 40px;
+	}
+	h2{
+		font-size: 1.83em;
+	}
+	h3{
+		font-size: 1.44em;
+	}
+	h4{
+		font-size: 1.11em;
+	}
+	h5, h6{
+		font-size: 1em;
+	}
+}
+
+.l-footer{
+	background-color: #212121;
+	color: #FFF;
+	clear: both;
+	.l-region--footer{
+		@include clearfix();
+		@include add-grid(12);
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 40px;
+		font-weight: 300;
+		ul{
+			margin: 0;
+			padding: 0;
+			font-size: 1.4em;
+			line-height: 1.6em;
+			list-style: none;
+			li{
+				border-bottom: 1px solid $border-color;
+				padding-bottom: 12px;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+				max-width: 90%;
+			}
+		}
+		.contact-info{
+			@media all and (min-width: 767px){
+				@include grid-span(4,1);
+			}
+			h3{
+				margin: 0;
+				color: $accent-color;
+				font-size: 2em;
+			}
+			p{
+				font-size: 1.4em;
+				line-height: 1.6em;
+			}
+		}
+		.enewsletter{
+			@include inverse-button-style();
+		}
+
+		.nav-links-first{
+			@include grid-span(6,1);
+
+		}
+		.nav-links-second{
+			@include grid-span(6,7);
+		}
+
+		@media all and (min-width: 767px){
+			.nav-links-first{
+				@include grid-span(2,5);
+				li{
+					max-width: 65%;
+				}
+			}
+			.nav-links-second{
+				@include grid-span(2,7);
+				li{
+					max-width: 65%;
+				}
+			}
+		}
+		.logo{
+			clear: both;
+			@media all and (min-width: 767px){
+				@include grid-span(4,9);
+			}
+			.social-icons{
+				text-align: center;
+				margin-top: 10px;
+				img{
+					width: 32px;
+				}
+			}
+		}
+	}
+}
+
+#ui-global-footer{
+	.l-container{
+		@include add-grid(12);
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 0 40px;
+		font-family: $sans-serif;
+		font-weight: 300;
+		#ui-global-links{
+			ul{
+				padding: 0;
+				li{
+					margin: 0 10px 0 0;
+					padding-right: 10px;
+					border-right: 1px solid $border-color;
+					&:last-child{
+						border-right: none;
+					}
+
+					&:after{
+						content:"";
+						margin: 0;
+					}
+					a{
+						color: $border-color;
+						strong{
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+	}
+}

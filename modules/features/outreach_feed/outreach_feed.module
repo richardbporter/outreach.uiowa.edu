@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Outreach Feed feature.
- */
-
-include_once 'outreach_feed.features.inc';

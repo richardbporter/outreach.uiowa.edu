@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Outreach slide views feature.
- */
-
-include_once 'outreach_slide_views.features.inc';

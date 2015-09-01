@@ -1,0 +1,83 @@
+.section-about-us{
+  .panel-col-last{
+    .menu-block-wrapper{
+      ul.menu{
+        padding: 0;
+        .leaf, .expanded{
+          list-style-type: none;
+          list-style-image: none;
+        }
+        .expanded{
+          ul{
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pane-featured-programs-about-us-featured-programs{
+  .views-field-field-featured-program-photo{
+    display: none;
+  }
+  @media all and (min-width: 640px){
+    .views-field-field-featured-program-photo{
+      display: block;
+    }
+
+    .view-content{
+      @include display-flex(flex);
+      @include flex-flow(row wrap);
+      @include justify-content(space-around);
+    }
+
+    .views-row{
+      width: 30%;
+    }
+  }
+
+  .views-row{
+    .views-field-title{
+      background-color: rgba(0,0,0,0.8);
+      border-bottom: 3px solid $accent-color;
+      padding: 10px;
+      a{
+        color: #FFF;
+        width: 100%;
+
+
+      }
+    }
+    .views-field-body{
+      p{
+        margin-top: 0;
+        font-size: 0.85em;
+        line-height: 1.5em;
+      }
+    }
+    .views-field-view-node{
+      margin-bottom: 20px;
+      a{
+        @include button-style();
+      }
+    }
+  }
+}
+
+@media all and (min-width: 640px){
+    .about-us-social{
+			@include display-flex(flex);
+			@include flex-flow(row wrap);
+			@include justify-content(space-around);
+      p,.fb-page{
+        margin-top: 0;
+        margin-right: 5%;
+  			width: 40%;
+  			@include flex-grow(1);
+  		}
+    }
+
+
+
+}

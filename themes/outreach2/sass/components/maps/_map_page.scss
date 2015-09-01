@@ -1,0 +1,53 @@
+.node-type-map{
+
+	.l-main{
+		padding: 0;
+		max-width: none;
+	}
+
+	#map{
+		height: 700px;
+	}
+
+	.county-marker, .house-marker, .senate-marker, .congressional-marker, .cluster-marker {
+	  position: absolute;  // Markers have to be positioned absolutely.
+	  pointer-events: all;  // Allows for interactive markers.
+	  color: $body-color;
+	  @include text-shadow(1px 2px 2px rgba(lighten($body-color, 60%), 0.4));
+	  padding: 2px;
+	  font-size: 0.7em;
+	  font-weight: 400;
+	}
+
+	/* =============================================================================
+	 *   County
+	 * ========================================================================== */
+	 .county-marker {
+	  margin-left: -20px;
+	  margin-top: -10px;
+	  &.smaller {
+	    margin-left: -15px;
+	  }
+	 }
+
+	.ida, .sac {
+	  margin-left: -10px;
+	}
+
+	.cherokee, .winnebago, .winneshiek, .palo-alto, .humboldt, .audubon, .buchanan,
+	.delaware, .washington, .van-buren, .des-moines, .mahaska, .keokuk,
+	.marshall, .wapello, .jefferson, .fremont, .ringgold, .johnson {
+	  margin-left: -30px;
+	  &.smaller {
+	    margin-left: -20px;
+	  }
+	}
+
+	.appanoose, .cerro-gordo, .chickasaw, .buena-vista, .montgomery, .pocahontas,
+	.pottawattamie, .poweshiek, .black-hawk, .washington {
+	  margin-left: -40px;
+	  &.smaller {
+	    margin-left: -20px;
+	  }
+	}
+}

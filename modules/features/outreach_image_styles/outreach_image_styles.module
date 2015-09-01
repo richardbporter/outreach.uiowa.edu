@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Outreach Image Styles feature.
+ */
+
+include_once 'outreach_image_styles.features.inc';

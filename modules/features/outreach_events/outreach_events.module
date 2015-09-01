@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Outreach Events feature.
+ */
+
+include_once 'outreach_events.features.inc';

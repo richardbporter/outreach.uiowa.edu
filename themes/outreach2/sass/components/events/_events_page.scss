@@ -1,0 +1,85 @@
+.page-events{
+  .view-display-id-events_page_slideshow{
+    .flexslider{
+      border: none;
+      @include box-shadow(none);
+      width: 500px;
+      .flexslider-views-slideshow-main-frame-row{
+        .views-field-title,
+        .views-field-field-event-date,
+        .views-field-field-event-location{
+          position: absolute;
+          left: 0;
+          width: 100%;
+          background-color: rgba(0,0,0,0.8);
+          padding: 5px 10px;
+          color: #FFF;
+        }
+        .views-field-title{
+          bottom: 60px;
+          font-size: 1.2em;
+          font-weight: 400;
+          height: 60px;
+
+        }
+        .views-field-field-event-date{
+          bottom: 30px;
+          height: 30px;
+        }
+        .views-field-field-event-location{
+          bottom: 0;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .view-display-id-page{
+    @media all and (min-width: 767px){
+      .view-content, .view-footer{
+  			@include display-flex(flex);
+  			@include flex-flow(row wrap);
+  			@include justify-content(space-around);
+        background-color: transparent;
+  		}
+  		.views-row{
+  			width: 30%;
+        height: 169px;
+  			margin-right: 2%;
+  			margin-bottom: 30px;
+        position: relative;
+        border: 1px solid $border-color;
+        background-color: transparent;
+        @include border-radius(5px);
+        .views-field-field-image{
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0.1;
+          z-index: 0;
+        }
+        .views-field-title{
+          font-weight: 600;
+          padding: 10px 10px 0px;
+          position: relative;
+          z-index: 2;
+          line-height: 1.3em;
+          margin-bottom: 10px;
+        }
+        .views-field-field-event-date,
+        .views-field-field-event-location{
+          padding: 0 10px;
+          font-size: 0.9em;
+          line-height: 1.3em;
+        }
+      }
+    }
+  }
+  .view-footer{
+    p{
+      a{
+        @include button-style();
+      }
+    }
+  }
+}

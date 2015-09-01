@@ -1,0 +1,16 @@
+name = Outreach Image Styles
+core = 7.x
+package = Outreach
+version = 7.x-1.0
+project = outreach_image_styles
+dependencies[] = image
+dependencies[] = manualcrop
+features[features_api][] = api:2
+features[image][] = event_page_display
+features[image][] = event_thumbnail
+features[image][] = featured_program_banner
+features[image][] = featured_program_home_page
+features[image][] = featured_program_person
+features[image][] = front_page_feature
+features[image][] = hometown_hawkeye
+features[image][] = profile_photo

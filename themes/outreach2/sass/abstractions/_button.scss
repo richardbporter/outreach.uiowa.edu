@@ -1,0 +1,27 @@
+@mixin button-style(){
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border: 1px solid #999;
+	@include border-radius(3px);
+	padding: 5px 10px;
+	color: #000;
+	&:hover{
+		background-color: #222;
+		color: #EEE;
+		text-decoration: none;
+		&:after{
+			color: $accent-color;
+		}
+	}
+	&:after{
+		content:"\25b6";
+		padding-left: 4px;
+	}
+}
+
+@mixin inverse-button-style(){
+	@include button-style();
+	color: #FFF;
+	background-color: #000;
+}

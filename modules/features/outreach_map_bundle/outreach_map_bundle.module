@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Outreach map bundle feature.
- */
-
-include_once 'outreach_map_bundle.features.inc';

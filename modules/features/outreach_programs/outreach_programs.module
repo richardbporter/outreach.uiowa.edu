@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Outreach Programs feature.
+ */
+
+include_once 'outreach_programs.features.inc';
